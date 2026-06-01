@@ -352,9 +352,7 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 	<header class="bg-teal-900 text-white shadow-md sticky top-0 z-20 flex-shrink-0">
 		<div class="max-w-xl mx-auto px-4 py-4 flex items-center justify-between">
 			<div class="flex items-center gap-2">
-				<div class="w-8 h-8 bg-teal-700 rounded-lg flex items-center justify-center font-bold">
-					K
-				</div>
+				<img src="/logo.png" alt="Logo KRL Live" class="w-9 h-9 object-contain drop-shadow-sm" />
 				<h1 class="text-lg font-bold tracking-tight">KRL Live</h1>
 			</div>
 
