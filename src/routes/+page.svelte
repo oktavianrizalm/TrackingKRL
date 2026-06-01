@@ -33,6 +33,7 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 	let lastUpdated: Date | null = $state(null);
 	let isLoading: boolean = $state(true);
 	let activeTab: 'schedule' | 'map' = $state('schedule');
+	let showCopyright: boolean = $state(false);
 
 	// Active Trains State
 	let activeTrains: any[] = $state([]);
@@ -355,6 +356,21 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 					K
 				</div>
 				<h1 class="text-lg font-bold tracking-tight">KRL Live</h1>
+			</div>
+
+			<div class="relative">
+				<button 
+					onclick={() => showCopyright = !showCopyright}
+					onblur={() => setTimeout(() => showCopyright = false, 200)}
+					class="text-[10px] font-bold text-teal-300/80 hover:text-white transition-colors bg-white/5 px-2 py-1 rounded-full border border-teal-700/50"
+				>
+					🄯 MRO - 2026
+				</button>
+				{#if showCopyright}
+					<div class="absolute right-0 mt-2 w-64 bg-slate-800 text-teal-50 text-xs p-4 rounded-xl shadow-2xl border border-teal-700/50 z-50 animate-in fade-in zoom-in-95">
+						Data diambil berdasarkan GAPEKA dari website <strong>kci.id</strong> yang diupdate pada Februari 2026.
+					</div>
+				{/if}
 			</div>
 		</div>
 		
