@@ -1,26 +1,17 @@
 import { json } from '@sveltejs/kit';
 import { allTrains } from '$lib/server/mockSchedule';
 
-// In-memory cache
-interface CacheData {
-	timestamp: number;
-	data: any;
-}
-
-const cache: Record<string, CacheData> = {};
-const CACHE_DURATION_MS = 30 * 1000; // 30 seconds
-
-export const GET = async ({ url }) => {
-	const stationId = url.searchParams.get('stationId') || 'MRI';
+export const GET = async ({ url, setHeaders }) => {
+	const rawStationId = url.searchParams.get('stationId') || 'MRI';
 	
-	// Check cache
-	if (cache[stationId] && Date.now() - cache[stationId].timestamp < CACHE_DURATION_MS) {
-		return json({
-			status: 'success',
-			source: 'cache',
-			data: cache[stationId].data
-		});
-	}
+	// Input validation: Must be alphanumeric, max 10 chars. Prevent prototype pollution.
+	const isValid = /^[A-Z0-9]{2,10}$/i.test(rawStationId);
+	const stationId = isValid ? rawStationId.toUpperCase() : 'MRI';
+
+	// Use Edge CDN caching instead of vulnerable in-memory cache
+	setHeaders({
+		'Cache-Control': 'public, s-maxage=30, stale-while-revalidate=59'
+	});
 
 	const nowRaw = new Date();
 	const now = new Date(nowRaw.toLocaleString('en-US', { timeZone: 'Asia/Jakarta' }));
@@ -72,12 +63,6 @@ export const GET = async ({ url }) => {
 		station_id: stationId,
 		last_updated: now.toISOString(),
 		trains: upcomingTrains
-	};
-
-	// Save to cache
-	cache[stationId] = {
-		timestamp: Date.now(),
-		data: responseData
 	};
 
 	return json({

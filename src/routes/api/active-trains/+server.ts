@@ -1,7 +1,11 @@
 import { json } from '@sveltejs/kit';
 import { allTrains } from '$lib/server/mockSchedule';
 
-export const GET = async () => {
+export const GET = async ({ setHeaders }) => {
+	// Cache response at CDN edge for 5 seconds to absorb high-frequency polling from clients
+	setHeaders({
+		'Cache-Control': 'public, s-maxage=5, stale-while-revalidate=10'
+	});
     const nowRaw = new Date();
     const now = new Date(nowRaw.toLocaleString('en-US', { timeZone: 'Asia/Jakarta' }));
     // Use local Jakarta time if possible, or assume server time is correct
