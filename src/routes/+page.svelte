@@ -78,10 +78,11 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 	let trackMultiLineStringMRT: any = null; // For MRT turf snapping
 	let allStationCoords: Record<string, [number, number]> = {}; // Map of ID -> [lat, lng]
 
-	let clRouteLayer: any = $state(null);
-	let mrtRouteLayer: any = $state(null);
-	let clStationMarkers: any[] = $state([]);
-	let mrtStationMarkers: any[] = $state([]);
+	let clRouteLayer: any = null;
+	let mrtRouteLayer: any = null;
+	let clStationMarkers: any[] = [];
+	let mrtStationMarkers: any[] = [];
+	let mapDataLoaded = $state(false);
 
 	// Search Dropdown State
 	let searchQuery = $state('');
@@ -379,6 +380,8 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 						}
 					}
 				});
+				
+				mapDataLoaded = true; // Trigger reactive effect safely
 			})
 			.catch(err => console.error('Failed to load all stations:', err));
 
@@ -400,7 +403,7 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 
 	// Watch for stationFilter change to toggle map layers
 	$effect(() => {
-		if (browser && mapObj && L) {
+		if (browser && mapObj && L && mapDataLoaded) {
 			const mode = stationFilter; // Track dependency explicitly
 			if (mode === 'MRT') {
 				if (clRouteLayer) clRouteLayer.remove();
