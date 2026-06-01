@@ -29,7 +29,7 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 
 	// State
 	let stations: Station[] = $state([]);
-	let selectedStationId: string = $state('MRI');
+	let selectedStationId: string | null = $state(null);
 	let trains: Train[] = $state([]);
 	let lastUpdated: Date | null = $state(null);
 	let isLoading: boolean = $state(true);
@@ -78,21 +78,13 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 	let trackMultiLineStringMRT: any = null; // For MRT turf snapping
 	let allStationCoords: Record<string, [number, number]> = {}; // Map of ID -> [lat, lng]
 
-	let clRouteLayer: any = null;
-	let mrtRouteLayer: any = null;
-	let clStationMarkers: any[] = [];
-	let mrtStationMarkers: any[] = [];
-	let mapDataLoaded = $state(false);
-
 	// Search Dropdown State
 	let searchQuery = $state('');
 	let dropdownOpen = $state(false);
-	let stationFilter = $state('CL');
 
 	let filteredStations = $derived(
 		stations.filter(s => 
-			(s.type === stationFilter || (!s.type && stationFilter === 'CL')) &&
-			(s.name.toLowerCase().includes(searchQuery.toLowerCase()) || s.id.toLowerCase().includes(searchQuery.toLowerCase()))
+			s.name.toLowerCase().includes(searchQuery.toLowerCase()) || s.id.toLowerCase().includes(searchQuery.toLowerCase())
 		)
 	);
 
@@ -120,6 +112,7 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 	};
 
 	const fetchTrains = async () => {
+		if (!selectedStationId) return;
 		isLoading = true;
 		try {
 			const res = await fetch(`/api/trains?stationId=${selectedStationId}`);
@@ -151,9 +144,7 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 	const updateTrainMarkers = () => {
 		if (!L || (!trackMultiLineStringCL && !trackMultiLineStringMRT)) return;
 
-		// Filter active trains based on stationFilter
-		const visibleTrains = activeTrains.filter(t => stationFilter === 'MRT' ? t.line === 'MRT' : t.line !== 'MRT');
-		const currentTrainIds = new Set(visibleTrains.map(t => t.id));
+		const currentTrainIds = new Set(activeTrains.map(t => t.id));
 
 		// Remove old markers
 		Object.keys(trainMarkers).forEach(id => {
@@ -164,7 +155,7 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 		});
 
 		// Update or create markers
-		visibleTrains.forEach(train => {
+		activeTrains.forEach(train => {
 			const fromCoord = allStationCoords[train.fromStation];
 			const toCoord = allStationCoords[train.toStation];
 
@@ -285,29 +276,15 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 				trackMultiLineStringCL = linesCL.length > 0 ? multiLineString(linesCL) : null;
 				trackMultiLineStringMRT = linesMRT.length > 0 ? multiLineString(linesMRT) : null;
 
-				clRouteLayer = L.geoJSON(data, {
-					filter: (feature: any) => feature.properties.line !== 'MRT' && feature.properties.colour !== '#1e40af',
-					style: (feature: any) => ({
-						color: feature.properties.colour || '#3B82F6',
-						weight: 4,
-						opacity: 0.8
-					})
-				});
-
-				mrtRouteLayer = L.geoJSON(data, {
-					filter: (feature: any) => feature.properties.line === 'MRT' || feature.properties.colour === '#1e40af',
-					style: (feature: any) => ({
-						color: feature.properties.colour || '#1e40af',
-						weight: 4,
-						opacity: 0.8
-					})
-				});
-
-				if (stationFilter === 'MRT') {
-					mrtRouteLayer.addTo(mapObj);
-				} else {
-					clRouteLayer.addTo(mapObj);
-				}
+				L.geoJSON(data, {
+					style: (feature: any) => {
+						return {
+							color: feature.properties.colour || '#3B82F6',
+							weight: 4,
+							opacity: 0.8
+						};
+					}
+				}).addTo(mapObj);
 			})
 			.catch(err => console.error('Failed to load route geometry:', err));
 
@@ -319,26 +296,19 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 			const name = st ? st.name : stationId;
 			const isMrt = st ? st.type === 'MRT' : (stationId.length === 3 && !['JAKK', 'BKS', 'BOO', 'KPB', 'PSE', 'JNG', 'THB', 'MRI', 'SUD'].includes(stationId));
 
-			const marker = L.marker(coords, {
+			L.marker(coords, {
 				icon: L.divIcon({
 					className: `bg-white border-2 rounded-full w-4 h-4 shadow-sm ${isMrt ? 'border-blue-800' : 'border-slate-800'}`,
 					iconSize: [16, 16],
 					iconAnchor: [8, 8],
 					html: `<div class="absolute w-full h-full rounded-full opacity-0 hover:opacity-100 bg-white shadow-xl flex flex-col items-center justify-center -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs whitespace-nowrap text-slate-800 z-50 transition-all border border-slate-200 pointer-events-none rounded-lg"><span class="font-bold">${name}</span><span class="text-[9px] text-slate-500 font-mono">${stationId}</span></div>`
 				})
-			}).bindTooltip(stationId, { 
+			}).addTo(mapObj)
+			.bindTooltip(stationId, { 
 				permanent: true, 
 				direction: 'right', 
 				className: 'bg-white border-none text-slate-700 font-mono text-[9px] font-bold shadow-sm p-1 ml-2 rounded' 
 			});
-
-			if (isMrt) {
-				mrtStationMarkers.push(marker);
-				if (stationFilter === 'MRT') marker.addTo(mapObj);
-			} else {
-				clStationMarkers.push(marker);
-				if (stationFilter === 'CL') marker.addTo(mapObj);
-			}
 		});
 
 		// Fetch and Draw All Other Stations
@@ -357,31 +327,21 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 
 						allStationCoords[genId] = coords as [number, number];
 
-						const marker = L.circleMarker(coords as [number, number], {
+						L.circleMarker(coords as [number, number], {
 							radius: 4,
 							color: '#fff',
 							weight: 1.5,
 							fillColor: '#64748b',
 							fillOpacity: 1
-						}).bindPopup(`<div class="text-xs font-semibold text-slate-800">${name}<br/>ID: ${genId}</div>`)
+						}).addTo(mapObj)
+						.bindPopup(`<div class="text-xs font-semibold text-slate-800">${name}<br/>ID: ${genId}</div>`)
 						.bindTooltip(genId, { 
 							permanent: true, 
 							direction: 'right', 
 							className: 'bg-transparent border-none text-slate-500 font-mono text-[9px] font-bold shadow-none p-0 ml-1' 
 						});
-
-						const isMrt = stations.find(s => s.id === genId)?.type === 'MRT';
-						if (isMrt) {
-							mrtStationMarkers.push(marker);
-							if (stationFilter === 'MRT') marker.addTo(mapObj);
-						} else {
-							clStationMarkers.push(marker);
-							if (stationFilter === 'CL') marker.addTo(mapObj);
-						}
 					}
 				});
-				
-				mapDataLoaded = true; // Trigger reactive effect safely
 			})
 			.catch(err => console.error('Failed to load all stations:', err));
 
@@ -401,24 +361,20 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 		}
 	});
 
-	// Watch for stationFilter change to toggle map layers
+	// Watch for selectedStationId change to fly map to station
 	$effect(() => {
-		if (browser && mapObj && L && mapDataLoaded) {
-			const mode = stationFilter; // Track dependency explicitly
-			if (mode === 'MRT') {
-				if (clRouteLayer) clRouteLayer.remove();
-				if (mrtRouteLayer) mrtRouteLayer.addTo(mapObj);
-
-				clStationMarkers.forEach(m => m.remove());
-				mrtStationMarkers.forEach(m => m.addTo(mapObj));
-			} else {
-				if (mrtRouteLayer) mrtRouteLayer.remove();
-				if (clRouteLayer) clRouteLayer.addTo(mapObj);
-
-				mrtStationMarkers.forEach(m => m.remove());
-				clStationMarkers.forEach(m => m.addTo(mapObj));
+		const tab = activeTab; // Read unconditionally so Svelte tracks this dependency
+		if (browser && mapObj && L && selectedStationId) {
+			const coords = allStationCoords[selectedStationId];
+			if (coords) {
+				if (tab === 'map') {
+					// Add a slight delay to ensure the map container is fully rendered if switching tabs
+					setTimeout(() => {
+						mapObj.invalidateSize();
+						mapObj.flyTo(coords, 16, { animate: true, duration: 1.5 });
+					}, 100);
+				}
 			}
-			updateTrainMarkers();
 		}
 	});
 
@@ -515,20 +471,6 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 						<label for="station" class="text-xs font-bold text-slate-500 uppercase tracking-wider">
 							Pilih Stasiun
 						</label>
-						<div class="flex bg-slate-100 dark:bg-slate-800 p-1 rounded-lg transition-colors">
-							<button 
-								class="px-3 py-1 text-xs font-bold rounded-md transition-colors {stationFilter === 'CL' ? 'bg-white text-teal-700 shadow-sm' : 'text-slate-500 hover:text-slate-700'}"
-								onclick={() => { stationFilter = 'CL'; searchQuery = ''; dropdownOpen = true; }}
-							>
-								CL
-							</button>
-							<button 
-								class="px-3 py-1 text-xs font-bold rounded-md transition-colors {stationFilter === 'MRT' ? 'bg-white text-teal-700 shadow-sm' : 'text-slate-500 hover:text-slate-700'}"
-								onclick={() => { stationFilter = 'MRT'; searchQuery = ''; dropdownOpen = true; }}
-							>
-								MRT
-							</button>
-						</div>
 					</div>
 					<div class="relative mt-3">
 						<input 
@@ -549,20 +491,29 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 								{#if filteredStations.length === 0}
 									<div class="px-4 py-3 text-slate-500 text-sm">Stasiun tidak ditemukan</div>
 								{/if}
-								{#each filteredStations as station}
-									<button 
-										class="w-full text-left px-4 py-3 hover:bg-teal-50 dark:hover:bg-slate-700 focus:bg-teal-50 dark:focus:bg-slate-700 border-b border-slate-50 dark:border-slate-700 last:border-0 transition-colors flex justify-between items-center"
-										onclick={() => { 
-											selectedStationId = station.id; 
-											searchQuery = station.name; 
-											dropdownOpen = false; 
-											handleStationChange(); 
-										}}
-									>
-										<span class="text-slate-800 dark:text-slate-100 font-semibold">{station.name}</span>
-										<span class="text-xs font-bold text-slate-400 dark:text-slate-500">{station.id}</span>
-									</button>
-								{/each}
+								<!-- Search Results -->
+								<div class="max-h-60 overflow-y-auto">
+									{#each filteredStations as station}
+										<button 
+											class="w-full text-left px-4 py-3 hover:bg-slate-700 transition-colors border-b border-slate-700/50 last:border-0 {station.id === 'MRO' ? 'bg-teal-900/30' : ''}"
+											onclick={() => {
+												if (station.id === 'MRO') {
+													const audio = new Audio('/easter.mp3');
+													audio.play();
+													searchQuery = 'MRO - Mariotama';
+												} else {
+													searchQuery = station.name;
+												}
+												selectedStationId = station.id;
+												dropdownOpen = false;
+												handleStationChange();
+											}}
+										>
+											<span class="text-slate-800 dark:text-slate-100 font-semibold">{station.name}</span>
+											<span class="text-xs font-bold text-slate-400 dark:text-slate-500">{station.id}</span>
+										</button>
+									{/each}
+								</div>
 							</div>
 						{/if}
 					</div>
