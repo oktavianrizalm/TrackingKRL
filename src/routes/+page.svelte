@@ -356,11 +356,6 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 				</div>
 				<h1 class="text-lg font-bold tracking-tight">KRL Live</h1>
 			</div>
-			
-			<div class="flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full text-xs font-semibold backdrop-blur-sm">
-				<div class="w-2 h-2 rounded-full bg-lime-400 animate-pulse"></div>
-				LIVE
-			</div>
 		</div>
 		
 		<!-- Tabs -->
@@ -432,43 +427,13 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 					{/if}
 				</section>
 
-				<!-- Hero Section / Next Train -->
-				{#if !isLoading && trains.length > 0}
-					{@const nextTrain = trains[0]}
-					<section class="bg-gradient-to-br from-teal-800 to-teal-950 text-white rounded-2xl p-6 shadow-lg relative overflow-hidden">
-						<div class="absolute top-[-40px] right-[-40px] w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
-						
-						<div class="text-xs font-bold uppercase tracking-wider text-teal-300/80 mb-2">
-							Kereta Berikutnya
-						</div>
-						
-						<div class="flex items-baseline gap-2 mb-2">
-							<div class="text-5xl font-black tracking-tighter text-lime-400">
-								{getCountdownText(nextTrain).split(' ')[0]}
-							</div>
-							<div class="text-lg font-semibold text-white/70">
-								{getCountdownText(nextTrain).split(' ')[1] || ''}
-							</div>
-						</div>
-
-						<div class="text-sm text-white/80 border-b border-white/10 pb-4 mb-4 flex justify-between items-center">
-							<div>Tujuan <strong class="text-white text-base">{nextTrain.destination}</strong></div>
-							<div class="text-xs font-mono text-teal-200 bg-black/20 px-2 py-0.5 rounded">ID: {nextTrain.id}</div>
-						</div>
-
-						<div class="flex items-center justify-between">
-							<div class="text-xs text-white/50 font-medium">JADWAL</div>
-							<div class="font-mono text-sm font-bold bg-white/10 px-2 py-1 rounded">
-								{nextTrain.scheduled_time}
-							</div>
-						</div>
-					</section>
-				{:else if isLoading}
+				<!-- States -->
+				{#if isLoading}
 					<section class="bg-teal-900 rounded-2xl p-10 flex flex-col items-center justify-center gap-3">
 						<div class="w-8 h-8 border-4 border-white/20 border-t-white rounded-full animate-spin"></div>
 						<div class="text-white/70 text-sm font-medium">Memuat jadwal...</div>
 					</section>
-				{:else}
+				{:else if trains.length === 0}
 					<section class="bg-slate-100 rounded-2xl p-10 flex flex-col items-center justify-center gap-2 text-center border border-slate-200">
 						<div class="text-3xl mb-2">🚉</div>
 						<div class="text-slate-600 font-semibold">Tidak ada jadwal kereta</div>
@@ -479,11 +444,11 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 				<!-- Train List -->
 				<section>
 					<h2 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">
-						Jadwal Selanjutnya
+						Jadwal Kereta
 					</h2>
 					
 					<div class="space-y-2">
-						{#each trains.slice(1) as train (train.id)}
+						{#each trains as train (train.id)}
 							<div class="bg-white rounded-xl p-4 flex items-center gap-4 shadow-sm border border-slate-100 transition-all hover:border-teal-200 hover:shadow-md">
 								<div class="w-1.5 self-stretch rounded-full flex-shrink-0 {lineColors[train.line] || 'bg-slate-400'}"></div>
 								
