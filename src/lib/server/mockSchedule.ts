@@ -3,13 +3,22 @@ import mrtScheduleRaw from '../../../static/mrt-schedule.json';
 import mrtStationsRaw from '../../../static/mrt-stations.json';
 
 let parsedSchedule: any = parsedScheduleRaw;
-const getLineByRelasi = (relasi: string) => {
+const getLineBySchedule = (scheduleKeys: string[], relasi: string) => {
+    for (const id of scheduleKeys) {
+        if (['TPK', 'TPO', 'AC'].includes(id)) return 'TANJUNGPRIUK';
+        if (['TNG', 'BPR', 'PI', 'BOI', 'RW', 'KDS', 'PSG', 'GF', 'PB'].includes(id)) return 'TANGERANG';
+        if (['RK', 'CTR', 'MJ', 'CKY', 'TGS', 'TEJ', 'DAR', 'CJT', 'PRP', 'JTK', 'CC', 'CSK', 'SRP', 'RU', 'SDM', 'JMU', 'PDJ', 'KBY', 'PLM'].includes(id)) return 'RANGKASBITUNG';
+        if (['BOO', 'NMO', 'BJD', 'CTA', 'DP', 'DPB', 'POC', 'UI', 'UP', 'LNA', 'TNT', 'PND', 'CW', 'TEB', 'JAY', 'MGB', 'SW', 'JUA', 'GDD', 'CKI'].includes(id)) return 'BOGOR';
+        if (['CKR', 'MTM', 'CIT', 'TB', 'BKST', 'BKS', 'KRI', 'CUK', 'KLDB', 'BUA', 'KLD', 'POK', 'KMT', 'GST', 'PSE', 'KMO', 'RJW', 'AK'].includes(id)) return 'CIKARANG';
+    }
+    
+    // Fallback to relasi parsing if somehow no unique stations are found
     const r = relasi.toLowerCase();
-    if (r.includes('bks') || r.includes('ckr') || r.includes('kpb')) return 'CIKARANG';
+    if (r.includes('bks') || r.includes('ckr') || r.includes('kpb') || r.includes('ak') || r.includes('jng')) return 'CIKARANG';
     if (r.includes('ru') || r.includes('srp') || r.includes('thb') || r.includes('prp') || r.includes('rks')) return 'RANGKASBITUNG';
     if (r.includes('tng') || r.includes('du')) return 'TANGERANG';
     if (r.includes('tpk')) return 'TANJUNGPRIUK';
-    return 'BOGOR'; // fallback because Bogor is most common
+    return 'BOGOR';
 };
 
 const idToName: Record<string, string> = {
@@ -81,7 +90,7 @@ const clTrains = Object.entries(parsedSchedule).map(([id, train]: [string, any])
 
     return {
         id,
-        line: getLineByRelasi(train.relasi),
+        line: getLineBySchedule(Object.keys(train.schedule), train.relasi),
         destination,
         schedule: train.schedule
     };

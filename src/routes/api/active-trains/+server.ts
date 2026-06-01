@@ -21,23 +21,20 @@ export const GET = async ({ setHeaders }) => {
 
     for (const train of allTrains) {
         // Schedule is an object like { "DP": "04:05", "DPB": "04:09", ... }
-        // Let's sort the schedule by time to find the path
+        // Keys preserve insertion order. We can anchor the times based on previous stops.
+        let previousMins = -1;
         const stops = Object.entries(train.schedule).map(([stationId, timeStr]) => {
             const [h, m] = (timeStr as string).split(':').map(Number);
             let mins = h * 60 + m;
-            // Handle cross-midnight trains (e.g. starts at 23:30, ends at 01:00)
-            if (mins < 180 && currentTotalMinutes > 1200) {
-                // Current time is late night, train time is next morning
-                mins += 24 * 60; 
-            } else if (mins > 1200 && currentTotalMinutes < 180) {
-                // Current time is early morning, train time is previous night
-                mins -= 24 * 60;
+            
+            // If time drops significantly (e.g. 23:55 -> 00:05), it crossed midnight
+            if (previousMins !== -1 && mins < previousMins - 180) {
+                mins += 24 * 60;
             }
+            previousMins = mins;
+            
             return { stationId, timeMinutes: mins, timeStr };
         });
-
-        // Sort chronologically
-        stops.sort((a, b) => a.timeMinutes - b.timeMinutes);
 
         if (stops.length < 2) continue;
 
@@ -45,20 +42,30 @@ export const GET = async ({ setHeaders }) => {
         const endTime = stops[stops.length - 1].timeMinutes;
 
         // Check if train is currently active
-        if (currentTotalMinutes >= startTime && currentTotalMinutes <= endTime) {
+        // It could be active today, or it could be a cross-midnight train running past 24:00
+        let effectiveCurrentTime = currentTotalMinutes;
+        
+        // If current time is 00:30 (30 mins) but train is 23:00-01:00 (1380-1500)
+        if (currentTotalMinutes < 180 && endTime >= 1440) {
+            if (currentTotalMinutes + 1440 >= startTime && currentTotalMinutes + 1440 <= endTime) {
+                effectiveCurrentTime += 1440;
+            }
+        }
+
+        if (effectiveCurrentTime >= startTime && effectiveCurrentTime <= endTime) {
             // Find the segment it's currently on
             let fromStation = null;
             let toStation = null;
             let progress = 0;
 
             for (let i = 0; i < stops.length - 1; i++) {
-                if (currentTotalMinutes >= stops[i].timeMinutes && currentTotalMinutes <= stops[i+1].timeMinutes) {
+                if (effectiveCurrentTime >= stops[i].timeMinutes && effectiveCurrentTime <= stops[i+1].timeMinutes) {
                     fromStation = stops[i].stationId;
                     toStation = stops[i+1].stationId;
                     
                     const segmentDuration = stops[i+1].timeMinutes - stops[i].timeMinutes;
                     if (segmentDuration > 0) {
-                        progress = (currentTotalMinutes - stops[i].timeMinutes) / segmentDuration;
+                        progress = (effectiveCurrentTime - stops[i].timeMinutes) / segmentDuration;
                     } else {
                         progress = 1;
                     }
