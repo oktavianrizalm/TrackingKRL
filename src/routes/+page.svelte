@@ -78,10 +78,10 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 	let trackMultiLineStringMRT: any = null; // For MRT turf snapping
 	let allStationCoords: Record<string, [number, number]> = {}; // Map of ID -> [lat, lng]
 
-	let clRouteLayer: any = null;
-	let mrtRouteLayer: any = null;
-	let clStationMarkers: any[] = [];
-	let mrtStationMarkers: any[] = [];
+	let clRouteLayer: any = $state(null);
+	let mrtRouteLayer: any = $state(null);
+	let clStationMarkers: any[] = $state([]);
+	let mrtStationMarkers: any[] = $state([]);
 
 	// Search Dropdown State
 	let searchQuery = $state('');
@@ -349,10 +349,7 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 					// @ts-ignore
 					if (!exclude.includes(name)) {
 						let genId = realStationIds[name.toLowerCase()] || realStationIds[name.replace(/ /g, '').toLowerCase()];
-						if (!genId) {
-							// Fallback if not found in list
-							genId = name.replace(/[^a-zA-Z]/g, '').substring(0, 3).toUpperCase();
-						}
+						if (!genId) return; // Skip non-KRL/MRT stations entirely
 						
 						// Skip if it is already drawn as a main station
 						if (stationCoordinates[genId]) return;
@@ -404,18 +401,19 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 	// Watch for stationFilter change to toggle map layers
 	$effect(() => {
 		if (browser && mapObj && L) {
-			if (stationFilter === 'MRT') {
-				if (clRouteLayer && mapObj.hasLayer(clRouteLayer)) mapObj.removeLayer(clRouteLayer);
-				if (mrtRouteLayer && !mapObj.hasLayer(mrtRouteLayer)) mrtRouteLayer.addTo(mapObj);
+			const mode = stationFilter; // Track dependency explicitly
+			if (mode === 'MRT') {
+				if (clRouteLayer) clRouteLayer.remove();
+				if (mrtRouteLayer) mrtRouteLayer.addTo(mapObj);
 
-				clStationMarkers.forEach(m => mapObj.hasLayer(m) && mapObj.removeLayer(m));
-				mrtStationMarkers.forEach(m => !mapObj.hasLayer(m) && m.addTo(mapObj));
+				clStationMarkers.forEach(m => m.remove());
+				mrtStationMarkers.forEach(m => m.addTo(mapObj));
 			} else {
-				if (mrtRouteLayer && mapObj.hasLayer(mrtRouteLayer)) mapObj.removeLayer(mrtRouteLayer);
-				if (clRouteLayer && !mapObj.hasLayer(clRouteLayer)) clRouteLayer.addTo(mapObj);
+				if (mrtRouteLayer) mrtRouteLayer.remove();
+				if (clRouteLayer) clRouteLayer.addTo(mapObj);
 
-				mrtStationMarkers.forEach(m => mapObj.hasLayer(m) && mapObj.removeLayer(m));
-				clStationMarkers.forEach(m => !mapObj.hasLayer(m) && m.addTo(mapObj));
+				mrtStationMarkers.forEach(m => m.remove());
+				clStationMarkers.forEach(m => m.addTo(mapObj));
 			}
 			updateTrainMarkers();
 		}
