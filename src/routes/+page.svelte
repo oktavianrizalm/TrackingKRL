@@ -78,6 +78,11 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 	let trackMultiLineStringMRT: any = null; // For MRT turf snapping
 	let allStationCoords: Record<string, [number, number]> = {}; // Map of ID -> [lat, lng]
 
+	let clRouteLayer: any = null;
+	let mrtRouteLayer: any = null;
+	let clStationMarkers: any[] = [];
+	let mrtStationMarkers: any[] = [];
+
 	// Search Dropdown State
 	let searchQuery = $state('');
 	let dropdownOpen = $state(false);
@@ -145,7 +150,9 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 	const updateTrainMarkers = () => {
 		if (!L || (!trackMultiLineStringCL && !trackMultiLineStringMRT)) return;
 
-		const currentTrainIds = new Set(activeTrains.map(t => t.id));
+		// Filter active trains based on stationFilter
+		const visibleTrains = activeTrains.filter(t => stationFilter === 'MRT' ? t.line === 'MRT' : t.line !== 'MRT');
+		const currentTrainIds = new Set(visibleTrains.map(t => t.id));
 
 		// Remove old markers
 		Object.keys(trainMarkers).forEach(id => {
@@ -156,7 +163,7 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 		});
 
 		// Update or create markers
-		activeTrains.forEach(train => {
+		visibleTrains.forEach(train => {
 			const fromCoord = allStationCoords[train.fromStation];
 			const toCoord = allStationCoords[train.toStation];
 
@@ -241,14 +248,14 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 		mapObj = L.map(mapElement).setView([-6.2088, 106.8456], 11);
 
 		// Tile Layers
-		lightLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
+		lightLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 			maxZoom: 20,
-			attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
 		});
 
-		darkLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+		darkLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 			maxZoom: 20,
-			attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
 		});
 
 		if (isDarkMode) {
@@ -277,15 +284,29 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 				trackMultiLineStringCL = linesCL.length > 0 ? multiLineString(linesCL) : null;
 				trackMultiLineStringMRT = linesMRT.length > 0 ? multiLineString(linesMRT) : null;
 
-				L.geoJSON(data, {
-					style: (feature: any) => {
-						return {
-							color: feature.properties.colour || '#3B82F6',
-							weight: 4,
-							opacity: 0.8
-						};
-					}
-				}).addTo(mapObj);
+				clRouteLayer = L.geoJSON(data, {
+					filter: (feature: any) => feature.properties.line !== 'MRT' && feature.properties.colour !== '#1e40af',
+					style: (feature: any) => ({
+						color: feature.properties.colour || '#3B82F6',
+						weight: 4,
+						opacity: 0.8
+					})
+				});
+
+				mrtRouteLayer = L.geoJSON(data, {
+					filter: (feature: any) => feature.properties.line === 'MRT' || feature.properties.colour === '#1e40af',
+					style: (feature: any) => ({
+						color: feature.properties.colour || '#1e40af',
+						weight: 4,
+						opacity: 0.8
+					})
+				});
+
+				if (stationFilter === 'MRT') {
+					mrtRouteLayer.addTo(mapObj);
+				} else {
+					clRouteLayer.addTo(mapObj);
+				}
 			})
 			.catch(err => console.error('Failed to load route geometry:', err));
 
@@ -295,20 +316,28 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 			
 			const st = stations.find(s => s.id === stationId);
 			const name = st ? st.name : stationId;
+			const isMrt = st ? st.type === 'MRT' : (stationId.length === 3 && !['JAKK', 'BKS', 'BOO', 'KPB', 'PSE', 'JNG', 'THB', 'MRI', 'SUD'].includes(stationId));
 
-			L.marker(coords, {
+			const marker = L.marker(coords, {
 				icon: L.divIcon({
-					className: `bg-white border-2 rounded-full w-4 h-4 shadow-sm ${stationFilter === 'MRT' && stationId.length === 3 && !['JAKK', 'BKS', 'BOO'].includes(stationId) ? 'border-blue-800' : 'border-slate-800'}`,
+					className: `bg-white border-2 rounded-full w-4 h-4 shadow-sm ${isMrt ? 'border-blue-800' : 'border-slate-800'}`,
 					iconSize: [16, 16],
 					iconAnchor: [8, 8],
 					html: `<div class="absolute w-full h-full rounded-full opacity-0 hover:opacity-100 bg-white shadow-xl flex flex-col items-center justify-center -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs whitespace-nowrap text-slate-800 z-50 transition-all border border-slate-200 pointer-events-none rounded-lg"><span class="font-bold">${name}</span><span class="text-[9px] text-slate-500 font-mono">${stationId}</span></div>`
 				})
-			}).addTo(mapObj)
-			.bindTooltip(stationId, { 
+			}).bindTooltip(stationId, { 
 				permanent: true, 
 				direction: 'right', 
 				className: 'bg-white border-none text-slate-700 font-mono text-[9px] font-bold shadow-sm p-1 ml-2 rounded' 
 			});
+
+			if (isMrt) {
+				mrtStationMarkers.push(marker);
+				if (stationFilter === 'MRT') marker.addTo(mapObj);
+			} else {
+				clStationMarkers.push(marker);
+				if (stationFilter === 'CL') marker.addTo(mapObj);
+			}
 		});
 
 		// Fetch and Draw All Other Stations
@@ -330,19 +359,27 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 
 						allStationCoords[genId] = coords as [number, number];
 
-						L.circleMarker(coords as [number, number], {
+						const marker = L.circleMarker(coords as [number, number], {
 							radius: 4,
 							color: '#fff',
 							weight: 1.5,
 							fillColor: '#64748b',
 							fillOpacity: 1
-						}).addTo(mapObj)
-						.bindPopup(`<div class="text-xs font-semibold text-slate-800">${name}<br/>ID: ${genId}</div>`)
+						}).bindPopup(`<div class="text-xs font-semibold text-slate-800">${name}<br/>ID: ${genId}</div>`)
 						.bindTooltip(genId, { 
 							permanent: true, 
 							direction: 'right', 
 							className: 'bg-transparent border-none text-slate-500 font-mono text-[9px] font-bold shadow-none p-0 ml-1' 
 						});
+
+						const isMrt = stations.find(s => s.id === genId)?.type === 'MRT';
+						if (isMrt) {
+							mrtStationMarkers.push(marker);
+							if (stationFilter === 'MRT') marker.addTo(mapObj);
+						} else {
+							clStationMarkers.push(marker);
+							if (stationFilter === 'CL') marker.addTo(mapObj);
+						}
 					}
 				});
 			})
@@ -361,6 +398,26 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 			} else if (L._mapInstance) {
 				setTimeout(() => L._mapInstance.invalidateSize(), 100);
 			}
+		}
+	});
+
+	// Watch for stationFilter change to toggle map layers
+	$effect(() => {
+		if (browser && mapObj && L) {
+			if (stationFilter === 'MRT') {
+				if (clRouteLayer && mapObj.hasLayer(clRouteLayer)) mapObj.removeLayer(clRouteLayer);
+				if (mrtRouteLayer && !mapObj.hasLayer(mrtRouteLayer)) mrtRouteLayer.addTo(mapObj);
+
+				clStationMarkers.forEach(m => mapObj.hasLayer(m) && mapObj.removeLayer(m));
+				mrtStationMarkers.forEach(m => !mapObj.hasLayer(m) && m.addTo(mapObj));
+			} else {
+				if (mrtRouteLayer && mapObj.hasLayer(mrtRouteLayer)) mapObj.removeLayer(mrtRouteLayer);
+				if (clRouteLayer && !mapObj.hasLayer(clRouteLayer)) clRouteLayer.addTo(mapObj);
+
+				mrtStationMarkers.forEach(m => mapObj.hasLayer(m) && mapObj.removeLayer(m));
+				clStationMarkers.forEach(m => !mapObj.hasLayer(m) && m.addTo(mapObj));
+			}
+			updateTrainMarkers();
 		}
 	});
 
