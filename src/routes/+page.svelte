@@ -36,6 +36,28 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 	let activeTab: 'schedule' | 'map' = $state('schedule');
 	let showCopyright: boolean = $state(false);
 
+	// Dark Mode State
+	let isDarkMode: boolean = $state(false);
+	
+	const toggleDarkMode = () => {
+		isDarkMode = !isDarkMode;
+		if (isDarkMode) {
+			document.documentElement.classList.add('dark');
+			localStorage.setItem('color-theme', 'dark');
+			if (mapObj && lightLayer && darkLayer) {
+				mapObj.removeLayer(lightLayer);
+				darkLayer.addTo(mapObj);
+			}
+		} else {
+			document.documentElement.classList.remove('dark');
+			localStorage.setItem('color-theme', 'light');
+			if (mapObj && lightLayer && darkLayer) {
+				mapObj.removeLayer(darkLayer);
+				lightLayer.addTo(mapObj);
+			}
+		}
+	};
+
 	// Active Trains State
 	let activeTrains: any[] = $state([]);
 	let trainMarkers: Record<string, any> = {}; // Leaflet markers
@@ -49,7 +71,11 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 	// Map State
 	let mapElement: HTMLElement;
 	let L: any;
-	let trackMultiLineString: any = null; // For turf snapping
+	let mapObj: any;
+	let lightLayer: any;
+	let darkLayer: any;
+	let trackMultiLineStringCL: any = null; // For CL turf snapping
+	let trackMultiLineStringMRT: any = null; // For MRT turf snapping
 	let allStationCoords: Record<string, [number, number]> = {}; // Map of ID -> [lat, lng]
 
 	// Search Dropdown State
@@ -117,7 +143,7 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 	};
 
 	const updateTrainMarkers = () => {
-		if (!L || !trackMultiLineString) return;
+		if (!L || (!trackMultiLineStringCL && !trackMultiLineStringMRT)) return;
 
 		const currentTrainIds = new Set(activeTrains.map(t => t.id));
 
@@ -143,7 +169,10 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 			// 2. Snap to track line using Turf.js
 			// turf uses [lng, lat] order!
 			const pt = point([lng, lat]);
-			const snapped = nearestPointOnLine(trackMultiLineString, pt);
+			let targetTrack = train.line === 'MRT' ? trackMultiLineStringMRT : trackMultiLineStringCL;
+			if (!targetTrack) targetTrack = trackMultiLineStringCL || trackMultiLineStringMRT;
+
+			const snapped = nearestPointOnLine(targetTrack, pt);
 			const finalCoord: [number, number] = [snapped.geometry.coordinates[1], snapped.geometry.coordinates[0]];
 
 			if (trainMarkers[train.id]) {
@@ -209,33 +238,44 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 		L = (await import('leaflet')).default;
 		
 		// Initialize the map centered roughly on Jakarta
-		const map = L.map(mapElement).setView([-6.2088, 106.8456], 11);
+		mapObj = L.map(mapElement).setView([-6.2088, 106.8456], 11);
 
-		// Add OpenStreetMap tiles
-		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			attribution: '© OpenStreetMap contributors'
-		}).addTo(map);
-
-		// Custom icon for stations
-		const stationIcon = L.divIcon({
-			className: 'bg-teal-900 border-2 border-white rounded-full w-3 h-3 shadow-md',
-			iconSize: [12, 12],
-			iconAnchor: [6, 6]
+		// Tile Layers
+		lightLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
+			maxZoom: 20,
+			attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
 		});
+
+		darkLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+			maxZoom: 20,
+			attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+		});
+
+		if (isDarkMode) {
+			darkLayer.addTo(mapObj);
+		} else {
+			lightLayer.addTo(mapObj);
+		}
 
 		// Fetch and Draw Real GeoJSON Routes
 		fetch('/krl-routes.geojson')
 			.then(res => res.json())
 			.then(data => {
 				// Build MultiLineString for Turf snapping
-				const lines: any[] = [];
+				const linesCL: any[] = [];
+				const linesMRT: any[] = [];
 				data.features.forEach((f: any) => {
 					if (f.geometry && f.geometry.type === 'LineString') {
-						lines.push(f.geometry.coordinates);
+						if (f.properties.line === 'MRT' || f.properties.colour === '#1e40af') {
+							linesMRT.push(f.geometry.coordinates);
+						} else {
+							linesCL.push(f.geometry.coordinates);
+						}
 					}
 				});
 
-				trackMultiLineString = multiLineString(lines);
+				trackMultiLineStringCL = linesCL.length > 0 ? multiLineString(linesCL) : null;
+				trackMultiLineStringMRT = linesMRT.length > 0 ? multiLineString(linesMRT) : null;
 
 				L.geoJSON(data, {
 					style: (feature: any) => {
@@ -245,34 +285,30 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 							opacity: 0.8
 						};
 					}
-				}).addTo(map);
+				}).addTo(mapObj);
 			})
 			.catch(err => console.error('Failed to load route geometry:', err));
 
-		// Helper to generate a fake ID for minor stations
-		const generateId = (name: string) => {
-			const clean = name.replace(/[^a-zA-Z]/g, '').toUpperCase();
-			if (clean.length <= 3) return clean;
-			const words = name.split(' ');
-			if (words.length >= 3) return words[0][0].toUpperCase() + words[1][0].toUpperCase() + words[2][0].toUpperCase();
-			if (words.length === 2) return words[0][0].toUpperCase() + words[1].substring(0, 2).toUpperCase();
-			return clean.substring(0, 3);
-		};
-
 		// Place Main Station Markers
-		Object.entries(stationCoordinates).forEach(([id, coords]) => {
-			allStationCoords[id] = coords;
-			const st = stations.find(s => s.id === id);
-			const name = st ? st.name : id;
+		Object.entries(stationCoordinates).forEach(([stationId, coords]) => {
+			allStationCoords[stationId] = coords;
 			
-			L.marker(coords, { icon: stationIcon })
-				.addTo(map)
-				.bindPopup(`<b>${name}</b><br/>ID: ${id}`)
-				.bindTooltip(id, { 
-					permanent: true, 
-					direction: 'right', 
-					className: 'bg-white/80 backdrop-blur-sm border border-slate-200 text-slate-800 font-mono text-[10px] font-bold px-1 py-0.5 rounded shadow-sm' 
-				});
+			const st = stations.find(s => s.id === stationId);
+			const name = st ? st.name : stationId;
+
+			L.marker(coords, {
+				icon: L.divIcon({
+					className: `bg-white border-2 rounded-full w-4 h-4 shadow-sm ${stationFilter === 'MRT' && stationId.length === 3 && !['JAKK', 'BKS', 'BOO'].includes(stationId) ? 'border-blue-800' : 'border-slate-800'}`,
+					iconSize: [16, 16],
+					iconAnchor: [8, 8],
+					html: `<div class="absolute w-full h-full rounded-full opacity-0 hover:opacity-100 bg-white shadow-xl flex flex-col items-center justify-center -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs whitespace-nowrap text-slate-800 z-50 transition-all border border-slate-200 pointer-events-none rounded-lg"><span class="font-bold">${name}</span><span class="text-[9px] text-slate-500 font-mono">${stationId}</span></div>`
+				})
+			}).addTo(mapObj)
+			.bindTooltip(stationId, { 
+				permanent: true, 
+				direction: 'right', 
+				className: 'bg-white border-none text-slate-700 font-mono text-[9px] font-bold shadow-sm p-1 ml-2 rounded' 
+			});
 		});
 
 		// Fetch and Draw All Other Stations
@@ -300,7 +336,7 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 							weight: 1.5,
 							fillColor: '#64748b',
 							fillOpacity: 1
-						}).addTo(map)
+						}).addTo(mapObj)
 						.bindPopup(`<div class="text-xs font-semibold text-slate-800">${name}<br/>ID: ${genId}</div>`)
 						.bindTooltip(genId, { 
 							permanent: true, 
@@ -313,7 +349,7 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 			.catch(err => console.error('Failed to load all stations:', err));
 
 		// Save the map instance to L so updateTrainMarkers can use it later safely
-		L._mapInstance = map;
+		L._mapInstance = mapObj;
 	};
 
 	// Watch for tab change to initialize map
@@ -328,7 +364,10 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 		}
 	});
 
-	onMount(() => {
+	onMount(async () => {
+		// Read dark mode state from DOM
+		isDarkMode = document.documentElement.classList.contains('dark');
+
 		fetchStations().then(() => {
 			fetchTrains();
 			fetchActiveTrains();
@@ -356,12 +395,24 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 
 <div class="min-h-screen bg-slate-50 text-slate-900 font-sans flex flex-col">
 	<!-- Top Navigation -->
-	<header class="bg-teal-900 text-white shadow-md sticky top-0 z-20 flex-shrink-0">
+	<header class="bg-teal-900 dark:bg-slate-900 text-white shadow-md sticky top-0 z-20 flex-shrink-0 transition-colors">
 		<div class="max-w-xl mx-auto px-4 py-4 flex items-center justify-between">
 			<div class="flex items-center gap-2">
 				<img src="/logo.png" alt="Logo KRL Live" class="w-9 h-9 object-contain drop-shadow-sm" />
 				<h1 class="text-lg font-bold tracking-tight">KRL Live</h1>
 			</div>
+
+			<button 
+				onclick={toggleDarkMode}
+				class="ml-auto mr-4 text-teal-200 hover:text-white dark:text-slate-400 dark:hover:text-white transition-colors"
+				aria-label="Toggle Dark Mode"
+			>
+				{#if isDarkMode}
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+				{:else}
+					<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+				{/if}
+			</button>
 
 			<div class="relative">
 				<button 
@@ -396,17 +447,17 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 		</div>
 	</header>
 
-	<main class="flex-1 w-full max-w-xl mx-auto relative flex flex-col">
+	<main class="flex-1 w-full max-w-xl mx-auto relative flex flex-col bg-slate-50 dark:bg-slate-950 transition-colors">
 		
 		{#if activeTab === 'schedule'}
 			<div class="p-4 space-y-6 pb-20 w-full animate-in fade-in slide-in-from-bottom-2 duration-300">
 				<!-- Station Selector -->
-				<section class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex flex-col gap-3">
-					<div class="flex items-center justify-between">
+				<section class="bg-white dark:bg-slate-900 p-4 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col gap-3 transition-colors">
+					<div class="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-800 transition-colors">
 						<label for="station" class="text-xs font-bold text-slate-500 uppercase tracking-wider">
 							Pilih Stasiun
 						</label>
-						<div class="flex bg-slate-100 p-1 rounded-lg">
+						<div class="flex bg-slate-100 dark:bg-slate-800 p-1 rounded-lg transition-colors">
 							<button 
 								class="px-3 py-1 text-xs font-bold rounded-md transition-colors {stationFilter === 'CL' ? 'bg-white text-teal-700 shadow-sm' : 'text-slate-500 hover:text-slate-700'}"
 								onclick={() => { stationFilter = 'CL'; searchQuery = ''; dropdownOpen = true; }}
@@ -421,14 +472,14 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 							</button>
 						</div>
 					</div>
-					<div class="relative">
+					<div class="relative mt-3">
 						<input 
 							type="text"
 							bind:value={searchQuery}
 							onfocus={() => { dropdownOpen = true; searchQuery = ''; }}
 							onblur={() => setTimeout(() => dropdownOpen = false, 200)}
 							placeholder="Cari nama stasiun atau ID..."
-							class="w-full appearance-none bg-slate-50 border border-slate-200 text-slate-800 text-base font-semibold rounded-xl px-4 py-3 pr-10 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+							class="w-full appearance-none bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-100 text-base font-semibold rounded-xl px-4 py-3 pr-10 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
 						/>
 						<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-500">
 							<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -436,13 +487,13 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 							</svg>
 						</div>
 						{#if dropdownOpen}
-							<div class="absolute w-full mt-2 bg-white border border-slate-200 rounded-xl shadow-xl max-h-60 overflow-y-auto z-50 animate-in fade-in slide-in-from-top-2">
+							<div class="absolute w-full mt-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-xl max-h-60 overflow-y-auto z-50 animate-in fade-in slide-in-from-top-2">
 								{#if filteredStations.length === 0}
 									<div class="px-4 py-3 text-slate-500 text-sm">Stasiun tidak ditemukan</div>
 								{/if}
 								{#each filteredStations as station}
 									<button 
-										class="w-full text-left px-4 py-3 hover:bg-teal-50 focus:bg-teal-50 border-b border-slate-50 last:border-0 transition-colors flex justify-between items-center"
+										class="w-full text-left px-4 py-3 hover:bg-teal-50 dark:hover:bg-slate-700 focus:bg-teal-50 dark:focus:bg-slate-700 border-b border-slate-50 dark:border-slate-700 last:border-0 transition-colors flex justify-between items-center"
 										onclick={() => { 
 											selectedStationId = station.id; 
 											searchQuery = station.name; 
@@ -450,16 +501,16 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 											handleStationChange(); 
 										}}
 									>
-										<span class="font-semibold text-slate-800">{station.name}</span>
-										<span class="text-xs font-mono text-slate-400 bg-slate-100 px-2 py-1 rounded">{station.id}</span>
+										<span class="text-slate-800 dark:text-slate-100 font-semibold">{station.name}</span>
+										<span class="text-xs font-bold text-slate-400 dark:text-slate-500">{station.id}</span>
 									</button>
 								{/each}
 							</div>
 						{/if}
 					</div>
 					{#if lastUpdated}
-						<div class="text-[11px] text-slate-400 text-right mt-1">
-							Diperbarui: {lastUpdated.toLocaleTimeString('id-ID')}
+						<div class="text-[10px] text-right font-medium text-slate-400 dark:text-slate-500 mt-2">
+							Diperbarui: {lastUpdated.toLocaleTimeString('en-GB')} WIB
 						</div>
 					{/if}
 				</section>
@@ -471,32 +522,30 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 						<div class="text-white/70 text-sm font-medium">Memuat jadwal...</div>
 					</section>
 				{:else if trains.length === 0}
-					<section class="bg-slate-100 rounded-2xl p-10 flex flex-col items-center justify-center gap-2 text-center border border-slate-200">
+					<section class="bg-slate-100 dark:bg-slate-900 rounded-2xl p-10 flex flex-col items-center justify-center gap-2 text-center border border-slate-200 dark:border-slate-800">
 						<div class="text-3xl mb-2">🚉</div>
-						<div class="text-slate-600 font-semibold">Tidak ada jadwal kereta</div>
-						<div class="text-slate-400 text-sm">Kereta terakhir mungkin sudah berangkat.</div>
+						<div class="text-slate-600 dark:text-slate-400 font-semibold">Tidak ada jadwal kereta</div>
+						<div class="text-slate-400 dark:text-slate-600 text-sm">Kereta terakhir mungkin sudah berangkat.</div>
 					</section>
 				{/if}
 
 				<!-- Train List -->
 				<section>
-					<h2 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">
+					<h2 class="text-xl font-black text-slate-800 dark:text-slate-100 flex items-center gap-2">
 						Jadwal Kereta
 					</h2>
 					
 					<div class="space-y-2">
 						{#each trains as train (train.id)}
-							<div class="bg-white rounded-xl p-4 flex items-center gap-4 shadow-sm border border-slate-100 transition-all hover:border-teal-200 hover:shadow-md">
+							<div class="bg-white dark:bg-slate-900 rounded-xl p-4 flex items-center gap-4 shadow-sm border border-slate-100 dark:border-slate-800 transition-all hover:border-teal-200 hover:shadow-md">
 								<div class="w-1.5 self-stretch rounded-full flex-shrink-0 {lineColors[train.line] || 'bg-slate-400'}"></div>
 								
-								<div class="font-mono text-lg font-bold text-slate-800 min-w-[50px]">
+								<div class="font-mono text-lg font-bold text-slate-800 dark:text-slate-200 min-w-[50px]">
 									{train.scheduled_time}
 								</div>
 								
 								<div class="flex-1 min-w-0">
-									<div class="text-base font-bold text-slate-900 truncate">
-										{train.destination}
-									</div>
+									<div class="text-base font-bold text-slate-800 dark:text-slate-100">{train.destination}</div>
 									<div class="text-xs text-slate-500 mt-0.5">
 										ID: {train.id}
 									</div>

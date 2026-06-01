@@ -32,7 +32,8 @@ const idToName: Record<string, string> = {
     'KPB': 'Kampung Bandan',
     'PSE': 'Pasar Senen',
     'PRP': 'Parung Panjang',
-    'TGS': 'Tigaraksa'
+    'TGS': 'Tigaraksa',
+    'GRG': 'Grogol'
 };
 
 import { realStationIds } from '$lib/mapData';
