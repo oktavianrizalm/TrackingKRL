@@ -19,10 +19,19 @@ export const GET = async ({ url, setHeaders }) => {
 	const currentMinute = now.getMinutes();
 	const currentTotalMinutes = currentHour * 60 + currentMinute;
 
+	const isWeekend = now.getDay() === 0 || now.getDay() === 6;
+
 	const mockTrains = [];
 
 	// Filter trains that stop at the requested station and are upcoming
 	for (const train of allTrains) {
+		if (train.line === 'MRT') {
+			// @ts-ignore - days property added to MRT trains
+			if (isWeekend && train.days === 'weekday') continue;
+			// @ts-ignore
+			if (!isWeekend && train.days === 'weekend') continue;
+		}
+
 		if (train.schedule[stationId]) {
 			const timeStr = train.schedule[stationId];
 			const [hours, minutes] = timeStr.split(':').map(Number);

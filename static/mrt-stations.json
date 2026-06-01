@@ -1,0 +1,58 @@
+[
+  {
+    "id": "",
+    "name": "Pilih Stasiun"
+  },
+  {
+    "id": "ASN",
+    "name": "ASEAN"
+  },
+  {
+    "id": "BNH",
+    "name": "Bendungan Hilir"
+  },
+  {
+    "id": "BLA",
+    "name": "Blok A"
+  },
+  {
+    "id": "BLM",
+    "name": "Blok M BCA"
+  },
+  {
+    "id": "BHI",
+    "name": "Bundaran HI"
+  },
+  {
+    "id": "CPR",
+    "name": "Cipete Raya"
+  },
+  {
+    "id": "DKA",
+    "name": "Dukuh Atas BNI"
+  },
+  {
+    "id": "FTM",
+    "name": "Fatmawati Indomaret"
+  },
+  {
+    "id": "HJN",
+    "name": "Haji Nawi"
+  },
+  {
+    "id": "IST",
+    "name": "Istora Mandiri"
+  },
+  {
+    "id": "LBB",
+    "name": "Lebak Bulus Grab"
+  },
+  {
+    "id": "SNY",
+    "name": "Senayan Mastercard"
+  },
+  {
+    "id": "STB",
+    "name": "Setiabudi Astra"
+  }
+]

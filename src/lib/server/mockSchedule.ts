@@ -1,4 +1,6 @@
 import parsedScheduleRaw from '../../../static/schedule.json';
+import mrtScheduleRaw from '../../../static/mrt-schedule.json';
+import mrtStationsRaw from '../../../static/mrt-stations.json';
 
 let parsedSchedule: any = parsedScheduleRaw;
 const getLineByRelasi = (relasi: string) => {
@@ -44,16 +46,34 @@ Object.entries(realStationIds).forEach(([name, id]) => {
 });
 
 const uniqueStationIds = new Set<string>();
+const stationTypes: Record<string, string> = {};
+
 Object.values(parsedSchedule).forEach((train: any) => {
-    Object.keys(train.schedule).forEach(id => uniqueStationIds.add(id));
+    Object.keys(train.schedule).forEach(id => {
+        uniqueStationIds.add(id);
+        stationTypes[id] = 'CL';
+    });
+});
+
+mrtScheduleRaw.forEach((train: any) => {
+    Object.keys(train.schedule).forEach(id => {
+        uniqueStationIds.add(id);
+        stationTypes[id] = 'MRT';
+    });
+});
+
+const mrtIdToName: Record<string, string> = {};
+mrtStationsRaw.forEach((s: any) => {
+    if (s.id) mrtIdToName[s.id] = s.name;
 });
 
 export const stationsList = Array.from(uniqueStationIds).map(id => ({
     id,
-    name: idToNameFull[id] || idToName[id] || id
+    name: idToNameFull[id] || idToName[id] || mrtIdToName[id] || id,
+    type: stationTypes[id]
 })).sort((a, b) => a.name.localeCompare(b.name));
 
-export const allTrains = Object.entries(parsedSchedule).map(([id, train]: [string, any]) => {
+const clTrains = Object.entries(parsedSchedule).map(([id, train]: [string, any]) => {
     const parts = train.relasi.split('-');
     const destCode = parts[parts.length - 1].toUpperCase();
     const destination = idToName[destCode] || destCode;
@@ -65,3 +85,5 @@ export const allTrains = Object.entries(parsedSchedule).map(([id, train]: [strin
         schedule: train.schedule
     };
 });
+
+export const allTrains = [...clTrains, ...mrtScheduleRaw];

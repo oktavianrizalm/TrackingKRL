@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/open-dyslexic-regular.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bpg-arial@1.0.0/css/bpg-arial.min.css"
+    />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Official Website MRT Jakarta</title>
+    <script type="module" crossorigin src="/assets/index-D_5ug3E6.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-vendor-BOzAuSS2.js">
+    <link rel="modulepreload" crossorigin href="/assets/mui-vendor-Bu-n7oyB.js">
+    <link rel="modulepreload" crossorigin href="/assets/chart-vendor-CP3r8cXu.js">
+    <link rel="modulepreload" crossorigin href="/assets/redux-vendor-DIG381YX.js">
+    <link rel="modulepreload" crossorigin href="/assets/i18n-vendor-V5SWZS9v.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-CqmM0Cwj.css">
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!-- entry root vite -->
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/index.min.js"></script>
+    <!-- <script src="https://code.responsivevoice.org/responsivevoice.js?key=YOUR_API_KEY"></script> -->
+    <script src="https://chat.botika.online/client/assets/js/botika.widget.js"></script>
+    <script>
+      window.BotikaChat.init({
+        client: "rorNYCz",
+        widget: {
+          theme: "custom", // black, red, blue, purple, cyan, green, yellow, custom
+          "theme-color": "#19519A", // comment if you don't use custom theme
+          title: "DINA",
+          description: "Digital Intelligent Assistant",
+          caption: "Hai, Ada yang bisa DINA bantu?",
+          greeting: true, // true to use the greeting feature, false to turn off the greeting feature
+          "greeting-message": "Hello, Saya Digital Intelligent Assistant", // edit for bot widget description
+          "greeting-button": "Hello", // button greeting widget
+          logo: "https://botmaster-files.s3.ap-southeast-1.amazonaws.com/Content/2380d7e155a256b7f7b0f30285b5e4909a8453cb/Asset%206.png", // change logo webchat
+          history: false, // If the true function is enabled, will remove chat history inside the widget every time the browser reloads. If false, history chat will remain still inside the widget
+        },
+      });
+    </script>
+  </body>
+</html>

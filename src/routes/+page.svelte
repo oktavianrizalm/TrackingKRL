@@ -9,6 +9,7 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 	interface Station {
 		id: string;
 		name: string;
+		type: string;
 	}
 
 	interface Train {
@@ -54,9 +55,13 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 	// Search Dropdown State
 	let searchQuery = $state('');
 	let dropdownOpen = $state(false);
+	let stationFilter = $state('CL');
 
 	let filteredStations = $derived(
-		stations.filter(s => s.name.toLowerCase().includes(searchQuery.toLowerCase()) || s.id.toLowerCase().includes(searchQuery.toLowerCase()))
+		stations.filter(s => 
+			(s.type === stationFilter || (!s.type && stationFilter === 'CL')) &&
+			(s.name.toLowerCase().includes(searchQuery.toLowerCase()) || s.id.toLowerCase().includes(searchQuery.toLowerCase()))
+		)
 	);
 
 	// Colors for lines
@@ -64,7 +69,8 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 		'BOGOR': 'bg-red-500 text-white',
 		'CIKARANG': 'bg-blue-500 text-white',
 		'RANGKASBITUNG': 'bg-green-600 text-white',
-		'TANGERANG': 'bg-yellow-700 text-white'
+		'TANGERANG': 'bg-yellow-700 text-white',
+		'MRT': 'bg-blue-800 text-white'
 	};
 
 	const fetchStations = async () => {
@@ -228,6 +234,7 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 						lines.push(f.geometry.coordinates);
 					}
 				});
+
 				trackMultiLineString = multiLineString(lines);
 
 				L.geoJSON(data, {
@@ -394,10 +401,26 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 		{#if activeTab === 'schedule'}
 			<div class="p-4 space-y-6 pb-20 w-full animate-in fade-in slide-in-from-bottom-2 duration-300">
 				<!-- Station Selector -->
-				<section class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex flex-col gap-2">
-					<label for="station" class="text-xs font-bold text-slate-500 uppercase tracking-wider">
-						Pilih Stasiun
-					</label>
+				<section class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex flex-col gap-3">
+					<div class="flex items-center justify-between">
+						<label for="station" class="text-xs font-bold text-slate-500 uppercase tracking-wider">
+							Pilih Stasiun
+						</label>
+						<div class="flex bg-slate-100 p-1 rounded-lg">
+							<button 
+								class="px-3 py-1 text-xs font-bold rounded-md transition-colors {stationFilter === 'CL' ? 'bg-white text-teal-700 shadow-sm' : 'text-slate-500 hover:text-slate-700'}"
+								onclick={() => { stationFilter = 'CL'; searchQuery = ''; dropdownOpen = true; }}
+							>
+								CL
+							</button>
+							<button 
+								class="px-3 py-1 text-xs font-bold rounded-md transition-colors {stationFilter === 'MRT' ? 'bg-white text-teal-700 shadow-sm' : 'text-slate-500 hover:text-slate-700'}"
+								onclick={() => { stationFilter = 'MRT'; searchQuery = ''; dropdownOpen = true; }}
+							>
+								MRT
+							</button>
+						</div>
+					</div>
 					<div class="relative">
 						<input 
 							type="text"
