@@ -1,14 +1,6 @@
-import fs from 'fs';
-import path from 'path';
+import parsedScheduleRaw from '../../../static/schedule.json';
 
-let parsedSchedule: any = {};
-try {
-    const raw = fs.readFileSync(path.join(process.cwd(), 'static', 'schedule.json'), 'utf-8');
-    parsedSchedule = JSON.parse(raw);
-} catch (e) {
-    console.error('Could not load schedule.json', e);
-}
-
+let parsedSchedule: any = parsedScheduleRaw;
 const getLineByRelasi = (relasi: string) => {
     const r = relasi.toLowerCase();
     if (r.includes('bks') || r.includes('ckr') || r.includes('kpb')) return 'CIKARANG';
