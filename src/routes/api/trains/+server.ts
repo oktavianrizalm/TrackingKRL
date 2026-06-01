@@ -22,7 +22,8 @@ export const GET = async ({ url }) => {
 		});
 	}
 
-	const now = new Date();
+	const nowRaw = new Date();
+	const now = new Date(nowRaw.toLocaleString('en-US', { timeZone: 'Asia/Jakarta' }));
 	const currentHour = now.getHours();
 	const currentMinute = now.getMinutes();
 	const currentTotalMinutes = currentHour * 60 + currentMinute;

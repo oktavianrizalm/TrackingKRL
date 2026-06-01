@@ -2,7 +2,8 @@ import { json } from '@sveltejs/kit';
 import { allTrains } from '$lib/server/mockSchedule';
 
 export const GET = async () => {
-    const now = new Date();
+    const nowRaw = new Date();
+    const now = new Date(nowRaw.toLocaleString('en-US', { timeZone: 'Asia/Jakarta' }));
     // Use local Jakarta time if possible, or assume server time is correct
     // For robust logic, let's just use current hour/minute
     const currentHour = now.getHours();

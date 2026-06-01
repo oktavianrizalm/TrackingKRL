@@ -20,6 +20,12 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 		status: 'arrived' | 'boarding_soon' | 'upcoming';
 	}
 
+	// Timezone helper
+	const getJakartaTime = () => {
+		const raw = new Date();
+		return new Date(raw.toLocaleString('en-US', { timeZone: 'Asia/Jakarta' }));
+	};
+
 	// State
 	let stations: Station[] = $state([]);
 	let selectedStationId: string = $state('MRI');
@@ -36,7 +42,7 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 	let fetchTimer: ReturnType<typeof setInterval>;
 	let countdownTimer: ReturnType<typeof setInterval>;
 	let activeTrainsTimer: ReturnType<typeof setInterval>;
-	let now = $state(new Date());
+	let now = $state(getJakartaTime());
 
 	// Map State
 	let mapElement: HTMLElement;
@@ -170,8 +176,8 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 		if (train.status === 'arrived') return 'Tiba';
 		if (train.status === 'boarding_soon') return 'Berangkat';
 
+		const scheduled = getJakartaTime();
 		const [hours, minutes] = train.scheduled_time.split(':').map(Number);
-		const scheduled = new Date();
 		scheduled.setHours(hours, minutes, 0, 0);
 
 		if (scheduled < new Date(now.getTime() - 3600000)) {
@@ -324,7 +330,7 @@ import nearestPointOnLine from '@turf/nearest-point-on-line';
 		activeTrainsTimer = setInterval(fetchActiveTrains, 5000); // Fetch every 5s for smooth updates
 
 		countdownTimer = setInterval(() => {
-			now = new Date();
+			now = getJakartaTime();
 		}, 1000);
 	});
 
