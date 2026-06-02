@@ -713,7 +713,7 @@
 					>
 						Data diambil berdasarkan GAPEKA dari website <strong
 							>KCI & MRT</strong
-						> yang diupdate pada Februari 2026.
+						> yang diupdate pada Mei 2026.
 					</div>
 				{/if}
 			</div>
