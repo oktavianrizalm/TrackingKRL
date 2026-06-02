@@ -44,10 +44,10 @@ export const GET = async ({ url, setHeaders }) => {
 
 			const diffMinutes = trainTotalMinutes - currentTotalMinutes;
 
-			// Include trains arriving in the next 120 minutes, or just arrived (diff >= -5)
-			if (diffMinutes >= -5 && diffMinutes <= 120) {
+			// Include trains arriving in the next 120 minutes (drop departed trains)
+			if (diffMinutes >= 0 && diffMinutes <= 120) {
 				let status = 'upcoming';
-				if (diffMinutes <= 0) status = 'arrived';
+				if (diffMinutes === 0) status = 'arrived';
 				else if (diffMinutes <= 5) status = 'boarding_soon';
 
 				mockTrains.push({
