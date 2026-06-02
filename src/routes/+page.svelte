@@ -63,6 +63,8 @@
 	// Active Trains State
 	let activeTrains: any[] = $state([]);
 	let trainMarkers: Record<string, any> = {}; // Leaflet markers
+	let pendingFlyToTrainId: string | null = null;
+	let skipStationFly = false;
 
 	// Timers
 	let fetchTimer: ReturnType<typeof setInterval>;
@@ -90,6 +92,14 @@
 			(s) =>
 				s.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
 				s.id.toLowerCase().includes(searchQuery.toLowerCase()),
+		),
+	);
+
+	let filteredTrainsList = $derived(
+		trains.filter(
+			(train) =>
+				train.status === "arrived" ||
+				activeTrains.some((t) => t.id === train.id),
 		),
 	);
 
@@ -232,6 +242,24 @@
 				trainMarkers[train.id] = marker;
 			}
 		});
+
+		if (
+			pendingFlyToTrainId &&
+			trainMarkers[pendingFlyToTrainId] &&
+			L &&
+			L._mapInstance
+		) {
+			const marker = trainMarkers[pendingFlyToTrainId];
+			setTimeout(() => {
+				L._mapInstance.invalidateSize();
+				L._mapInstance.flyTo(marker.getLatLng(), 16, {
+					animate: true,
+					duration: 1.5,
+				});
+				marker.openPopup();
+			}, 200);
+			pendingFlyToTrainId = null;
+		}
 	};
 
 	const handleStationChange = () => {
@@ -300,7 +328,7 @@
 		}
 
 		// Fetch and Draw Real GeoJSON Routes
-		fetch("/krl-routes.geojson")
+		const p1 = fetch("/krl-routes.geojson")
 			.then((res) => res.json())
 			.then((data) => {
 				// Build MultiLineString for Turf snapping
@@ -377,7 +405,7 @@
 		});
 
 		// Fetch and Draw All Other Stations
-		fetch("/all-stations.json")
+		const p2 = fetch("/all-stations.json")
 			.then((res) => res.json())
 			.then((data) => {
 				const exclude = [
@@ -436,6 +464,10 @@
 
 		// Save the map instance to L so updateTrainMarkers can use it later safely
 		L._mapInstance = mapObj;
+
+		Promise.all([p1, p2]).then(() => {
+			updateTrainMarkers();
+		});
 	};
 
 	// Watch for tab change to initialize map
@@ -458,6 +490,10 @@
 		if (browser && ready && mapObj && L && selectedStationId) {
 			const coords = allStationCoords[selectedStationId];
 			if (coords && tab === "map") {
+				if (skipStationFly) {
+					skipStationFly = false;
+					return;
+				}
 				// Add a slight delay to ensure the map container is fully rendered if switching tabs
 				setTimeout(() => {
 					mapObj.invalidateSize();
@@ -467,12 +503,122 @@
 		}
 	});
 
+	const flyToTrain = (trainId: string) => {
+		pendingFlyToTrainId = trainId;
+		skipStationFly = true;
+		activeTab = "map";
+
+		if (L && L._mapInstance && trainMarkers[trainId]) {
+			setTimeout(() => {
+				L._mapInstance.invalidateSize();
+				L._mapInstance.flyTo(trainMarkers[trainId].getLatLng(), 16, {
+					animate: true,
+					duration: 1.5,
+				});
+				trainMarkers[trainId].openPopup();
+			}, 200);
+			pendingFlyToTrainId = null;
+		} else {
+			// Trigger immediate active trains fetch to see if we can get the marker
+			fetchActiveTrains().then(() => {
+				if (L && L._mapInstance && trainMarkers[trainId]) {
+					setTimeout(() => {
+						L._mapInstance.invalidateSize();
+						L._mapInstance.flyTo(
+							trainMarkers[trainId].getLatLng(),
+							16,
+							{ animate: true, duration: 1.5 },
+						);
+						trainMarkers[trainId].openPopup();
+					}, 200);
+					pendingFlyToTrainId = null;
+				} else {
+					// Fallback to station if not active or marker not found
+					const isActive = activeTrains.some((t) => t.id === trainId);
+					if (!isActive) {
+						if (selectedStationId) {
+							const coords = allStationCoords[selectedStationId];
+							if (coords) {
+								setTimeout(() => {
+									if (L && L._mapInstance) {
+										L._mapInstance.invalidateSize();
+										L._mapInstance.flyTo(coords, 16, {
+											animate: true,
+											duration: 1.5,
+										});
+									}
+								}, 200);
+							}
+						}
+						pendingFlyToTrainId = null;
+					}
+				}
+			});
+		}
+	};
+
 	onMount(async () => {
 		// Read dark mode state from DOM
 		isDarkMode = document.documentElement.classList.contains("dark");
 
 		fetchStations().then(() => {
-			fetchTrains();
+			// Auto-detect closest station if none selected
+			if (!selectedStationId && navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(
+					async (pos) => {
+						try {
+							const res = await fetch("/all-stations.json");
+							const allCoords = await res.json();
+
+							let closestId = null;
+							let minDist = Infinity;
+							const lat = pos.coords.latitude;
+							const lng = pos.coords.longitude;
+
+							Object.entries(allCoords).forEach(
+								([name, coords]) => {
+									const dx =
+										(coords as [number, number])[0] - lat;
+									const dy =
+										(coords as [number, number])[1] - lng;
+									const dist = dx * dx + dy * dy;
+									if (dist < minDist) {
+										minDist = dist;
+										const genId =
+											realStationIds[
+												name.toLowerCase()
+											] ||
+											realStationIds[
+												name
+													.replace(/ /g, "")
+													.toLowerCase()
+											];
+										if (genId) closestId = genId;
+									}
+								},
+							);
+
+							if (closestId) {
+								selectedStationId = closestId;
+								const st = stations.find(
+									(s) => s.id === closestId,
+								);
+								if (st) searchQuery = st.name;
+								fetchTrains();
+							}
+						} catch (e) {
+							console.error("Failed to auto-detect location", e);
+						}
+					},
+					(err) => {
+						console.warn("Geolocation denied or unavailable:", err);
+					},
+				);
+			}
+
+			if (selectedStationId) {
+				fetchTrains();
+			}
 			fetchActiveTrains();
 		});
 
@@ -566,7 +712,7 @@
 						class="absolute right-0 mt-2 w-64 bg-slate-800 text-teal-50 text-xs p-4 rounded-xl shadow-2xl border border-teal-700/50 z-50 animate-in fade-in zoom-in-95"
 					>
 						Data diambil berdasarkan GAPEKA dari website <strong
-							>kci.id</strong
+							>KCI & MRT</strong
 						> yang diupdate pada Februari 2026.
 					</div>
 				{/if}
@@ -719,7 +865,7 @@
 							Memuat jadwal...
 						</div>
 					</section>
-				{:else if trains.length === 0}
+				{:else if filteredTrainsList.length === 0}
 					<section
 						class="bg-slate-100 dark:bg-slate-900 rounded-2xl p-10 flex flex-col items-center justify-center gap-2 text-center border border-slate-200 dark:border-slate-800"
 					>
@@ -744,9 +890,9 @@
 					</h2>
 
 					<div class="space-y-2">
-						{#each trains as train (train.id)}
+						{#each filteredTrainsList as train (train.id)}
 							<div
-								class="bg-white dark:bg-slate-900 rounded-xl p-4 flex items-center gap-4 shadow-sm border border-slate-100 dark:border-slate-800 transition-all hover:border-teal-200 hover:shadow-md"
+								class="bg-white dark:bg-slate-900 rounded-xl p-4 flex items-center gap-4 shadow-sm border border-slate-100 dark:border-slate-800 transition-colors"
 							>
 								<div
 									class="w-1.5 self-stretch rounded-full flex-shrink-0 {lineColors[
@@ -762,35 +908,68 @@
 
 								<div class="flex-1 min-w-0">
 									<div
-										class="text-base font-bold text-slate-800 dark:text-slate-100"
+										class="text-base font-bold text-slate-800 dark:text-slate-100 uppercase"
 									>
 										{train.destination}
 									</div>
-									<div class="text-xs text-slate-500 mt-0.5">
-										ID: {train.id}
+									<div
+										class="text-xs text-slate-500 mt-0.5 flex flex-wrap items-center gap-1"
+									>
+										<span>ID: {train.id}</span>
+										{#if train.status === "arrived"}
+											<span
+												class="text-fuchsia-600 dark:text-fuchsia-400 font-medium"
+												>— Kereta Sudah Tiba</span
+											>
+										{:else if activeTrains.find((t) => t.id === train.id)}
+											{@const activeInfo =
+												activeTrains.find(
+													(t) => t.id === train.id,
+												)}
+											{@const fromStaName =
+												stations.find(
+													(s) =>
+														s.id ===
+														activeInfo?.fromStation,
+												)?.name ||
+												activeInfo?.fromStation}
+											<span
+												class="text-fuchsia-600 dark:text-fuchsia-400 font-medium"
+												>— Berjalan dari stasiun {fromStaName}</span
+											>
+										{/if}
 									</div>
 								</div>
 
-								<div class="flex-shrink-0">
+								<div
+									class="flex-shrink-0 flex flex-col gap-2 items-end justify-center"
+								>
 									{#if train.status === "arrived"}
 										<span
-											class="px-3 py-1 rounded-full text-xs font-bold bg-teal-100 text-teal-800"
+											class="px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider bg-cyan-400 dark:bg-cyan-400 text-slate-950 uppercase min-w-[64px] text-center"
 										>
 											Tiba
 										</span>
 									{:else if train.status === "boarding_soon"}
 										<span
-											class="px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800"
+											class="px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider bg-amber-400 dark:bg-amber-400 text-slate-950 uppercase min-w-[64px] text-center"
 										>
 											Segera
 										</span>
 									{:else}
 										<span
-											class="font-mono text-sm font-bold bg-slate-100 text-slate-600 px-3 py-1 rounded-lg border border-slate-200"
+											class="px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-200 min-w-[64px] text-center border border-slate-200 dark:border-slate-700"
 										>
 											{getCountdownText(train)}
 										</span>
 									{/if}
+
+									<button
+										onclick={() => flyToTrain(train.id)}
+										class="px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider bg-cyan-100 hover:bg-cyan-200 dark:bg-cyan-950/60 dark:hover:bg-cyan-900/60 text-cyan-900 dark:text-cyan-200 transition-colors uppercase min-w-[64px] text-center border border-cyan-200 dark:border-cyan-900/50 shadow-sm active:scale-95 transition-transform"
+									>
+										View
+									</button>
 								</div>
 							</div>
 						{/each}
