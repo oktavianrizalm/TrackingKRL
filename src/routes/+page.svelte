@@ -811,7 +811,8 @@
 												'MRO'
 													? 'bg-teal-900/30'
 													: ''}"
-												onclick={() => {
+												onmousedown={(e) => {
+													e.preventDefault();
 													if (station.id === "MRO") {
 														const audio = new Audio(
 															"/easter.mp3",
@@ -825,6 +826,7 @@
 													selectedStationId = station.id;
 													dropdownOpen = false;
 													handleStationChange();
+													document.getElementById("station-search")?.blur();
 												}}
 											>
 												<span
