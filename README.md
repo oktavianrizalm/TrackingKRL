@@ -1,6 +1,6 @@
 # 🚇 Jakarta KRL - MRT Commuter Tracking Webapp
 
-A modern, responsive, and performant real-time commuter tracking web application for Jakarta KRL Commuter Line and MRT Jakarta. It visualizes train routes, displays upcoming arrivals with down-to-the-second countdowns, and displays simulated real-time train positions on an interactive map.
+A modern, responsive, and performant real-time (based on scrapped schedule from official commuter and MRT Jakarta Website) commuter tracking web application for Jakarta KRL Commuter Line and MRT Jakarta. It visualizes train routes, displays upcoming arrivals with down-to-the-second countdowns, and displays simulated real-time train positions on an interactive map.
 
 ---
 
