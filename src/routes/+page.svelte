@@ -570,7 +570,7 @@
 							const res = await fetch("/all-stations.json");
 							const allCoords = await res.json();
 
-							let closestId = null;
+							let closestId: string | null = null;
 							let minDist = Infinity;
 							const lat = pos.coords.latitude;
 							const lng = pos.coords.longitude;
@@ -651,7 +651,7 @@
 		class="bg-teal-900 dark:bg-slate-900 text-white shadow-md sticky top-0 z-20 flex-shrink-0 transition-colors"
 	>
 		<div
-			class="max-w-xl mx-auto px-4 py-4 flex items-center justify-between"
+			class="w-full px-4 md:px-8 py-4 flex items-center justify-between"
 		>
 			<div class="flex items-center gap-2">
 				<img
@@ -720,7 +720,7 @@
 		</div>
 
 		<!-- Tabs -->
-		<div class="max-w-xl mx-auto flex">
+		<div class="w-full px-4 md:px-8 flex">
 			<button
 				class="flex-1 py-3 text-sm font-bold border-b-4 transition-colors {activeTab ===
 				'schedule'
@@ -743,238 +743,243 @@
 	</header>
 
 	<main
-		class="flex-1 w-full max-w-xl mx-auto relative flex flex-col bg-slate-50 dark:bg-slate-950 transition-colors"
+		class="flex-1 w-full relative flex flex-col bg-slate-50 dark:bg-slate-950 transition-colors"
 	>
 		{#if activeTab === "schedule"}
 			<div
-				class="p-4 space-y-6 pb-20 w-full animate-in fade-in slide-in-from-bottom-2 duration-300"
+				class="p-4 md:p-6 lg:p-8 w-full max-w-7xl mx-auto flex flex-col md:flex-row gap-6 pb-20 animate-in fade-in slide-in-from-bottom-2 duration-300"
 			>
-				<!-- Station Selector -->
-				<section
-					class="bg-white dark:bg-slate-900 p-4 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col gap-3 transition-colors"
-				>
-					<div
-						class="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-800 transition-colors"
+				<!-- Left Column: Station Selector -->
+				<div class="w-full md:w-[320px] lg:w-[380px] flex-shrink-0">
+					<!-- Station Selector -->
+					<section
+						class="bg-white dark:bg-slate-900 p-4 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col gap-3 transition-colors md:sticky md:top-24"
 					>
 						<label
-							for="station"
-							class="text-xs font-bold text-slate-500 uppercase tracking-wider"
+							for="station-search"
+							class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider px-1 block"
 						>
 							Pilih Stasiun
 						</label>
-					</div>
-					<div class="relative mt-3">
-						<input
-							type="text"
-							bind:value={searchQuery}
-							onfocus={() => {
-								dropdownOpen = true;
-								searchQuery = "";
-							}}
-							onblur={() =>
-								setTimeout(() => (dropdownOpen = false), 200)}
-							placeholder="Cari nama stasiun atau ID..."
-							class="w-full appearance-none bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-100 text-base font-semibold rounded-xl px-4 py-3 pr-10 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
-						/>
-						<div
-							class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-500"
-						>
-							<svg
-								class="h-4 w-4"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-								/>
-							</svg>
-						</div>
-						{#if dropdownOpen}
+						<div class="relative">
+							<input
+								id="station-search"
+								type="text"
+								bind:value={searchQuery}
+								onfocus={() => {
+									dropdownOpen = true;
+									searchQuery = "";
+								}}
+								onblur={() =>
+									setTimeout(() => (dropdownOpen = false), 200)}
+								placeholder="Cari nama stasiun atau ID..."
+								class="w-full appearance-none bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-100 text-base font-semibold rounded-xl px-4 py-3 pr-10 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+							/>
 							<div
-								class="absolute w-full mt-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-xl max-h-60 overflow-y-auto z-50 animate-in fade-in slide-in-from-top-2"
+								class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-500"
 							>
-								{#if filteredStations.length === 0}
-									<div
-										class="px-4 py-3 text-slate-500 text-sm"
-									>
-										Stasiun tidak ditemukan
-									</div>
-								{/if}
-								<!-- Search Results -->
-								<div class="max-h-60 overflow-y-auto">
-									{#each filteredStations as station}
-										<button
-											class="w-full text-left px-4 py-3 hover:bg-slate-700 transition-colors border-b border-slate-700/50 last:border-0 {station.id ===
-											'MRO'
-												? 'bg-teal-900/30'
-												: ''}"
-											onclick={() => {
-												if (station.id === "MRO") {
-													const audio = new Audio(
-														"/easter.mp3",
-													);
-													audio.play();
-													searchQuery =
-														"MRO - Mariotama";
-												} else {
-													searchQuery = station.name;
-												}
-												selectedStationId = station.id;
-												dropdownOpen = false;
-												handleStationChange();
-											}}
+								<svg
+									class="h-4 w-4"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+									/>
+								</svg>
+							</div>
+							{#if dropdownOpen}
+								<div
+									class="absolute w-full mt-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-xl max-h-60 overflow-y-auto z-50 animate-in fade-in slide-in-from-top-2"
+								>
+									{#if filteredStations.length === 0}
+										<div
+											class="px-4 py-3 text-slate-500 text-sm"
 										>
-											<span
-												class="text-slate-800 dark:text-slate-100 font-semibold"
-												>{station.name}</span
+											Stasiun tidak ditemukan
+										</div>
+									{/if}
+									<!-- Search Results -->
+									<div class="max-h-60 overflow-y-auto">
+										{#each filteredStations as station}
+											<button
+												class="w-full text-left px-4 py-3 hover:bg-slate-700 transition-colors border-b border-slate-700/50 last:border-0 {station.id ===
+												'MRO'
+													? 'bg-teal-900/30'
+													: ''}"
+												onclick={() => {
+													if (station.id === "MRO") {
+														const audio = new Audio(
+															"/easter.mp3",
+														);
+														audio.play();
+														searchQuery =
+															"MRO - Mariotama";
+													} else {
+														searchQuery = station.name;
+													}
+													selectedStationId = station.id;
+													dropdownOpen = false;
+													handleStationChange();
+												}}
 											>
-											<span
-												class="text-xs font-bold text-slate-400 dark:text-slate-500"
-												>{station.id}</span
-											>
-										</button>
-									{/each}
+												<span
+													class="text-slate-800 dark:text-slate-100 font-semibold"
+													>{station.name}</span
+												>
+												<span
+													class="text-xs font-bold text-slate-400 dark:text-slate-500"
+													>{station.id}</span
+												>
+											</button>
+										{/each}
+									</div>
 								</div>
+							{/if}
+						</div>
+						{#if lastUpdated}
+							<div
+								class="text-[10px] text-right font-medium text-slate-400 dark:text-slate-500 mt-2"
+							>
+								Diperbarui: {lastUpdated.toLocaleTimeString(
+									"en-GB",
+								)} WIB
 							</div>
 						{/if}
-					</div>
-					{#if lastUpdated}
-						<div
-							class="text-[10px] text-right font-medium text-slate-400 dark:text-slate-500 mt-2"
-						>
-							Diperbarui: {lastUpdated.toLocaleTimeString(
-								"en-GB",
-							)} WIB
-						</div>
-					{/if}
-				</section>
-
-				<!-- States -->
-				{#if isLoading}
-					<section
-						class="bg-teal-900 rounded-2xl p-10 flex flex-col items-center justify-center gap-3"
-					>
-						<div
-							class="w-8 h-8 border-4 border-white/20 border-t-white rounded-full animate-spin"
-						></div>
-						<div class="text-white/70 text-sm font-medium">
-							Memuat jadwal...
-						</div>
 					</section>
-				{:else if filteredTrainsList.length === 0}
-					<section
-						class="bg-slate-100 dark:bg-slate-900 rounded-2xl p-10 flex flex-col items-center justify-center gap-2 text-center border border-slate-200 dark:border-slate-800"
-					>
-						<div class="text-3xl mb-2">🚉</div>
-						<div
-							class="text-slate-600 dark:text-slate-400 font-semibold"
+				</div>
+
+				<!-- Right Column: Train Schedule / States -->
+				<div class="flex-grow space-y-6 min-w-0">
+					<!-- States -->
+					{#if isLoading}
+						<section
+							class="bg-teal-900 rounded-2xl p-10 flex flex-col items-center justify-center gap-3"
 						>
-							Tidak ada jadwal kereta
-						</div>
-						<div class="text-slate-400 dark:text-slate-600 text-sm">
-							Kereta terakhir mungkin sudah berangkat.
-						</div>
-					</section>
-				{/if}
-
-				<!-- Train List -->
-				<section>
-					<h2
-						class="text-xl font-black text-slate-800 dark:text-slate-100 flex items-center gap-2"
-					>
-						Jadwal Kereta
-					</h2>
-
-					<div class="space-y-2">
-						{#each filteredTrainsList as train (train.id)}
 							<div
-								class="bg-white dark:bg-slate-900 rounded-xl p-4 flex items-center gap-4 shadow-sm border border-slate-100 dark:border-slate-800 transition-colors"
-							>
-								<div
-									class="w-1.5 self-stretch rounded-full flex-shrink-0 {lineColors[
-										train.line
-									] || 'bg-slate-400'}"
-								></div>
-
-								<div
-									class="font-mono text-lg font-bold text-slate-800 dark:text-slate-200 min-w-[50px]"
-								>
-									{train.scheduled_time}
-								</div>
-
-								<div class="flex-1 min-w-0">
-									<div
-										class="text-base font-bold text-slate-800 dark:text-slate-100 uppercase"
-									>
-										{train.destination}
-									</div>
-									<div
-										class="text-xs text-slate-500 mt-0.5 flex flex-wrap items-center gap-1"
-									>
-										<span>ID: {train.id}</span>
-										{#if train.status === "arrived"}
-											<span
-												class="text-fuchsia-600 dark:text-fuchsia-400 font-medium"
-												>— Kereta Sudah Tiba</span
-											>
-										{:else if activeTrains.find((t) => t.id === train.id)}
-											{@const activeInfo =
-												activeTrains.find(
-													(t) => t.id === train.id,
-												)}
-											{@const fromStaName =
-												stations.find(
-													(s) =>
-														s.id ===
-														activeInfo?.fromStation,
-												)?.name ||
-												activeInfo?.fromStation}
-											<span
-												class="text-fuchsia-600 dark:text-fuchsia-400 font-medium"
-												>— Berjalan dari stasiun {fromStaName}</span
-											>
-										{/if}
-									</div>
-								</div>
-
-								<div
-									class="flex-shrink-0 flex flex-col gap-2 items-end justify-center"
-								>
-									{#if train.status === "arrived"}
-										<span
-											class="px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider bg-cyan-400 dark:bg-cyan-400 text-slate-950 uppercase min-w-[64px] text-center"
-										>
-											Tiba
-										</span>
-									{:else if train.status === "boarding_soon"}
-										<span
-											class="px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider bg-amber-400 dark:bg-amber-400 text-slate-950 uppercase min-w-[64px] text-center"
-										>
-											Segera
-										</span>
-									{:else}
-										<span
-											class="px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-200 min-w-[64px] text-center border border-slate-200 dark:border-slate-700"
-										>
-											{getCountdownText(train)}
-										</span>
-									{/if}
-
-									<button
-										onclick={() => flyToTrain(train.id)}
-										class="px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider bg-cyan-100 hover:bg-cyan-200 dark:bg-cyan-950/60 dark:hover:bg-cyan-900/60 text-cyan-900 dark:text-cyan-200 transition-colors uppercase min-w-[64px] text-center border border-cyan-200 dark:border-cyan-900/50 shadow-sm active:scale-95 transition-transform"
-									>
-										View
-									</button>
-								</div>
+								class="w-8 h-8 border-4 border-white/20 border-t-white rounded-full animate-spin"
+							></div>
+							<div class="text-white/70 text-sm font-medium">
+								Memuat jadwal...
 							</div>
-						{/each}
-					</div>
-				</section>
+						</section>
+					{:else if filteredTrainsList.length === 0}
+						<section
+							class="bg-slate-100 dark:bg-slate-900 rounded-2xl p-10 flex flex-col items-center justify-center gap-2 text-center border border-slate-200 dark:border-slate-800"
+						>
+							<div class="text-3xl mb-2">🚉</div>
+							<div
+								class="text-slate-600 dark:text-slate-400 font-semibold"
+							>
+								Tidak ada jadwal kereta
+							</div>
+							<div class="text-slate-400 dark:text-slate-600 text-sm">
+								Kereta terakhir mungkin sudah berangkat.
+							</div>
+						</section>
+					{/if}
+
+					<!-- Train List -->
+					{#if !isLoading && filteredTrainsList.length > 0}
+						<section>
+							<h2
+								class="text-xl font-black text-slate-800 dark:text-slate-100 flex items-center gap-2 mb-4"
+							>
+								Jadwal Kereta
+							</h2>
+
+							<div class="space-y-2">
+								{#each filteredTrainsList as train (train.id)}
+									<div
+										class="bg-white dark:bg-slate-900 rounded-xl p-4 flex items-center gap-4 shadow-sm border border-slate-100 dark:border-slate-800 transition-colors"
+									>
+										<div
+											class="w-1.5 self-stretch rounded-full flex-shrink-0 {lineColors[
+												train.line
+											] || 'bg-slate-400'}"
+										></div>
+
+										<div
+											class="font-mono text-lg font-bold text-slate-800 dark:text-slate-200 min-w-[50px]"
+										>
+											{train.scheduled_time}
+										</div>
+
+										<div class="flex-1 min-w-0">
+											<div
+												class="text-base font-bold text-slate-800 dark:text-slate-100 uppercase"
+											>
+												{train.destination}
+											</div>
+											<div
+												class="text-xs text-slate-500 mt-0.5 flex flex-wrap items-center gap-1"
+											>
+												<span>ID: {train.id}</span>
+												{#if train.status === "arrived"}
+													<span
+														class="text-fuchsia-600 dark:text-fuchsia-400 font-medium"
+														>— Kereta Sudah Tiba</span
+													>
+												{:else if activeTrains.find((t) => t.id === train.id)}
+													{@const activeInfo =
+														activeTrains.find(
+															(t) => t.id === train.id,
+														)}
+													{@const fromStaName =
+														stations.find(
+															(s) =>
+																s.id ===
+																activeInfo?.fromStation,
+														)?.name ||
+														activeInfo?.fromStation}
+													<span
+														class="text-fuchsia-600 dark:text-fuchsia-400 font-medium"
+														>— Berjalan dari stasiun {fromStaName}</span
+													>
+												{/if}
+											</div>
+										</div>
+
+										<div
+											class="flex-shrink-0 flex flex-col gap-2 items-end justify-center"
+										>
+											{#if train.status === "arrived"}
+												<span
+													class="px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider bg-cyan-400 dark:bg-cyan-400 text-slate-950 uppercase min-w-[64px] text-center"
+												>
+													Tiba
+												</span>
+											{:else if train.status === "boarding_soon"}
+												<span
+													class="px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider bg-amber-400 dark:bg-amber-400 text-slate-950 uppercase min-w-[64px] text-center"
+												>
+													Segera
+												</span>
+											{:else}
+												<span
+													class="px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-200 min-w-[64px] text-center border border-slate-200 dark:border-slate-700"
+												>
+													{getCountdownText(train)}
+												</span>
+											{/if}
+
+											<button
+												onclick={() => flyToTrain(train.id)}
+												class="px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider bg-cyan-100 hover:bg-cyan-200 dark:bg-cyan-950/60 dark:hover:bg-cyan-900/60 text-cyan-900 dark:text-cyan-200 transition-colors uppercase min-w-[64px] text-center border border-cyan-200 dark:border-cyan-900/50 shadow-sm active:scale-95 transition-transform"
+											>
+												View
+											</button>
+										</div>
+									</div>
+								{/each}
+							</div>
+						</section>
+					{/if}
+				</div>
 			</div>
 		{/if}
 
