@@ -303,8 +303,9 @@
 		isMapReady = true;
 
 		// Tile Layers
+		const cartoApiKey = "cb1_31et_1_3e7d913f83a18f5ff657054b";
 		lightLayer = L.tileLayer(
-			"https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+			`https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=${cartoApiKey}`,
 			{
 				maxZoom: 20,
 				attribution:
@@ -313,7 +314,7 @@
 		);
 
 		darkLayer = L.tileLayer(
-			"https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+			`https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=${cartoApiKey}`,
 			{
 				maxZoom: 20,
 				attribution:
