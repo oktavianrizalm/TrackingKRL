@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount, onDestroy } from "svelte";
 	import { browser } from "$app/environment";
+	import { PUBLIC_CARTO_API_KEY } from "$env/static/public";
 	import { stationCoordinates, routes, realStationIds } from "$lib/mapData";
 	import { point, multiLineString } from "@turf/helpers";
 	import nearestPointOnLine from "@turf/nearest-point-on-line";
@@ -303,9 +304,9 @@
 		isMapReady = true;
 
 		// Tile Layers
-		const cartoApiKey = "cb1_31et_1_3e7d913f83a18f5ff657054b";
+		const cartoKeyParam = PUBLIC_CARTO_API_KEY ? `?key=${PUBLIC_CARTO_API_KEY}` : "";
 		lightLayer = L.tileLayer(
-			`https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=${cartoApiKey}`,
+			`https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png${cartoKeyParam}`,
 			{
 				maxZoom: 20,
 				attribution:
@@ -314,7 +315,7 @@
 		);
 
 		darkLayer = L.tileLayer(
-			`https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=${cartoApiKey}`,
+			`https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png${cartoKeyParam}`,
 			{
 				maxZoom: 20,
 				attribution:
