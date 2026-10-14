@@ -193,6 +193,36 @@ const panturaTrains = [
     line: "ANTARKOTA",
     destination: "Ketapang",
     schedule: { "PSE": "12:15", "BKS": "12:45", "CNP": "15:00", "TG": "16:05", "PK": "17:00", "SMT": "18:15", "CU": "19:35", "BJ": "20:45", "SBI": "22:10", "SGU": "22:40", "SDA": "23:15", "BG": "23:55", "PB": "00:55", "TGL": "02:15", "JR": "02:55", "GLM": "04:10", "RGP": "04:45", "BWI": "05:20", "KTG": "05:40" }
+  },
+  // Pandalungan (GAPEKA 2025/2026: Gambir - Jember via Surabaya Pasarturi)
+  {
+    id: "KA 75F Pandalungan",
+    name: "Pandalungan",
+    line: "ANTARKOTA",
+    destination: "Gambir",
+    schedule: { "JR": "14:55", "TGL": "15:35", "KK": "16:15", "PB": "17:00", "BG": "18:05", "SBI": "19:15", "BJ": "20:30", "CU": "21:05", "SMT": "22:30", "PK": "23:45", "TG": "00:35", "CN": "01:30", "JNG": "03:55", "GMR": "04:15" }
+  },
+  {
+    id: "KA 76F Pandalungan",
+    name: "Pandalungan",
+    line: "ANTARKOTA",
+    destination: "Jember",
+    schedule: { "GMR": "20:05", "CN": "22:40", "TG": "23:35", "PK": "00:25", "SMT": "01:35", "CU": "03:00", "BJ": "03:35", "SBI": "04:50", "BG": "06:05", "PB": "07:10", "KK": "07:55", "TGL": "08:40", "JR": "09:15" }
+  },
+  // Majapahit (GAPEKA 2025/2026: Pasar Senen - Malang via Semarang)
+  {
+    id: "KA 215 Majapahit",
+    name: "Majapahit",
+    line: "ANTARKOTA",
+    destination: "Pasar Senen",
+    schedule: { "ML": "18:45", "BG": "19:55", "SDA": "20:25", "SGU": "20:55", "SBI": "21:20", "LMG": "21:55", "BBT": "22:20", "BJ": "22:50", "CU": "23:25", "NBO": "00:25", "SMT": "01:15", "PK": "02:30", "TG": "03:20", "CNP": "04:15", "BKS": "06:40", "JNG": "06:58", "PSE": "07:15" }
+  },
+  {
+    id: "KA 216 Majapahit",
+    name: "Majapahit",
+    line: "ANTARKOTA",
+    destination: "Malang",
+    schedule: { "PSE": "19:20", "BKS": "19:50", "CNP": "22:25", "TG": "23:20", "PK": "00:10", "SMT": "01:25", "NBO": "02:15", "CU": "03:15", "BJ": "03:50", "BBT": "04:20", "LMG": "04:45", "SBI": "05:25", "SGU": "05:50", "SDA": "06:20", "BG": "06:50", "ML": "08:00" }
   }
 ];
 
@@ -481,6 +511,21 @@ const selatanTrains = [
     line: "ANTARKOTA",
     destination: "Kutoarjo",
     schedule: { "PSE": "07:10", "BKS": "07:40", "CNP": "09:55", "PWT": "11:45", "KYA": "12:20", "GB": "12:50", "KTA": "13:25" }
+  },
+  // Progo (GAPEKA 2025/2026: Lempuyangan - Pasar Senen via Purwokerto)
+  {
+    id: "KA 247 Progo",
+    name: "Progo",
+    line: "ANTARKOTA",
+    destination: "Pasar Senen",
+    schedule: { "LPN": "11:30", "WT": "12:00", "KTA": "12:35", "GB": "13:05", "KYA": "13:40", "PWT": "14:15", "CNP": "16:30", "BKS": "18:55", "JNG": "19:15", "PSE": "19:30" }
+  },
+  {
+    id: "KA 248 Progo",
+    name: "Progo",
+    line: "ANTARKOTA",
+    destination: "Lempuyangan",
+    schedule: { "PSE": "23:10", "BKS": "23:40", "CNP": "02:00", "PWT": "04:20", "KYA": "04:55", "GB": "05:25", "KTA": "06:00", "WT": "06:35", "LPN": "07:05" }
   }
 ];
 
@@ -803,7 +848,7 @@ merakDeparturesMER.forEach((dep, idx) => {
   });
 });
 
-// 5b. Commuter Line Bandung Raya (PDL <-> CCL) - 16 trips
+// 5b. Commuter Line Bandung Raya (PDL <-> CCL) - 24 trips (GAPEKA 2025/2026: Kecepatan s.d. 110 km/jam, durasi 63 menit)
 const bdrDeparturesPDL = ["05:05", "06:15", "07:30", "08:50", "10:15", "11:45", "13:10", "14:40", "16:05", "17:35", "19:00", "20:30"];
 const bdrDeparturesCCL = ["05:10", "06:25", "07:45", "09:10", "10:35", "12:05", "13:35", "15:00", "16:25", "17:55", "19:20", "20:50"];
 
@@ -815,10 +860,10 @@ bdrDeparturesPDL.forEach((dep, idx) => {
     destination: "Cicalengka",
     schedule: {
       "PDL": dep,
-      "CMI": addMinutes(dep, 16),
-      "BD": addMinutes(dep, 32),
-      "KAC": addMinutes(dep, 46),
-      "CCL": addMinutes(dep, 78)
+      "CMI": addMinutes(dep, 14),
+      "BD": addMinutes(dep, 28),
+      "KAC": addMinutes(dep, 40),
+      "CCL": addMinutes(dep, 63)
     }
   });
 });
@@ -831,10 +876,10 @@ bdrDeparturesCCL.forEach((dep, idx) => {
     destination: "Padalarang",
     schedule: {
       "CCL": dep,
-      "KAC": addMinutes(dep, 32),
-      "BD": addMinutes(dep, 46),
-      "CMI": addMinutes(dep, 62),
-      "PDL": addMinutes(dep, 78)
+      "KAC": addMinutes(dep, 25),
+      "BD": addMinutes(dep, 38),
+      "CMI": addMinutes(dep, 50),
+      "PDL": addMinutes(dep, 63)
     }
   });
 });
@@ -877,9 +922,9 @@ ykSoloDeparturesPL.forEach((dep, idx) => {
   });
 });
 
-// 5d. KA Prameks (YK <-> KTA) - 8 trips
-const prameksDeparturesYK = ["06:37", "10:26", "13:49", "17:50"];
-const prameksDeparturesKTA = ["05:25", "09:05", "12:20", "16:05"];
+// 5d. KA Prameks (YK <-> KTA) - 10 trips (GAPEKA 2025/2026: Tambahan frekuensi)
+const prameksDeparturesYK = ["06:37", "09:05", "11:45", "14:55", "17:50"];
+const prameksDeparturesKTA = ["05:25", "07:50", "10:20", "13:30", "16:25"];
 
 prameksDeparturesYK.forEach((dep, idx) => {
   localTrains.push({
@@ -889,8 +934,8 @@ prameksDeparturesYK.forEach((dep, idx) => {
     destination: "Kutoarjo",
     schedule: {
       "YK": dep,
-      "WT": addMinutes(dep, 30),
-      "KTA": addMinutes(dep, 65)
+      "WT": addMinutes(dep, 28),
+      "KTA": addMinutes(dep, 58)
     }
   });
 });
@@ -903,8 +948,8 @@ prameksDeparturesKTA.forEach((dep, idx) => {
     destination: "Yogyakarta",
     schedule: {
       "KTA": dep,
-      "WT": addMinutes(dep, 35),
-      "YK": addMinutes(dep, 65)
+      "WT": addMinutes(dep, 30),
+      "YK": addMinutes(dep, 58)
     }
   });
 });
@@ -1052,17 +1097,19 @@ sibinuangDeparturesNRS.forEach((dep, idx) => {
 });
 
 // ==========================================
-// 6. WHOOSH (Kereta Cepat Jakarta - Bandung)
+// 6. WHOOSH (Kereta Cepat Jakarta - Bandung) - 62 Trips (GAPEKA 2025/2026)
 // ==========================================
 const whooshTrains = [];
-// Halim <-> Padalarang <-> Tegalluar (30 trips throughout the day from 06:00 to 21:00)
+// Halim <-> Padalarang <-> Tegalluar (62 trips throughout the day from 06:00 to 21:00 with 30-min peak headway)
 const whooshDeparturesHLM = [
-  "06:40", "07:05", "07:55", "08:45", "09:10", "10:20", "11:10", "12:00", "13:02", "14:02",
-  "15:00", "15:35", "16:10", "16:45", "17:35", "18:00", "18:50", "19:40", "20:30", "21:15"
+  "06:00", "06:30", "07:00", "07:30", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30",
+  "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30",
+  "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00"
 ];
 const whooshDeparturesTGLR = [
-  "06:40", "07:05", "07:55", "08:45", "09:10", "10:20", "11:10", "12:00", "13:02", "14:02",
-  "15:00", "15:35", "16:10", "16:45", "17:35", "18:00", "18:50", "19:40", "20:30", "21:15"
+  "06:00", "06:30", "07:00", "07:30", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30",
+  "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30",
+  "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00"
 ];
 
 whooshDeparturesHLM.forEach((dep, idx) => {
@@ -1144,12 +1191,18 @@ bandaraSoettaDeparturesBST.forEach((dep, idx) => {
   });
 });
 
-// 7b. Bandara YIA (YK <-> YIA)
+// 7b. Bandara YIA (YK <-> YIA) - 24 Regular Trips + 8 Xpress Trips (GAPEKA 2025/2026 KAI Commuter)
 const bandaraYIADeparturesYK = [
-  "05:00", "06:00", "07:05", "08:05", "09:10", "10:10", "11:20", "12:20", "13:30", "14:30", "15:40", "16:40", "17:50", "18:50", "20:00", "21:00"
+  "04:20", "05:10", "06:30", "08:33", "08:55", "10:15", "12:00", "12:35", "14:13", "15:49", "16:07", "18:25"
 ];
 const bandaraYIADeparturesYIA = [
-  "05:50", "06:50", "07:55", "08:55", "10:00", "11:00", "12:10", "13:10", "14:20", "15:20", "16:30", "17:30", "18:40", "19:40", "20:50", "21:50"
+  "05:16", "06:20", "07:46", "09:53", "11:35", "13:25", "14:56", "15:20", "17:00", "17:34", "19:46", "20:55"
+];
+const bandaraYIAXpressYK = [
+  "05:00", "07:20", "09:30", "11:00", "13:40", "16:40", "18:00", "20:15"
+];
+const bandaraYIAXpressYIA = [
+  "05:55", "08:15", "10:25", "11:55", "14:35", "17:35", "18:55", "21:10"
 ];
 
 bandaraYIADeparturesYK.forEach((dep, idx) => {
@@ -1176,6 +1229,33 @@ bandaraYIADeparturesYIA.forEach((dep, idx) => {
       "YIA": dep,
       "WT": addMinutes(dep, 15),
       "YK": addMinutes(dep, 39)
+    }
+  });
+});
+
+// KA Bandara YIA Xpress (Non-stop ~35 menit)
+bandaraYIAXpressYK.forEach((dep, idx) => {
+  bandaraTrains.push({
+    id: `KA ${7251 + idx * 2} YIA Xpress`,
+    name: "KA Bandara YIA Xpress",
+    line: "BANDARA",
+    destination: "Bandara YIA",
+    schedule: {
+      "YK": dep,
+      "YIA": addMinutes(dep, 35)
+    }
+  });
+});
+
+bandaraYIAXpressYIA.forEach((dep, idx) => {
+  bandaraTrains.push({
+    id: `KA ${7252 + idx * 2} YIA Xpress`,
+    name: "KA Bandara YIA Xpress",
+    line: "BANDARA",
+    destination: "Yogyakarta",
+    schedule: {
+      "YIA": dep,
+      "YK": addMinutes(dep, 35)
     }
   });
 });

@@ -457,6 +457,98 @@
     }
   },
   {
+    "id": "KA 75F Pandalungan",
+    "name": "Pandalungan",
+    "line": "ANTARKOTA",
+    "destination": "Gambir",
+    "schedule": {
+      "JR": "14:55",
+      "TGL": "15:35",
+      "KK": "16:15",
+      "PB": "17:00",
+      "BG": "18:05",
+      "SBI": "19:15",
+      "BJ": "20:30",
+      "CU": "21:05",
+      "SMT": "22:30",
+      "PK": "23:45",
+      "TG": "00:35",
+      "CN": "01:30",
+      "JNG": "03:55",
+      "GMR": "04:15"
+    }
+  },
+  {
+    "id": "KA 76F Pandalungan",
+    "name": "Pandalungan",
+    "line": "ANTARKOTA",
+    "destination": "Jember",
+    "schedule": {
+      "GMR": "20:05",
+      "CN": "22:40",
+      "TG": "23:35",
+      "PK": "00:25",
+      "SMT": "01:35",
+      "CU": "03:00",
+      "BJ": "03:35",
+      "SBI": "04:50",
+      "BG": "06:05",
+      "PB": "07:10",
+      "KK": "07:55",
+      "TGL": "08:40",
+      "JR": "09:15"
+    }
+  },
+  {
+    "id": "KA 215 Majapahit",
+    "name": "Majapahit",
+    "line": "ANTARKOTA",
+    "destination": "Pasar Senen",
+    "schedule": {
+      "ML": "18:45",
+      "BG": "19:55",
+      "SDA": "20:25",
+      "SGU": "20:55",
+      "SBI": "21:20",
+      "LMG": "21:55",
+      "BBT": "22:20",
+      "BJ": "22:50",
+      "CU": "23:25",
+      "NBO": "00:25",
+      "SMT": "01:15",
+      "PK": "02:30",
+      "TG": "03:20",
+      "CNP": "04:15",
+      "BKS": "06:40",
+      "JNG": "06:58",
+      "PSE": "07:15"
+    }
+  },
+  {
+    "id": "KA 216 Majapahit",
+    "name": "Majapahit",
+    "line": "ANTARKOTA",
+    "destination": "Malang",
+    "schedule": {
+      "PSE": "19:20",
+      "BKS": "19:50",
+      "CNP": "22:25",
+      "TG": "23:20",
+      "PK": "00:10",
+      "SMT": "01:25",
+      "NBO": "02:15",
+      "CU": "03:15",
+      "BJ": "03:50",
+      "BBT": "04:20",
+      "LMG": "04:45",
+      "SBI": "05:25",
+      "SGU": "05:50",
+      "SDA": "06:20",
+      "BG": "06:50",
+      "ML": "08:00"
+    }
+  },
+  {
     "id": "KA 7 Argo Lawu",
     "name": "Argo Lawu",
     "line": "ANTARKOTA",
@@ -1173,6 +1265,41 @@
       "KYA": "12:20",
       "GB": "12:50",
       "KTA": "13:25"
+    }
+  },
+  {
+    "id": "KA 247 Progo",
+    "name": "Progo",
+    "line": "ANTARKOTA",
+    "destination": "Pasar Senen",
+    "schedule": {
+      "LPN": "11:30",
+      "WT": "12:00",
+      "KTA": "12:35",
+      "GB": "13:05",
+      "KYA": "13:40",
+      "PWT": "14:15",
+      "CNP": "16:30",
+      "BKS": "18:55",
+      "JNG": "19:15",
+      "PSE": "19:30"
+    }
+  },
+  {
+    "id": "KA 248 Progo",
+    "name": "Progo",
+    "line": "ANTARKOTA",
+    "destination": "Lempuyangan",
+    "schedule": {
+      "PSE": "23:10",
+      "BKS": "23:40",
+      "CNP": "02:00",
+      "PWT": "04:20",
+      "KYA": "04:55",
+      "GB": "05:25",
+      "KTA": "06:00",
+      "WT": "06:35",
+      "LPN": "07:05"
     }
   },
   {
@@ -2002,10 +2129,10 @@
     "destination": "Cicalengka",
     "schedule": {
       "PDL": "05:05",
-      "CMI": "05:21",
-      "BD": "05:37",
-      "KAC": "05:51",
-      "CCL": "06:23"
+      "CMI": "05:19",
+      "BD": "05:33",
+      "KAC": "05:45",
+      "CCL": "06:08"
     }
   },
   {
@@ -2015,10 +2142,10 @@
     "destination": "Cicalengka",
     "schedule": {
       "PDL": "06:15",
-      "CMI": "06:31",
-      "BD": "06:47",
-      "KAC": "07:01",
-      "CCL": "07:33"
+      "CMI": "06:29",
+      "BD": "06:43",
+      "KAC": "06:55",
+      "CCL": "07:18"
     }
   },
   {
@@ -2028,10 +2155,10 @@
     "destination": "Cicalengka",
     "schedule": {
       "PDL": "07:30",
-      "CMI": "07:46",
-      "BD": "08:02",
-      "KAC": "08:16",
-      "CCL": "08:48"
+      "CMI": "07:44",
+      "BD": "07:58",
+      "KAC": "08:10",
+      "CCL": "08:33"
     }
   },
   {
@@ -2041,10 +2168,10 @@
     "destination": "Cicalengka",
     "schedule": {
       "PDL": "08:50",
-      "CMI": "09:06",
-      "BD": "09:22",
-      "KAC": "09:36",
-      "CCL": "10:08"
+      "CMI": "09:04",
+      "BD": "09:18",
+      "KAC": "09:30",
+      "CCL": "09:53"
     }
   },
   {
@@ -2054,10 +2181,10 @@
     "destination": "Cicalengka",
     "schedule": {
       "PDL": "10:15",
-      "CMI": "10:31",
-      "BD": "10:47",
-      "KAC": "11:01",
-      "CCL": "11:33"
+      "CMI": "10:29",
+      "BD": "10:43",
+      "KAC": "10:55",
+      "CCL": "11:18"
     }
   },
   {
@@ -2067,10 +2194,10 @@
     "destination": "Cicalengka",
     "schedule": {
       "PDL": "11:45",
-      "CMI": "12:01",
-      "BD": "12:17",
-      "KAC": "12:31",
-      "CCL": "13:03"
+      "CMI": "11:59",
+      "BD": "12:13",
+      "KAC": "12:25",
+      "CCL": "12:48"
     }
   },
   {
@@ -2080,10 +2207,10 @@
     "destination": "Cicalengka",
     "schedule": {
       "PDL": "13:10",
-      "CMI": "13:26",
-      "BD": "13:42",
-      "KAC": "13:56",
-      "CCL": "14:28"
+      "CMI": "13:24",
+      "BD": "13:38",
+      "KAC": "13:50",
+      "CCL": "14:13"
     }
   },
   {
@@ -2093,10 +2220,10 @@
     "destination": "Cicalengka",
     "schedule": {
       "PDL": "14:40",
-      "CMI": "14:56",
-      "BD": "15:12",
-      "KAC": "15:26",
-      "CCL": "15:58"
+      "CMI": "14:54",
+      "BD": "15:08",
+      "KAC": "15:20",
+      "CCL": "15:43"
     }
   },
   {
@@ -2106,10 +2233,10 @@
     "destination": "Cicalengka",
     "schedule": {
       "PDL": "16:05",
-      "CMI": "16:21",
-      "BD": "16:37",
-      "KAC": "16:51",
-      "CCL": "17:23"
+      "CMI": "16:19",
+      "BD": "16:33",
+      "KAC": "16:45",
+      "CCL": "17:08"
     }
   },
   {
@@ -2119,10 +2246,10 @@
     "destination": "Cicalengka",
     "schedule": {
       "PDL": "17:35",
-      "CMI": "17:51",
-      "BD": "18:07",
-      "KAC": "18:21",
-      "CCL": "18:53"
+      "CMI": "17:49",
+      "BD": "18:03",
+      "KAC": "18:15",
+      "CCL": "18:38"
     }
   },
   {
@@ -2132,10 +2259,10 @@
     "destination": "Cicalengka",
     "schedule": {
       "PDL": "19:00",
-      "CMI": "19:16",
-      "BD": "19:32",
-      "KAC": "19:46",
-      "CCL": "20:18"
+      "CMI": "19:14",
+      "BD": "19:28",
+      "KAC": "19:40",
+      "CCL": "20:03"
     }
   },
   {
@@ -2145,10 +2272,10 @@
     "destination": "Cicalengka",
     "schedule": {
       "PDL": "20:30",
-      "CMI": "20:46",
-      "BD": "21:02",
-      "KAC": "21:16",
-      "CCL": "21:48"
+      "CMI": "20:44",
+      "BD": "20:58",
+      "KAC": "21:10",
+      "CCL": "21:33"
     }
   },
   {
@@ -2158,10 +2285,10 @@
     "destination": "Padalarang",
     "schedule": {
       "CCL": "05:10",
-      "KAC": "05:42",
-      "BD": "05:56",
-      "CMI": "06:12",
-      "PDL": "06:28"
+      "KAC": "05:35",
+      "BD": "05:48",
+      "CMI": "06:00",
+      "PDL": "06:13"
     }
   },
   {
@@ -2171,10 +2298,10 @@
     "destination": "Padalarang",
     "schedule": {
       "CCL": "06:25",
-      "KAC": "06:57",
-      "BD": "07:11",
-      "CMI": "07:27",
-      "PDL": "07:43"
+      "KAC": "06:50",
+      "BD": "07:03",
+      "CMI": "07:15",
+      "PDL": "07:28"
     }
   },
   {
@@ -2184,10 +2311,10 @@
     "destination": "Padalarang",
     "schedule": {
       "CCL": "07:45",
-      "KAC": "08:17",
-      "BD": "08:31",
-      "CMI": "08:47",
-      "PDL": "09:03"
+      "KAC": "08:10",
+      "BD": "08:23",
+      "CMI": "08:35",
+      "PDL": "08:48"
     }
   },
   {
@@ -2197,10 +2324,10 @@
     "destination": "Padalarang",
     "schedule": {
       "CCL": "09:10",
-      "KAC": "09:42",
-      "BD": "09:56",
-      "CMI": "10:12",
-      "PDL": "10:28"
+      "KAC": "09:35",
+      "BD": "09:48",
+      "CMI": "10:00",
+      "PDL": "10:13"
     }
   },
   {
@@ -2210,10 +2337,10 @@
     "destination": "Padalarang",
     "schedule": {
       "CCL": "10:35",
-      "KAC": "11:07",
-      "BD": "11:21",
-      "CMI": "11:37",
-      "PDL": "11:53"
+      "KAC": "11:00",
+      "BD": "11:13",
+      "CMI": "11:25",
+      "PDL": "11:38"
     }
   },
   {
@@ -2223,10 +2350,10 @@
     "destination": "Padalarang",
     "schedule": {
       "CCL": "12:05",
-      "KAC": "12:37",
-      "BD": "12:51",
-      "CMI": "13:07",
-      "PDL": "13:23"
+      "KAC": "12:30",
+      "BD": "12:43",
+      "CMI": "12:55",
+      "PDL": "13:08"
     }
   },
   {
@@ -2236,10 +2363,10 @@
     "destination": "Padalarang",
     "schedule": {
       "CCL": "13:35",
-      "KAC": "14:07",
-      "BD": "14:21",
-      "CMI": "14:37",
-      "PDL": "14:53"
+      "KAC": "14:00",
+      "BD": "14:13",
+      "CMI": "14:25",
+      "PDL": "14:38"
     }
   },
   {
@@ -2249,10 +2376,10 @@
     "destination": "Padalarang",
     "schedule": {
       "CCL": "15:00",
-      "KAC": "15:32",
-      "BD": "15:46",
-      "CMI": "16:02",
-      "PDL": "16:18"
+      "KAC": "15:25",
+      "BD": "15:38",
+      "CMI": "15:50",
+      "PDL": "16:03"
     }
   },
   {
@@ -2262,10 +2389,10 @@
     "destination": "Padalarang",
     "schedule": {
       "CCL": "16:25",
-      "KAC": "16:57",
-      "BD": "17:11",
-      "CMI": "17:27",
-      "PDL": "17:43"
+      "KAC": "16:50",
+      "BD": "17:03",
+      "CMI": "17:15",
+      "PDL": "17:28"
     }
   },
   {
@@ -2275,10 +2402,10 @@
     "destination": "Padalarang",
     "schedule": {
       "CCL": "17:55",
-      "KAC": "18:27",
-      "BD": "18:41",
-      "CMI": "18:57",
-      "PDL": "19:13"
+      "KAC": "18:20",
+      "BD": "18:33",
+      "CMI": "18:45",
+      "PDL": "18:58"
     }
   },
   {
@@ -2288,10 +2415,10 @@
     "destination": "Padalarang",
     "schedule": {
       "CCL": "19:20",
-      "KAC": "19:52",
-      "BD": "20:06",
-      "CMI": "20:22",
-      "PDL": "20:38"
+      "KAC": "19:45",
+      "BD": "19:58",
+      "CMI": "20:10",
+      "PDL": "20:23"
     }
   },
   {
@@ -2301,10 +2428,10 @@
     "destination": "Padalarang",
     "schedule": {
       "CCL": "20:50",
-      "KAC": "21:22",
-      "BD": "21:36",
-      "CMI": "21:52",
-      "PDL": "22:08"
+      "KAC": "21:15",
+      "BD": "21:28",
+      "CMI": "21:40",
+      "PDL": "21:53"
     }
   },
   {
@@ -2650,8 +2777,8 @@
     "destination": "Kutoarjo",
     "schedule": {
       "YK": "06:37",
-      "WT": "07:07",
-      "KTA": "07:42"
+      "WT": "07:05",
+      "KTA": "07:35"
     }
   },
   {
@@ -2660,9 +2787,9 @@
     "line": "LOKAL",
     "destination": "Kutoarjo",
     "schedule": {
-      "YK": "10:26",
-      "WT": "10:56",
-      "KTA": "11:31"
+      "YK": "09:05",
+      "WT": "09:33",
+      "KTA": "10:03"
     }
   },
   {
@@ -2671,9 +2798,9 @@
     "line": "LOKAL",
     "destination": "Kutoarjo",
     "schedule": {
-      "YK": "13:49",
-      "WT": "14:19",
-      "KTA": "14:54"
+      "YK": "11:45",
+      "WT": "12:13",
+      "KTA": "12:43"
     }
   },
   {
@@ -2682,9 +2809,20 @@
     "line": "LOKAL",
     "destination": "Kutoarjo",
     "schedule": {
+      "YK": "14:55",
+      "WT": "15:23",
+      "KTA": "15:53"
+    }
+  },
+  {
+    "id": "KA 559 Prameks",
+    "name": "Prambanan Ekspres",
+    "line": "LOKAL",
+    "destination": "Kutoarjo",
+    "schedule": {
       "YK": "17:50",
-      "WT": "18:20",
-      "KTA": "18:55"
+      "WT": "18:18",
+      "KTA": "18:48"
     }
   },
   {
@@ -2694,8 +2832,8 @@
     "destination": "Yogyakarta",
     "schedule": {
       "KTA": "05:25",
-      "WT": "06:00",
-      "YK": "06:30"
+      "WT": "05:55",
+      "YK": "06:23"
     }
   },
   {
@@ -2704,9 +2842,9 @@
     "line": "LOKAL",
     "destination": "Yogyakarta",
     "schedule": {
-      "KTA": "09:05",
-      "WT": "09:40",
-      "YK": "10:10"
+      "KTA": "07:50",
+      "WT": "08:20",
+      "YK": "08:48"
     }
   },
   {
@@ -2715,9 +2853,9 @@
     "line": "LOKAL",
     "destination": "Yogyakarta",
     "schedule": {
-      "KTA": "12:20",
-      "WT": "12:55",
-      "YK": "13:25"
+      "KTA": "10:20",
+      "WT": "10:50",
+      "YK": "11:18"
     }
   },
   {
@@ -2726,9 +2864,20 @@
     "line": "LOKAL",
     "destination": "Yogyakarta",
     "schedule": {
-      "KTA": "16:05",
-      "WT": "16:40",
-      "YK": "17:10"
+      "KTA": "13:30",
+      "WT": "14:00",
+      "YK": "14:28"
+    }
+  },
+  {
+    "id": "KA 560 Prameks",
+    "name": "Prambanan Ekspres",
+    "line": "LOKAL",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "KTA": "16:25",
+      "WT": "16:55",
+      "YK": "17:23"
     }
   },
   {
@@ -3265,9 +3414,9 @@
     "line": "WHOOSH",
     "destination": "Tegalluar Summarecon",
     "schedule": {
-      "HLM": "06:40",
-      "PDL": "07:12",
-      "TGLR": "07:26"
+      "HLM": "06:00",
+      "PDL": "06:32",
+      "TGLR": "06:46"
     }
   },
   {
@@ -3276,9 +3425,9 @@
     "line": "WHOOSH",
     "destination": "Tegalluar Summarecon",
     "schedule": {
-      "HLM": "07:05",
-      "PDL": "07:37",
-      "TGLR": "07:51"
+      "HLM": "06:30",
+      "PDL": "07:02",
+      "TGLR": "07:16"
     }
   },
   {
@@ -3287,9 +3436,9 @@
     "line": "WHOOSH",
     "destination": "Tegalluar Summarecon",
     "schedule": {
-      "HLM": "07:55",
-      "PDL": "08:27",
-      "TGLR": "08:41"
+      "HLM": "07:00",
+      "PDL": "07:32",
+      "TGLR": "07:46"
     }
   },
   {
@@ -3298,9 +3447,9 @@
     "line": "WHOOSH",
     "destination": "Tegalluar Summarecon",
     "schedule": {
-      "HLM": "08:45",
-      "PDL": "09:17",
-      "TGLR": "09:31"
+      "HLM": "07:30",
+      "PDL": "08:02",
+      "TGLR": "08:16"
     }
   },
   {
@@ -3309,9 +3458,9 @@
     "line": "WHOOSH",
     "destination": "Tegalluar Summarecon",
     "schedule": {
-      "HLM": "09:10",
-      "PDL": "09:42",
-      "TGLR": "09:56"
+      "HLM": "08:00",
+      "PDL": "08:32",
+      "TGLR": "08:46"
     }
   },
   {
@@ -3320,9 +3469,9 @@
     "line": "WHOOSH",
     "destination": "Tegalluar Summarecon",
     "schedule": {
-      "HLM": "10:20",
-      "PDL": "10:52",
-      "TGLR": "11:06"
+      "HLM": "08:30",
+      "PDL": "09:02",
+      "TGLR": "09:16"
     }
   },
   {
@@ -3331,13 +3480,68 @@
     "line": "WHOOSH",
     "destination": "Tegalluar Summarecon",
     "schedule": {
-      "HLM": "11:10",
-      "PDL": "11:42",
-      "TGLR": "11:56"
+      "HLM": "09:00",
+      "PDL": "09:32",
+      "TGLR": "09:46"
     }
   },
   {
     "id": "Whoosh G1115",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "09:30",
+      "PDL": "10:02",
+      "TGLR": "10:16"
+    }
+  },
+  {
+    "id": "Whoosh G1117",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "10:00",
+      "PDL": "10:32",
+      "TGLR": "10:46"
+    }
+  },
+  {
+    "id": "Whoosh G1119",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "10:30",
+      "PDL": "11:02",
+      "TGLR": "11:16"
+    }
+  },
+  {
+    "id": "Whoosh G1121",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "11:00",
+      "PDL": "11:32",
+      "TGLR": "11:46"
+    }
+  },
+  {
+    "id": "Whoosh G1123",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "11:30",
+      "PDL": "12:02",
+      "TGLR": "12:16"
+    }
+  },
+  {
+    "id": "Whoosh G1125",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Tegalluar Summarecon",
@@ -3348,29 +3552,62 @@
     }
   },
   {
-    "id": "Whoosh G1117",
+    "id": "Whoosh G1127",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Tegalluar Summarecon",
     "schedule": {
-      "HLM": "13:02",
-      "PDL": "13:34",
-      "TGLR": "13:48"
+      "HLM": "12:30",
+      "PDL": "13:02",
+      "TGLR": "13:16"
     }
   },
   {
-    "id": "Whoosh G1119",
+    "id": "Whoosh G1129",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Tegalluar Summarecon",
     "schedule": {
-      "HLM": "14:02",
-      "PDL": "14:34",
-      "TGLR": "14:48"
+      "HLM": "13:00",
+      "PDL": "13:32",
+      "TGLR": "13:46"
     }
   },
   {
-    "id": "Whoosh G1121",
+    "id": "Whoosh G1131",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "13:30",
+      "PDL": "14:02",
+      "TGLR": "14:16"
+    }
+  },
+  {
+    "id": "Whoosh G1133",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "14:00",
+      "PDL": "14:32",
+      "TGLR": "14:46"
+    }
+  },
+  {
+    "id": "Whoosh G1135",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "14:30",
+      "PDL": "15:02",
+      "TGLR": "15:16"
+    }
+  },
+  {
+    "id": "Whoosh G1137",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Tegalluar Summarecon",
@@ -3381,51 +3618,62 @@
     }
   },
   {
-    "id": "Whoosh G1123",
+    "id": "Whoosh G1139",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Tegalluar Summarecon",
     "schedule": {
-      "HLM": "15:35",
-      "PDL": "16:07",
-      "TGLR": "16:21"
+      "HLM": "15:30",
+      "PDL": "16:02",
+      "TGLR": "16:16"
     }
   },
   {
-    "id": "Whoosh G1125",
+    "id": "Whoosh G1141",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Tegalluar Summarecon",
     "schedule": {
-      "HLM": "16:10",
-      "PDL": "16:42",
-      "TGLR": "16:56"
+      "HLM": "16:00",
+      "PDL": "16:32",
+      "TGLR": "16:46"
     }
   },
   {
-    "id": "Whoosh G1127",
+    "id": "Whoosh G1143",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Tegalluar Summarecon",
     "schedule": {
-      "HLM": "16:45",
-      "PDL": "17:17",
-      "TGLR": "17:31"
+      "HLM": "16:30",
+      "PDL": "17:02",
+      "TGLR": "17:16"
     }
   },
   {
-    "id": "Whoosh G1129",
+    "id": "Whoosh G1145",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Tegalluar Summarecon",
     "schedule": {
-      "HLM": "17:35",
-      "PDL": "18:07",
-      "TGLR": "18:21"
+      "HLM": "17:00",
+      "PDL": "17:32",
+      "TGLR": "17:46"
     }
   },
   {
-    "id": "Whoosh G1131",
+    "id": "Whoosh G1147",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "17:30",
+      "PDL": "18:02",
+      "TGLR": "18:16"
+    }
+  },
+  {
+    "id": "Whoosh G1149",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Tegalluar Summarecon",
@@ -3436,29 +3684,51 @@
     }
   },
   {
-    "id": "Whoosh G1133",
+    "id": "Whoosh G1151",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Tegalluar Summarecon",
     "schedule": {
-      "HLM": "18:50",
-      "PDL": "19:22",
-      "TGLR": "19:36"
+      "HLM": "18:30",
+      "PDL": "19:02",
+      "TGLR": "19:16"
     }
   },
   {
-    "id": "Whoosh G1135",
+    "id": "Whoosh G1153",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Tegalluar Summarecon",
     "schedule": {
-      "HLM": "19:40",
-      "PDL": "20:12",
-      "TGLR": "20:26"
+      "HLM": "19:00",
+      "PDL": "19:32",
+      "TGLR": "19:46"
     }
   },
   {
-    "id": "Whoosh G1137",
+    "id": "Whoosh G1155",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "19:30",
+      "PDL": "20:02",
+      "TGLR": "20:16"
+    }
+  },
+  {
+    "id": "Whoosh G1157",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "20:00",
+      "PDL": "20:32",
+      "TGLR": "20:46"
+    }
+  },
+  {
+    "id": "Whoosh G1159",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Tegalluar Summarecon",
@@ -3469,14 +3739,14 @@
     }
   },
   {
-    "id": "Whoosh G1139",
+    "id": "Whoosh G1161",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Tegalluar Summarecon",
     "schedule": {
-      "HLM": "21:15",
-      "PDL": "21:47",
-      "TGLR": "22:01"
+      "HLM": "21:00",
+      "PDL": "21:32",
+      "TGLR": "21:46"
     }
   },
   {
@@ -3485,9 +3755,9 @@
     "line": "WHOOSH",
     "destination": "Halim",
     "schedule": {
-      "TGLR": "06:40",
-      "PDL": "06:54",
-      "HLM": "07:26"
+      "TGLR": "06:00",
+      "PDL": "06:14",
+      "HLM": "06:46"
     }
   },
   {
@@ -3496,9 +3766,9 @@
     "line": "WHOOSH",
     "destination": "Halim",
     "schedule": {
-      "TGLR": "07:05",
-      "PDL": "07:19",
-      "HLM": "07:51"
+      "TGLR": "06:30",
+      "PDL": "06:44",
+      "HLM": "07:16"
     }
   },
   {
@@ -3507,9 +3777,9 @@
     "line": "WHOOSH",
     "destination": "Halim",
     "schedule": {
-      "TGLR": "07:55",
-      "PDL": "08:09",
-      "HLM": "08:41"
+      "TGLR": "07:00",
+      "PDL": "07:14",
+      "HLM": "07:46"
     }
   },
   {
@@ -3518,9 +3788,9 @@
     "line": "WHOOSH",
     "destination": "Halim",
     "schedule": {
-      "TGLR": "08:45",
-      "PDL": "08:59",
-      "HLM": "09:31"
+      "TGLR": "07:30",
+      "PDL": "07:44",
+      "HLM": "08:16"
     }
   },
   {
@@ -3529,9 +3799,9 @@
     "line": "WHOOSH",
     "destination": "Halim",
     "schedule": {
-      "TGLR": "09:10",
-      "PDL": "09:24",
-      "HLM": "09:56"
+      "TGLR": "08:00",
+      "PDL": "08:14",
+      "HLM": "08:46"
     }
   },
   {
@@ -3540,9 +3810,9 @@
     "line": "WHOOSH",
     "destination": "Halim",
     "schedule": {
-      "TGLR": "10:20",
-      "PDL": "10:34",
-      "HLM": "11:06"
+      "TGLR": "08:30",
+      "PDL": "08:44",
+      "HLM": "09:16"
     }
   },
   {
@@ -3551,13 +3821,68 @@
     "line": "WHOOSH",
     "destination": "Halim",
     "schedule": {
-      "TGLR": "11:10",
-      "PDL": "11:24",
-      "HLM": "11:56"
+      "TGLR": "09:00",
+      "PDL": "09:14",
+      "HLM": "09:46"
     }
   },
   {
     "id": "Whoosh G1116",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "09:30",
+      "PDL": "09:44",
+      "HLM": "10:16"
+    }
+  },
+  {
+    "id": "Whoosh G1118",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "10:00",
+      "PDL": "10:14",
+      "HLM": "10:46"
+    }
+  },
+  {
+    "id": "Whoosh G1120",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "10:30",
+      "PDL": "10:44",
+      "HLM": "11:16"
+    }
+  },
+  {
+    "id": "Whoosh G1122",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "11:00",
+      "PDL": "11:14",
+      "HLM": "11:46"
+    }
+  },
+  {
+    "id": "Whoosh G1124",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "11:30",
+      "PDL": "11:44",
+      "HLM": "12:16"
+    }
+  },
+  {
+    "id": "Whoosh G1126",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Halim",
@@ -3568,29 +3893,62 @@
     }
   },
   {
-    "id": "Whoosh G1118",
+    "id": "Whoosh G1128",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Halim",
     "schedule": {
-      "TGLR": "13:02",
-      "PDL": "13:16",
-      "HLM": "13:48"
+      "TGLR": "12:30",
+      "PDL": "12:44",
+      "HLM": "13:16"
     }
   },
   {
-    "id": "Whoosh G1120",
+    "id": "Whoosh G1130",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Halim",
     "schedule": {
-      "TGLR": "14:02",
-      "PDL": "14:16",
-      "HLM": "14:48"
+      "TGLR": "13:00",
+      "PDL": "13:14",
+      "HLM": "13:46"
     }
   },
   {
-    "id": "Whoosh G1122",
+    "id": "Whoosh G1132",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "13:30",
+      "PDL": "13:44",
+      "HLM": "14:16"
+    }
+  },
+  {
+    "id": "Whoosh G1134",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "14:00",
+      "PDL": "14:14",
+      "HLM": "14:46"
+    }
+  },
+  {
+    "id": "Whoosh G1136",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "14:30",
+      "PDL": "14:44",
+      "HLM": "15:16"
+    }
+  },
+  {
+    "id": "Whoosh G1138",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Halim",
@@ -3601,51 +3959,62 @@
     }
   },
   {
-    "id": "Whoosh G1124",
+    "id": "Whoosh G1140",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Halim",
     "schedule": {
-      "TGLR": "15:35",
-      "PDL": "15:49",
-      "HLM": "16:21"
+      "TGLR": "15:30",
+      "PDL": "15:44",
+      "HLM": "16:16"
     }
   },
   {
-    "id": "Whoosh G1126",
+    "id": "Whoosh G1142",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Halim",
     "schedule": {
-      "TGLR": "16:10",
-      "PDL": "16:24",
-      "HLM": "16:56"
+      "TGLR": "16:00",
+      "PDL": "16:14",
+      "HLM": "16:46"
     }
   },
   {
-    "id": "Whoosh G1128",
+    "id": "Whoosh G1144",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Halim",
     "schedule": {
-      "TGLR": "16:45",
-      "PDL": "16:59",
-      "HLM": "17:31"
+      "TGLR": "16:30",
+      "PDL": "16:44",
+      "HLM": "17:16"
     }
   },
   {
-    "id": "Whoosh G1130",
+    "id": "Whoosh G1146",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Halim",
     "schedule": {
-      "TGLR": "17:35",
-      "PDL": "17:49",
-      "HLM": "18:21"
+      "TGLR": "17:00",
+      "PDL": "17:14",
+      "HLM": "17:46"
     }
   },
   {
-    "id": "Whoosh G1132",
+    "id": "Whoosh G1148",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "17:30",
+      "PDL": "17:44",
+      "HLM": "18:16"
+    }
+  },
+  {
+    "id": "Whoosh G1150",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Halim",
@@ -3656,29 +4025,51 @@
     }
   },
   {
-    "id": "Whoosh G1134",
+    "id": "Whoosh G1152",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Halim",
     "schedule": {
-      "TGLR": "18:50",
-      "PDL": "19:04",
-      "HLM": "19:36"
+      "TGLR": "18:30",
+      "PDL": "18:44",
+      "HLM": "19:16"
     }
   },
   {
-    "id": "Whoosh G1136",
+    "id": "Whoosh G1154",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Halim",
     "schedule": {
-      "TGLR": "19:40",
-      "PDL": "19:54",
-      "HLM": "20:26"
+      "TGLR": "19:00",
+      "PDL": "19:14",
+      "HLM": "19:46"
     }
   },
   {
-    "id": "Whoosh G1138",
+    "id": "Whoosh G1156",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "19:30",
+      "PDL": "19:44",
+      "HLM": "20:16"
+    }
+  },
+  {
+    "id": "Whoosh G1158",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "20:00",
+      "PDL": "20:14",
+      "HLM": "20:46"
+    }
+  },
+  {
+    "id": "Whoosh G1160",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Halim",
@@ -3689,14 +4080,14 @@
     }
   },
   {
-    "id": "Whoosh G1140",
+    "id": "Whoosh G1162",
     "name": "Whoosh KCIC",
     "line": "WHOOSH",
     "destination": "Halim",
     "schedule": {
-      "TGLR": "21:15",
-      "PDL": "21:29",
-      "HLM": "22:01"
+      "TGLR": "21:00",
+      "PDL": "21:14",
+      "HLM": "21:46"
     }
   },
   {
@@ -4589,9 +4980,9 @@
     "line": "BANDARA",
     "destination": "Bandara YIA",
     "schedule": {
-      "YK": "05:00",
-      "WT": "05:24",
-      "YIA": "05:39"
+      "YK": "04:20",
+      "WT": "04:44",
+      "YIA": "04:59"
     }
   },
   {
@@ -4600,9 +4991,9 @@
     "line": "BANDARA",
     "destination": "Bandara YIA",
     "schedule": {
-      "YK": "06:00",
-      "WT": "06:24",
-      "YIA": "06:39"
+      "YK": "05:10",
+      "WT": "05:34",
+      "YIA": "05:49"
     }
   },
   {
@@ -4611,9 +5002,9 @@
     "line": "BANDARA",
     "destination": "Bandara YIA",
     "schedule": {
-      "YK": "07:05",
-      "WT": "07:29",
-      "YIA": "07:44"
+      "YK": "06:30",
+      "WT": "06:54",
+      "YIA": "07:09"
     }
   },
   {
@@ -4622,9 +5013,9 @@
     "line": "BANDARA",
     "destination": "Bandara YIA",
     "schedule": {
-      "YK": "08:05",
-      "WT": "08:29",
-      "YIA": "08:44"
+      "YK": "08:33",
+      "WT": "08:57",
+      "YIA": "09:12"
     }
   },
   {
@@ -4633,9 +5024,9 @@
     "line": "BANDARA",
     "destination": "Bandara YIA",
     "schedule": {
-      "YK": "09:10",
-      "WT": "09:34",
-      "YIA": "09:49"
+      "YK": "08:55",
+      "WT": "09:19",
+      "YIA": "09:34"
     }
   },
   {
@@ -4644,9 +5035,9 @@
     "line": "BANDARA",
     "destination": "Bandara YIA",
     "schedule": {
-      "YK": "10:10",
-      "WT": "10:34",
-      "YIA": "10:49"
+      "YK": "10:15",
+      "WT": "10:39",
+      "YIA": "10:54"
     }
   },
   {
@@ -4655,9 +5046,9 @@
     "line": "BANDARA",
     "destination": "Bandara YIA",
     "schedule": {
-      "YK": "11:20",
-      "WT": "11:44",
-      "YIA": "11:59"
+      "YK": "12:00",
+      "WT": "12:24",
+      "YIA": "12:39"
     }
   },
   {
@@ -4666,9 +5057,9 @@
     "line": "BANDARA",
     "destination": "Bandara YIA",
     "schedule": {
-      "YK": "12:20",
-      "WT": "12:44",
-      "YIA": "12:59"
+      "YK": "12:35",
+      "WT": "12:59",
+      "YIA": "13:14"
     }
   },
   {
@@ -4677,9 +5068,9 @@
     "line": "BANDARA",
     "destination": "Bandara YIA",
     "schedule": {
-      "YK": "13:30",
-      "WT": "13:54",
-      "YIA": "14:09"
+      "YK": "14:13",
+      "WT": "14:37",
+      "YIA": "14:52"
     }
   },
   {
@@ -4688,9 +5079,9 @@
     "line": "BANDARA",
     "destination": "Bandara YIA",
     "schedule": {
-      "YK": "14:30",
-      "WT": "14:54",
-      "YIA": "15:09"
+      "YK": "15:49",
+      "WT": "16:13",
+      "YIA": "16:28"
     }
   },
   {
@@ -4699,9 +5090,9 @@
     "line": "BANDARA",
     "destination": "Bandara YIA",
     "schedule": {
-      "YK": "15:40",
-      "WT": "16:04",
-      "YIA": "16:19"
+      "YK": "16:07",
+      "WT": "16:31",
+      "YIA": "16:46"
     }
   },
   {
@@ -4710,53 +5101,9 @@
     "line": "BANDARA",
     "destination": "Bandara YIA",
     "schedule": {
-      "YK": "16:40",
-      "WT": "17:04",
-      "YIA": "17:19"
-    }
-  },
-  {
-    "id": "KA 7225 Bandara YIA",
-    "name": "KA Bandara YIA",
-    "line": "BANDARA",
-    "destination": "Bandara YIA",
-    "schedule": {
-      "YK": "17:50",
-      "WT": "18:14",
-      "YIA": "18:29"
-    }
-  },
-  {
-    "id": "KA 7227 Bandara YIA",
-    "name": "KA Bandara YIA",
-    "line": "BANDARA",
-    "destination": "Bandara YIA",
-    "schedule": {
-      "YK": "18:50",
-      "WT": "19:14",
-      "YIA": "19:29"
-    }
-  },
-  {
-    "id": "KA 7229 Bandara YIA",
-    "name": "KA Bandara YIA",
-    "line": "BANDARA",
-    "destination": "Bandara YIA",
-    "schedule": {
-      "YK": "20:00",
-      "WT": "20:24",
-      "YIA": "20:39"
-    }
-  },
-  {
-    "id": "KA 7231 Bandara YIA",
-    "name": "KA Bandara YIA",
-    "line": "BANDARA",
-    "destination": "Bandara YIA",
-    "schedule": {
-      "YK": "21:00",
-      "WT": "21:24",
-      "YIA": "21:39"
+      "YK": "18:25",
+      "WT": "18:49",
+      "YIA": "19:04"
     }
   },
   {
@@ -4765,9 +5112,9 @@
     "line": "BANDARA",
     "destination": "Yogyakarta",
     "schedule": {
-      "YIA": "05:50",
-      "WT": "06:05",
-      "YK": "06:29"
+      "YIA": "05:16",
+      "WT": "05:31",
+      "YK": "05:55"
     }
   },
   {
@@ -4776,9 +5123,9 @@
     "line": "BANDARA",
     "destination": "Yogyakarta",
     "schedule": {
-      "YIA": "06:50",
-      "WT": "07:05",
-      "YK": "07:29"
+      "YIA": "06:20",
+      "WT": "06:35",
+      "YK": "06:59"
     }
   },
   {
@@ -4787,9 +5134,9 @@
     "line": "BANDARA",
     "destination": "Yogyakarta",
     "schedule": {
-      "YIA": "07:55",
-      "WT": "08:10",
-      "YK": "08:34"
+      "YIA": "07:46",
+      "WT": "08:01",
+      "YK": "08:25"
     }
   },
   {
@@ -4798,9 +5145,9 @@
     "line": "BANDARA",
     "destination": "Yogyakarta",
     "schedule": {
-      "YIA": "08:55",
-      "WT": "09:10",
-      "YK": "09:34"
+      "YIA": "09:53",
+      "WT": "10:08",
+      "YK": "10:32"
     }
   },
   {
@@ -4809,9 +5156,9 @@
     "line": "BANDARA",
     "destination": "Yogyakarta",
     "schedule": {
-      "YIA": "10:00",
-      "WT": "10:15",
-      "YK": "10:39"
+      "YIA": "11:35",
+      "WT": "11:50",
+      "YK": "12:14"
     }
   },
   {
@@ -4820,9 +5167,9 @@
     "line": "BANDARA",
     "destination": "Yogyakarta",
     "schedule": {
-      "YIA": "11:00",
-      "WT": "11:15",
-      "YK": "11:39"
+      "YIA": "13:25",
+      "WT": "13:40",
+      "YK": "14:04"
     }
   },
   {
@@ -4831,35 +5178,13 @@
     "line": "BANDARA",
     "destination": "Yogyakarta",
     "schedule": {
-      "YIA": "12:10",
-      "WT": "12:25",
-      "YK": "12:49"
+      "YIA": "14:56",
+      "WT": "15:11",
+      "YK": "15:35"
     }
   },
   {
     "id": "KA 7216 Bandara YIA",
-    "name": "KA Bandara YIA",
-    "line": "BANDARA",
-    "destination": "Yogyakarta",
-    "schedule": {
-      "YIA": "13:10",
-      "WT": "13:25",
-      "YK": "13:49"
-    }
-  },
-  {
-    "id": "KA 7218 Bandara YIA",
-    "name": "KA Bandara YIA",
-    "line": "BANDARA",
-    "destination": "Yogyakarta",
-    "schedule": {
-      "YIA": "14:20",
-      "WT": "14:35",
-      "YK": "14:59"
-    }
-  },
-  {
-    "id": "KA 7220 Bandara YIA",
     "name": "KA Bandara YIA",
     "line": "BANDARA",
     "destination": "Yogyakarta",
@@ -4870,14 +5195,36 @@
     }
   },
   {
+    "id": "KA 7218 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "17:00",
+      "WT": "17:15",
+      "YK": "17:39"
+    }
+  },
+  {
+    "id": "KA 7220 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "17:34",
+      "WT": "17:49",
+      "YK": "18:13"
+    }
+  },
+  {
     "id": "KA 7222 Bandara YIA",
     "name": "KA Bandara YIA",
     "line": "BANDARA",
     "destination": "Yogyakarta",
     "schedule": {
-      "YIA": "16:30",
-      "WT": "16:45",
-      "YK": "17:09"
+      "YIA": "19:46",
+      "WT": "20:01",
+      "YK": "20:25"
     }
   },
   {
@@ -4886,53 +5233,169 @@
     "line": "BANDARA",
     "destination": "Yogyakarta",
     "schedule": {
-      "YIA": "17:30",
-      "WT": "17:45",
-      "YK": "18:09"
+      "YIA": "20:55",
+      "WT": "21:10",
+      "YK": "21:34"
     }
   },
   {
-    "id": "KA 7226 Bandara YIA",
-    "name": "KA Bandara YIA",
+    "id": "KA 7251 YIA Xpress",
+    "name": "KA Bandara YIA Xpress",
     "line": "BANDARA",
-    "destination": "Yogyakarta",
+    "destination": "Bandara YIA",
     "schedule": {
-      "YIA": "18:40",
-      "WT": "18:55",
-      "YK": "19:19"
+      "YK": "05:00",
+      "YIA": "05:35"
     }
   },
   {
-    "id": "KA 7228 Bandara YIA",
-    "name": "KA Bandara YIA",
+    "id": "KA 7253 YIA Xpress",
+    "name": "KA Bandara YIA Xpress",
     "line": "BANDARA",
-    "destination": "Yogyakarta",
+    "destination": "Bandara YIA",
     "schedule": {
-      "YIA": "19:40",
-      "WT": "19:55",
-      "YK": "20:19"
+      "YK": "07:20",
+      "YIA": "07:55"
     }
   },
   {
-    "id": "KA 7230 Bandara YIA",
-    "name": "KA Bandara YIA",
+    "id": "KA 7255 YIA Xpress",
+    "name": "KA Bandara YIA Xpress",
     "line": "BANDARA",
-    "destination": "Yogyakarta",
+    "destination": "Bandara YIA",
     "schedule": {
-      "YIA": "20:50",
-      "WT": "21:05",
-      "YK": "21:29"
+      "YK": "09:30",
+      "YIA": "10:05"
     }
   },
   {
-    "id": "KA 7232 Bandara YIA",
-    "name": "KA Bandara YIA",
+    "id": "KA 7257 YIA Xpress",
+    "name": "KA Bandara YIA Xpress",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "11:00",
+      "YIA": "11:35"
+    }
+  },
+  {
+    "id": "KA 7259 YIA Xpress",
+    "name": "KA Bandara YIA Xpress",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "13:40",
+      "YIA": "14:15"
+    }
+  },
+  {
+    "id": "KA 7261 YIA Xpress",
+    "name": "KA Bandara YIA Xpress",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "16:40",
+      "YIA": "17:15"
+    }
+  },
+  {
+    "id": "KA 7263 YIA Xpress",
+    "name": "KA Bandara YIA Xpress",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "18:00",
+      "YIA": "18:35"
+    }
+  },
+  {
+    "id": "KA 7265 YIA Xpress",
+    "name": "KA Bandara YIA Xpress",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "20:15",
+      "YIA": "20:50"
+    }
+  },
+  {
+    "id": "KA 7252 YIA Xpress",
+    "name": "KA Bandara YIA Xpress",
     "line": "BANDARA",
     "destination": "Yogyakarta",
     "schedule": {
-      "YIA": "21:50",
-      "WT": "22:05",
-      "YK": "22:29"
+      "YIA": "05:55",
+      "YK": "06:30"
+    }
+  },
+  {
+    "id": "KA 7254 YIA Xpress",
+    "name": "KA Bandara YIA Xpress",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "08:15",
+      "YK": "08:50"
+    }
+  },
+  {
+    "id": "KA 7256 YIA Xpress",
+    "name": "KA Bandara YIA Xpress",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "10:25",
+      "YK": "11:00"
+    }
+  },
+  {
+    "id": "KA 7258 YIA Xpress",
+    "name": "KA Bandara YIA Xpress",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "11:55",
+      "YK": "12:30"
+    }
+  },
+  {
+    "id": "KA 7260 YIA Xpress",
+    "name": "KA Bandara YIA Xpress",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "14:35",
+      "YK": "15:10"
+    }
+  },
+  {
+    "id": "KA 7262 YIA Xpress",
+    "name": "KA Bandara YIA Xpress",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "17:35",
+      "YK": "18:10"
+    }
+  },
+  {
+    "id": "KA 7264 YIA Xpress",
+    "name": "KA Bandara YIA Xpress",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "18:55",
+      "YK": "19:30"
+    }
+  },
+  {
+    "id": "KA 7266 YIA Xpress",
+    "name": "KA Bandara YIA Xpress",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "21:10",
+      "YK": "21:45"
     }
   },
   {
