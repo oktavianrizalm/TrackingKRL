@@ -1,0 +1,5230 @@
+[
+  {
+    "id": "KA 1 Argo Bromo Anggrek",
+    "name": "Argo Bromo Anggrek",
+    "line": "ANTARKOTA",
+    "destination": "Gambir",
+    "schedule": {
+      "SBI": "09:10",
+      "BJ": "10:18",
+      "CU": "11:25",
+      "SMT": "12:25",
+      "PK": "13:30",
+      "TG": "14:15",
+      "CN": "15:08",
+      "JNG": "17:15",
+      "GMR": "17:35"
+    }
+  },
+  {
+    "id": "KA 2 Argo Bromo Anggrek",
+    "name": "Argo Bromo Anggrek",
+    "line": "ANTARKOTA",
+    "destination": "Surabaya Pasarturi",
+    "schedule": {
+      "GMR": "08:20",
+      "CN": "10:45",
+      "TG": "11:35",
+      "PK": "12:20",
+      "SMT": "13:25",
+      "CU": "14:26",
+      "BJ": "15:35",
+      "SBI": "16:45"
+    }
+  },
+  {
+    "id": "KA 3 Argo Bromo Anggrek Malam",
+    "name": "Argo Bromo Anggrek Malam",
+    "line": "ANTARKOTA",
+    "destination": "Gambir",
+    "schedule": {
+      "SBI": "21:15",
+      "BJ": "22:23",
+      "CU": "23:30",
+      "SMT": "00:30",
+      "PK": "01:35",
+      "TG": "02:20",
+      "CN": "03:13",
+      "JNG": "05:20",
+      "GMR": "05:40"
+    }
+  },
+  {
+    "id": "KA 4 Argo Bromo Anggrek Malam",
+    "name": "Argo Bromo Anggrek Malam",
+    "line": "ANTARKOTA",
+    "destination": "Surabaya Pasarturi",
+    "schedule": {
+      "GMR": "20:30",
+      "CN": "22:55",
+      "TG": "23:45",
+      "PK": "00:30",
+      "SMT": "01:35",
+      "CU": "02:36",
+      "BJ": "03:45",
+      "SBI": "04:55"
+    }
+  },
+  {
+    "id": "KA 61 Sembrani",
+    "name": "Sembrani",
+    "line": "ANTARKOTA",
+    "destination": "Gambir",
+    "schedule": {
+      "SBI": "19:00",
+      "LMG": "19:35",
+      "BBT": "19:55",
+      "BJ": "20:25",
+      "CU": "21:30",
+      "SMT": "22:35",
+      "PK": "23:45",
+      "TG": "00:35",
+      "CN": "01:30",
+      "BKS": "03:50",
+      "GMR": "04:15"
+    }
+  },
+  {
+    "id": "KA 62 Sembrani",
+    "name": "Sembrani",
+    "line": "ANTARKOTA",
+    "destination": "Surabaya Pasarturi",
+    "schedule": {
+      "GMR": "19:30",
+      "BKS": "19:58",
+      "CN": "22:15",
+      "TG": "23:08",
+      "PK": "23:55",
+      "SMT": "01:05",
+      "CU": "02:10",
+      "BJ": "03:20",
+      "BBT": "03:50",
+      "LMG": "04:10",
+      "SBI": "04:45"
+    }
+  },
+  {
+    "id": "KA 11 Argo Sindoro",
+    "name": "Argo Sindoro",
+    "line": "ANTARKOTA",
+    "destination": "Gambir",
+    "schedule": {
+      "SMT": "06:50",
+      "PK": "08:00",
+      "TG": "08:50",
+      "CN": "09:45",
+      "JNG": "12:05",
+      "GMR": "12:25"
+    }
+  },
+  {
+    "id": "KA 12 Argo Sindoro",
+    "name": "Argo Sindoro",
+    "line": "ANTARKOTA",
+    "destination": "Semarang Tawang",
+    "schedule": {
+      "GMR": "16:40",
+      "JNG": "16:58",
+      "CN": "19:15",
+      "TG": "20:05",
+      "PK": "20:55",
+      "SMT": "22:10"
+    }
+  },
+  {
+    "id": "KA 13 Argo Muria",
+    "name": "Argo Muria",
+    "line": "ANTARKOTA",
+    "destination": "Gambir",
+    "schedule": {
+      "SMT": "16:00",
+      "PK": "17:10",
+      "TG": "18:00",
+      "CN": "18:55",
+      "JNG": "21:15",
+      "GMR": "21:35"
+    }
+  },
+  {
+    "id": "KA 14 Argo Muria",
+    "name": "Argo Muria",
+    "line": "ANTARKOTA",
+    "destination": "Semarang Tawang",
+    "schedule": {
+      "GMR": "07:00",
+      "JNG": "07:18",
+      "CN": "09:35",
+      "TG": "10:25",
+      "PK": "11:15",
+      "SMT": "12:30"
+    }
+  },
+  {
+    "id": "KA 131 Dharmawangsa",
+    "name": "Dharmawangsa",
+    "line": "ANTARKOTA",
+    "destination": "Pasar Senen",
+    "schedule": {
+      "SBI": "22:30",
+      "LMG": "23:10",
+      "BBT": "23:35",
+      "BJ": "00:10",
+      "CU": "01:25",
+      "NBO": "02:10",
+      "SMT": "03:00",
+      "PK": "04:20",
+      "TG": "05:15",
+      "BB": "05:40",
+      "CNP": "06:30",
+      "CKR": "08:35",
+      "BKS": "08:55",
+      "PSE": "09:25"
+    }
+  },
+  {
+    "id": "KA 132 Dharmawangsa",
+    "name": "Dharmawangsa",
+    "line": "ANTARKOTA",
+    "destination": "Surabaya Pasarturi",
+    "schedule": {
+      "PSE": "08:40",
+      "BKS": "09:10",
+      "CKR": "09:30",
+      "CNP": "11:45",
+      "BB": "12:35",
+      "TG": "13:00",
+      "PK": "13:55",
+      "SMT": "15:20",
+      "NBO": "16:15",
+      "CU": "17:05",
+      "BJ": "18:25",
+      "BBT": "19:00",
+      "LMG": "19:25",
+      "SBI": "20:05"
+    }
+  },
+  {
+    "id": "KA 219 Kertajaya",
+    "name": "Kertajaya",
+    "line": "ANTARKOTA",
+    "destination": "Pasar Senen",
+    "schedule": {
+      "SBI": "21:45",
+      "LMG": "22:25",
+      "BBT": "22:50",
+      "BJ": "23:25",
+      "CU": "00:40",
+      "SMT": "02:15",
+      "PK": "03:35",
+      "TG": "04:30",
+      "CNP": "05:40",
+      "BKS": "07:55",
+      "PSE": "08:25"
+    }
+  },
+  {
+    "id": "KA 220 Kertajaya",
+    "name": "Kertajaya",
+    "line": "ANTARKOTA",
+    "destination": "Surabaya Pasarturi",
+    "schedule": {
+      "PSE": "14:30",
+      "BKS": "15:00",
+      "CNP": "17:35",
+      "TG": "18:40",
+      "PK": "19:35",
+      "SMT": "21:00",
+      "CU": "22:25",
+      "BJ": "23:45",
+      "BBT": "00:20",
+      "LMG": "00:45",
+      "SBI": "01:25"
+    }
+  },
+  {
+    "id": "KA 235 Airlangga",
+    "name": "Airlangga",
+    "line": "ANTARKOTA",
+    "destination": "Pasar Senen",
+    "schedule": {
+      "SBI": "12:25",
+      "LMG": "13:05",
+      "BBT": "13:30",
+      "BJ": "14:05",
+      "CU": "15:20",
+      "SMC": "17:00",
+      "PK": "18:25",
+      "TG": "19:20",
+      "CNP": "20:45",
+      "CKR": "22:50",
+      "BKS": "23:10",
+      "PSE": "23:35"
+    }
+  },
+  {
+    "id": "KA 236 Airlangga",
+    "name": "Airlangga",
+    "line": "ANTARKOTA",
+    "destination": "Surabaya Pasarturi",
+    "schedule": {
+      "PSE": "11:20",
+      "BKS": "11:50",
+      "CKR": "12:10",
+      "CNP": "14:25",
+      "TG": "15:45",
+      "PK": "16:45",
+      "SMC": "18:15",
+      "CU": "19:40",
+      "BJ": "21:05",
+      "BBT": "21:40",
+      "LMG": "22:05",
+      "SBI": "22:50"
+    }
+  },
+  {
+    "id": "KA 107 Jayabaya",
+    "name": "Jayabaya",
+    "line": "ANTARKOTA",
+    "destination": "Pasar Senen",
+    "schedule": {
+      "ML": "12:30",
+      "LW": "13:00",
+      "BG": "13:45",
+      "SDA": "14:20",
+      "SGU": "14:50",
+      "SBI": "15:20",
+      "BJ": "16:45",
+      "CU": "18:00",
+      "SMT": "19:25",
+      "PK": "20:45",
+      "TG": "21:40",
+      "CN": "22:45",
+      "BKS": "01:10",
+      "PSE": "01:40"
+    }
+  },
+  {
+    "id": "KA 108 Jayabaya",
+    "name": "Jayabaya",
+    "line": "ANTARKOTA",
+    "destination": "Malang",
+    "schedule": {
+      "PSE": "16:45",
+      "BKS": "17:15",
+      "CN": "19:45",
+      "TG": "20:45",
+      "PK": "21:40",
+      "SMT": "23:05",
+      "CU": "00:30",
+      "BJ": "01:50",
+      "SBI": "03:15",
+      "SGU": "03:45",
+      "SDA": "04:15",
+      "BG": "04:50",
+      "LW": "05:35",
+      "ML": "06:05"
+    }
+  },
+  {
+    "id": "KA 123 Harina",
+    "name": "Harina",
+    "line": "ANTARKOTA",
+    "destination": "Bandung",
+    "schedule": {
+      "SBI": "17:40",
+      "LMG": "18:20",
+      "BJ": "19:15",
+      "CU": "20:30",
+      "SMT": "22:00",
+      "PK": "23:20",
+      "TG": "00:15",
+      "CNP": "01:25",
+      "CKP": "03:45",
+      "CBR": "03:57",
+      "PWK": "04:10",
+      "CA": "04:18",
+      "PLD": "04:30",
+      "SKT": "04:42",
+      "PDL": "04:52",
+      "CMI": "05:00",
+      "BD": "05:20"
+    }
+  },
+  {
+    "id": "KA 124 Harina",
+    "name": "Harina",
+    "line": "ANTARKOTA",
+    "destination": "Surabaya Pasarturi",
+    "schedule": {
+      "BD": "21:40",
+      "CMI": "21:55",
+      "PDL": "22:05",
+      "SKT": "22:15",
+      "PLD": "22:28",
+      "CA": "22:40",
+      "PWK": "22:50",
+      "CBR": "23:05",
+      "CKP": "23:25",
+      "CNP": "01:45",
+      "TG": "02:50",
+      "PK": "03:45",
+      "SMT": "05:10",
+      "CU": "06:35",
+      "BJ": "07:55",
+      "LMG": "08:50",
+      "SBI": "09:35"
+    }
+  },
+  {
+    "id": "KA 19 Argo Merbabu",
+    "name": "Argo Merbabu",
+    "line": "ANTARKOTA",
+    "destination": "Gambir",
+    "schedule": {
+      "SMT": "05:50",
+      "PK": "06:55",
+      "TG": "07:45",
+      "CN": "08:40",
+      "JNG": "11:00",
+      "GMR": "11:20"
+    }
+  },
+  {
+    "id": "KA 20 Argo Merbabu",
+    "name": "Argo Merbabu",
+    "line": "ANTARKOTA",
+    "destination": "Semarang Tawang",
+    "schedule": {
+      "GMR": "14:20",
+      "CN": "16:40",
+      "TG": "17:35",
+      "PK": "18:25",
+      "SMT": "19:40"
+    }
+  },
+  {
+    "id": "KA 185 Blambangan Ekspres",
+    "name": "Blambangan Ekspres",
+    "line": "ANTARKOTA",
+    "destination": "Pasar Senen",
+    "schedule": {
+      "KTG": "14:50",
+      "BWI": "15:05",
+      "RGP": "15:40",
+      "GLM": "16:15",
+      "JR": "17:30",
+      "TGL": "18:05",
+      "PB": "19:30",
+      "BG": "20:30",
+      "SDA": "21:10",
+      "SGU": "21:45",
+      "SBI": "22:15",
+      "BJ": "23:40",
+      "CU": "00:55",
+      "SMT": "02:15",
+      "PK": "03:30",
+      "TG": "04:25",
+      "CNP": "05:25",
+      "BKS": "07:15",
+      "PSE": "07:40"
+    }
+  },
+  {
+    "id": "KA 186 Blambangan Ekspres",
+    "name": "Blambangan Ekspres",
+    "line": "ANTARKOTA",
+    "destination": "Ketapang",
+    "schedule": {
+      "PSE": "12:15",
+      "BKS": "12:45",
+      "CNP": "15:00",
+      "TG": "16:05",
+      "PK": "17:00",
+      "SMT": "18:15",
+      "CU": "19:35",
+      "BJ": "20:45",
+      "SBI": "22:10",
+      "SGU": "22:40",
+      "SDA": "23:15",
+      "BG": "23:55",
+      "PB": "00:55",
+      "TGL": "02:15",
+      "JR": "02:55",
+      "GLM": "04:10",
+      "RGP": "04:45",
+      "BWI": "05:20",
+      "KTG": "05:40"
+    }
+  },
+  {
+    "id": "KA 7 Argo Lawu",
+    "name": "Argo Lawu",
+    "line": "ANTARKOTA",
+    "destination": "Gambir",
+    "schedule": {
+      "SLO": "08:30",
+      "KT": "08:55",
+      "YK": "09:20",
+      "KTA": "10:10",
+      "KYA": "11:05",
+      "PWT": "11:40",
+      "CN": "13:30",
+      "JNG": "15:50",
+      "GMR": "16:10"
+    }
+  },
+  {
+    "id": "KA 8 Argo Lawu",
+    "name": "Argo Lawu",
+    "line": "ANTARKOTA",
+    "destination": "Solo Balapan",
+    "schedule": {
+      "GMR": "20:45",
+      "CN": "23:05",
+      "PWT": "00:55",
+      "KYA": "01:30",
+      "KTA": "02:25",
+      "YK": "03:15",
+      "KT": "03:40",
+      "SLO": "04:05"
+    }
+  },
+  {
+    "id": "KA 9 Argo Dwipangga",
+    "name": "Argo Dwipangga",
+    "line": "ANTARKOTA",
+    "destination": "Gambir",
+    "schedule": {
+      "SLO": "20:30",
+      "KT": "20:55",
+      "YK": "21:20",
+      "KTA": "22:10",
+      "KYA": "23:05",
+      "PWT": "23:40",
+      "CN": "01:30",
+      "JNG": "03:50",
+      "GMR": "04:10"
+    }
+  },
+  {
+    "id": "KA 10 Argo Dwipangga",
+    "name": "Argo Dwipangga",
+    "line": "ANTARKOTA",
+    "destination": "Solo Balapan",
+    "schedule": {
+      "GMR": "08:50",
+      "CN": "11:10",
+      "PWT": "13:00",
+      "KYA": "13:35",
+      "KTA": "14:30",
+      "YK": "15:20",
+      "KT": "15:45",
+      "SLO": "16:10"
+    }
+  },
+  {
+    "id": "KA 67 Taksaka Pagi",
+    "name": "Taksaka Pagi",
+    "line": "ANTARKOTA",
+    "destination": "Gambir",
+    "schedule": {
+      "YK": "08:45",
+      "KTA": "09:35",
+      "KYA": "10:30",
+      "PWT": "11:05",
+      "CN": "12:55",
+      "JNG": "15:15",
+      "GMR": "15:35"
+    }
+  },
+  {
+    "id": "KA 68 Taksaka Pagi",
+    "name": "Taksaka Pagi",
+    "line": "ANTARKOTA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "GMR": "09:20",
+      "CN": "11:40",
+      "PWT": "13:30",
+      "KYA": "14:05",
+      "KTA": "15:00",
+      "YK": "15:50"
+    }
+  },
+  {
+    "id": "KA 69 Taksaka Malam",
+    "name": "Taksaka Malam",
+    "line": "ANTARKOTA",
+    "destination": "Gambir",
+    "schedule": {
+      "YK": "21:40",
+      "KTA": "22:30",
+      "KYA": "23:25",
+      "PWT": "00:00",
+      "CN": "01:50",
+      "JNG": "04:10",
+      "GMR": "04:30"
+    }
+  },
+  {
+    "id": "KA 70 Taksaka Malam",
+    "name": "Taksaka Malam",
+    "line": "ANTARKOTA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "GMR": "21:40",
+      "CN": "00:00",
+      "PWT": "01:50",
+      "KYA": "02:25",
+      "KTA": "03:20",
+      "YK": "04:10"
+    }
+  },
+  {
+    "id": "KA 55 Gajayana",
+    "name": "Gajayana",
+    "line": "ANTARKOTA",
+    "destination": "Gambir",
+    "schedule": {
+      "ML": "14:25",
+      "MLK": "14:32",
+      "WG": "15:10",
+      "BL": "16:00",
+      "TA": "16:35",
+      "KD": "17:15",
+      "KTS": "17:55",
+      "MN": "18:45",
+      "SLO": "19:50",
+      "YK": "20:45",
+      "KTA": "21:35",
+      "KYA": "22:30",
+      "PWT": "23:05",
+      "CN": "00:55",
+      "JNG": "03:15",
+      "GMR": "03:35"
+    }
+  },
+  {
+    "id": "KA 56 Gajayana",
+    "name": "Gajayana",
+    "line": "ANTARKOTA",
+    "destination": "Malang",
+    "schedule": {
+      "GMR": "18:50",
+      "CN": "21:10",
+      "PWT": "23:00",
+      "KYA": "23:35",
+      "KTA": "00:30",
+      "YK": "01:20",
+      "SLO": "02:15",
+      "MN": "03:20",
+      "KTS": "04:10",
+      "KD": "04:50",
+      "TA": "05:30",
+      "BL": "06:05",
+      "WG": "06:55",
+      "MLK": "07:33",
+      "ML": "07:40"
+    }
+  },
+  {
+    "id": "KA 59 Bima",
+    "name": "Bima",
+    "line": "ANTARKOTA",
+    "destination": "Gambir",
+    "schedule": {
+      "SGU": "19:20",
+      "MR": "19:55",
+      "JG": "20:20",
+      "KTS": "20:45",
+      "MN": "21:35",
+      "SLO": "22:40",
+      "YK": "23:35",
+      "KTA": "00:25",
+      "KYA": "01:20",
+      "PWT": "01:55",
+      "CN": "03:45",
+      "JNG": "06:05",
+      "GMR": "06:25"
+    }
+  },
+  {
+    "id": "KA 60 Bima",
+    "name": "Bima",
+    "line": "ANTARKOTA",
+    "destination": "Surabaya Gubeng",
+    "schedule": {
+      "GMR": "17:00",
+      "CN": "19:20",
+      "PWT": "21:10",
+      "KYA": "21:45",
+      "KTA": "22:40",
+      "YK": "23:30",
+      "SLO": "00:25",
+      "MN": "01:30",
+      "KTS": "02:20",
+      "JG": "02:45",
+      "MR": "03:10",
+      "SGU": "03:45"
+    }
+  },
+  {
+    "id": "KA 65 Turangga",
+    "name": "Turangga",
+    "line": "ANTARKOTA",
+    "destination": "Bandung",
+    "schedule": {
+      "SGU": "20:00",
+      "MR": "20:35",
+      "JG": "21:00",
+      "KTS": "21:25",
+      "MN": "22:15",
+      "SLO": "23:20",
+      "YK": "00:15",
+      "KTA": "01:05",
+      "KYA": "02:00",
+      "BJR": "03:35",
+      "CI": "04:05",
+      "TSM": "04:40",
+      "KAC": "06:30",
+      "BD": "06:50"
+    }
+  },
+  {
+    "id": "KA 66 Turangga",
+    "name": "Turangga",
+    "line": "ANTARKOTA",
+    "destination": "Surabaya Gubeng",
+    "schedule": {
+      "BD": "18:10",
+      "KAC": "18:25",
+      "TSM": "20:15",
+      "CI": "20:50",
+      "BJR": "21:20",
+      "KYA": "22:55",
+      "KTA": "23:50",
+      "YK": "00:40",
+      "SLO": "01:35",
+      "MN": "02:40",
+      "KTS": "03:30",
+      "JG": "03:55",
+      "MR": "04:20",
+      "SGU": "04:55"
+    }
+  },
+  {
+    "id": "KA 91 Lodaya Pagi",
+    "name": "Lodaya Pagi",
+    "line": "ANTARKOTA",
+    "destination": "Bandung",
+    "schedule": {
+      "SLO": "07:20",
+      "KT": "07:45",
+      "YK": "08:10",
+      "WT": "08:40",
+      "KTA": "09:10",
+      "GB": "09:40",
+      "KYA": "10:15",
+      "BJR": "11:50",
+      "CI": "12:20",
+      "TSM": "12:55",
+      "KAC": "14:45",
+      "BD": "15:05"
+    }
+  },
+  {
+    "id": "KA 92 Lodaya Pagi",
+    "name": "Lodaya Pagi",
+    "line": "ANTARKOTA",
+    "destination": "Solo Balapan",
+    "schedule": {
+      "BD": "06:55",
+      "KAC": "07:10",
+      "TSM": "09:00",
+      "CI": "09:35",
+      "BJR": "10:05",
+      "KYA": "11:40",
+      "GB": "12:15",
+      "KTA": "12:45",
+      "WT": "13:15",
+      "YK": "13:45",
+      "KT": "14:10",
+      "SLO": "14:35"
+    }
+  },
+  {
+    "id": "KA 93 Lodaya Malam",
+    "name": "Lodaya Malam",
+    "line": "ANTARKOTA",
+    "destination": "Bandung",
+    "schedule": {
+      "SLO": "19:00",
+      "KT": "19:25",
+      "YK": "19:50",
+      "WT": "20:20",
+      "KTA": "20:50",
+      "KYA": "21:55",
+      "BJR": "23:30",
+      "TSM": "00:35",
+      "KAC": "02:25",
+      "BD": "02:45"
+    }
+  },
+  {
+    "id": "KA 94 Lodaya Malam",
+    "name": "Lodaya Malam",
+    "line": "ANTARKOTA",
+    "destination": "Solo Balapan",
+    "schedule": {
+      "BD": "19:10",
+      "KAC": "19:25",
+      "TSM": "21:15",
+      "CI": "21:50",
+      "BJR": "22:20",
+      "KYA": "23:55",
+      "KTA": "00:50",
+      "WT": "01:20",
+      "YK": "01:50",
+      "KT": "02:15",
+      "SLO": "02:40"
+    }
+  },
+  {
+    "id": "KA 121 Malabar",
+    "name": "Malabar",
+    "line": "ANTARKOTA",
+    "destination": "Bandung",
+    "schedule": {
+      "ML": "16:50",
+      "WG": "17:35",
+      "BL": "18:25",
+      "TA": "19:00",
+      "KD": "19:40",
+      "KTS": "20:20",
+      "MN": "21:10",
+      "SLO": "22:15",
+      "YK": "23:10",
+      "KTA": "00:00",
+      "KYA": "00:55",
+      "BJR": "02:30",
+      "TSM": "03:35",
+      "KAC": "05:25",
+      "BD": "05:45"
+    }
+  },
+  {
+    "id": "KA 122 Malabar",
+    "name": "Malabar",
+    "line": "ANTARKOTA",
+    "destination": "Malang",
+    "schedule": {
+      "BD": "09:50",
+      "KAC": "10:05",
+      "TSM": "11:55",
+      "CI": "12:30",
+      "BJR": "13:00",
+      "KYA": "14:35",
+      "KTA": "15:30",
+      "YK": "16:20",
+      "SLO": "17:15",
+      "MN": "18:20",
+      "KTS": "19:10",
+      "KD": "19:50",
+      "TA": "20:30",
+      "BL": "21:05",
+      "WG": "21:55",
+      "ML": "22:40"
+    }
+  },
+  {
+    "id": "KA 95 Sancaka Pagi",
+    "name": "Sancaka Pagi",
+    "line": "ANTARKOTA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "SGU": "07:00",
+      "MR": "07:35",
+      "JG": "08:00",
+      "KTS": "08:25",
+      "MN": "09:15",
+      "NGW": "09:40",
+      "SLO": "10:35",
+      "KT": "11:00",
+      "YK": "11:25"
+    }
+  },
+  {
+    "id": "KA 96 Sancaka Pagi",
+    "name": "Sancaka Pagi",
+    "line": "ANTARKOTA",
+    "destination": "Surabaya Gubeng",
+    "schedule": {
+      "YK": "06:45",
+      "KT": "07:10",
+      "SLO": "07:35",
+      "NGW": "08:30",
+      "MN": "08:55",
+      "KTS": "09:45",
+      "JG": "10:10",
+      "MR": "10:35",
+      "SGU": "11:10"
+    }
+  },
+  {
+    "id": "KA 97 Sancaka Siang",
+    "name": "Sancaka Siang",
+    "line": "ANTARKOTA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "SGU": "11:15",
+      "MR": "11:50",
+      "JG": "12:15",
+      "KTS": "12:40",
+      "MN": "13:30",
+      "SLO": "14:50",
+      "KT": "15:15",
+      "YK": "15:40"
+    }
+  },
+  {
+    "id": "KA 98 Sancaka Sore",
+    "name": "Sancaka Sore",
+    "line": "ANTARKOTA",
+    "destination": "Surabaya Gubeng",
+    "schedule": {
+      "YK": "17:10",
+      "KT": "17:35",
+      "SLO": "18:00",
+      "NGW": "18:55",
+      "MN": "19:20",
+      "KTS": "20:10",
+      "JG": "20:35",
+      "MR": "21:00",
+      "SGU": "21:35"
+    }
+  },
+  {
+    "id": "KA 217 Jayakarta",
+    "name": "Jayakarta",
+    "line": "ANTARKOTA",
+    "destination": "Pasar Senen",
+    "schedule": {
+      "SGU": "14:10",
+      "MR": "14:45",
+      "KTS": "15:35",
+      "MN": "16:25",
+      "SLO": "17:30",
+      "YK": "18:25",
+      "KTA": "19:15",
+      "KYA": "20:10",
+      "PWT": "20:45",
+      "CNP": "22:35",
+      "CKR": "00:40",
+      "BKS": "01:00",
+      "PSE": "01:35"
+    }
+  },
+  {
+    "id": "KA 218 Jayakarta",
+    "name": "Jayakarta",
+    "line": "ANTARKOTA",
+    "destination": "Surabaya Gubeng",
+    "schedule": {
+      "PSE": "17:10",
+      "BKS": "17:40",
+      "CKR": "18:00",
+      "CNP": "20:15",
+      "PWT": "22:05",
+      "KYA": "22:40",
+      "KTA": "23:35",
+      "YK": "00:25",
+      "SLO": "01:20",
+      "MN": "02:25",
+      "KTS": "03:15",
+      "MR": "04:05",
+      "SGU": "04:40"
+    }
+  },
+  {
+    "id": "KA 233 Matarmaja",
+    "name": "Matarmaja",
+    "line": "ANTARKOTA",
+    "destination": "Pasar Senen",
+    "schedule": {
+      "ML": "09:25",
+      "WG": "10:10",
+      "BL": "11:00",
+      "TA": "11:35",
+      "KD": "12:15",
+      "KTS": "12:55",
+      "MN": "13:45",
+      "SLO": "14:50",
+      "SMT": "17:15",
+      "PK": "18:35",
+      "TG": "19:30",
+      "CNP": "20:40",
+      "PSE": "23:55"
+    }
+  },
+  {
+    "id": "KA 234 Matarmaja",
+    "name": "Matarmaja",
+    "line": "ANTARKOTA",
+    "destination": "Malang",
+    "schedule": {
+      "PSE": "10:45",
+      "BKS": "11:15",
+      "CNP": "13:30",
+      "TG": "14:35",
+      "PK": "15:30",
+      "SMT": "16:55",
+      "SLO": "19:20",
+      "MN": "20:25",
+      "KTS": "21:15",
+      "KD": "21:55",
+      "TA": "22:35",
+      "BL": "23:10",
+      "WG": "00:00",
+      "ML": "00:45"
+    }
+  },
+  {
+    "id": "KA 245 Bengawan",
+    "name": "Bengawan",
+    "line": "ANTARKOTA",
+    "destination": "Pasar Senen",
+    "schedule": {
+      "PWS": "20:50",
+      "KT": "21:15",
+      "LPN": "21:40",
+      "WT": "22:10",
+      "KTA": "22:40",
+      "KYA": "23:45",
+      "PWT": "00:20",
+      "CNP": "02:10",
+      "BKS": "04:25",
+      "PSE": "04:55"
+    }
+  },
+  {
+    "id": "KA 246 Bengawan",
+    "name": "Bengawan",
+    "line": "ANTARKOTA",
+    "destination": "Solo Purwosari",
+    "schedule": {
+      "PSE": "06:00",
+      "BKS": "06:30",
+      "CKR": "06:50",
+      "CNP": "09:05",
+      "PWT": "10:55",
+      "KYA": "11:30",
+      "KTA": "12:25",
+      "WT": "12:55",
+      "LPN": "13:25",
+      "KT": "13:50",
+      "PWS": "14:15"
+    }
+  },
+  {
+    "id": "KA 293 Progo",
+    "name": "Progo",
+    "line": "ANTARKOTA",
+    "destination": "Pasar Senen",
+    "schedule": {
+      "LPN": "15:10",
+      "WT": "15:40",
+      "KTA": "16:10",
+      "KYA": "17:15",
+      "PWT": "17:50",
+      "CNP": "19:40",
+      "BKS": "21:55",
+      "PSE": "22:25"
+    }
+  },
+  {
+    "id": "KA 294 Progo",
+    "name": "Progo",
+    "line": "ANTARKOTA",
+    "destination": "Lempuyangan",
+    "schedule": {
+      "PSE": "23:00",
+      "BKS": "23:30",
+      "CNP": "01:45",
+      "PWT": "03:35",
+      "KYA": "04:10",
+      "KTA": "05:05",
+      "WT": "05:35",
+      "LPN": "06:05"
+    }
+  },
+  {
+    "id": "KA 241 Sri Tanjung",
+    "name": "Sri Tanjung",
+    "line": "ANTARKOTA",
+    "destination": "Ketapang",
+    "schedule": {
+      "LPN": "07:00",
+      "KT": "07:25",
+      "PWS": "07:50",
+      "MN": "08:55",
+      "KTS": "09:45",
+      "JG": "10:10",
+      "MR": "10:35",
+      "SGU": "11:15",
+      "SDA": "11:50",
+      "BG": "12:30",
+      "PB": "13:30",
+      "JR": "15:30",
+      "RGP": "16:45",
+      "BWI": "17:20",
+      "KTG": "17:40"
+    }
+  },
+  {
+    "id": "KA 242 Sri Tanjung",
+    "name": "Sri Tanjung",
+    "line": "ANTARKOTA",
+    "destination": "Lempuyangan",
+    "schedule": {
+      "KTG": "06:50",
+      "BWI": "07:05",
+      "RGP": "07:40",
+      "JR": "08:55",
+      "PB": "10:55",
+      "BG": "11:55",
+      "SDA": "12:35",
+      "SGU": "13:10",
+      "MR": "13:50",
+      "JG": "14:15",
+      "KTS": "14:40",
+      "MN": "15:30",
+      "PWS": "16:35",
+      "KT": "17:00",
+      "LPN": "17:25"
+    }
+  },
+  {
+    "id": "KA 117 Wijayakusuma",
+    "name": "Wijayakusuma",
+    "line": "ANTARKOTA",
+    "destination": "Ketapang",
+    "schedule": {
+      "CP": "15:10",
+      "KYA": "15:45",
+      "KTA": "16:40",
+      "YK": "17:30",
+      "SLO": "18:25",
+      "MN": "19:30",
+      "KTS": "20:20",
+      "SGU": "21:35",
+      "SDA": "22:10",
+      "BG": "22:50",
+      "JR": "00:50",
+      "BWI": "02:40",
+      "KTG": "03:00"
+    }
+  },
+  {
+    "id": "KA 118 Wijayakusuma",
+    "name": "Wijayakusuma",
+    "line": "ANTARKOTA",
+    "destination": "Cilacap",
+    "schedule": {
+      "KTG": "11:30",
+      "BWI": "11:45",
+      "JR": "13:35",
+      "BG": "15:35",
+      "SDA": "16:15",
+      "SGU": "16:50",
+      "KTS": "18:05",
+      "MN": "18:55",
+      "SLO": "20:00",
+      "YK": "20:55",
+      "KTA": "21:45",
+      "KYA": "22:40",
+      "CP": "23:15"
+    }
+  },
+  {
+    "id": "KA 147 Sawunggalih Pagi",
+    "name": "Sawunggalih Pagi",
+    "line": "ANTARKOTA",
+    "destination": "Pasar Senen",
+    "schedule": {
+      "KTA": "07:00",
+      "GB": "07:35",
+      "KYA": "08:05",
+      "PWT": "08:40",
+      "CNP": "10:30",
+      "BKS": "12:45",
+      "PSE": "13:15"
+    }
+  },
+  {
+    "id": "KA 148 Sawunggalih Pagi",
+    "name": "Sawunggalih Pagi",
+    "line": "ANTARKOTA",
+    "destination": "Kutoarjo",
+    "schedule": {
+      "PSE": "07:10",
+      "BKS": "07:40",
+      "CNP": "09:55",
+      "PWT": "11:45",
+      "KYA": "12:20",
+      "GB": "12:50",
+      "KTA": "13:25"
+    }
+  },
+  {
+    "id": "KA 35 Argo Parahyangan",
+    "name": "Argo Parahyangan",
+    "line": "ANTARKOTA",
+    "destination": "Gambir",
+    "schedule": {
+      "BD": "05:00",
+      "CMI": "05:15",
+      "PDL": "05:28",
+      "SKT": "05:42",
+      "PLD": "05:58",
+      "CA": "06:12",
+      "PWK": "06:22",
+      "CBR": "06:33",
+      "CKP": "06:45",
+      "KW": "07:00",
+      "CKR": "07:18",
+      "BKS": "07:34",
+      "JNG": "07:48",
+      "GMR": "08:05"
+    }
+  },
+  {
+    "id": "KA 36 Argo Parahyangan",
+    "name": "Argo Parahyangan",
+    "line": "ANTARKOTA",
+    "destination": "Bandung",
+    "schedule": {
+      "GMR": "06:30",
+      "JNG": "06:48",
+      "BKS": "07:02",
+      "CKR": "07:18",
+      "KW": "07:35",
+      "CKP": "07:50",
+      "CBR": "08:01",
+      "PWK": "08:12",
+      "CA": "08:22",
+      "PLD": "08:35",
+      "SKT": "08:52",
+      "PDL": "09:05",
+      "CMI": "09:20",
+      "BD": "09:35"
+    }
+  },
+  {
+    "id": "KA 37 Argo Parahyangan",
+    "name": "Argo Parahyangan",
+    "line": "ANTARKOTA",
+    "destination": "Gambir",
+    "schedule": {
+      "BD": "10:50",
+      "CMI": "11:05",
+      "PDL": "11:18",
+      "SKT": "11:32",
+      "PLD": "11:48",
+      "CA": "12:02",
+      "PWK": "12:12",
+      "CBR": "12:23",
+      "CKP": "12:35",
+      "KW": "12:50",
+      "CKR": "13:08",
+      "BKS": "13:24",
+      "JNG": "13:38",
+      "GMR": "13:55"
+    }
+  },
+  {
+    "id": "KA 38 Argo Parahyangan",
+    "name": "Argo Parahyangan",
+    "line": "ANTARKOTA",
+    "destination": "Bandung",
+    "schedule": {
+      "GMR": "12:30",
+      "JNG": "12:48",
+      "BKS": "13:02",
+      "CKR": "13:18",
+      "KW": "13:35",
+      "CKP": "13:50",
+      "CBR": "14:01",
+      "PWK": "14:12",
+      "CA": "14:22",
+      "PLD": "14:35",
+      "SKT": "14:52",
+      "PDL": "15:05",
+      "CMI": "15:20",
+      "BD": "15:35"
+    }
+  },
+  {
+    "id": "KA 39 Argo Parahyangan",
+    "name": "Argo Parahyangan",
+    "line": "ANTARKOTA",
+    "destination": "Gambir",
+    "schedule": {
+      "BD": "16:10",
+      "CMI": "16:25",
+      "PDL": "16:38",
+      "SKT": "16:52",
+      "PLD": "17:08",
+      "CA": "17:22",
+      "PWK": "17:32",
+      "CBR": "17:43",
+      "CKP": "17:55",
+      "KW": "18:10",
+      "CKR": "18:28",
+      "BKS": "18:44",
+      "JNG": "18:58",
+      "GMR": "19:15"
+    }
+  },
+  {
+    "id": "KA 40 Argo Parahyangan",
+    "name": "Argo Parahyangan",
+    "line": "ANTARKOTA",
+    "destination": "Bandung",
+    "schedule": {
+      "GMR": "18:25",
+      "JNG": "18:43",
+      "BKS": "18:57",
+      "CKR": "19:13",
+      "KW": "19:30",
+      "CKP": "19:45",
+      "CBR": "19:56",
+      "PWK": "20:07",
+      "CA": "20:17",
+      "PLD": "20:30",
+      "SKT": "20:47",
+      "PDL": "21:00",
+      "CMI": "21:15",
+      "BD": "21:30"
+    }
+  },
+  {
+    "id": "KA 7047 Papandayan",
+    "name": "Papandayan",
+    "line": "ANTARKOTA",
+    "destination": "Gambir",
+    "schedule": {
+      "GRT": "12:30",
+      "CCL": "13:35",
+      "KAC": "14:05",
+      "BD": "14:25",
+      "CMI": "14:40",
+      "PDL": "14:55",
+      "SKT": "15:10",
+      "PLD": "15:25",
+      "CA": "15:40",
+      "PWK": "15:52",
+      "CBR": "16:03",
+      "CKP": "16:15",
+      "CKR": "16:45",
+      "BKS": "17:02",
+      "JNG": "17:18",
+      "GMR": "17:35"
+    }
+  },
+  {
+    "id": "KA 7048 Papandayan",
+    "name": "Papandayan",
+    "line": "ANTARKOTA",
+    "destination": "Garut",
+    "schedule": {
+      "GMR": "06:30",
+      "JNG": "06:48",
+      "BKS": "07:02",
+      "CKR": "07:18",
+      "CKP": "07:50",
+      "CBR": "08:01",
+      "PWK": "08:12",
+      "CA": "08:22",
+      "PLD": "08:35",
+      "SKT": "08:52",
+      "PDL": "09:05",
+      "CMI": "09:20",
+      "BD": "09:35",
+      "KAC": "09:55",
+      "CCL": "10:25",
+      "GRT": "11:30"
+    }
+  },
+  {
+    "id": "KA 7027 Pangandaran",
+    "name": "Pangandaran",
+    "line": "ANTARKOTA",
+    "destination": "Gambir",
+    "schedule": {
+      "BJR": "16:55",
+      "CI": "17:25",
+      "TSM": "18:00",
+      "KAC": "19:50",
+      "BD": "20:10",
+      "CMI": "20:25",
+      "PDL": "20:40",
+      "SKT": "20:55",
+      "PLD": "21:10",
+      "CA": "21:23",
+      "PWK": "21:35",
+      "CBR": "21:47",
+      "CKP": "22:00",
+      "CKR": "22:30",
+      "BKS": "22:48",
+      "JNG": "23:02",
+      "GMR": "23:20"
+    }
+  },
+  {
+    "id": "KA 7028 Pangandaran",
+    "name": "Pangandaran",
+    "line": "ANTARKOTA",
+    "destination": "Banjar",
+    "schedule": {
+      "GMR": "09:30",
+      "JNG": "09:48",
+      "BKS": "10:02",
+      "CKR": "10:18",
+      "CKP": "10:50",
+      "CBR": "11:01",
+      "PWK": "11:12",
+      "CA": "11:22",
+      "PLD": "11:35",
+      "SKT": "11:52",
+      "PDL": "12:05",
+      "CMI": "12:20",
+      "BD": "12:35",
+      "KAC": "12:55",
+      "TSM": "14:45",
+      "CI": "15:20",
+      "BJR": "15:50"
+    }
+  },
+  {
+    "id": "KA 251 Serayu Pagi",
+    "name": "Serayu Pagi",
+    "line": "ANTARKOTA",
+    "destination": "Purwokerto",
+    "schedule": {
+      "PSE": "09:25",
+      "BKS": "09:55",
+      "CKR": "10:15",
+      "KW": "10:35",
+      "CKP": "10:50",
+      "CBR": "10:58",
+      "PWK": "11:05",
+      "CA": "11:15",
+      "PLD": "11:28",
+      "SKT": "11:45",
+      "PDL": "11:58",
+      "CMI": "12:15",
+      "KAC": "12:45",
+      "CCL": "13:15",
+      "TSM": "14:50",
+      "CI": "15:25",
+      "BJR": "15:55",
+      "KYA": "17:30",
+      "PWT": "18:05"
+    }
+  },
+  {
+    "id": "KA 252 Serayu Pagi",
+    "name": "Serayu Pagi",
+    "line": "ANTARKOTA",
+    "destination": "Pasar Senen",
+    "schedule": {
+      "PWT": "06:50",
+      "KYA": "07:25",
+      "BJR": "09:00",
+      "CI": "09:30",
+      "TSM": "10:05",
+      "CCL": "11:40",
+      "KAC": "12:10",
+      "CMI": "12:40",
+      "PDL": "12:55",
+      "SKT": "13:10",
+      "PLD": "13:25",
+      "CA": "13:38",
+      "PWK": "13:50",
+      "CBR": "14:00",
+      "CKP": "14:10",
+      "KW": "14:25",
+      "CKR": "14:40",
+      "BKS": "15:00",
+      "PSE": "15:30"
+    }
+  },
+  {
+    "id": "KA U51 Sribilah Pagi",
+    "name": "Sribilah Utama Pagi",
+    "line": "ANTARKOTA",
+    "destination": "Rantau Prapat",
+    "schedule": {
+      "MDN": "07:50",
+      "TBI": "09:40",
+      "KIS": "10:45",
+      "MBM": "11:45",
+      "RAP": "13:10"
+    }
+  },
+  {
+    "id": "KA U52 Sribilah Pagi",
+    "name": "Sribilah Utama Pagi",
+    "line": "ANTARKOTA",
+    "destination": "Medan",
+    "schedule": {
+      "RAP": "07:45",
+      "MBM": "09:10",
+      "KIS": "10:10",
+      "TBI": "11:15",
+      "MDN": "13:05"
+    }
+  },
+  {
+    "id": "KA U53 Sribilah Siang",
+    "name": "Sribilah Utama Siang",
+    "line": "ANTARKOTA",
+    "destination": "Rantau Prapat",
+    "schedule": {
+      "MDN": "15:00",
+      "TBI": "16:50",
+      "KIS": "17:55",
+      "MBM": "18:55",
+      "RAP": "20:20"
+    }
+  },
+  {
+    "id": "KA U54 Sribilah Siang",
+    "name": "Sribilah Utama Siang",
+    "line": "ANTARKOTA",
+    "destination": "Medan",
+    "schedule": {
+      "RAP": "14:35",
+      "MBM": "16:00",
+      "KIS": "17:00",
+      "TBI": "18:05",
+      "MDN": "19:55"
+    }
+  },
+  {
+    "id": "KA U55 Sribilah Malam",
+    "name": "Sribilah Utama Malam",
+    "line": "ANTARKOTA",
+    "destination": "Rantau Prapat",
+    "schedule": {
+      "MDN": "22:20",
+      "TBI": "00:10",
+      "KIS": "01:15",
+      "MBM": "02:15",
+      "RAP": "03:40"
+    }
+  },
+  {
+    "id": "KA U56 Sribilah Malam",
+    "name": "Sribilah Utama Malam",
+    "line": "ANTARKOTA",
+    "destination": "Medan",
+    "schedule": {
+      "RAP": "22:00",
+      "MBM": "23:25",
+      "KIS": "00:25",
+      "TBI": "01:30",
+      "MDN": "03:20"
+    }
+  },
+  {
+    "id": "KA U71 Putri Deli Pagi",
+    "name": "Putri Deli Pagi",
+    "line": "ANTARKOTA",
+    "destination": "Tanjungbalai",
+    "schedule": {
+      "MDN": "07:00",
+      "TBI": "08:50",
+      "KIS": "09:55",
+      "TNB": "10:35"
+    }
+  },
+  {
+    "id": "KA U72 Putri Deli Pagi",
+    "name": "Putri Deli Pagi",
+    "line": "ANTARKOTA",
+    "destination": "Medan",
+    "schedule": {
+      "TNB": "08:30",
+      "KIS": "09:10",
+      "TBI": "10:15",
+      "MDN": "12:05"
+    }
+  },
+  {
+    "id": "KA U73 Putri Deli Siang",
+    "name": "Putri Deli Siang",
+    "line": "ANTARKOTA",
+    "destination": "Tanjungbalai",
+    "schedule": {
+      "MDN": "12:50",
+      "TBI": "14:40",
+      "KIS": "15:45",
+      "TNB": "16:25"
+    }
+  },
+  {
+    "id": "KA U74 Putri Deli Siang",
+    "name": "Putri Deli Siang",
+    "line": "ANTARKOTA",
+    "destination": "Medan",
+    "schedule": {
+      "TNB": "12:40",
+      "KIS": "13:20",
+      "TBI": "14:25",
+      "MDN": "16:15"
+    }
+  },
+  {
+    "id": "KA U77 Siantar Ekspres",
+    "name": "Siantar Ekspres",
+    "line": "ANTARKOTA",
+    "destination": "Siantar",
+    "schedule": {
+      "MDN": "11:45",
+      "TBI": "13:35",
+      "SIR": "14:40"
+    }
+  },
+  {
+    "id": "KA U78 Siantar Ekspres",
+    "name": "Siantar Ekspres",
+    "line": "ANTARKOTA",
+    "destination": "Medan",
+    "schedule": {
+      "SIR": "15:10",
+      "TBI": "16:15",
+      "MDN": "18:05"
+    }
+  },
+  {
+    "id": "KA S1 Sindang Marga",
+    "name": "Sindang Marga",
+    "line": "ANTARKOTA",
+    "destination": "Lubuklinggau",
+    "schedule": {
+      "KPT": "20:15",
+      "PBM": "21:40",
+      "ME": "22:45",
+      "LT": "23:40",
+      "LLG": "02:45"
+    }
+  },
+  {
+    "id": "KA S2 Sindang Marga",
+    "name": "Sindang Marga",
+    "line": "ANTARKOTA",
+    "destination": "Kertapati",
+    "schedule": {
+      "LLG": "20:15",
+      "LT": "23:20",
+      "ME": "00:15",
+      "PBM": "01:20",
+      "KPT": "02:45"
+    }
+  },
+  {
+    "id": "KA S5 Bukit Serelo",
+    "name": "Bukit Serelo",
+    "line": "ANTARKOTA",
+    "destination": "Lubuklinggau",
+    "schedule": {
+      "KPT": "09:00",
+      "PBM": "10:25",
+      "ME": "11:30",
+      "LT": "12:25",
+      "LLG": "15:30"
+    }
+  },
+  {
+    "id": "KA S6 Bukit Serelo",
+    "name": "Bukit Serelo",
+    "line": "ANTARKOTA",
+    "destination": "Kertapati",
+    "schedule": {
+      "LLG": "09:00",
+      "LT": "12:05",
+      "ME": "13:00",
+      "PBM": "14:05",
+      "KPT": "15:30"
+    }
+  },
+  {
+    "id": "KA S3 Sriwijaya",
+    "name": "Sriwijaya",
+    "line": "ANTARKOTA",
+    "destination": "Tanjungkarang",
+    "schedule": {
+      "KPT": "21:00",
+      "PBM": "22:25",
+      "BTA": "00:45",
+      "KB": "02:30",
+      "TNK": "05:40"
+    }
+  },
+  {
+    "id": "KA S4 Sriwijaya",
+    "name": "Sriwijaya",
+    "line": "ANTARKOTA",
+    "destination": "Kertapati",
+    "schedule": {
+      "TNK": "21:00",
+      "KB": "00:10",
+      "BTA": "01:55",
+      "PBM": "04:15",
+      "KPT": "05:40"
+    }
+  },
+  {
+    "id": "KA S7 Rajabasa",
+    "name": "Rajabasa",
+    "line": "ANTARKOTA",
+    "destination": "Tanjungkarang",
+    "schedule": {
+      "KPT": "08:30",
+      "PBM": "09:55",
+      "BTA": "12:15",
+      "KB": "14:00",
+      "TNK": "17:10"
+    }
+  },
+  {
+    "id": "KA S8 Rajabasa",
+    "name": "Rajabasa",
+    "line": "ANTARKOTA",
+    "destination": "Kertapati",
+    "schedule": {
+      "TNK": "08:30",
+      "KB": "11:40",
+      "BTA": "13:25",
+      "PBM": "15:45",
+      "KPT": "17:10"
+    }
+  },
+  {
+    "id": "KA S9 Kuala Stabas Pagi",
+    "name": "Kuala Stabas Pagi",
+    "line": "ANTARKOTA",
+    "destination": "Baturaja",
+    "schedule": {
+      "TNK": "06:30",
+      "KB": "09:40",
+      "BTA": "11:25"
+    }
+  },
+  {
+    "id": "KA S10 Kuala Stabas Pagi",
+    "name": "Kuala Stabas Pagi",
+    "line": "ANTARKOTA",
+    "destination": "Tanjungkarang",
+    "schedule": {
+      "BTA": "06:30",
+      "KB": "08:15",
+      "TNK": "11:25"
+    }
+  },
+  {
+    "id": "KA S11 Kuala Stabas Siang",
+    "name": "Kuala Stabas Siang",
+    "line": "ANTARKOTA",
+    "destination": "Baturaja",
+    "schedule": {
+      "TNK": "13:30",
+      "KB": "16:40",
+      "BTA": "18:25"
+    }
+  },
+  {
+    "id": "KA S12 Kuala Stabas Siang",
+    "name": "Kuala Stabas Siang",
+    "line": "ANTARKOTA",
+    "destination": "Tanjungkarang",
+    "schedule": {
+      "BTA": "14:00",
+      "KB": "15:45",
+      "TNK": "18:55"
+    }
+  },
+  {
+    "id": "KA 301 CL Merak",
+    "name": "Commuter Line Merak",
+    "line": "LOKAL",
+    "destination": "Merak",
+    "schedule": {
+      "RK": "05:10",
+      "CKY": "05:28",
+      "SG": "05:52",
+      "KRA": "06:04",
+      "CLG": "06:24",
+      "KEN": "06:35",
+      "MER": "06:55"
+    }
+  },
+  {
+    "id": "KA 303 CL Merak",
+    "name": "Commuter Line Merak",
+    "line": "LOKAL",
+    "destination": "Merak",
+    "schedule": {
+      "RK": "07:35",
+      "CKY": "07:53",
+      "SG": "08:17",
+      "KRA": "08:29",
+      "CLG": "08:49",
+      "KEN": "09:00",
+      "MER": "09:20"
+    }
+  },
+  {
+    "id": "KA 305 CL Merak",
+    "name": "Commuter Line Merak",
+    "line": "LOKAL",
+    "destination": "Merak",
+    "schedule": {
+      "RK": "09:50",
+      "CKY": "10:08",
+      "SG": "10:32",
+      "KRA": "10:44",
+      "CLG": "11:04",
+      "KEN": "11:15",
+      "MER": "11:35"
+    }
+  },
+  {
+    "id": "KA 307 CL Merak",
+    "name": "Commuter Line Merak",
+    "line": "LOKAL",
+    "destination": "Merak",
+    "schedule": {
+      "RK": "12:10",
+      "CKY": "12:28",
+      "SG": "12:52",
+      "KRA": "13:04",
+      "CLG": "13:24",
+      "KEN": "13:35",
+      "MER": "13:55"
+    }
+  },
+  {
+    "id": "KA 309 CL Merak",
+    "name": "Commuter Line Merak",
+    "line": "LOKAL",
+    "destination": "Merak",
+    "schedule": {
+      "RK": "14:20",
+      "CKY": "14:38",
+      "SG": "15:02",
+      "KRA": "15:14",
+      "CLG": "15:34",
+      "KEN": "15:45",
+      "MER": "16:05"
+    }
+  },
+  {
+    "id": "KA 311 CL Merak",
+    "name": "Commuter Line Merak",
+    "line": "LOKAL",
+    "destination": "Merak",
+    "schedule": {
+      "RK": "16:45",
+      "CKY": "17:03",
+      "SG": "17:27",
+      "KRA": "17:39",
+      "CLG": "17:59",
+      "KEN": "18:10",
+      "MER": "18:30"
+    }
+  },
+  {
+    "id": "KA 313 CL Merak",
+    "name": "Commuter Line Merak",
+    "line": "LOKAL",
+    "destination": "Merak",
+    "schedule": {
+      "RK": "19:00",
+      "CKY": "19:18",
+      "SG": "19:42",
+      "KRA": "19:54",
+      "CLG": "20:14",
+      "KEN": "20:25",
+      "MER": "20:45"
+    }
+  },
+  {
+    "id": "KA 315 CL Merak",
+    "name": "Commuter Line Merak",
+    "line": "LOKAL",
+    "destination": "Merak",
+    "schedule": {
+      "RK": "21:15",
+      "CKY": "21:33",
+      "SG": "21:57",
+      "KRA": "22:09",
+      "CLG": "22:29",
+      "KEN": "22:40",
+      "MER": "23:00"
+    }
+  },
+  {
+    "id": "KA 302 CL Merak",
+    "name": "Commuter Line Merak",
+    "line": "LOKAL",
+    "destination": "Rangkasbitung",
+    "schedule": {
+      "MER": "05:00",
+      "KEN": "05:20",
+      "CLG": "05:31",
+      "KRA": "05:51",
+      "SG": "06:03",
+      "CKY": "06:27",
+      "RK": "06:45"
+    }
+  },
+  {
+    "id": "KA 304 CL Merak",
+    "name": "Commuter Line Merak",
+    "line": "LOKAL",
+    "destination": "Rangkasbitung",
+    "schedule": {
+      "MER": "07:20",
+      "KEN": "07:40",
+      "CLG": "07:51",
+      "KRA": "08:11",
+      "SG": "08:23",
+      "CKY": "08:47",
+      "RK": "09:05"
+    }
+  },
+  {
+    "id": "KA 306 CL Merak",
+    "name": "Commuter Line Merak",
+    "line": "LOKAL",
+    "destination": "Rangkasbitung",
+    "schedule": {
+      "MER": "09:40",
+      "KEN": "10:00",
+      "CLG": "10:11",
+      "KRA": "10:31",
+      "SG": "10:43",
+      "CKY": "11:07",
+      "RK": "11:25"
+    }
+  },
+  {
+    "id": "KA 308 CL Merak",
+    "name": "Commuter Line Merak",
+    "line": "LOKAL",
+    "destination": "Rangkasbitung",
+    "schedule": {
+      "MER": "12:00",
+      "KEN": "12:20",
+      "CLG": "12:31",
+      "KRA": "12:51",
+      "SG": "13:03",
+      "CKY": "13:27",
+      "RK": "13:45"
+    }
+  },
+  {
+    "id": "KA 310 CL Merak",
+    "name": "Commuter Line Merak",
+    "line": "LOKAL",
+    "destination": "Rangkasbitung",
+    "schedule": {
+      "MER": "14:10",
+      "KEN": "14:30",
+      "CLG": "14:41",
+      "KRA": "15:01",
+      "SG": "15:13",
+      "CKY": "15:37",
+      "RK": "15:55"
+    }
+  },
+  {
+    "id": "KA 312 CL Merak",
+    "name": "Commuter Line Merak",
+    "line": "LOKAL",
+    "destination": "Rangkasbitung",
+    "schedule": {
+      "MER": "16:30",
+      "KEN": "16:50",
+      "CLG": "17:01",
+      "KRA": "17:21",
+      "SG": "17:33",
+      "CKY": "17:57",
+      "RK": "18:15"
+    }
+  },
+  {
+    "id": "KA 314 CL Merak",
+    "name": "Commuter Line Merak",
+    "line": "LOKAL",
+    "destination": "Rangkasbitung",
+    "schedule": {
+      "MER": "18:50",
+      "KEN": "19:10",
+      "CLG": "19:21",
+      "KRA": "19:41",
+      "SG": "19:53",
+      "CKY": "20:17",
+      "RK": "20:35"
+    }
+  },
+  {
+    "id": "KA 316 CL Merak",
+    "name": "Commuter Line Merak",
+    "line": "LOKAL",
+    "destination": "Rangkasbitung",
+    "schedule": {
+      "MER": "21:05",
+      "KEN": "21:25",
+      "CLG": "21:36",
+      "KRA": "21:56",
+      "SG": "22:08",
+      "CKY": "22:32",
+      "RK": "22:50"
+    }
+  },
+  {
+    "id": "KA 351 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Cicalengka",
+    "schedule": {
+      "PDL": "05:05",
+      "CMI": "05:21",
+      "BD": "05:37",
+      "KAC": "05:51",
+      "CCL": "06:23"
+    }
+  },
+  {
+    "id": "KA 353 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Cicalengka",
+    "schedule": {
+      "PDL": "06:15",
+      "CMI": "06:31",
+      "BD": "06:47",
+      "KAC": "07:01",
+      "CCL": "07:33"
+    }
+  },
+  {
+    "id": "KA 355 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Cicalengka",
+    "schedule": {
+      "PDL": "07:30",
+      "CMI": "07:46",
+      "BD": "08:02",
+      "KAC": "08:16",
+      "CCL": "08:48"
+    }
+  },
+  {
+    "id": "KA 357 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Cicalengka",
+    "schedule": {
+      "PDL": "08:50",
+      "CMI": "09:06",
+      "BD": "09:22",
+      "KAC": "09:36",
+      "CCL": "10:08"
+    }
+  },
+  {
+    "id": "KA 359 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Cicalengka",
+    "schedule": {
+      "PDL": "10:15",
+      "CMI": "10:31",
+      "BD": "10:47",
+      "KAC": "11:01",
+      "CCL": "11:33"
+    }
+  },
+  {
+    "id": "KA 361 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Cicalengka",
+    "schedule": {
+      "PDL": "11:45",
+      "CMI": "12:01",
+      "BD": "12:17",
+      "KAC": "12:31",
+      "CCL": "13:03"
+    }
+  },
+  {
+    "id": "KA 363 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Cicalengka",
+    "schedule": {
+      "PDL": "13:10",
+      "CMI": "13:26",
+      "BD": "13:42",
+      "KAC": "13:56",
+      "CCL": "14:28"
+    }
+  },
+  {
+    "id": "KA 365 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Cicalengka",
+    "schedule": {
+      "PDL": "14:40",
+      "CMI": "14:56",
+      "BD": "15:12",
+      "KAC": "15:26",
+      "CCL": "15:58"
+    }
+  },
+  {
+    "id": "KA 367 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Cicalengka",
+    "schedule": {
+      "PDL": "16:05",
+      "CMI": "16:21",
+      "BD": "16:37",
+      "KAC": "16:51",
+      "CCL": "17:23"
+    }
+  },
+  {
+    "id": "KA 369 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Cicalengka",
+    "schedule": {
+      "PDL": "17:35",
+      "CMI": "17:51",
+      "BD": "18:07",
+      "KAC": "18:21",
+      "CCL": "18:53"
+    }
+  },
+  {
+    "id": "KA 371 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Cicalengka",
+    "schedule": {
+      "PDL": "19:00",
+      "CMI": "19:16",
+      "BD": "19:32",
+      "KAC": "19:46",
+      "CCL": "20:18"
+    }
+  },
+  {
+    "id": "KA 373 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Cicalengka",
+    "schedule": {
+      "PDL": "20:30",
+      "CMI": "20:46",
+      "BD": "21:02",
+      "KAC": "21:16",
+      "CCL": "21:48"
+    }
+  },
+  {
+    "id": "KA 352 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Padalarang",
+    "schedule": {
+      "CCL": "05:10",
+      "KAC": "05:42",
+      "BD": "05:56",
+      "CMI": "06:12",
+      "PDL": "06:28"
+    }
+  },
+  {
+    "id": "KA 354 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Padalarang",
+    "schedule": {
+      "CCL": "06:25",
+      "KAC": "06:57",
+      "BD": "07:11",
+      "CMI": "07:27",
+      "PDL": "07:43"
+    }
+  },
+  {
+    "id": "KA 356 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Padalarang",
+    "schedule": {
+      "CCL": "07:45",
+      "KAC": "08:17",
+      "BD": "08:31",
+      "CMI": "08:47",
+      "PDL": "09:03"
+    }
+  },
+  {
+    "id": "KA 358 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Padalarang",
+    "schedule": {
+      "CCL": "09:10",
+      "KAC": "09:42",
+      "BD": "09:56",
+      "CMI": "10:12",
+      "PDL": "10:28"
+    }
+  },
+  {
+    "id": "KA 360 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Padalarang",
+    "schedule": {
+      "CCL": "10:35",
+      "KAC": "11:07",
+      "BD": "11:21",
+      "CMI": "11:37",
+      "PDL": "11:53"
+    }
+  },
+  {
+    "id": "KA 362 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Padalarang",
+    "schedule": {
+      "CCL": "12:05",
+      "KAC": "12:37",
+      "BD": "12:51",
+      "CMI": "13:07",
+      "PDL": "13:23"
+    }
+  },
+  {
+    "id": "KA 364 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Padalarang",
+    "schedule": {
+      "CCL": "13:35",
+      "KAC": "14:07",
+      "BD": "14:21",
+      "CMI": "14:37",
+      "PDL": "14:53"
+    }
+  },
+  {
+    "id": "KA 366 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Padalarang",
+    "schedule": {
+      "CCL": "15:00",
+      "KAC": "15:32",
+      "BD": "15:46",
+      "CMI": "16:02",
+      "PDL": "16:18"
+    }
+  },
+  {
+    "id": "KA 368 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Padalarang",
+    "schedule": {
+      "CCL": "16:25",
+      "KAC": "16:57",
+      "BD": "17:11",
+      "CMI": "17:27",
+      "PDL": "17:43"
+    }
+  },
+  {
+    "id": "KA 370 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Padalarang",
+    "schedule": {
+      "CCL": "17:55",
+      "KAC": "18:27",
+      "BD": "18:41",
+      "CMI": "18:57",
+      "PDL": "19:13"
+    }
+  },
+  {
+    "id": "KA 372 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Padalarang",
+    "schedule": {
+      "CCL": "19:20",
+      "KAC": "19:52",
+      "BD": "20:06",
+      "CMI": "20:22",
+      "PDL": "20:38"
+    }
+  },
+  {
+    "id": "KA 374 CL Bandung Raya",
+    "name": "Commuter Line Bandung Raya",
+    "line": "LOKAL",
+    "destination": "Padalarang",
+    "schedule": {
+      "CCL": "20:50",
+      "KAC": "21:22",
+      "BD": "21:36",
+      "CMI": "21:52",
+      "PDL": "22:08"
+    }
+  },
+  {
+    "id": "KA 651 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Palur",
+    "schedule": {
+      "YK": "05:30",
+      "LPN": "05:35",
+      "KT": "05:58",
+      "PWS": "06:22",
+      "SLO": "06:30",
+      "PL": "06:42"
+    }
+  },
+  {
+    "id": "KA 653 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Palur",
+    "schedule": {
+      "YK": "06:50",
+      "LPN": "06:55",
+      "KT": "07:18",
+      "PWS": "07:42",
+      "SLO": "07:50",
+      "PL": "08:02"
+    }
+  },
+  {
+    "id": "KA 655 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Palur",
+    "schedule": {
+      "YK": "08:15",
+      "LPN": "08:20",
+      "KT": "08:43",
+      "PWS": "09:07",
+      "SLO": "09:15",
+      "PL": "09:27"
+    }
+  },
+  {
+    "id": "KA 657 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Palur",
+    "schedule": {
+      "YK": "09:40",
+      "LPN": "09:45",
+      "KT": "10:08",
+      "PWS": "10:32",
+      "SLO": "10:40",
+      "PL": "10:52"
+    }
+  },
+  {
+    "id": "KA 659 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Palur",
+    "schedule": {
+      "YK": "11:05",
+      "LPN": "11:10",
+      "KT": "11:33",
+      "PWS": "11:57",
+      "SLO": "12:05",
+      "PL": "12:17"
+    }
+  },
+  {
+    "id": "KA 661 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Palur",
+    "schedule": {
+      "YK": "12:30",
+      "LPN": "12:35",
+      "KT": "12:58",
+      "PWS": "13:22",
+      "SLO": "13:30",
+      "PL": "13:42"
+    }
+  },
+  {
+    "id": "KA 663 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Palur",
+    "schedule": {
+      "YK": "13:55",
+      "LPN": "14:00",
+      "KT": "14:23",
+      "PWS": "14:47",
+      "SLO": "14:55",
+      "PL": "15:07"
+    }
+  },
+  {
+    "id": "KA 665 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Palur",
+    "schedule": {
+      "YK": "15:20",
+      "LPN": "15:25",
+      "KT": "15:48",
+      "PWS": "16:12",
+      "SLO": "16:20",
+      "PL": "16:32"
+    }
+  },
+  {
+    "id": "KA 667 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Palur",
+    "schedule": {
+      "YK": "16:45",
+      "LPN": "16:50",
+      "KT": "17:13",
+      "PWS": "17:37",
+      "SLO": "17:45",
+      "PL": "17:57"
+    }
+  },
+  {
+    "id": "KA 669 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Palur",
+    "schedule": {
+      "YK": "18:10",
+      "LPN": "18:15",
+      "KT": "18:38",
+      "PWS": "19:02",
+      "SLO": "19:10",
+      "PL": "19:22"
+    }
+  },
+  {
+    "id": "KA 671 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Palur",
+    "schedule": {
+      "YK": "19:35",
+      "LPN": "19:40",
+      "KT": "20:03",
+      "PWS": "20:27",
+      "SLO": "20:35",
+      "PL": "20:47"
+    }
+  },
+  {
+    "id": "KA 673 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Palur",
+    "schedule": {
+      "YK": "21:00",
+      "LPN": "21:05",
+      "KT": "21:28",
+      "PWS": "21:52",
+      "SLO": "22:00",
+      "PL": "22:12"
+    }
+  },
+  {
+    "id": "KA 652 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "PL": "05:35",
+      "SLO": "05:47",
+      "PWS": "05:55",
+      "KT": "06:19",
+      "LPN": "06:42",
+      "YK": "06:47"
+    }
+  },
+  {
+    "id": "KA 654 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "PL": "06:55",
+      "SLO": "07:07",
+      "PWS": "07:15",
+      "KT": "07:39",
+      "LPN": "08:02",
+      "YK": "08:07"
+    }
+  },
+  {
+    "id": "KA 656 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "PL": "08:20",
+      "SLO": "08:32",
+      "PWS": "08:40",
+      "KT": "09:04",
+      "LPN": "09:27",
+      "YK": "09:32"
+    }
+  },
+  {
+    "id": "KA 658 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "PL": "09:45",
+      "SLO": "09:57",
+      "PWS": "10:05",
+      "KT": "10:29",
+      "LPN": "10:52",
+      "YK": "10:57"
+    }
+  },
+  {
+    "id": "KA 660 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "PL": "11:10",
+      "SLO": "11:22",
+      "PWS": "11:30",
+      "KT": "11:54",
+      "LPN": "12:17",
+      "YK": "12:22"
+    }
+  },
+  {
+    "id": "KA 662 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "PL": "12:35",
+      "SLO": "12:47",
+      "PWS": "12:55",
+      "KT": "13:19",
+      "LPN": "13:42",
+      "YK": "13:47"
+    }
+  },
+  {
+    "id": "KA 664 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "PL": "14:00",
+      "SLO": "14:12",
+      "PWS": "14:20",
+      "KT": "14:44",
+      "LPN": "15:07",
+      "YK": "15:12"
+    }
+  },
+  {
+    "id": "KA 666 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "PL": "15:25",
+      "SLO": "15:37",
+      "PWS": "15:45",
+      "KT": "16:09",
+      "LPN": "16:32",
+      "YK": "16:37"
+    }
+  },
+  {
+    "id": "KA 668 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "PL": "16:50",
+      "SLO": "17:02",
+      "PWS": "17:10",
+      "KT": "17:34",
+      "LPN": "17:57",
+      "YK": "18:02"
+    }
+  },
+  {
+    "id": "KA 670 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "PL": "18:15",
+      "SLO": "18:27",
+      "PWS": "18:35",
+      "KT": "18:59",
+      "LPN": "19:22",
+      "YK": "19:27"
+    }
+  },
+  {
+    "id": "KA 672 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "PL": "19:40",
+      "SLO": "19:52",
+      "PWS": "20:00",
+      "KT": "20:24",
+      "LPN": "20:47",
+      "YK": "20:52"
+    }
+  },
+  {
+    "id": "KA 674 CL Yogyakarta",
+    "name": "Commuter Line Yogyakarta",
+    "line": "LOKAL",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "PL": "21:05",
+      "SLO": "21:17",
+      "PWS": "21:25",
+      "KT": "21:49",
+      "LPN": "22:12",
+      "YK": "22:17"
+    }
+  },
+  {
+    "id": "KA 551 Prameks",
+    "name": "Prambanan Ekspres",
+    "line": "LOKAL",
+    "destination": "Kutoarjo",
+    "schedule": {
+      "YK": "06:37",
+      "WT": "07:07",
+      "KTA": "07:42"
+    }
+  },
+  {
+    "id": "KA 553 Prameks",
+    "name": "Prambanan Ekspres",
+    "line": "LOKAL",
+    "destination": "Kutoarjo",
+    "schedule": {
+      "YK": "10:26",
+      "WT": "10:56",
+      "KTA": "11:31"
+    }
+  },
+  {
+    "id": "KA 555 Prameks",
+    "name": "Prambanan Ekspres",
+    "line": "LOKAL",
+    "destination": "Kutoarjo",
+    "schedule": {
+      "YK": "13:49",
+      "WT": "14:19",
+      "KTA": "14:54"
+    }
+  },
+  {
+    "id": "KA 557 Prameks",
+    "name": "Prambanan Ekspres",
+    "line": "LOKAL",
+    "destination": "Kutoarjo",
+    "schedule": {
+      "YK": "17:50",
+      "WT": "18:20",
+      "KTA": "18:55"
+    }
+  },
+  {
+    "id": "KA 552 Prameks",
+    "name": "Prambanan Ekspres",
+    "line": "LOKAL",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "KTA": "05:25",
+      "WT": "06:00",
+      "YK": "06:30"
+    }
+  },
+  {
+    "id": "KA 554 Prameks",
+    "name": "Prambanan Ekspres",
+    "line": "LOKAL",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "KTA": "09:05",
+      "WT": "09:40",
+      "YK": "10:10"
+    }
+  },
+  {
+    "id": "KA 556 Prameks",
+    "name": "Prambanan Ekspres",
+    "line": "LOKAL",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "KTA": "12:20",
+      "WT": "12:55",
+      "YK": "13:25"
+    }
+  },
+  {
+    "id": "KA 558 Prameks",
+    "name": "Prambanan Ekspres",
+    "line": "LOKAL",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "KTA": "16:05",
+      "WT": "16:40",
+      "YK": "17:10"
+    }
+  },
+  {
+    "id": "KA 401 CL Dhoho",
+    "name": "Commuter Line Dhoho",
+    "line": "LOKAL",
+    "destination": "Blitar",
+    "schedule": {
+      "SGU": "05:15",
+      "MR": "06:00",
+      "KTS": "06:50",
+      "KD": "07:30",
+      "TA": "08:10",
+      "BL": "08:50"
+    }
+  },
+  {
+    "id": "KA 403 CL Dhoho",
+    "name": "Commuter Line Dhoho",
+    "line": "LOKAL",
+    "destination": "Blitar",
+    "schedule": {
+      "SGU": "09:20",
+      "MR": "10:05",
+      "KTS": "10:55",
+      "KD": "11:35",
+      "TA": "12:15",
+      "BL": "12:55"
+    }
+  },
+  {
+    "id": "KA 405 CL Dhoho",
+    "name": "Commuter Line Dhoho",
+    "line": "LOKAL",
+    "destination": "Blitar",
+    "schedule": {
+      "SGU": "14:15",
+      "MR": "15:00",
+      "KTS": "15:50",
+      "KD": "16:30",
+      "TA": "17:10",
+      "BL": "17:50"
+    }
+  },
+  {
+    "id": "KA 407 CL Dhoho",
+    "name": "Commuter Line Dhoho",
+    "line": "LOKAL",
+    "destination": "Blitar",
+    "schedule": {
+      "SGU": "18:30",
+      "MR": "19:15",
+      "KTS": "20:05",
+      "KD": "20:45",
+      "TA": "21:25",
+      "BL": "22:05"
+    }
+  },
+  {
+    "id": "KA 402 CL Dhoho",
+    "name": "Commuter Line Dhoho",
+    "line": "LOKAL",
+    "destination": "Surabaya Gubeng",
+    "schedule": {
+      "BL": "04:30",
+      "TA": "05:10",
+      "KD": "05:50",
+      "KTS": "06:30",
+      "MR": "07:20",
+      "SGU": "08:05"
+    }
+  },
+  {
+    "id": "KA 404 CL Dhoho",
+    "name": "Commuter Line Dhoho",
+    "line": "LOKAL",
+    "destination": "Surabaya Gubeng",
+    "schedule": {
+      "BL": "08:50",
+      "TA": "09:30",
+      "KD": "10:10",
+      "KTS": "10:50",
+      "MR": "11:40",
+      "SGU": "12:25"
+    }
+  },
+  {
+    "id": "KA 406 CL Dhoho",
+    "name": "Commuter Line Dhoho",
+    "line": "LOKAL",
+    "destination": "Surabaya Gubeng",
+    "schedule": {
+      "BL": "13:40",
+      "TA": "14:20",
+      "KD": "15:00",
+      "KTS": "15:40",
+      "MR": "16:30",
+      "SGU": "17:15"
+    }
+  },
+  {
+    "id": "KA 408 CL Dhoho",
+    "name": "Commuter Line Dhoho",
+    "line": "LOKAL",
+    "destination": "Surabaya Gubeng",
+    "schedule": {
+      "BL": "18:00",
+      "TA": "18:40",
+      "KD": "19:20",
+      "KTS": "20:00",
+      "MR": "20:50",
+      "SGU": "21:35"
+    }
+  },
+  {
+    "id": "KA 431 CL Penataran",
+    "name": "Commuter Line Penataran",
+    "line": "LOKAL",
+    "destination": "Blitar",
+    "schedule": {
+      "SGU": "06:45",
+      "SDA": "07:20",
+      "BG": "08:00",
+      "ML": "09:00",
+      "BL": "10:20"
+    }
+  },
+  {
+    "id": "KA 433 CL Penataran",
+    "name": "Commuter Line Penataran",
+    "line": "LOKAL",
+    "destination": "Blitar",
+    "schedule": {
+      "SGU": "11:10",
+      "SDA": "11:45",
+      "BG": "12:25",
+      "ML": "13:25",
+      "BL": "14:45"
+    }
+  },
+  {
+    "id": "KA 435 CL Penataran",
+    "name": "Commuter Line Penataran",
+    "line": "LOKAL",
+    "destination": "Blitar",
+    "schedule": {
+      "SGU": "15:30",
+      "SDA": "16:05",
+      "BG": "16:45",
+      "ML": "17:45",
+      "BL": "19:05"
+    }
+  },
+  {
+    "id": "KA 437 CL Penataran",
+    "name": "Commuter Line Penataran",
+    "line": "LOKAL",
+    "destination": "Blitar",
+    "schedule": {
+      "SGU": "19:40",
+      "SDA": "20:15",
+      "BG": "20:55",
+      "ML": "21:55",
+      "BL": "23:15"
+    }
+  },
+  {
+    "id": "KA 432 CL Penataran",
+    "name": "Commuter Line Penataran",
+    "line": "LOKAL",
+    "destination": "Surabaya Gubeng",
+    "schedule": {
+      "BL": "05:40",
+      "ML": "07:00",
+      "BG": "08:00",
+      "SDA": "08:40",
+      "SGU": "09:15"
+    }
+  },
+  {
+    "id": "KA 434 CL Penataran",
+    "name": "Commuter Line Penataran",
+    "line": "LOKAL",
+    "destination": "Surabaya Gubeng",
+    "schedule": {
+      "BL": "10:15",
+      "ML": "11:35",
+      "BG": "12:35",
+      "SDA": "13:15",
+      "SGU": "13:50"
+    }
+  },
+  {
+    "id": "KA 436 CL Penataran",
+    "name": "Commuter Line Penataran",
+    "line": "LOKAL",
+    "destination": "Surabaya Gubeng",
+    "schedule": {
+      "BL": "14:50",
+      "ML": "16:10",
+      "BG": "17:10",
+      "SDA": "17:50",
+      "SGU": "18:25"
+    }
+  },
+  {
+    "id": "KA 438 CL Penataran",
+    "name": "Commuter Line Penataran",
+    "line": "LOKAL",
+    "destination": "Surabaya Gubeng",
+    "schedule": {
+      "BL": "19:15",
+      "ML": "20:35",
+      "BG": "21:35",
+      "SDA": "22:15",
+      "SGU": "22:50"
+    }
+  },
+  {
+    "id": "KA U81 Sri Lelawangsa",
+    "name": "Commuter Line Sri Lelawangsa",
+    "line": "LOKAL",
+    "destination": "Binjai",
+    "schedule": {
+      "MDN": "05:30",
+      "BIJ": "06:00"
+    }
+  },
+  {
+    "id": "KA U83 Sri Lelawangsa",
+    "name": "Commuter Line Sri Lelawangsa",
+    "line": "LOKAL",
+    "destination": "Binjai",
+    "schedule": {
+      "MDN": "07:00",
+      "BIJ": "07:30"
+    }
+  },
+  {
+    "id": "KA U85 Sri Lelawangsa",
+    "name": "Commuter Line Sri Lelawangsa",
+    "line": "LOKAL",
+    "destination": "Binjai",
+    "schedule": {
+      "MDN": "08:30",
+      "BIJ": "09:00"
+    }
+  },
+  {
+    "id": "KA U87 Sri Lelawangsa",
+    "name": "Commuter Line Sri Lelawangsa",
+    "line": "LOKAL",
+    "destination": "Binjai",
+    "schedule": {
+      "MDN": "10:30",
+      "BIJ": "11:00"
+    }
+  },
+  {
+    "id": "KA U89 Sri Lelawangsa",
+    "name": "Commuter Line Sri Lelawangsa",
+    "line": "LOKAL",
+    "destination": "Binjai",
+    "schedule": {
+      "MDN": "12:15",
+      "BIJ": "12:45"
+    }
+  },
+  {
+    "id": "KA U91 Sri Lelawangsa",
+    "name": "Commuter Line Sri Lelawangsa",
+    "line": "LOKAL",
+    "destination": "Binjai",
+    "schedule": {
+      "MDN": "14:00",
+      "BIJ": "14:30"
+    }
+  },
+  {
+    "id": "KA U93 Sri Lelawangsa",
+    "name": "Commuter Line Sri Lelawangsa",
+    "line": "LOKAL",
+    "destination": "Binjai",
+    "schedule": {
+      "MDN": "15:45",
+      "BIJ": "16:15"
+    }
+  },
+  {
+    "id": "KA U95 Sri Lelawangsa",
+    "name": "Commuter Line Sri Lelawangsa",
+    "line": "LOKAL",
+    "destination": "Binjai",
+    "schedule": {
+      "MDN": "17:15",
+      "BIJ": "17:45"
+    }
+  },
+  {
+    "id": "KA U97 Sri Lelawangsa",
+    "name": "Commuter Line Sri Lelawangsa",
+    "line": "LOKAL",
+    "destination": "Binjai",
+    "schedule": {
+      "MDN": "18:45",
+      "BIJ": "19:15"
+    }
+  },
+  {
+    "id": "KA U99 Sri Lelawangsa",
+    "name": "Commuter Line Sri Lelawangsa",
+    "line": "LOKAL",
+    "destination": "Binjai",
+    "schedule": {
+      "MDN": "20:30",
+      "BIJ": "21:00"
+    }
+  },
+  {
+    "id": "KA U82 Sri Lelawangsa",
+    "name": "Commuter Line Sri Lelawangsa",
+    "line": "LOKAL",
+    "destination": "Medan",
+    "schedule": {
+      "BIJ": "06:15",
+      "MDN": "06:45"
+    }
+  },
+  {
+    "id": "KA U84 Sri Lelawangsa",
+    "name": "Commuter Line Sri Lelawangsa",
+    "line": "LOKAL",
+    "destination": "Medan",
+    "schedule": {
+      "BIJ": "07:45",
+      "MDN": "08:15"
+    }
+  },
+  {
+    "id": "KA U86 Sri Lelawangsa",
+    "name": "Commuter Line Sri Lelawangsa",
+    "line": "LOKAL",
+    "destination": "Medan",
+    "schedule": {
+      "BIJ": "09:15",
+      "MDN": "09:45"
+    }
+  },
+  {
+    "id": "KA U88 Sri Lelawangsa",
+    "name": "Commuter Line Sri Lelawangsa",
+    "line": "LOKAL",
+    "destination": "Medan",
+    "schedule": {
+      "BIJ": "11:15",
+      "MDN": "11:45"
+    }
+  },
+  {
+    "id": "KA U90 Sri Lelawangsa",
+    "name": "Commuter Line Sri Lelawangsa",
+    "line": "LOKAL",
+    "destination": "Medan",
+    "schedule": {
+      "BIJ": "13:00",
+      "MDN": "13:30"
+    }
+  },
+  {
+    "id": "KA U92 Sri Lelawangsa",
+    "name": "Commuter Line Sri Lelawangsa",
+    "line": "LOKAL",
+    "destination": "Medan",
+    "schedule": {
+      "BIJ": "14:45",
+      "MDN": "15:15"
+    }
+  },
+  {
+    "id": "KA U94 Sri Lelawangsa",
+    "name": "Commuter Line Sri Lelawangsa",
+    "line": "LOKAL",
+    "destination": "Medan",
+    "schedule": {
+      "BIJ": "16:30",
+      "MDN": "17:00"
+    }
+  },
+  {
+    "id": "KA U96 Sri Lelawangsa",
+    "name": "Commuter Line Sri Lelawangsa",
+    "line": "LOKAL",
+    "destination": "Medan",
+    "schedule": {
+      "BIJ": "18:00",
+      "MDN": "18:30"
+    }
+  },
+  {
+    "id": "KA U98 Sri Lelawangsa",
+    "name": "Commuter Line Sri Lelawangsa",
+    "line": "LOKAL",
+    "destination": "Medan",
+    "schedule": {
+      "BIJ": "19:30",
+      "MDN": "20:00"
+    }
+  },
+  {
+    "id": "KA U100 Sri Lelawangsa",
+    "name": "Commuter Line Sri Lelawangsa",
+    "line": "LOKAL",
+    "destination": "Medan",
+    "schedule": {
+      "BIJ": "21:15",
+      "MDN": "21:45"
+    }
+  },
+  {
+    "id": "KA B1 Pariaman Ekspres",
+    "name": "KA Pariaman Ekspres",
+    "line": "LOKAL",
+    "destination": "Naras",
+    "schedule": {
+      "PD": "06:00",
+      "ATR": "06:10",
+      "TAB": "06:22",
+      "LBY": "06:50",
+      "PMN": "07:25",
+      "NRS": "07:40"
+    }
+  },
+  {
+    "id": "KA B3 Pariaman Ekspres",
+    "name": "KA Pariaman Ekspres",
+    "line": "LOKAL",
+    "destination": "Naras",
+    "schedule": {
+      "PD": "09:30",
+      "ATR": "09:40",
+      "TAB": "09:52",
+      "LBY": "10:20",
+      "PMN": "10:55",
+      "NRS": "11:10"
+    }
+  },
+  {
+    "id": "KA B5 Pariaman Ekspres",
+    "name": "KA Pariaman Ekspres",
+    "line": "LOKAL",
+    "destination": "Naras",
+    "schedule": {
+      "PD": "14:10",
+      "ATR": "14:20",
+      "TAB": "14:32",
+      "LBY": "15:00",
+      "PMN": "15:35",
+      "NRS": "15:50"
+    }
+  },
+  {
+    "id": "KA B7 Pariaman Ekspres",
+    "name": "KA Pariaman Ekspres",
+    "line": "LOKAL",
+    "destination": "Naras",
+    "schedule": {
+      "PD": "17:35",
+      "ATR": "17:45",
+      "TAB": "17:57",
+      "LBY": "18:25",
+      "PMN": "19:00",
+      "NRS": "19:15"
+    }
+  },
+  {
+    "id": "KA B2 Pariaman Ekspres",
+    "name": "KA Pariaman Ekspres",
+    "line": "LOKAL",
+    "destination": "Padang",
+    "schedule": {
+      "NRS": "06:00",
+      "PMN": "06:15",
+      "LBY": "06:50",
+      "TAB": "07:18",
+      "ATR": "07:30",
+      "PD": "07:40"
+    }
+  },
+  {
+    "id": "KA B4 Pariaman Ekspres",
+    "name": "KA Pariaman Ekspres",
+    "line": "LOKAL",
+    "destination": "Padang",
+    "schedule": {
+      "NRS": "09:20",
+      "PMN": "09:35",
+      "LBY": "10:10",
+      "TAB": "10:38",
+      "ATR": "10:50",
+      "PD": "11:00"
+    }
+  },
+  {
+    "id": "KA B6 Pariaman Ekspres",
+    "name": "KA Pariaman Ekspres",
+    "line": "LOKAL",
+    "destination": "Padang",
+    "schedule": {
+      "NRS": "14:00",
+      "PMN": "14:15",
+      "LBY": "14:50",
+      "TAB": "15:18",
+      "ATR": "15:30",
+      "PD": "15:40"
+    }
+  },
+  {
+    "id": "KA B8 Pariaman Ekspres",
+    "name": "KA Pariaman Ekspres",
+    "line": "LOKAL",
+    "destination": "Padang",
+    "schedule": {
+      "NRS": "17:00",
+      "PMN": "17:15",
+      "LBY": "17:50",
+      "TAB": "18:18",
+      "ATR": "18:30",
+      "PD": "18:40"
+    }
+  },
+  {
+    "id": "Whoosh G1101",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "06:40",
+      "PDL": "07:12",
+      "TGLR": "07:26"
+    }
+  },
+  {
+    "id": "Whoosh G1103",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "07:05",
+      "PDL": "07:37",
+      "TGLR": "07:51"
+    }
+  },
+  {
+    "id": "Whoosh G1105",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "07:55",
+      "PDL": "08:27",
+      "TGLR": "08:41"
+    }
+  },
+  {
+    "id": "Whoosh G1107",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "08:45",
+      "PDL": "09:17",
+      "TGLR": "09:31"
+    }
+  },
+  {
+    "id": "Whoosh G1109",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "09:10",
+      "PDL": "09:42",
+      "TGLR": "09:56"
+    }
+  },
+  {
+    "id": "Whoosh G1111",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "10:20",
+      "PDL": "10:52",
+      "TGLR": "11:06"
+    }
+  },
+  {
+    "id": "Whoosh G1113",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "11:10",
+      "PDL": "11:42",
+      "TGLR": "11:56"
+    }
+  },
+  {
+    "id": "Whoosh G1115",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "12:00",
+      "PDL": "12:32",
+      "TGLR": "12:46"
+    }
+  },
+  {
+    "id": "Whoosh G1117",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "13:02",
+      "PDL": "13:34",
+      "TGLR": "13:48"
+    }
+  },
+  {
+    "id": "Whoosh G1119",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "14:02",
+      "PDL": "14:34",
+      "TGLR": "14:48"
+    }
+  },
+  {
+    "id": "Whoosh G1121",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "15:00",
+      "PDL": "15:32",
+      "TGLR": "15:46"
+    }
+  },
+  {
+    "id": "Whoosh G1123",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "15:35",
+      "PDL": "16:07",
+      "TGLR": "16:21"
+    }
+  },
+  {
+    "id": "Whoosh G1125",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "16:10",
+      "PDL": "16:42",
+      "TGLR": "16:56"
+    }
+  },
+  {
+    "id": "Whoosh G1127",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "16:45",
+      "PDL": "17:17",
+      "TGLR": "17:31"
+    }
+  },
+  {
+    "id": "Whoosh G1129",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "17:35",
+      "PDL": "18:07",
+      "TGLR": "18:21"
+    }
+  },
+  {
+    "id": "Whoosh G1131",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "18:00",
+      "PDL": "18:32",
+      "TGLR": "18:46"
+    }
+  },
+  {
+    "id": "Whoosh G1133",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "18:50",
+      "PDL": "19:22",
+      "TGLR": "19:36"
+    }
+  },
+  {
+    "id": "Whoosh G1135",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "19:40",
+      "PDL": "20:12",
+      "TGLR": "20:26"
+    }
+  },
+  {
+    "id": "Whoosh G1137",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "20:30",
+      "PDL": "21:02",
+      "TGLR": "21:16"
+    }
+  },
+  {
+    "id": "Whoosh G1139",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Tegalluar Summarecon",
+    "schedule": {
+      "HLM": "21:15",
+      "PDL": "21:47",
+      "TGLR": "22:01"
+    }
+  },
+  {
+    "id": "Whoosh G1102",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "06:40",
+      "PDL": "06:54",
+      "HLM": "07:26"
+    }
+  },
+  {
+    "id": "Whoosh G1104",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "07:05",
+      "PDL": "07:19",
+      "HLM": "07:51"
+    }
+  },
+  {
+    "id": "Whoosh G1106",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "07:55",
+      "PDL": "08:09",
+      "HLM": "08:41"
+    }
+  },
+  {
+    "id": "Whoosh G1108",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "08:45",
+      "PDL": "08:59",
+      "HLM": "09:31"
+    }
+  },
+  {
+    "id": "Whoosh G1110",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "09:10",
+      "PDL": "09:24",
+      "HLM": "09:56"
+    }
+  },
+  {
+    "id": "Whoosh G1112",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "10:20",
+      "PDL": "10:34",
+      "HLM": "11:06"
+    }
+  },
+  {
+    "id": "Whoosh G1114",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "11:10",
+      "PDL": "11:24",
+      "HLM": "11:56"
+    }
+  },
+  {
+    "id": "Whoosh G1116",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "12:00",
+      "PDL": "12:14",
+      "HLM": "12:46"
+    }
+  },
+  {
+    "id": "Whoosh G1118",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "13:02",
+      "PDL": "13:16",
+      "HLM": "13:48"
+    }
+  },
+  {
+    "id": "Whoosh G1120",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "14:02",
+      "PDL": "14:16",
+      "HLM": "14:48"
+    }
+  },
+  {
+    "id": "Whoosh G1122",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "15:00",
+      "PDL": "15:14",
+      "HLM": "15:46"
+    }
+  },
+  {
+    "id": "Whoosh G1124",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "15:35",
+      "PDL": "15:49",
+      "HLM": "16:21"
+    }
+  },
+  {
+    "id": "Whoosh G1126",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "16:10",
+      "PDL": "16:24",
+      "HLM": "16:56"
+    }
+  },
+  {
+    "id": "Whoosh G1128",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "16:45",
+      "PDL": "16:59",
+      "HLM": "17:31"
+    }
+  },
+  {
+    "id": "Whoosh G1130",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "17:35",
+      "PDL": "17:49",
+      "HLM": "18:21"
+    }
+  },
+  {
+    "id": "Whoosh G1132",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "18:00",
+      "PDL": "18:14",
+      "HLM": "18:46"
+    }
+  },
+  {
+    "id": "Whoosh G1134",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "18:50",
+      "PDL": "19:04",
+      "HLM": "19:36"
+    }
+  },
+  {
+    "id": "Whoosh G1136",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "19:40",
+      "PDL": "19:54",
+      "HLM": "20:26"
+    }
+  },
+  {
+    "id": "Whoosh G1138",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "20:30",
+      "PDL": "20:44",
+      "HLM": "21:16"
+    }
+  },
+  {
+    "id": "Whoosh G1140",
+    "name": "Whoosh KCIC",
+    "line": "WHOOSH",
+    "destination": "Halim",
+    "schedule": {
+      "TGLR": "21:15",
+      "PDL": "21:29",
+      "HLM": "22:01"
+    }
+  },
+  {
+    "id": "KA 7101 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "05:00",
+      "BNC": "05:12",
+      "DU": "05:25",
+      "BPR": "05:42",
+      "BST": "05:54"
+    }
+  },
+  {
+    "id": "KA 7103 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "05:30",
+      "BNC": "05:42",
+      "DU": "05:55",
+      "BPR": "06:12",
+      "BST": "06:24"
+    }
+  },
+  {
+    "id": "KA 7105 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "06:00",
+      "BNC": "06:12",
+      "DU": "06:25",
+      "BPR": "06:42",
+      "BST": "06:54"
+    }
+  },
+  {
+    "id": "KA 7107 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "06:30",
+      "BNC": "06:42",
+      "DU": "06:55",
+      "BPR": "07:12",
+      "BST": "07:24"
+    }
+  },
+  {
+    "id": "KA 7109 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "07:00",
+      "BNC": "07:12",
+      "DU": "07:25",
+      "BPR": "07:42",
+      "BST": "07:54"
+    }
+  },
+  {
+    "id": "KA 7111 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "07:30",
+      "BNC": "07:42",
+      "DU": "07:55",
+      "BPR": "08:12",
+      "BST": "08:24"
+    }
+  },
+  {
+    "id": "KA 7113 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "08:00",
+      "BNC": "08:12",
+      "DU": "08:25",
+      "BPR": "08:42",
+      "BST": "08:54"
+    }
+  },
+  {
+    "id": "KA 7115 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "08:30",
+      "BNC": "08:42",
+      "DU": "08:55",
+      "BPR": "09:12",
+      "BST": "09:24"
+    }
+  },
+  {
+    "id": "KA 7117 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "09:00",
+      "BNC": "09:12",
+      "DU": "09:25",
+      "BPR": "09:42",
+      "BST": "09:54"
+    }
+  },
+  {
+    "id": "KA 7119 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "09:30",
+      "BNC": "09:42",
+      "DU": "09:55",
+      "BPR": "10:12",
+      "BST": "10:24"
+    }
+  },
+  {
+    "id": "KA 7121 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "10:00",
+      "BNC": "10:12",
+      "DU": "10:25",
+      "BPR": "10:42",
+      "BST": "10:54"
+    }
+  },
+  {
+    "id": "KA 7123 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "10:30",
+      "BNC": "10:42",
+      "DU": "10:55",
+      "BPR": "11:12",
+      "BST": "11:24"
+    }
+  },
+  {
+    "id": "KA 7125 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "11:00",
+      "BNC": "11:12",
+      "DU": "11:25",
+      "BPR": "11:42",
+      "BST": "11:54"
+    }
+  },
+  {
+    "id": "KA 7127 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "11:30",
+      "BNC": "11:42",
+      "DU": "11:55",
+      "BPR": "12:12",
+      "BST": "12:24"
+    }
+  },
+  {
+    "id": "KA 7129 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "12:00",
+      "BNC": "12:12",
+      "DU": "12:25",
+      "BPR": "12:42",
+      "BST": "12:54"
+    }
+  },
+  {
+    "id": "KA 7131 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "12:30",
+      "BNC": "12:42",
+      "DU": "12:55",
+      "BPR": "13:12",
+      "BST": "13:24"
+    }
+  },
+  {
+    "id": "KA 7133 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "13:00",
+      "BNC": "13:12",
+      "DU": "13:25",
+      "BPR": "13:42",
+      "BST": "13:54"
+    }
+  },
+  {
+    "id": "KA 7135 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "13:30",
+      "BNC": "13:42",
+      "DU": "13:55",
+      "BPR": "14:12",
+      "BST": "14:24"
+    }
+  },
+  {
+    "id": "KA 7137 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "14:00",
+      "BNC": "14:12",
+      "DU": "14:25",
+      "BPR": "14:42",
+      "BST": "14:54"
+    }
+  },
+  {
+    "id": "KA 7139 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "14:30",
+      "BNC": "14:42",
+      "DU": "14:55",
+      "BPR": "15:12",
+      "BST": "15:24"
+    }
+  },
+  {
+    "id": "KA 7141 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "15:00",
+      "BNC": "15:12",
+      "DU": "15:25",
+      "BPR": "15:42",
+      "BST": "15:54"
+    }
+  },
+  {
+    "id": "KA 7143 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "15:30",
+      "BNC": "15:42",
+      "DU": "15:55",
+      "BPR": "16:12",
+      "BST": "16:24"
+    }
+  },
+  {
+    "id": "KA 7145 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "16:00",
+      "BNC": "16:12",
+      "DU": "16:25",
+      "BPR": "16:42",
+      "BST": "16:54"
+    }
+  },
+  {
+    "id": "KA 7147 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "16:30",
+      "BNC": "16:42",
+      "DU": "16:55",
+      "BPR": "17:12",
+      "BST": "17:24"
+    }
+  },
+  {
+    "id": "KA 7149 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "17:00",
+      "BNC": "17:12",
+      "DU": "17:25",
+      "BPR": "17:42",
+      "BST": "17:54"
+    }
+  },
+  {
+    "id": "KA 7151 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "17:30",
+      "BNC": "17:42",
+      "DU": "17:55",
+      "BPR": "18:12",
+      "BST": "18:24"
+    }
+  },
+  {
+    "id": "KA 7153 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "18:00",
+      "BNC": "18:12",
+      "DU": "18:25",
+      "BPR": "18:42",
+      "BST": "18:54"
+    }
+  },
+  {
+    "id": "KA 7155 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "18:30",
+      "BNC": "18:42",
+      "DU": "18:55",
+      "BPR": "19:12",
+      "BST": "19:24"
+    }
+  },
+  {
+    "id": "KA 7157 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "19:00",
+      "BNC": "19:12",
+      "DU": "19:25",
+      "BPR": "19:42",
+      "BST": "19:54"
+    }
+  },
+  {
+    "id": "KA 7159 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "19:30",
+      "BNC": "19:42",
+      "DU": "19:55",
+      "BPR": "20:12",
+      "BST": "20:24"
+    }
+  },
+  {
+    "id": "KA 7161 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "20:00",
+      "BNC": "20:12",
+      "DU": "20:25",
+      "BPR": "20:42",
+      "BST": "20:54"
+    }
+  },
+  {
+    "id": "KA 7163 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "20:30",
+      "BNC": "20:42",
+      "DU": "20:55",
+      "BPR": "21:12",
+      "BST": "21:24"
+    }
+  },
+  {
+    "id": "KA 7165 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "21:00",
+      "BNC": "21:12",
+      "DU": "21:25",
+      "BPR": "21:42",
+      "BST": "21:54"
+    }
+  },
+  {
+    "id": "KA 7167 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Bandara Soekarno-Hatta",
+    "schedule": {
+      "MRI": "21:30",
+      "BNC": "21:42",
+      "DU": "21:55",
+      "BPR": "22:12",
+      "BST": "22:24"
+    }
+  },
+  {
+    "id": "KA 7102 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "06:15",
+      "BPR": "06:27",
+      "DU": "06:44",
+      "BNC": "06:57",
+      "MRI": "07:09"
+    }
+  },
+  {
+    "id": "KA 7104 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "06:45",
+      "BPR": "06:57",
+      "DU": "07:14",
+      "BNC": "07:27",
+      "MRI": "07:39"
+    }
+  },
+  {
+    "id": "KA 7106 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "07:15",
+      "BPR": "07:27",
+      "DU": "07:44",
+      "BNC": "07:57",
+      "MRI": "08:09"
+    }
+  },
+  {
+    "id": "KA 7108 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "07:45",
+      "BPR": "07:57",
+      "DU": "08:14",
+      "BNC": "08:27",
+      "MRI": "08:39"
+    }
+  },
+  {
+    "id": "KA 7110 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "08:15",
+      "BPR": "08:27",
+      "DU": "08:44",
+      "BNC": "08:57",
+      "MRI": "09:09"
+    }
+  },
+  {
+    "id": "KA 7112 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "08:45",
+      "BPR": "08:57",
+      "DU": "09:14",
+      "BNC": "09:27",
+      "MRI": "09:39"
+    }
+  },
+  {
+    "id": "KA 7114 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "09:15",
+      "BPR": "09:27",
+      "DU": "09:44",
+      "BNC": "09:57",
+      "MRI": "10:09"
+    }
+  },
+  {
+    "id": "KA 7116 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "09:45",
+      "BPR": "09:57",
+      "DU": "10:14",
+      "BNC": "10:27",
+      "MRI": "10:39"
+    }
+  },
+  {
+    "id": "KA 7118 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "10:15",
+      "BPR": "10:27",
+      "DU": "10:44",
+      "BNC": "10:57",
+      "MRI": "11:09"
+    }
+  },
+  {
+    "id": "KA 7120 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "10:45",
+      "BPR": "10:57",
+      "DU": "11:14",
+      "BNC": "11:27",
+      "MRI": "11:39"
+    }
+  },
+  {
+    "id": "KA 7122 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "11:15",
+      "BPR": "11:27",
+      "DU": "11:44",
+      "BNC": "11:57",
+      "MRI": "12:09"
+    }
+  },
+  {
+    "id": "KA 7124 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "11:45",
+      "BPR": "11:57",
+      "DU": "12:14",
+      "BNC": "12:27",
+      "MRI": "12:39"
+    }
+  },
+  {
+    "id": "KA 7126 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "12:15",
+      "BPR": "12:27",
+      "DU": "12:44",
+      "BNC": "12:57",
+      "MRI": "13:09"
+    }
+  },
+  {
+    "id": "KA 7128 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "12:45",
+      "BPR": "12:57",
+      "DU": "13:14",
+      "BNC": "13:27",
+      "MRI": "13:39"
+    }
+  },
+  {
+    "id": "KA 7130 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "13:15",
+      "BPR": "13:27",
+      "DU": "13:44",
+      "BNC": "13:57",
+      "MRI": "14:09"
+    }
+  },
+  {
+    "id": "KA 7132 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "13:45",
+      "BPR": "13:57",
+      "DU": "14:14",
+      "BNC": "14:27",
+      "MRI": "14:39"
+    }
+  },
+  {
+    "id": "KA 7134 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "14:15",
+      "BPR": "14:27",
+      "DU": "14:44",
+      "BNC": "14:57",
+      "MRI": "15:09"
+    }
+  },
+  {
+    "id": "KA 7136 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "14:45",
+      "BPR": "14:57",
+      "DU": "15:14",
+      "BNC": "15:27",
+      "MRI": "15:39"
+    }
+  },
+  {
+    "id": "KA 7138 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "15:15",
+      "BPR": "15:27",
+      "DU": "15:44",
+      "BNC": "15:57",
+      "MRI": "16:09"
+    }
+  },
+  {
+    "id": "KA 7140 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "15:45",
+      "BPR": "15:57",
+      "DU": "16:14",
+      "BNC": "16:27",
+      "MRI": "16:39"
+    }
+  },
+  {
+    "id": "KA 7142 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "16:15",
+      "BPR": "16:27",
+      "DU": "16:44",
+      "BNC": "16:57",
+      "MRI": "17:09"
+    }
+  },
+  {
+    "id": "KA 7144 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "16:45",
+      "BPR": "16:57",
+      "DU": "17:14",
+      "BNC": "17:27",
+      "MRI": "17:39"
+    }
+  },
+  {
+    "id": "KA 7146 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "17:15",
+      "BPR": "17:27",
+      "DU": "17:44",
+      "BNC": "17:57",
+      "MRI": "18:09"
+    }
+  },
+  {
+    "id": "KA 7148 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "17:45",
+      "BPR": "17:57",
+      "DU": "18:14",
+      "BNC": "18:27",
+      "MRI": "18:39"
+    }
+  },
+  {
+    "id": "KA 7150 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "18:15",
+      "BPR": "18:27",
+      "DU": "18:44",
+      "BNC": "18:57",
+      "MRI": "19:09"
+    }
+  },
+  {
+    "id": "KA 7152 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "18:45",
+      "BPR": "18:57",
+      "DU": "19:14",
+      "BNC": "19:27",
+      "MRI": "19:39"
+    }
+  },
+  {
+    "id": "KA 7154 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "19:15",
+      "BPR": "19:27",
+      "DU": "19:44",
+      "BNC": "19:57",
+      "MRI": "20:09"
+    }
+  },
+  {
+    "id": "KA 7156 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "19:45",
+      "BPR": "19:57",
+      "DU": "20:14",
+      "BNC": "20:27",
+      "MRI": "20:39"
+    }
+  },
+  {
+    "id": "KA 7158 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "20:15",
+      "BPR": "20:27",
+      "DU": "20:44",
+      "BNC": "20:57",
+      "MRI": "21:09"
+    }
+  },
+  {
+    "id": "KA 7160 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "20:45",
+      "BPR": "20:57",
+      "DU": "21:14",
+      "BNC": "21:27",
+      "MRI": "21:39"
+    }
+  },
+  {
+    "id": "KA 7162 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "21:15",
+      "BPR": "21:27",
+      "DU": "21:44",
+      "BNC": "21:57",
+      "MRI": "22:09"
+    }
+  },
+  {
+    "id": "KA 7164 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "21:45",
+      "BPR": "21:57",
+      "DU": "22:14",
+      "BNC": "22:27",
+      "MRI": "22:39"
+    }
+  },
+  {
+    "id": "KA 7166 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "22:15",
+      "BPR": "22:27",
+      "DU": "22:44",
+      "BNC": "22:57",
+      "MRI": "23:09"
+    }
+  },
+  {
+    "id": "KA 7168 Bandara Soetta",
+    "name": "KA Bandara Soekarno-Hatta",
+    "line": "BANDARA",
+    "destination": "Manggarai",
+    "schedule": {
+      "BST": "22:45",
+      "BPR": "22:57",
+      "DU": "23:14",
+      "BNC": "23:27",
+      "MRI": "23:39"
+    }
+  },
+  {
+    "id": "KA 7201 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "05:00",
+      "WT": "05:24",
+      "YIA": "05:39"
+    }
+  },
+  {
+    "id": "KA 7203 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "06:00",
+      "WT": "06:24",
+      "YIA": "06:39"
+    }
+  },
+  {
+    "id": "KA 7205 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "07:05",
+      "WT": "07:29",
+      "YIA": "07:44"
+    }
+  },
+  {
+    "id": "KA 7207 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "08:05",
+      "WT": "08:29",
+      "YIA": "08:44"
+    }
+  },
+  {
+    "id": "KA 7209 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "09:10",
+      "WT": "09:34",
+      "YIA": "09:49"
+    }
+  },
+  {
+    "id": "KA 7211 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "10:10",
+      "WT": "10:34",
+      "YIA": "10:49"
+    }
+  },
+  {
+    "id": "KA 7213 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "11:20",
+      "WT": "11:44",
+      "YIA": "11:59"
+    }
+  },
+  {
+    "id": "KA 7215 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "12:20",
+      "WT": "12:44",
+      "YIA": "12:59"
+    }
+  },
+  {
+    "id": "KA 7217 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "13:30",
+      "WT": "13:54",
+      "YIA": "14:09"
+    }
+  },
+  {
+    "id": "KA 7219 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "14:30",
+      "WT": "14:54",
+      "YIA": "15:09"
+    }
+  },
+  {
+    "id": "KA 7221 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "15:40",
+      "WT": "16:04",
+      "YIA": "16:19"
+    }
+  },
+  {
+    "id": "KA 7223 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "16:40",
+      "WT": "17:04",
+      "YIA": "17:19"
+    }
+  },
+  {
+    "id": "KA 7225 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "17:50",
+      "WT": "18:14",
+      "YIA": "18:29"
+    }
+  },
+  {
+    "id": "KA 7227 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "18:50",
+      "WT": "19:14",
+      "YIA": "19:29"
+    }
+  },
+  {
+    "id": "KA 7229 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "20:00",
+      "WT": "20:24",
+      "YIA": "20:39"
+    }
+  },
+  {
+    "id": "KA 7231 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Bandara YIA",
+    "schedule": {
+      "YK": "21:00",
+      "WT": "21:24",
+      "YIA": "21:39"
+    }
+  },
+  {
+    "id": "KA 7202 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "05:50",
+      "WT": "06:05",
+      "YK": "06:29"
+    }
+  },
+  {
+    "id": "KA 7204 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "06:50",
+      "WT": "07:05",
+      "YK": "07:29"
+    }
+  },
+  {
+    "id": "KA 7206 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "07:55",
+      "WT": "08:10",
+      "YK": "08:34"
+    }
+  },
+  {
+    "id": "KA 7208 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "08:55",
+      "WT": "09:10",
+      "YK": "09:34"
+    }
+  },
+  {
+    "id": "KA 7210 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "10:00",
+      "WT": "10:15",
+      "YK": "10:39"
+    }
+  },
+  {
+    "id": "KA 7212 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "11:00",
+      "WT": "11:15",
+      "YK": "11:39"
+    }
+  },
+  {
+    "id": "KA 7214 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "12:10",
+      "WT": "12:25",
+      "YK": "12:49"
+    }
+  },
+  {
+    "id": "KA 7216 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "13:10",
+      "WT": "13:25",
+      "YK": "13:49"
+    }
+  },
+  {
+    "id": "KA 7218 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "14:20",
+      "WT": "14:35",
+      "YK": "14:59"
+    }
+  },
+  {
+    "id": "KA 7220 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "15:20",
+      "WT": "15:35",
+      "YK": "15:59"
+    }
+  },
+  {
+    "id": "KA 7222 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "16:30",
+      "WT": "16:45",
+      "YK": "17:09"
+    }
+  },
+  {
+    "id": "KA 7224 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "17:30",
+      "WT": "17:45",
+      "YK": "18:09"
+    }
+  },
+  {
+    "id": "KA 7226 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "18:40",
+      "WT": "18:55",
+      "YK": "19:19"
+    }
+  },
+  {
+    "id": "KA 7228 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "19:40",
+      "WT": "19:55",
+      "YK": "20:19"
+    }
+  },
+  {
+    "id": "KA 7230 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "20:50",
+      "WT": "21:05",
+      "YK": "21:29"
+    }
+  },
+  {
+    "id": "KA 7232 Bandara YIA",
+    "name": "KA Bandara YIA",
+    "line": "BANDARA",
+    "destination": "Yogyakarta",
+    "schedule": {
+      "YIA": "21:50",
+      "WT": "22:05",
+      "YK": "22:29"
+    }
+  },
+  {
+    "id": "KA 7301 Minangkabau Ekspres",
+    "name": "KA Minangkabau Ekspres",
+    "line": "BANDARA",
+    "destination": "Bandara Minangkabau",
+    "schedule": {
+      "PD": "06:15",
+      "DUK": "06:40",
+      "BIM": "06:57"
+    }
+  },
+  {
+    "id": "KA 7303 Minangkabau Ekspres",
+    "name": "KA Minangkabau Ekspres",
+    "line": "BANDARA",
+    "destination": "Bandara Minangkabau",
+    "schedule": {
+      "PD": "08:20",
+      "DUK": "08:45",
+      "BIM": "09:02"
+    }
+  },
+  {
+    "id": "KA 7305 Minangkabau Ekspres",
+    "name": "KA Minangkabau Ekspres",
+    "line": "BANDARA",
+    "destination": "Bandara Minangkabau",
+    "schedule": {
+      "PD": "10:45",
+      "DUK": "11:10",
+      "BIM": "11:27"
+    }
+  },
+  {
+    "id": "KA 7307 Minangkabau Ekspres",
+    "name": "KA Minangkabau Ekspres",
+    "line": "BANDARA",
+    "destination": "Bandara Minangkabau",
+    "schedule": {
+      "PD": "13:10",
+      "DUK": "13:35",
+      "BIM": "13:52"
+    }
+  },
+  {
+    "id": "KA 7309 Minangkabau Ekspres",
+    "name": "KA Minangkabau Ekspres",
+    "line": "BANDARA",
+    "destination": "Bandara Minangkabau",
+    "schedule": {
+      "PD": "15:40",
+      "DUK": "16:05",
+      "BIM": "16:22"
+    }
+  },
+  {
+    "id": "KA 7311 Minangkabau Ekspres",
+    "name": "KA Minangkabau Ekspres",
+    "line": "BANDARA",
+    "destination": "Bandara Minangkabau",
+    "schedule": {
+      "PD": "18:00",
+      "DUK": "18:25",
+      "BIM": "18:42"
+    }
+  },
+  {
+    "id": "KA 7302 Minangkabau Ekspres",
+    "name": "KA Minangkabau Ekspres",
+    "line": "BANDARA",
+    "destination": "Padang",
+    "schedule": {
+      "BIM": "07:15",
+      "DUK": "07:32",
+      "PD": "07:57"
+    }
+  },
+  {
+    "id": "KA 7304 Minangkabau Ekspres",
+    "name": "KA Minangkabau Ekspres",
+    "line": "BANDARA",
+    "destination": "Padang",
+    "schedule": {
+      "BIM": "09:30",
+      "DUK": "09:47",
+      "PD": "10:12"
+    }
+  },
+  {
+    "id": "KA 7306 Minangkabau Ekspres",
+    "name": "KA Minangkabau Ekspres",
+    "line": "BANDARA",
+    "destination": "Padang",
+    "schedule": {
+      "BIM": "11:55",
+      "DUK": "12:12",
+      "PD": "12:37"
+    }
+  },
+  {
+    "id": "KA 7308 Minangkabau Ekspres",
+    "name": "KA Minangkabau Ekspres",
+    "line": "BANDARA",
+    "destination": "Padang",
+    "schedule": {
+      "BIM": "14:25",
+      "DUK": "14:42",
+      "PD": "15:07"
+    }
+  },
+  {
+    "id": "KA 7310 Minangkabau Ekspres",
+    "name": "KA Minangkabau Ekspres",
+    "line": "BANDARA",
+    "destination": "Padang",
+    "schedule": {
+      "BIM": "16:50",
+      "DUK": "17:07",
+      "PD": "17:32"
+    }
+  },
+  {
+    "id": "KA 7312 Minangkabau Ekspres",
+    "name": "KA Minangkabau Ekspres",
+    "line": "BANDARA",
+    "destination": "Padang",
+    "schedule": {
+      "BIM": "19:15",
+      "DUK": "19:32",
+      "PD": "19:57"
+    }
+  },
+  {
+    "id": "KA 7401 Bandara Kualanamu",
+    "name": "KA Bandara Kualanamu",
+    "line": "BANDARA",
+    "destination": "Kualanamu",
+    "schedule": {
+      "MDN": "05:20",
+      "KNM": "05:52"
+    }
+  },
+  {
+    "id": "KA 7403 Bandara Kualanamu",
+    "name": "KA Bandara Kualanamu",
+    "line": "BANDARA",
+    "destination": "Kualanamu",
+    "schedule": {
+      "MDN": "07:20",
+      "KNM": "07:52"
+    }
+  },
+  {
+    "id": "KA 7405 Bandara Kualanamu",
+    "name": "KA Bandara Kualanamu",
+    "line": "BANDARA",
+    "destination": "Kualanamu",
+    "schedule": {
+      "MDN": "09:20",
+      "KNM": "09:52"
+    }
+  },
+  {
+    "id": "KA 7407 Bandara Kualanamu",
+    "name": "KA Bandara Kualanamu",
+    "line": "BANDARA",
+    "destination": "Kualanamu",
+    "schedule": {
+      "MDN": "11:20",
+      "KNM": "11:52"
+    }
+  },
+  {
+    "id": "KA 7409 Bandara Kualanamu",
+    "name": "KA Bandara Kualanamu",
+    "line": "BANDARA",
+    "destination": "Kualanamu",
+    "schedule": {
+      "MDN": "13:20",
+      "KNM": "13:52"
+    }
+  },
+  {
+    "id": "KA 7411 Bandara Kualanamu",
+    "name": "KA Bandara Kualanamu",
+    "line": "BANDARA",
+    "destination": "Kualanamu",
+    "schedule": {
+      "MDN": "15:20",
+      "KNM": "15:52"
+    }
+  },
+  {
+    "id": "KA 7413 Bandara Kualanamu",
+    "name": "KA Bandara Kualanamu",
+    "line": "BANDARA",
+    "destination": "Kualanamu",
+    "schedule": {
+      "MDN": "17:20",
+      "KNM": "17:52"
+    }
+  },
+  {
+    "id": "KA 7415 Bandara Kualanamu",
+    "name": "KA Bandara Kualanamu",
+    "line": "BANDARA",
+    "destination": "Kualanamu",
+    "schedule": {
+      "MDN": "19:20",
+      "KNM": "19:52"
+    }
+  },
+  {
+    "id": "KA 7402 Bandara Kualanamu",
+    "name": "KA Bandara Kualanamu",
+    "line": "BANDARA",
+    "destination": "Medan",
+    "schedule": {
+      "KNM": "06:20",
+      "MDN": "06:52"
+    }
+  },
+  {
+    "id": "KA 7404 Bandara Kualanamu",
+    "name": "KA Bandara Kualanamu",
+    "line": "BANDARA",
+    "destination": "Medan",
+    "schedule": {
+      "KNM": "08:20",
+      "MDN": "08:52"
+    }
+  },
+  {
+    "id": "KA 7406 Bandara Kualanamu",
+    "name": "KA Bandara Kualanamu",
+    "line": "BANDARA",
+    "destination": "Medan",
+    "schedule": {
+      "KNM": "10:20",
+      "MDN": "10:52"
+    }
+  },
+  {
+    "id": "KA 7408 Bandara Kualanamu",
+    "name": "KA Bandara Kualanamu",
+    "line": "BANDARA",
+    "destination": "Medan",
+    "schedule": {
+      "KNM": "12:20",
+      "MDN": "12:52"
+    }
+  },
+  {
+    "id": "KA 7410 Bandara Kualanamu",
+    "name": "KA Bandara Kualanamu",
+    "line": "BANDARA",
+    "destination": "Medan",
+    "schedule": {
+      "KNM": "14:20",
+      "MDN": "14:52"
+    }
+  },
+  {
+    "id": "KA 7412 Bandara Kualanamu",
+    "name": "KA Bandara Kualanamu",
+    "line": "BANDARA",
+    "destination": "Medan",
+    "schedule": {
+      "KNM": "16:20",
+      "MDN": "16:52"
+    }
+  },
+  {
+    "id": "KA 7414 Bandara Kualanamu",
+    "name": "KA Bandara Kualanamu",
+    "line": "BANDARA",
+    "destination": "Medan",
+    "schedule": {
+      "KNM": "18:20",
+      "MDN": "18:52"
+    }
+  },
+  {
+    "id": "KA 7416 Bandara Kualanamu",
+    "name": "KA Bandara Kualanamu",
+    "line": "BANDARA",
+    "destination": "Medan",
+    "schedule": {
+      "KNM": "20:20",
+      "MDN": "20:52"
+    }
+  }
+]

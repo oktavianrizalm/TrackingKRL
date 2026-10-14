@@ -1,6 +1,8 @@
 import parsedScheduleRaw from '../../../static/schedule.json';
 import mrtScheduleRaw from '../../../static/mrt-schedule.json';
 import mrtStationsRaw from '../../../static/mrt-stations.json';
+import nationalGapekaRaw from '../../../static/data/national-gapeka.json';
+import nationalStationsRaw from '../../../static/data/all-national-stations.json';
 
 let parsedSchedule: any = parsedScheduleRaw;
 const getLineBySchedule = (scheduleKeys: string[], relasi: string) => {
@@ -55,6 +57,14 @@ Object.entries(realStationIds).forEach(([name, id]) => {
     }
 });
 
+const nationalIdToName: Record<string, string> = {};
+nationalStationsRaw.forEach((s: any) => {
+    const id = s.code || s.id;
+    if (id && s.name) {
+        nationalIdToName[id] = s.name;
+    }
+});
+
 const uniqueStationIds = new Set<string>();
 const stationTypes: Record<string, string> = {};
 
@@ -72,6 +82,15 @@ mrtScheduleRaw.forEach((train: any) => {
     });
 });
 
+nationalGapekaRaw.forEach((train: any) => {
+    Object.keys(train.schedule).forEach(id => {
+        uniqueStationIds.add(id);
+        if (!stationTypes[id]) {
+            stationTypes[id] = train.line;
+        }
+    });
+});
+
 const mrtIdToName: Record<string, string> = {};
 mrtStationsRaw.forEach((s: any) => {
     if (s.id) mrtIdToName[s.id] = s.name;
@@ -79,14 +98,14 @@ mrtStationsRaw.forEach((s: any) => {
 
 export const stationsList = Array.from(uniqueStationIds).map(id => ({
     id,
-    name: idToNameFull[id] || idToName[id] || mrtIdToName[id] || id,
+    name: idToNameFull[id] || nationalIdToName[id] || idToName[id] || mrtIdToName[id] || id,
     type: stationTypes[id]
 })).sort((a, b) => a.name.localeCompare(b.name));
 
 const clTrains = Object.entries(parsedSchedule).map(([id, train]: [string, any]) => {
     const parts = train.relasi.split('-');
     const destCode = parts[parts.length - 1].toUpperCase();
-    const destination = idToName[destCode] || destCode;
+    const destination = idToName[destCode] || nationalIdToName[destCode] || destCode;
 
     return {
         id,
@@ -96,4 +115,5 @@ const clTrains = Object.entries(parsedSchedule).map(([id, train]: [string, any])
     };
 });
 
-export const allTrains = [...clTrains, ...mrtScheduleRaw];
+export const allTrains = [...clTrains, ...mrtScheduleRaw, ...nationalGapekaRaw];
+

@@ -1,0 +1,7958 @@
+[
+  {
+    "id": "SMO",
+    "name": "Adi Soemarmo",
+    "code": "SMO",
+    "coords": [
+      -7.5134399,
+      110.7478647
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "AKB",
+    "name": "Aek Loba",
+    "code": "AKB",
+    "coords": [
+      2.6514866,
+      99.6160095
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "ASM",
+    "name": "Air Asam",
+    "code": "ASM",
+    "coords": [
+      -3.6473134,
+      104.3006606
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "ATR",
+    "name": "Air Tawar",
+    "code": "ATR",
+    "coords": [
+      -0.9007054,
+      100.3509734
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "AI",
+    "name": "Alai",
+    "code": "AI",
+    "coords": [
+      -0.9255979,
+      100.3658354
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "ATA",
+    "name": "Alastua",
+    "code": "ATA",
+    "coords": [
+      -6.9844964,
+      110.4759402
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "ABR",
+    "name": "Ambarawa",
+    "code": "ABR",
+    "coords": [
+      -7.265508,
+      110.4016937
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Wisata"
+  },
+  {
+    "id": "AMPER",
+    "name": "Ampera",
+    "code": "",
+    "coords": [
+      -2.9890153,
+      104.7619665
+    ],
+    "island": "Sumatera",
+    "type": "LRT",
+    "network": "LRT Palembang"
+  },
+  {
+    "id": "AC",
+    "name": "Ancol",
+    "code": "AC",
+    "coords": [
+      -6.128115,
+      106.8451374
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "AND",
+    "name": "Andir",
+    "code": "AND",
+    "coords": [
+      -6.9082925,
+      107.5796436
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "AK",
+    "name": "Angke",
+    "code": "AK",
+    "coords": [
+      -6.1447372,
+      106.8007792
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "ARB",
+    "name": "Araskabu",
+    "code": "ARB",
+    "coords": [
+      3.6145424,
+      98.8468976
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "AGO",
+    "name": "Argopuro",
+    "code": "AGO",
+    "coords": [
+      -8.1835002,
+      114.3692329
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "AJ",
+    "name": "Arjasa",
+    "code": "AJ",
+    "coords": [
+      -8.1294312,
+      113.7428099
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "AWN",
+    "name": "Arjawinangun",
+    "code": "AWN",
+    "coords": [
+      -6.6445325,
+      108.4145647
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SSM",
+    "name": "ASEAN Headquarters",
+    "code": "SSM",
+    "coords": [
+      -6.2387737,
+      106.7984457
+    ],
+    "island": "Jawa",
+    "type": "MRT",
+    "network": "MRT Jakarta"
+  },
+  {
+    "id": "ASH",
+    "name": "Asrama Haji",
+    "code": "ASH",
+    "coords": [
+      -2.9196331,
+      104.7117314
+    ],
+    "island": "Sumatera",
+    "type": "LRT",
+    "network": "LRT Palembang"
+  },
+  {
+    "id": "AW",
+    "name": "Awipari",
+    "code": "AW",
+    "coords": [
+      -7.3538405,
+      108.2743716
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BBD",
+    "name": "Babadan",
+    "code": "BBD",
+    "coords": [
+      -7.586738,
+      111.5895237
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BBK",
+    "name": "Babakan",
+    "code": "BBK",
+    "coords": [
+      -6.8605246,
+      108.7187279
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BBT",
+    "name": "Babat",
+    "code": "BBT",
+    "coords": [
+      -7.1063013,
+      112.1688743
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BGR",
+    "name": "Bagor",
+    "code": "BGR",
+    "coords": [
+      -7.5718704,
+      111.8531208
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BLI",
+    "name": "Bahlias",
+    "code": "BLI",
+    "coords": [
+      3.2016303,
+      99.3404706
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BJL",
+    "name": "Bajalinggei",
+    "code": "BJL",
+    "coords": [
+      3.1673253,
+      99.1110071
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BMB",
+    "name": "Bamban",
+    "code": "BMB",
+    "coords": [
+      3.4378028,
+      99.1670851
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BAP",
+    "name": "Bandar Khalipah",
+    "code": "BAP",
+    "coords": [
+      3.5939373,
+      98.7570866
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BDT",
+    "name": "Bandar Tinggi",
+    "code": "BDT",
+    "coords": [
+      3.2845125,
+      99.3038039
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BIM",
+    "name": "Bandara Internasional Minangkabau",
+    "code": "BIM",
+    "coords": [
+      -0.7833205,
+      100.286582
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BST",
+    "name": "Bandara Soekarno-Hatta",
+    "code": "BST",
+    "coords": [
+      -6.1272786,
+      106.6525156
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "BDR",
+    "name": "Bandara Sultan Mahmud Badaruddin II",
+    "code": "BDR",
+    "coords": [
+      -2.8941648,
+      104.7059579
+    ],
+    "island": "Sumatera",
+    "type": "LRT",
+    "network": "LRT Palembang"
+  },
+  {
+    "id": "BD",
+    "name": "Bandung",
+    "code": "BD",
+    "coords": [
+      -6.914258,
+      107.6021243
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BG",
+    "name": "Bangil",
+    "code": "BG",
+    "coords": [
+      -7.5989884,
+      112.7782099
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BDW",
+    "name": "Bangoduwa",
+    "code": "BDW",
+    "coords": [
+      -6.6629571,
+      108.4600625
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BSS",
+    "name": "Bangsalsari",
+    "code": "BSS",
+    "coords": [
+      -8.2029806,
+      113.5332331
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BJR",
+    "name": "Banjar",
+    "code": "BJR",
+    "coords": [
+      -7.3762326,
+      108.5423345
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BJI",
+    "name": "Banjarsari",
+    "code": "BJI",
+    "coords": [
+      -3.6766099,
+      103.6984284
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BWI",
+    "name": "Banyuwangi Kota",
+    "code": "BWI",
+    "coords": [
+      -8.2228722,
+      114.3406551
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BRN",
+    "name": "Baron",
+    "code": "BRN",
+    "coords": [
+      -7.602829,
+      112.0393837
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BTG",
+    "name": "Batang",
+    "code": "BTG",
+    "coords": [
+      -6.9098111,
+      109.7476469
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BTK",
+    "name": "Batang Kuis",
+    "code": "BTK",
+    "coords": [
+      3.6106493,
+      98.8007665
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BATUC",
+    "name": "Batu Ceper",
+    "code": "",
+    "coords": [
+      -6.1720268,
+      106.6652866
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "BTA",
+    "name": "Baturaja",
+    "code": "BTA",
+    "coords": [
+      -4.1272035,
+      104.1618125
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BTT",
+    "name": "Batutulis",
+    "code": "BTT",
+    "coords": [
+      -6.6261433,
+      106.8097396
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BYM",
+    "name": "Bayeman",
+    "code": "BYM",
+    "coords": [
+      -7.7345295,
+      113.1188195
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BDN",
+    "name": "Bedono",
+    "code": "BDN",
+    "coords": [
+      -7.3092881,
+      110.3531062
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Wisata"
+  },
+  {
+    "id": "BKS",
+    "name": "Bekasi",
+    "code": "BKS",
+    "coords": [
+      -6.2362143,
+      106.9987436
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BEKAS",
+    "name": "Bekasi Barat",
+    "code": "",
+    "coords": [
+      -6.2529489,
+      106.9904237
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jabodebek"
+  },
+  {
+    "id": "BKST",
+    "name": "Bekasi Timur",
+    "code": "BKST",
+    "coords": [
+      -6.2467953,
+      107.0181046
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "BKI",
+    "name": "Bekri",
+    "code": "BKI",
+    "coords": [
+      -5.0726473,
+      105.1362053
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BLT",
+    "name": "Belatung",
+    "code": "BLT",
+    "coords": [
+      -4.0265291,
+      104.2289135
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BLW",
+    "name": "Belawan",
+    "code": "BLW",
+    "coords": [
+      3.778179,
+      98.6817775
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BIK",
+    "name": "Belimbing Airkaka",
+    "code": "BIK",
+    "coords": [
+      -3.990908,
+      104.2923428
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BIB",
+    "name": "Belimbing Pendopo",
+    "code": "BIB",
+    "coords": [
+      -3.4433091,
+      103.9758823
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BNH",
+    "name": "Bendungan Hilir",
+    "code": "BNH",
+    "coords": [
+      -6.2150263,
+      106.8179484
+    ],
+    "island": "Jawa",
+    "type": "MRT",
+    "network": "MRT Jakarta"
+  },
+  {
+    "id": "BNW",
+    "name": "Benowo",
+    "code": "BNW",
+    "coords": [
+      -7.2339099,
+      112.6152676
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "SBE",
+    "name": "Benteng",
+    "code": "SBE",
+    "coords": [
+      -7.2212848,
+      112.7438537
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BSG",
+    "name": "Besitang",
+    "code": "BSG",
+    "coords": [
+      4.0320668,
+      98.188486
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BIJ",
+    "name": "Binjai",
+    "code": "BIJ",
+    "coords": [
+      3.6097901,
+      98.4979278
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BBA",
+    "name": "Blambangan Pagar",
+    "code": "BBA",
+    "coords": [
+      -4.8951847,
+      105.0394118
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BBU",
+    "name": "Blambangan Umpu",
+    "code": "BBU",
+    "coords": [
+      -4.4981168,
+      104.5202829
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BMG",
+    "name": "Blimbing",
+    "code": "BMG",
+    "coords": [
+      -7.9399415,
+      112.6448626
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "BL",
+    "name": "Blitar",
+    "code": "BL",
+    "coords": [
+      -8.1014972,
+      112.162726
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BLA",
+    "name": "Blok A VISA",
+    "code": "BLA",
+    "coords": [
+      -6.2557793,
+      106.7971403
+    ],
+    "island": "Jawa",
+    "type": "MRT",
+    "network": "MRT Jakarta"
+  },
+  {
+    "id": "BLM",
+    "name": "Blok M BCA",
+    "code": "BLM",
+    "coords": [
+      -6.2444643,
+      106.7981332
+    ],
+    "island": "Jawa",
+    "type": "MRT",
+    "network": "MRT Jakarta"
+  },
+  {
+    "id": "SUDB",
+    "name": "BNI City",
+    "code": "SUDB",
+    "coords": [
+      -6.2015938,
+      106.8197174
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "BOO",
+    "name": "Bogor",
+    "code": "BOO",
+    "coords": [
+      -6.5942887,
+      106.7907695
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "BOP",
+    "name": "Bogor Paledang",
+    "code": "BOP",
+    "coords": [
+      -6.5978118,
+      106.7906486
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BH",
+    "name": "Boharan",
+    "code": "BH",
+    "coords": [
+      -7.3879686,
+      112.6192723
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "BJ",
+    "name": "Bojonegoro",
+    "code": "BJ",
+    "coords": [
+      -7.164395,
+      111.8865812
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BJG",
+    "name": "Bojong",
+    "code": "BJG",
+    "coords": [
+      -7.3473596,
+      108.4302093
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BOI",
+    "name": "Bojong Indah",
+    "code": "BOI",
+    "coords": [
+      -6.1602142,
+      106.7361338
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "BJD",
+    "name": "Bojonggede",
+    "code": "BJD",
+    "coords": [
+      -6.4932345,
+      106.795025
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "BOULE",
+    "name": "Boulevard Selatan",
+    "code": "",
+    "coords": [
+      -6.1691934,
+      106.8998732
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jakarta"
+  },
+  {
+    "id": "BVU",
+    "name": "Boulevard Utara Summarecon Mall",
+    "code": "BVU",
+    "coords": [
+      -6.1594082,
+      106.906024
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jakarta"
+  },
+  {
+    "id": "BWO",
+    "name": "Bowerno",
+    "code": "BWO",
+    "coords": [
+      -7.1311836,
+      112.0999028
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "BBN",
+    "name": "Brambanan",
+    "code": "BBN",
+    "coords": [
+      -7.7566296,
+      110.500401
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "BTI",
+    "name": "Branti",
+    "code": "BTI",
+    "coords": [
+      -5.2546181,
+      105.1788468
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BB",
+    "name": "Brebes",
+    "code": "BB",
+    "coords": [
+      -6.8745119,
+      109.0437151
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BBG",
+    "name": "Brumbung",
+    "code": "BBG",
+    "coords": [
+      -7.0254774,
+      110.5219125
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BUA",
+    "name": "Buaran",
+    "code": "BUA",
+    "coords": [
+      -6.2156064,
+      106.92316
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "BKP",
+    "name": "Bukit Putus",
+    "code": "BKP",
+    "coords": [
+      -0.9855003,
+      100.3851231
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BUKIT",
+    "name": "Bukit Selamat",
+    "code": "",
+    "coords": [
+      4.0529115,
+      98.115853
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "PT. Kereta Api Indonesia (Persero)"
+  },
+  {
+    "id": "BUMIS",
+    "name": "Bumi Sriwijaya",
+    "code": "",
+    "coords": [
+      -2.9771091,
+      104.7449425
+    ],
+    "island": "Sumatera",
+    "type": "LRT",
+    "network": "LRT Palembang"
+  },
+  {
+    "id": "BMA",
+    "name": "Bumiayu",
+    "code": "BMA",
+    "coords": [
+      -7.2372809,
+      109.0098856
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BMW",
+    "name": "Bumiwaluya",
+    "code": "BMW",
+    "coords": [
+      -7.0587259,
+      108.0705853
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BHI",
+    "name": "Bundaran HI Bank Jakarta",
+    "code": "BHI",
+    "coords": [
+      -6.1918644,
+      106.8230084
+    ],
+    "island": "Jawa",
+    "type": "MRT",
+    "network": "MRT Jakarta"
+  },
+  {
+    "id": "BGM",
+    "name": "Bungamas",
+    "code": "BGM",
+    "coords": [
+      -3.7032802,
+      103.3681318
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BKH",
+    "name": "Bungkaih",
+    "code": "BKH",
+    "coords": [
+      5.2598247,
+      96.9651531
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BUU",
+    "name": "Bunut",
+    "code": "BUU",
+    "coords": [
+      3.0018558,
+      99.5998459
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "BTH",
+    "name": "Butuh",
+    "code": "BTH",
+    "coords": [
+      -7.7244476,
+      109.8587178
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CUK",
+    "name": "Cakung",
+    "code": "CUK",
+    "coords": [
+      -6.219081,
+      106.9524791
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CMS",
+    "name": "Candimas",
+    "code": "CMS",
+    "coords": [
+      -4.8499483,
+      104.9256936
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CNK",
+    "name": "Cangkring",
+    "code": "CNK",
+    "coords": [
+      -6.6794246,
+      108.5007465
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CRB",
+    "name": "Caruban",
+    "code": "CRB",
+    "coords": [
+      -7.5511802,
+      111.6559475
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CT",
+    "name": "Catang",
+    "code": "CT",
+    "coords": [
+      -6.2656845,
+      106.2678941
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CW",
+    "name": "Cawang",
+    "code": "CW",
+    "coords": [
+      -6.2425517,
+      106.8586903
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CEP",
+    "name": "Cempaka",
+    "code": "CEP",
+    "coords": [
+      -4.7937016,
+      104.8195768
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CE",
+    "name": "Ceper",
+    "code": "CE",
+    "coords": [
+      -7.6689676,
+      110.6748531
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CU",
+    "name": "Cepu",
+    "code": "CU",
+    "coords": [
+      -7.1545441,
+      111.5908695
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CME",
+    "name": "Cerme",
+    "code": "CME",
+    "coords": [
+      -7.2242503,
+      112.5707953
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CI",
+    "name": "Ciamis",
+    "code": "CI",
+    "coords": [
+      -7.3293002,
+      108.3561326
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CJ",
+    "name": "Cianjur",
+    "code": "CJ",
+    "coords": [
+      -6.8245938,
+      107.1426417
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CAW",
+    "name": "Ciawi",
+    "code": "CAW",
+    "coords": [
+      -7.1573957,
+      108.1457184
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CBD",
+    "name": "Cibadak",
+    "code": "CBD",
+    "coords": [
+      -6.8882892,
+      106.7804342
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CB",
+    "name": "Cibatu",
+    "code": "CB",
+    "coords": [
+      -7.1000241,
+      107.9794364
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CBB",
+    "name": "Cibeber",
+    "code": "CBB",
+    "coords": [
+      -6.9375398,
+      107.1211717
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CBN",
+    "name": "Cibinong",
+    "code": "CBN",
+    "coords": [
+      -6.4642482,
+      106.8525201
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CIT",
+    "name": "Cibitung",
+    "code": "CIT",
+    "coords": [
+      -6.2618245,
+      107.0837982
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CBR",
+    "name": "Cibungur",
+    "code": "CBR",
+    "coords": [
+      -6.4678378,
+      107.4795654
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CCL",
+    "name": "Cicalengka",
+    "code": "CCL",
+    "coords": [
+      -6.9814295,
+      107.8325892
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CC",
+    "name": "Cicayur",
+    "code": "CC",
+    "coords": [
+      -6.329683,
+      106.6189713
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CCR",
+    "name": "Cicurug",
+    "code": "CCR",
+    "coords": [
+      -6.7901148,
+      106.7797692
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CGD",
+    "name": "Cigading",
+    "code": "CGD",
+    "coords": [
+      -6.0209589,
+      105.9664193
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CA",
+    "name": "Ciganea",
+    "code": "CA",
+    "coords": [
+      -6.5734417,
+      107.4307613
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CGB",
+    "name": "Cigombong",
+    "code": "CGB",
+    "coords": [
+      -6.7422491,
+      106.8029383
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CD",
+    "name": "Cikadongdong",
+    "code": "CD",
+    "coords": [
+      -6.7155099,
+      107.3908287
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CKP",
+    "name": "Cikampek",
+    "code": "CKP",
+    "coords": [
+      -6.4064302,
+      107.4589073
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CKR",
+    "name": "Cikarang",
+    "code": "CKR",
+    "coords": [
+      -6.2553138,
+      107.1450733
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CKM",
+    "name": "Cikaum",
+    "code": "CKM",
+    "coords": [
+      -6.4354394,
+      107.7395658
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CKL",
+    "name": "Cikeusal",
+    "code": "CKL",
+    "coords": [
+      -6.2170575,
+      106.2446148
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CKI",
+    "name": "Cikini",
+    "code": "CKI",
+    "coords": [
+      -6.1985052,
+      106.8412799
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CIKOK",
+    "name": "Cikoko",
+    "code": "",
+    "coords": [
+      -6.2434718,
+      106.8570718
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jabodebek"
+  },
+  {
+    "id": "CKY",
+    "name": "Cikoya",
+    "code": "CKY",
+    "coords": [
+      -6.3357385,
+      106.4116547
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CTH",
+    "name": "Cikudapateuh",
+    "code": "CTH",
+    "coords": [
+      -6.9188047,
+      107.6260505
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CIKUN",
+    "name": "Cikunir 1",
+    "code": "",
+    "coords": [
+      -6.2566001,
+      106.9518734
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jabodebek"
+  },
+  {
+    "id": "CIKUN",
+    "name": "Cikunir 2",
+    "code": "",
+    "coords": [
+      -6.2546502,
+      106.9632112
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jabodebek"
+  },
+  {
+    "id": "CP",
+    "name": "Cilacap",
+    "code": "CP",
+    "coords": [
+      -7.7360952,
+      109.0069515
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CLE",
+    "name": "Cilame",
+    "code": "CLE",
+    "coords": [
+      -6.8033145,
+      107.4634455
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CLT",
+    "name": "Cilebut",
+    "code": "CLT",
+    "coords": [
+      -6.5307239,
+      106.8006884
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CLD",
+    "name": "Ciledug",
+    "code": "CLD",
+    "coords": [
+      -6.9027352,
+      108.7440389
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CLH",
+    "name": "Cilegeh",
+    "code": "CLH",
+    "coords": [
+      -6.4638841,
+      108.0352727
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CLG",
+    "name": "Cilegon",
+    "code": "CLG",
+    "coords": [
+      -6.0197309,
+      106.053105
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CJT",
+    "name": "Cilejit",
+    "code": "CJT",
+    "coords": [
+      -6.3542652,
+      106.5096432
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CILIW",
+    "name": "Ciliwung",
+    "code": "",
+    "coords": [
+      -6.2434461,
+      106.8639705
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jabodebek"
+  },
+  {
+    "id": "CMI",
+    "name": "Cimahi",
+    "code": "CMI",
+    "coords": [
+      -6.8858788,
+      107.5360371
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CMK",
+    "name": "Cimekar",
+    "code": "CMK",
+    "coords": [
+      -6.9489636,
+      107.7121869
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CMD",
+    "name": "Cimindi",
+    "code": "CMD",
+    "coords": [
+      -6.8961097,
+      107.561158
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CPH",
+    "name": "Cimparuh",
+    "code": "CPH",
+    "coords": [
+      -0.6312751,
+      100.1396077
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CINDE",
+    "name": "Cinde",
+    "code": "",
+    "coords": [
+      -2.9807372,
+      104.7561025
+    ],
+    "island": "Sumatera",
+    "type": "LRT",
+    "network": "LRT Palembang"
+  },
+  {
+    "id": "CS",
+    "name": "Ciomas",
+    "code": "CS",
+    "coords": [
+      -6.663597,
+      106.8170161
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CPI",
+    "name": "Cipari",
+    "code": "CPI",
+    "coords": [
+      -7.440335,
+      108.7610943
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CPT",
+    "name": "Cipatat",
+    "code": "CPT",
+    "coords": [
+      -6.8220386,
+      107.3860457
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CPR",
+    "name": "Cipete Raya TUKU",
+    "code": "CPR",
+    "coords": [
+      -6.2783596,
+      106.7973159
+    ],
+    "island": "Jawa",
+    "type": "MRT",
+    "network": "MRT Jakarta"
+  },
+  {
+    "id": "CPD",
+    "name": "Cipeundeuy",
+    "code": "CPD",
+    "coords": [
+      -7.0935491,
+      108.1006532
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CPY",
+    "name": "Cipeuyeum",
+    "code": "CPY",
+    "coords": [
+      -6.818469,
+      107.2981724
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CRA",
+    "name": "Cipunegara",
+    "code": "CRA",
+    "coords": [
+      -6.4552753,
+      107.8830336
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CIRAC",
+    "name": "Ciracas",
+    "code": "",
+    "coords": [
+      -6.3237693,
+      106.8866433
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jabodebek"
+  },
+  {
+    "id": "CAA",
+    "name": "Cirahayu",
+    "code": "CAA",
+    "coords": [
+      -7.1344559,
+      108.1181141
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CRJ",
+    "name": "Ciranjang",
+    "code": "CRJ",
+    "coords": [
+      -6.8142021,
+      107.25121
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CN",
+    "name": "Cirebon",
+    "code": "CN",
+    "coords": [
+      -6.7053546,
+      108.5553503
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CNP",
+    "name": "Cirebon Prujakan",
+    "code": "CNP",
+    "coords": [
+      -6.7194171,
+      108.5584643
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CRG",
+    "name": "Cireungas",
+    "code": "CRG",
+    "coords": [
+      -6.9585506,
+      107.0371604
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CIR",
+    "name": "Ciroyom",
+    "code": "CIR",
+    "coords": [
+      -6.9140149,
+      107.5903057
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CSA",
+    "name": "Cisaat",
+    "code": "CSA",
+    "coords": [
+      -6.9139991,
+      106.8875524
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CSK",
+    "name": "Cisauk",
+    "code": "CSK",
+    "coords": [
+      -6.3244445,
+      106.6416257
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CTA",
+    "name": "Citayam",
+    "code": "CTA",
+    "coords": [
+      -6.4488237,
+      106.8023619
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CTR",
+    "name": "Citeras",
+    "code": "CTR",
+    "coords": [
+      -6.3350582,
+      106.3326694
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "CO",
+    "name": "Comal",
+    "code": "CO",
+    "coords": [
+      -6.9092929,
+      109.5367301
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "CRM",
+    "name": "Curahmalang",
+    "code": "CRM",
+    "coords": [
+      -7.5071167,
+      112.3700361
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "DAR",
+    "name": "Daru",
+    "code": "DAR",
+    "coords": [
+      -6.3379704,
+      106.4925632
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "DWN",
+    "name": "Dawuan",
+    "code": "DWN",
+    "coords": [
+      -6.3931077,
+      107.4333466
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "DL",
+    "name": "Delanggu",
+    "code": "DL",
+    "coords": [
+      -7.6222979,
+      110.706636
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "DEMAN",
+    "name": "Demang",
+    "code": "",
+    "coords": [
+      -2.9644486,
+      104.7357848
+    ],
+    "island": "Sumatera",
+    "type": "LRT",
+    "network": "LRT Palembang"
+  },
+  {
+    "id": "DP",
+    "name": "Depok",
+    "code": "DP",
+    "coords": [
+      -6.4048263,
+      106.8170842
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "DPB",
+    "name": "Depok Baru",
+    "code": "DPB",
+    "coords": [
+      -6.3911293,
+      106.8216412
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "DISHU",
+    "name": "Dishub",
+    "code": "",
+    "coords": [
+      -2.9785113,
+      104.7489537
+    ],
+    "island": "Sumatera",
+    "type": "LRT",
+    "network": "LRT Palembang"
+  },
+  {
+    "id": "DJKA",
+    "name": "DJKA",
+    "code": "",
+    "coords": [
+      -3.0315373,
+      104.7902142
+    ],
+    "island": "Sumatera",
+    "type": "LRT",
+    "network": "LRT Palembang"
+  },
+  {
+    "id": "DMR",
+    "name": "Dolok Merangir",
+    "code": "DMR",
+    "coords": [
+      3.1175749,
+      99.1170055
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "DPL",
+    "name": "Doplang",
+    "code": "DPL",
+    "coords": [
+      -7.1828075,
+      111.2880608
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "DD",
+    "name": "Duduk",
+    "code": "DD",
+    "coords": [
+      -7.1547186,
+      112.5204282
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "DUK",
+    "name": "Duku",
+    "code": "DUK",
+    "coords": [
+      -0.7869796,
+      100.3169233
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "DUKUH",
+    "name": "Dukuh Atas Bank Syariah Indonesia",
+    "code": "",
+    "coords": [
+      -6.204828,
+      106.8255301
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jabodebek"
+  },
+  {
+    "id": "DKA",
+    "name": "Dukuh Atas BNI",
+    "code": "DKA",
+    "coords": [
+      -6.2007957,
+      106.822788
+    ],
+    "island": "Jawa",
+    "type": "MRT",
+    "network": "MRT Jakarta"
+  },
+  {
+    "id": "DRN",
+    "name": "Duren Kalibata",
+    "code": "DRN",
+    "coords": [
+      -6.2552012,
+      106.8551672
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "DU",
+    "name": "Duri",
+    "code": "DU",
+    "coords": [
+      -6.1552764,
+      106.8012968
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "DAN",
+    "name": "Durian",
+    "code": "DAN",
+    "coords": [
+      -3.9679438,
+      104.3089946
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "DSU",
+    "name": "Dusun",
+    "code": "DSU",
+    "coords": [
+      3.1278068,
+      99.5096113
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "EKSST",
+    "name": "Eks Stasiun Srono",
+    "code": "",
+    "coords": [
+      -8.4015338,
+      114.2639414
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": ""
+  },
+  {
+    "id": "EQUES",
+    "name": "Equestrian",
+    "code": "",
+    "coords": [
+      -6.1835534,
+      106.8913536
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jakarta"
+  },
+  {
+    "id": "FTM",
+    "name": "Fatmawati Indomaret",
+    "code": "FTM",
+    "coords": [
+      -6.2924511,
+      106.7924644
+    ],
+    "island": "Jawa",
+    "type": "MRT",
+    "network": "MRT Jakarta"
+  },
+  {
+    "id": "GK",
+    "name": "Gadobangkong",
+    "code": "GK",
+    "coords": [
+      -6.8646744,
+      107.5151988
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "GMR",
+    "name": "Gambir",
+    "code": "GMR",
+    "coords": [
+      -6.1766553,
+      106.8306473
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GBN",
+    "name": "Gambringan",
+    "code": "GBN",
+    "coords": [
+      -7.1437311,
+      110.9151264
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GDS",
+    "name": "Gandasoli",
+    "code": "GDS",
+    "coords": [
+      -6.9414094,
+      106.9921399
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GDM",
+    "name": "Gandrungmangun",
+    "code": "GDM",
+    "coords": [
+      -7.5282628,
+      108.8591895
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GST",
+    "name": "Gang Sentiong",
+    "code": "GST",
+    "coords": [
+      -6.1861531,
+      106.8508709
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "GRN",
+    "name": "Garahan",
+    "code": "GRN",
+    "coords": [
+      -8.2249332,
+      113.8957494
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GARUD",
+    "name": "Garuda Dempo",
+    "code": "",
+    "coords": [
+      -2.9562902,
+      104.7357908
+    ],
+    "island": "Sumatera",
+    "type": "LRT",
+    "network": "LRT Palembang"
+  },
+  {
+    "id": "GRM",
+    "name": "Garum",
+    "code": "GRM",
+    "coords": [
+      -8.0735881,
+      112.2169504
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "GR",
+    "name": "Garuntang",
+    "code": "GR",
+    "coords": [
+      -5.4355538,
+      105.2917483
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GRT",
+    "name": "Garut",
+    "code": "GRT",
+    "coords": [
+      -7.2133699,
+      107.9035501
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GW",
+    "name": "Gawok",
+    "code": "GW",
+    "coords": [
+      -7.5894638,
+      110.7445379
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "GBG",
+    "name": "Gebang",
+    "code": "GBG",
+    "coords": [
+      3.9662287,
+      98.3624077
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GDG",
+    "name": "Gedangan",
+    "code": "GDG",
+    "coords": [
+      -7.3889859,
+      112.7285913
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "GDB",
+    "name": "Gedebage",
+    "code": "GDB",
+    "coords": [
+      -6.9408346,
+      107.6897945
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "GDR",
+    "name": "Gedungratu",
+    "code": "GDR",
+    "coords": [
+      -5.3436549,
+      105.224206
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GEB",
+    "name": "Gembong",
+    "code": "GEB",
+    "coords": [
+      -7.1023266,
+      112.2223071
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GG",
+    "name": "Geneng",
+    "code": "GG",
+    "coords": [
+      -7.4981245,
+      111.4188298
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GRK",
+    "name": "Geurugok",
+    "code": "GRK",
+    "coords": [
+      5.2285654,
+      96.8791291
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GHM",
+    "name": "Giham",
+    "code": "GHM",
+    "coords": [
+      -4.420498,
+      104.4939275
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GLS",
+    "name": "Gilas",
+    "code": "GLS",
+    "coords": [
+      -4.2642214,
+      104.2850138
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GLM",
+    "name": "Glenmore",
+    "code": "GLM",
+    "coords": [
+      -8.2994737,
+      114.049493
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GLB",
+    "name": "Glumbang",
+    "code": "GLB",
+    "coords": [
+      -3.2464269,
+      104.4413729
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GB",
+    "name": "Gombong",
+    "code": "GB",
+    "coords": [
+      -7.6108578,
+      109.5066911
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GDD",
+    "name": "Gondangdia",
+    "code": "GDD",
+    "coords": [
+      -6.1859109,
+      106.8325657
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "GPK",
+    "name": "Goprak",
+    "code": "GPK",
+    "coords": [
+      -7.2728727,
+      110.8971904
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GI",
+    "name": "Grati",
+    "code": "GI",
+    "coords": [
+      -7.7173725,
+      113.0120572
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GRG",
+    "name": "Grogol",
+    "code": "GRG",
+    "coords": [
+      -6.162035,
+      106.7896101
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "GUB",
+    "name": "Gubug",
+    "code": "GUB",
+    "coords": [
+      -7.0610407,
+      110.669465
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GM",
+    "name": "Gumilir",
+    "code": "GM",
+    "coords": [
+      -7.6850659,
+      109.0424855
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GD",
+    "name": "Gundih",
+    "code": "GD",
+    "coords": [
+      -7.2186589,
+      110.9000211
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "GNM",
+    "name": "Gunung Megang",
+    "code": "GNM",
+    "coords": [
+      -3.454139,
+      103.8668162
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "HJN",
+    "name": "Haji Nawi",
+    "code": "HJN",
+    "coords": [
+      -6.2666947,
+      106.7973262
+    ],
+    "island": "Jawa",
+    "type": "MRT",
+    "network": "MRT Jakarta"
+  },
+  {
+    "id": "HJP",
+    "name": "Haji Pemanggilan",
+    "code": "HJP",
+    "coords": [
+      -5.0020928,
+      105.1069072
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "HLM",
+    "name": "Halim",
+    "code": "HLM",
+    "coords": [
+      -6.2456352,
+      106.8844875
+    ],
+    "island": "Jawa",
+    "type": "Whoosh",
+    "network": "Whoosh"
+  },
+  {
+    "id": "HARJA",
+    "name": "Harjamukti",
+    "code": "",
+    "coords": [
+      -6.3738926,
+      106.8956698
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jabodebek"
+  },
+  {
+    "id": "HGL",
+    "name": "Haurgeulis",
+    "code": "HGL",
+    "coords": [
+      -6.4585152,
+      107.9409637
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "HRP",
+    "name": "Haurpugur",
+    "code": "HRP",
+    "coords": [
+      -6.9805496,
+      107.7991676
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "HELVE",
+    "name": "Helvetia",
+    "code": "",
+    "coords": [
+      3.6024031,
+      98.6313567
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": ""
+  },
+  {
+    "id": "HL",
+    "name": "Hengelo",
+    "code": "HL",
+    "coords": [
+      2.859939,
+      99.6394206
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "IJ",
+    "name": "Ijo",
+    "code": "IJ",
+    "coords": [
+      -7.6150095,
+      109.4469228
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "IDA",
+    "name": "Indarung",
+    "code": "IDA",
+    "coords": [
+      -0.9499467,
+      100.4674895
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "IH",
+    "name": "Indihiang",
+    "code": "IH",
+    "coords": [
+      -7.2867472,
+      108.200856
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "IDR",
+    "name": "Indralaya",
+    "code": "IDR",
+    "coords": [
+      -3.2094172,
+      104.6425121
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "IDO",
+    "name": "Indro",
+    "code": "IDO",
+    "coords": [
+      -7.1767537,
+      112.6644466
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "IST",
+    "name": "Istora Mandiri",
+    "code": "IST",
+    "coords": [
+      -6.22239,
+      106.8086229
+    ],
+    "island": "Jawa",
+    "type": "MRT",
+    "network": "MRT Jakarta"
+  },
+  {
+    "id": "JAKAB",
+    "name": "Jakabaring",
+    "code": "",
+    "coords": [
+      -3.0231474,
+      104.7845939
+    ],
+    "island": "Sumatera",
+    "type": "LRT",
+    "network": "LRT Palembang"
+  },
+  {
+    "id": "JAKG",
+    "name": "Jakarta Gudang",
+    "code": "JAKG",
+    "coords": [
+      -6.133327,
+      106.819373
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "JIS",
+    "name": "Jakarta International Stadium",
+    "code": "JIS",
+    "coords": [
+      -6.1228211,
+      106.8613596
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "JAKK",
+    "name": "Jakarta Kota",
+    "code": "JAKK",
+    "coords": [
+      -6.1375828,
+      106.8146203
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "JBN",
+    "name": "Jambon",
+    "code": "JBN",
+    "coords": [
+      -7.1503324,
+      111.0101
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "JMB",
+    "name": "Jambu",
+    "code": "JMB",
+    "coords": [
+      -7.2798844,
+      110.3689137
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Wisata"
+  },
+  {
+    "id": "JBU",
+    "name": "Jambu Baru",
+    "code": "JBU",
+    "coords": [
+      -6.3029978,
+      106.2604854
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "JATAK",
+    "name": "Jatake",
+    "code": "",
+    "coords": [
+      -6.3349941,
+      106.6066128
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "JTB",
+    "name": "Jatibarang",
+    "code": "JTB",
+    "coords": [
+      -6.4727954,
+      108.3064275
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "JATIB",
+    "name": "Jatibening Baru",
+    "code": "",
+    "coords": [
+      -6.2577476,
+      106.9279199
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jabodebek"
+  },
+  {
+    "id": "JATIM",
+    "name": "Jatimulya",
+    "code": "",
+    "coords": [
+      -6.2641077,
+      107.0216701
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jabodebek"
+  },
+  {
+    "id": "JNG",
+    "name": "Jatinegara",
+    "code": "JNG",
+    "coords": [
+      -6.2149252,
+      106.8703394
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "JTR",
+    "name": "Jatiroto",
+    "code": "JTR",
+    "coords": [
+      -8.1232548,
+      113.364155
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "JAY",
+    "name": "Jayakarta",
+    "code": "JAY",
+    "coords": [
+      -6.1412999,
+      106.8231322
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "JR",
+    "name": "Jember",
+    "code": "JR",
+    "coords": [
+      -8.1646972,
+      113.703457
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "JN",
+    "name": "Jenar",
+    "code": "JN",
+    "coords": [
+      -7.8026595,
+      110.00135
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "JRK",
+    "name": "Jerakah",
+    "code": "JRK",
+    "coords": [
+      -6.9803682,
+      110.3624848
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "JRL",
+    "name": "Jeruklegi",
+    "code": "JRL",
+    "coords": [
+      -7.6229351,
+      109.0181382
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "JG",
+    "name": "Jombang",
+    "code": "JG",
+    "coords": [
+      -7.5581754,
+      112.2334545
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "JUA",
+    "name": "Juanda",
+    "code": "JUA",
+    "coords": [
+      -6.1666746,
+      106.8304609
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "JMU",
+    "name": "Jurangmangu",
+    "code": "JMU",
+    "coords": [
+      -6.288582,
+      106.7291463
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "KADIP",
+    "name": "Kadipiro",
+    "code": "",
+    "coords": [
+      -7.5308135,
+      110.8180694
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": ""
+  },
+  {
+    "id": "KAB",
+    "name": "Kadokangabus",
+    "code": "KAB",
+    "coords": [
+      -6.4678704,
+      108.106814
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KAG",
+    "name": "Kalibalangan",
+    "code": "KAG",
+    "coords": [
+      -4.8665025,
+      104.9727132
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KBR",
+    "name": "Kalibaru",
+    "code": "KBR",
+    "coords": [
+      -8.2887276,
+      113.9842538
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KBD",
+    "name": "Kalibodri",
+    "code": "KBD",
+    "coords": [
+      -6.9737031,
+      110.1481776
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KDS",
+    "name": "Kalideres",
+    "code": "KDS",
+    "coords": [
+      -6.1659662,
+      106.7037283
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "KALIM",
+    "name": "Kalimas",
+    "code": "",
+    "coords": [
+      -7.2198464,
+      112.7348088
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KO",
+    "name": "Kalioso",
+    "code": "KO",
+    "coords": [
+      -7.4662866,
+      110.8049036
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KLT",
+    "name": "Kalisat",
+    "code": "KLT",
+    "coords": [
+      -8.1268771,
+      113.8123498
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KSL",
+    "name": "Kalisetail",
+    "code": "KSL",
+    "coords": [
+      -8.30277,
+      114.139772
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KIT",
+    "name": "Kalitidu",
+    "code": "KIT",
+    "coords": [
+      -7.131771,
+      111.7672981
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KLN",
+    "name": "Kaliwungu",
+    "code": "KLN",
+    "coords": [
+      -6.9596163,
+      110.2549063
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KPB",
+    "name": "Kampung Bandan",
+    "code": "KPB",
+    "coords": [
+      -6.1327023,
+      106.8284875
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "KAJ",
+    "name": "Kampung Juar",
+    "code": "KAJ",
+    "coords": [
+      -0.9650444,
+      100.4128965
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KAMPU",
+    "name": "Kampung Rambutan",
+    "code": "",
+    "coords": [
+      -6.3095494,
+      106.8843804
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jabodebek"
+  },
+  {
+    "id": "KDA",
+    "name": "Kandangan",
+    "code": "KDA",
+    "coords": [
+      -7.251077,
+      112.658348
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "KPS",
+    "name": "Kapas",
+    "code": "KPS",
+    "coords": [
+      -7.1993256,
+      111.9333994
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "KPA",
+    "name": "Kapuan",
+    "code": "KPA",
+    "coords": [
+      -7.1890959,
+      111.5542223
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KRA",
+    "name": "Karangantu",
+    "code": "KRA",
+    "coords": [
+      -6.0391664,
+      106.1619836
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "KA",
+    "name": "Karanganyar",
+    "code": "KA",
+    "coords": [
+      -7.6331327,
+      109.5730568
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KED",
+    "name": "Karangenda",
+    "code": "KED",
+    "coords": [
+      -3.3040214,
+      104.3959037
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KGD",
+    "name": "Karanggandul",
+    "code": "KGD",
+    "coords": [
+      -7.388486,
+      109.1858776
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KGT",
+    "name": "Karangjati",
+    "code": "KGT",
+    "coords": [
+      -7.1014102,
+      110.7790478
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KKD",
+    "name": "Karangkandri",
+    "code": "KKD",
+    "coords": [
+      -7.666246,
+      109.0757121
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KNP",
+    "name": "Karangpucung",
+    "code": "KNP",
+    "coords": [
+      -7.3534554,
+      108.4940732
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KRR",
+    "name": "Karangsari",
+    "code": "KRR",
+    "coords": [
+      -7.3823632,
+      109.1212032
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KSO",
+    "name": "Karangsono",
+    "code": "KSO",
+    "coords": [
+      -7.1963303,
+      110.8256483
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KRL",
+    "name": "Karangtalun",
+    "code": "KRL",
+    "coords": [
+      -7.6847111,
+      109.0230626
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KE",
+    "name": "Karangtengah",
+    "code": "KE",
+    "coords": [
+      -6.8963596,
+      106.8224172
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KW",
+    "name": "Karawang",
+    "code": "KW",
+    "coords": [
+      -6.3050826,
+      107.3002592
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KH",
+    "name": "Kasugihan",
+    "code": "KH",
+    "coords": [
+      -7.6183957,
+      109.12172
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KWG",
+    "name": "Kawunganten",
+    "code": "KWG",
+    "coords": [
+      -7.5908269,
+      108.9193962
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KTN",
+    "name": "Kayu Tanam",
+    "code": "KTN",
+    "coords": [
+      -0.547947,
+      100.3309864
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KBS",
+    "name": "Kebasen",
+    "code": "KBS",
+    "coords": [
+      -7.5321892,
+      109.2040515
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KBY",
+    "name": "Kebayoran",
+    "code": "KBY",
+    "coords": [
+      -6.23723,
+      106.7825345
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "KRO",
+    "name": "Kebonromo",
+    "code": "KRO",
+    "coords": [
+      -7.4190235,
+      111.0639984
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KM",
+    "name": "Kebumen",
+    "code": "KM",
+    "coords": [
+      -7.681968,
+      109.6624674
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KDN",
+    "name": "Kedinding",
+    "code": "KDN",
+    "coords": [
+      -7.4376838,
+      112.5516808
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "KD",
+    "name": "Kediri",
+    "code": "KD",
+    "coords": [
+      -7.817345,
+      112.0156357
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KDG",
+    "name": "Kedundang",
+    "code": "KDG",
+    "coords": [
+      -7.878169,
+      110.0993397
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KDB",
+    "name": "Kedungbanteng",
+    "code": "KDB",
+    "coords": [
+      -7.405233,
+      111.1171061
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KG",
+    "name": "Kedunggalar",
+    "code": "KG",
+    "coords": [
+      -7.4184996,
+      111.3069223
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KDH",
+    "name": "Kedunggedeh",
+    "code": "KDH",
+    "coords": [
+      -6.2699184,
+      107.2611531
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "KEJ",
+    "name": "Kedungjati",
+    "code": "KEJ",
+    "coords": [
+      -7.1635537,
+      110.6356532
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KPG",
+    "name": "Kelapa Gading",
+    "code": "KPG",
+    "coords": [
+      -6.1574335,
+      106.9142078
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jakarta"
+  },
+  {
+    "id": "KMO",
+    "name": "Kemayoran",
+    "code": "KMO",
+    "coords": [
+      -6.1617033,
+      106.8414012
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "KMK",
+    "name": "Kemelak",
+    "code": "KMK",
+    "coords": [
+      -4.1618579,
+      104.1899974
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KEMIR",
+    "name": "Kemiri",
+    "code": "",
+    "coords": [
+      -7.5347881,
+      110.9011834
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KJ",
+    "name": "Kemranjen",
+    "code": "KJ",
+    "coords": [
+      -7.6214019,
+      109.3150764
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KPN",
+    "name": "Kepanjen",
+    "code": "KPN",
+    "coords": [
+      -8.1320283,
+      112.5733309
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KPY",
+    "name": "Kepayang",
+    "code": "KPY",
+    "coords": [
+      -4.0118226,
+      104.2631839
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KPT",
+    "name": "Kertapati",
+    "code": "KPT",
+    "coords": [
+      -3.0169256,
+      104.7511497
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KTM",
+    "name": "Kertasemaya",
+    "code": "KTM",
+    "coords": [
+      -6.5282809,
+      108.3534068
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KTS",
+    "name": "Kertosono",
+    "code": "KTS",
+    "coords": [
+      -7.5921805,
+      112.1006422
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KSB",
+    "name": "Kesamben",
+    "code": "KSB",
+    "coords": [
+      -8.1492736,
+      112.3634609
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KGG",
+    "name": "Ketanggungan",
+    "code": "KGG",
+    "coords": [
+      -6.9384259,
+      108.8843474
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KTG",
+    "name": "Ketapang",
+    "code": "KTG",
+    "coords": [
+      -8.1411712,
+      114.3971314
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KAC",
+    "name": "Kiaracondong",
+    "code": "KAC",
+    "coords": [
+      -6.9247499,
+      107.6462773
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KIS",
+    "name": "Kisaran",
+    "code": "KIS",
+    "coords": [
+      2.9863698,
+      99.6198911
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KK",
+    "name": "Klakah",
+    "code": "KK",
+    "coords": [
+      -7.9941566,
+      113.249363
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KLI",
+    "name": "Klari",
+    "code": "KLI",
+    "coords": [
+      -6.349852,
+      107.3453729
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "KT",
+    "name": "Klaten",
+    "code": "KT",
+    "coords": [
+      -7.7123541,
+      110.6029736
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KLD",
+    "name": "Klender",
+    "code": "KLD",
+    "coords": [
+      -6.2133188,
+      106.8994133
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "KLDB",
+    "name": "Klender Baru",
+    "code": "KLDB",
+    "coords": [
+      -6.2176591,
+      106.9401833
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "KOS",
+    "name": "Kosambi",
+    "code": "KOS",
+    "coords": [
+      -6.3690828,
+      107.3747867
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "KOP",
+    "name": "Kota Padang",
+    "code": "KOP",
+    "coords": [
+      -3.4260342,
+      102.9670814
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KBU",
+    "name": "Kotabaru",
+    "code": "KBU",
+    "coords": [
+      -3.7310801,
+      104.331979
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KB",
+    "name": "Kotabumi",
+    "code": "KB",
+    "coords": [
+      -4.8218938,
+      104.8813339
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KTK",
+    "name": "Kotok",
+    "code": "KTK",
+    "coords": [
+      -8.1261718,
+      113.779076
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KNN",
+    "name": "Kradenan",
+    "code": "KNN",
+    "coords": [
+      -7.1503618,
+      111.1468413
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KAS",
+    "name": "Kramasan",
+    "code": "KAS",
+    "coords": [
+      -3.0486792,
+      104.7379138
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KMT",
+    "name": "Kramat",
+    "code": "KMT",
+    "coords": [
+      -6.1936203,
+      106.8565119
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "KRI",
+    "name": "Kranji",
+    "code": "KRI",
+    "coords": [
+      -6.2245133,
+      106.9798267
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "KRS",
+    "name": "Kras",
+    "code": "KRS",
+    "coords": [
+      -7.9486794,
+      111.9603122
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "KEN",
+    "name": "Krenceng",
+    "code": "KEN",
+    "coords": [
+      -6.0098243,
+      106.0231173
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "KNS",
+    "name": "Krengseng",
+    "code": "KNS",
+    "coords": [
+      -6.952419,
+      110.0278204
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KRT",
+    "name": "Kretek",
+    "code": "KRT",
+    "coords": [
+      -7.2856546,
+      109.0298934
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KRN",
+    "name": "Krian",
+    "code": "KRN",
+    "coords": [
+      -7.4097377,
+      112.5866604
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "KYA",
+    "name": "Kroya",
+    "code": "KYA",
+    "coords": [
+      -7.6299479,
+      109.2540488
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KRG",
+    "name": "Krueng Geukueh",
+    "code": "KRG",
+    "coords": [
+      5.2436902,
+      97.0206848
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KRM",
+    "name": "Krueng Mane",
+    "code": "KRM",
+    "coords": [
+      5.2512429,
+      96.9226121
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KBG",
+    "name": "Kuala Bingai",
+    "code": "KBG",
+    "coords": [
+      3.7079175,
+      98.4288878
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KTJ",
+    "name": "Kuala Tanjung",
+    "code": "KTJ",
+    "coords": [
+      3.3595967,
+      99.4499268
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KNM",
+    "name": "Kualanamu",
+    "code": "KNM",
+    "coords": [
+      3.6343512,
+      98.8779141
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI Bandara"
+  },
+  {
+    "id": "KUNIN",
+    "name": "Kuningan",
+    "code": "",
+    "coords": [
+      -6.2287727,
+      106.8332031
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jabodebek"
+  },
+  {
+    "id": "KI",
+    "name": "Kurai Taji",
+    "code": "KI",
+    "coords": [
+      -0.6330752,
+      100.1702041
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KRP",
+    "name": "Kuripan",
+    "code": "KRP",
+    "coords": [
+      -6.9237711,
+      109.8939735
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KBL",
+    "name": "Kutablang",
+    "code": "KBL",
+    "coords": [
+      5.2111057,
+      96.8435748
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KTA",
+    "name": "Kutoarjo",
+    "code": "KTA",
+    "coords": [
+      -7.7260691,
+      109.9071767
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "KWN",
+    "name": "Kutowinangun",
+    "code": "KWN",
+    "coords": [
+      -7.7160845,
+      109.7326313
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LBU",
+    "name": "Labuan",
+    "code": "LBU",
+    "coords": [
+      3.7353472,
+      98.6772142
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LAR",
+    "name": "Labuhanratu",
+    "code": "LAR",
+    "coords": [
+      -5.3724153,
+      105.2522422
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LT",
+    "name": "Lahat",
+    "code": "LT",
+    "coords": [
+      -3.7894804,
+      103.5372243
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LAG",
+    "name": "Lalang",
+    "code": "LAG",
+    "coords": [
+      3.3696876,
+      99.424355
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LMG",
+    "name": "Lamongan",
+    "code": "LMG",
+    "coords": [
+      -7.1124365,
+      112.4202256
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LP",
+    "name": "Lampegan",
+    "code": "LP",
+    "coords": [
+      -6.94995,
+      107.0613702
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LN",
+    "name": "Langen",
+    "code": "LN",
+    "coords": [
+      -7.3601518,
+      108.636925
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LR",
+    "name": "Larangan",
+    "code": "LR",
+    "coords": [
+      -6.8680857,
+      109.1854508
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LTD",
+    "name": "Laut Tador",
+    "code": "LTD",
+    "coords": [
+      3.2817798,
+      99.2553903
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LW",
+    "name": "Lawang",
+    "code": "LW",
+    "coords": [
+      -7.8366434,
+      112.6978281
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LBB",
+    "name": "Lebak Bulus Bank Syariah Indonesia",
+    "code": "LBB",
+    "coords": [
+      -6.2892744,
+      106.7749355
+    ],
+    "island": "Jawa",
+    "type": "MRT",
+    "network": "MRT Jakarta"
+  },
+  {
+    "id": "LBJ",
+    "name": "Lebakjero",
+    "code": "LBJ",
+    "coords": [
+      -7.053697,
+      107.8939262
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LBG",
+    "name": "Lebeng",
+    "code": "LBG",
+    "coords": [
+      -7.6212895,
+      109.0769351
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LEC",
+    "name": "Leces",
+    "code": "LEC",
+    "coords": [
+      -7.8464635,
+      113.2289975
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LDO",
+    "name": "Ledokombo",
+    "code": "LDO",
+    "coords": [
+      -8.140671,
+      113.8756389
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LL",
+    "name": "Leles",
+    "code": "LL",
+    "coords": [
+      -7.084442,
+      107.8997608
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "PT Kereta Api Indonesia"
+  },
+  {
+    "id": "LMB",
+    "name": "Lemahabang",
+    "code": "LMB",
+    "coords": [
+      -6.2706844,
+      107.179632
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "LEB",
+    "name": "Lembak",
+    "code": "LEB",
+    "coords": [
+      -3.3420823,
+      104.3415437
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LPN",
+    "name": "Lempuyangan",
+    "code": "LPN",
+    "coords": [
+      -7.7900721,
+      110.3753385
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LNA",
+    "name": "Lenteng Agung",
+    "code": "LNA",
+    "coords": [
+      -6.3303079,
+      106.8346791
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "LO",
+    "name": "Leuwigoong",
+    "code": "LO",
+    "coords": [
+      -7.1033308,
+      107.9581854
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "LDT",
+    "name": "Lidah Tanah",
+    "code": "LDT",
+    "coords": [
+      3.5629505,
+      99.0143114
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LMP",
+    "name": "Lima Puluh",
+    "code": "LMP",
+    "coords": [
+      3.1735086,
+      99.4126471
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LG",
+    "name": "Linggapura",
+    "code": "LG",
+    "coords": [
+      -7.1850689,
+      109.0124352
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LOS",
+    "name": "Losari",
+    "code": "LOS",
+    "coords": [
+      -6.8465666,
+      108.798266
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LA",
+    "name": "Lubuk Alung",
+    "code": "LA",
+    "coords": [
+      -0.6785453,
+      100.2892571
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LBT",
+    "name": "Lubuk Batang",
+    "code": "LBT",
+    "coords": [
+      -4.0577358,
+      104.217424
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LBY",
+    "name": "Lubuk Buaya",
+    "code": "LBY",
+    "coords": [
+      -0.8337782,
+      100.3277294
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LBP",
+    "name": "Lubuk Pakam",
+    "code": "LBP",
+    "coords": [
+      3.5645128,
+      98.8783763
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LRM",
+    "name": "Lubuk Rukam",
+    "code": "LRM",
+    "coords": [
+      -3.9326744,
+      104.3404713
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LLG",
+    "name": "Lubuklinggau",
+    "code": "LLG",
+    "coords": [
+      -3.2934341,
+      102.8643449
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "LWG",
+    "name": "Luwung",
+    "code": "LWG",
+    "coords": [
+      -6.7775132,
+      108.593213
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MN",
+    "name": "Madiun",
+    "code": "MN",
+    "coords": [
+      -7.618593,
+      111.5248581
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MADUC",
+    "name": "Madu Candhya",
+    "code": "",
+    "coords": [
+      -7.8290177,
+      110.3435678
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "Madukismo"
+  },
+  {
+    "id": "MADUK",
+    "name": "Madukismo",
+    "code": "",
+    "coords": [
+      -7.8328807,
+      110.34626
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "Madukismo"
+  },
+  {
+    "id": "MAG",
+    "name": "Magetan",
+    "code": "MAG",
+    "coords": [
+      -7.5627203,
+      111.4515125
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MGW",
+    "name": "Maguwo",
+    "code": "MGW",
+    "coords": [
+      -7.7850944,
+      110.4369156
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "MJ",
+    "name": "Maja",
+    "code": "MJ",
+    "coords": [
+      -6.332503,
+      106.3964794
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "ML",
+    "name": "Malang",
+    "code": "ML",
+    "coords": [
+      -7.9777838,
+      112.6374042
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MLK",
+    "name": "Malang Kotalama",
+    "code": "MLK",
+    "coords": [
+      -7.9948406,
+      112.6325144
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MLS",
+    "name": "Malasan",
+    "code": "MLS",
+    "coords": [
+      -7.8860722,
+      113.2604547
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MBM",
+    "name": "Mambang Muda",
+    "code": "MBM",
+    "coords": [
+      2.5652474,
+      99.6510071
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MGB",
+    "name": "Mangga Besar",
+    "code": "MGB",
+    "coords": [
+      -6.1498037,
+      106.8269826
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "MRI",
+    "name": "Manggarai",
+    "code": "MRI",
+    "coords": [
+      -6.2101704,
+      106.849935
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "MKG",
+    "name": "Mangkang",
+    "code": "MKG",
+    "coords": [
+      -6.9708194,
+      110.3022267
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MI",
+    "name": "Mangli",
+    "code": "MI",
+    "coords": [
+      -8.1908552,
+      113.6483607
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MNJ",
+    "name": "Manonjaya",
+    "code": "MNJ",
+    "coords": [
+      -7.3532178,
+      108.3026508
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MA",
+    "name": "Maos",
+    "code": "MA",
+    "coords": [
+      -7.6190328,
+      109.1394619
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MBU",
+    "name": "Marbau",
+    "code": "MBU",
+    "coords": [
+      2.2608808,
+      99.8208612
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MP",
+    "name": "Martapura",
+    "code": "MP",
+    "coords": [
+      -4.3162936,
+      104.346657
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MASAR",
+    "name": "Masaran",
+    "code": "",
+    "coords": [
+      -7.4682036,
+      110.9476546
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": ""
+  },
+  {
+    "id": "MSG",
+    "name": "Maseng",
+    "code": "MSG",
+    "coords": [
+      -6.7027797,
+      106.8145685
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MSI",
+    "name": "Maswati",
+    "code": "MSI",
+    "coords": [
+      -6.760834,
+      107.4089726
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "MTR",
+    "name": "Matraman",
+    "code": "MTR",
+    "coords": [
+      -6.2125672,
+      106.8597528
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "MDN",
+    "name": "Medan",
+    "code": "MDN",
+    "coords": [
+      3.591048,
+      98.679854
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MLW",
+    "name": "Meluwung",
+    "code": "MLW",
+    "coords": [
+      -7.3942975,
+      108.6994826
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MER",
+    "name": "Merak",
+    "code": "MER",
+    "coords": [
+      -5.9302409,
+      105.9967938
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "MRP",
+    "name": "Merapi",
+    "code": "MRP",
+    "coords": [
+      -3.7395013,
+      103.6760533
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TLM",
+    "name": "Metland Telagamurni",
+    "code": "TLM",
+    "coords": [
+      -6.2574741,
+      107.111227
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "MET",
+    "name": "Metur",
+    "code": "MET",
+    "coords": [
+      -3.79069,
+      104.3450075
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MGN",
+    "name": "Minggiran",
+    "code": "MGN",
+    "coords": [
+      -7.7281841,
+      112.0575847
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MR",
+    "name": "Mojokerto",
+    "code": "MR",
+    "coords": [
+      -7.4725529,
+      112.4341099
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MRW",
+    "name": "Mrawan",
+    "code": "MRW",
+    "coords": [
+      -8.2723505,
+      113.9267761
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "ME",
+    "name": "Muara Enim",
+    "code": "ME",
+    "coords": [
+      -3.6526528,
+      103.7761932
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MRL",
+    "name": "Muara Gula",
+    "code": "MRL",
+    "coords": [
+      -3.5898727,
+      103.775454
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MLI",
+    "name": "Muara Lawai",
+    "code": "MLI",
+    "coords": [
+      -3.6578122,
+      103.7332646
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MSL",
+    "name": "Muara Saling",
+    "code": "MSL",
+    "coords": [
+      -3.4326311,
+      103.0414848
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MUS",
+    "name": "Muara Satu",
+    "code": "MUS",
+    "coords": [
+      5.2102199,
+      97.0765974
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "MKB",
+    "name": "Muaro Kalaban",
+    "code": "MKB",
+    "coords": [
+      -0.712002,
+      100.7878057
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "NG",
+    "name": "Nagreg",
+    "code": "NG",
+    "coords": [
+      -7.0182363,
+      107.8862641
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "NMO",
+    "name": "Nambo",
+    "code": "NMO",
+    "coords": [
+      -6.466282,
+      106.906269
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "NRS",
+    "name": "Naras",
+    "code": "NRS",
+    "coords": [
+      -0.5709778,
+      100.0978185
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "PT Kereta Api Indonesia (Persero)"
+  },
+  {
+    "id": "NRR",
+    "name": "Negara Ratu",
+    "code": "NRR",
+    "coords": [
+      -4.6568465,
+      104.7377201
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "NGN",
+    "name": "Negeri Agung",
+    "code": "NGN",
+    "coords": [
+      -4.5718744,
+      104.6062258
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "NDL",
+    "name": "Ngadiluwih",
+    "code": "NDL",
+    "coords": [
+      -7.8984826,
+      111.9878878
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "NJ",
+    "name": "Nganjuk",
+    "code": "NJ",
+    "coords": [
+      -7.600335,
+      111.9027186
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "NGW",
+    "name": "Ngawi",
+    "code": "NGW",
+    "coords": [
+      -7.4422788,
+      111.3869462
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "NB",
+    "name": "Ngebruk",
+    "code": "NB",
+    "coords": [
+      -8.1519128,
+      112.5168449
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "NBO",
+    "name": "Ngrombo",
+    "code": "NBO",
+    "coords": [
+      -7.1453819,
+      110.9005668
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "NJG",
+    "name": "Ngujang",
+    "code": "NJG",
+    "coords": [
+      -8.0104875,
+      111.9269947
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "NT",
+    "name": "Ngunut",
+    "code": "NT",
+    "coords": [
+      -8.1028767,
+      112.012079
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "NRU",
+    "name": "Niru",
+    "code": "NRU",
+    "coords": [
+      -3.45353,
+      104.0643637
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "NTG",
+    "name": "Notog",
+    "code": "NTG",
+    "coords": [
+      -7.4859241,
+      109.2132133
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PAB",
+    "name": "Pabuaran",
+    "code": "PAB",
+    "coords": [
+      -6.4090707,
+      107.5840128
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PDL",
+    "name": "Padalarang",
+    "code": "PDL",
+    "coords": [
+      -6.8422655,
+      107.4969093
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI;KCIC"
+  },
+  {
+    "id": "PD",
+    "name": "Padang",
+    "code": "PD",
+    "coords": [
+      -0.9417514,
+      100.3738559
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PHA",
+    "name": "Padang Halaban",
+    "code": "PHA",
+    "coords": [
+      2.3147873,
+      99.8202735
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PDS",
+    "name": "Padas",
+    "code": "PDS",
+    "coords": [
+      -7.1791442,
+      110.6719062
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PGG",
+    "name": "Pagergunung",
+    "code": "PGG",
+    "coords": [
+      -3.6874377,
+      104.3171814
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PSI",
+    "name": "Pakisaji",
+    "code": "PSI",
+    "coords": [
+      -8.069302,
+      112.5985712
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "PLM",
+    "name": "Palmerah",
+    "code": "PLM",
+    "coords": [
+      -6.2079197,
+      106.7972321
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "PL",
+    "name": "Palur",
+    "code": "PL",
+    "coords": [
+      -7.5681155,
+      110.8752865
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "PME",
+    "name": "Pamingke",
+    "code": "PME",
+    "coords": [
+      2.376894,
+      99.7609723
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PANCO",
+    "name": "Pancoran",
+    "code": "",
+    "coords": [
+      -6.2421415,
+      106.8385146
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jabodebek"
+  },
+  {
+    "id": "PBN",
+    "name": "Pangkalan Brandan",
+    "code": "PBN",
+    "coords": [
+      4.0230408,
+      98.2899567
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PNL",
+    "name": "Panunggalan",
+    "code": "PNL",
+    "coords": [
+      -7.1527079,
+      111.0607188
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PPR",
+    "name": "Papar",
+    "code": "PPR",
+    "coords": [
+      -7.6976378,
+      112.0796715
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PMN",
+    "name": "Pariaman",
+    "code": "PMN",
+    "coords": [
+      -0.6267333,
+      100.1164352
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "PT Kereta Api Indonesia (Persero)"
+  },
+  {
+    "id": "PRK",
+    "name": "Parungkuda",
+    "code": "PRK",
+    "coords": [
+      -6.8466613,
+      106.7605635
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PRP",
+    "name": "Parungpanjang",
+    "code": "PRP",
+    "coords": [
+      -6.3443444,
+      106.5698462
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "PSM",
+    "name": "Pasar Minggu",
+    "code": "PSM",
+    "coords": [
+      -6.2833322,
+      106.8448558
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "PSMB",
+    "name": "Pasar Minggu Baru",
+    "code": "PSMB",
+    "coords": [
+      -6.262798,
+      106.8517957
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "PSE",
+    "name": "Pasar Senen",
+    "code": "PSE",
+    "coords": [
+      -6.1744233,
+      106.8445744
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PRU",
+    "name": "Pasar Usang",
+    "code": "PRU",
+    "coords": [
+      -0.7364828,
+      100.3104628
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PNT",
+    "name": "Pasarnguter",
+    "code": "PNT",
+    "coords": [
+      -7.7420605,
+      110.8796753
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PAS",
+    "name": "Pasirbungur",
+    "code": "PAS",
+    "coords": [
+      -6.4262913,
+      107.6885456
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PASIR",
+    "name": "Pasirjengkol",
+    "code": "",
+    "coords": [
+      -7.1283156,
+      107.9924477
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "PS",
+    "name": "Pasuruan",
+    "code": "PS",
+    "coords": [
+      -7.6377552,
+      112.9101355
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PAT",
+    "name": "Patuguran",
+    "code": "PAT",
+    "coords": [
+      -7.3281324,
+      109.0578773
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PTN",
+    "name": "Patukan",
+    "code": "PTN",
+    "coords": [
+      -7.7907238,
+      110.3253312
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PAK",
+    "name": "Pauh Kambar",
+    "code": "PAK",
+    "coords": [
+      -0.6513214,
+      100.2195424
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "IMA",
+    "name": "Pauh Lima",
+    "code": "IMA",
+    "coords": [
+      -0.9378747,
+      100.4349542
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PYK",
+    "name": "Payakabung",
+    "code": "PYK",
+    "coords": [
+      -3.1994005,
+      104.604981
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PGB",
+    "name": "Pegaden Baru",
+    "code": "PGB",
+    "coords": [
+      -6.4536012,
+      107.8170956
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PK",
+    "name": "Pekalongan",
+    "code": "PK",
+    "coords": [
+      -6.889813,
+      109.6643794
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PML",
+    "name": "Pemalang",
+    "code": "PML",
+    "coords": [
+      -6.8873513,
+      109.3882311
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PNG",
+    "name": "Penanggiran",
+    "code": "PNG",
+    "coords": [
+      -3.4819311,
+      103.8130512
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PNM",
+    "name": "Penimur",
+    "code": "PNM",
+    "coords": [
+      -3.445821,
+      104.1557856
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PNW",
+    "name": "Peninjawan",
+    "code": "PNW",
+    "coords": [
+      -3.87966,
+      104.3764639
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PBA",
+    "name": "Perbaungan",
+    "code": "PBA",
+    "coords": [
+      3.56679,
+      98.9511185
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PRA",
+    "name": "Perlanaan",
+    "code": "PRA",
+    "coords": [
+      3.1758161,
+      99.3650206
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PSG",
+    "name": "Pesing",
+    "code": "PSG",
+    "coords": [
+      -6.1612525,
+      106.7719077
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "PTA",
+    "name": "Petarukan",
+    "code": "PTA",
+    "coords": [
+      -6.8976445,
+      109.4496503
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PTR",
+    "name": "Peterongan",
+    "code": "PTR",
+    "coords": [
+      -7.5417187,
+      112.279445
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "PLB",
+    "name": "Plabuan",
+    "code": "PLB",
+    "coords": [
+      -6.9198452,
+      109.956321
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PLD",
+    "name": "Plered",
+    "code": "PLD",
+    "coords": [
+      -6.6409293,
+      107.3913078
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "PGJ",
+    "name": "Pogajih",
+    "code": "PGJ",
+    "coords": [
+      -8.1571039,
+      112.4202271
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "POLRE",
+    "name": "Polresta",
+    "code": "",
+    "coords": [
+      -3.0050779,
+      104.7724733
+    ],
+    "island": "Sumatera",
+    "type": "LRT",
+    "network": "LRT Palembang"
+  },
+  {
+    "id": "PCN",
+    "name": "Pondok Cina",
+    "code": "PCN",
+    "coords": [
+      -6.3690593,
+      106.8320844
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "POK",
+    "name": "Pondok Jati",
+    "code": "POK",
+    "coords": [
+      -6.2091242,
+      106.8623419
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "PDRG",
+    "name": "Pondok Rajeg",
+    "code": "PDRG",
+    "coords": [
+      -6.4607829,
+      106.824296
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "PDJ",
+    "name": "Pondok Ranji",
+    "code": "PDJ",
+    "coords": [
+      -6.2766831,
+      106.7446926
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "PI",
+    "name": "Poris",
+    "code": "PI",
+    "coords": [
+      -6.1697346,
+      106.6807523
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "PR",
+    "name": "Porong",
+    "code": "PR",
+    "coords": [
+      -7.5383909,
+      112.7017616
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "PBM",
+    "name": "Prabumulih",
+    "code": "PBM",
+    "coords": [
+      -3.4329772,
+      104.2410568
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PRAMU",
+    "name": "Pramuka",
+    "code": "",
+    "coords": [
+      -6.1920001,
+      106.870889
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jakarta"
+  },
+  {
+    "id": "PRB",
+    "name": "Prembun",
+    "code": "PRB",
+    "coords": [
+      -7.7244502,
+      109.797957
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PRI",
+    "name": "Pringkasap",
+    "code": "PRI",
+    "coords": [
+      -6.4180695,
+      107.6345113
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PB",
+    "name": "Probolinggo",
+    "code": "PB",
+    "coords": [
+      -7.7427074,
+      113.2159766
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PROKL",
+    "name": "Proklamasi",
+    "code": "",
+    "coords": [
+      -6.2021164,
+      106.8502137
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jakarta"
+  },
+  {
+    "id": "PPK",
+    "name": "Prupuk",
+    "code": "PPK",
+    "coords": [
+      -7.1229242,
+      108.9827363
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PC",
+    "name": "Pucuk",
+    "code": "PC",
+    "coords": [
+      -7.0976266,
+      112.2698043
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "PLA",
+    "name": "Pulau Aie",
+    "code": "PLA",
+    "coords": [
+      -0.9606745,
+      100.3660883
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PULOM",
+    "name": "Pulomas",
+    "code": "",
+    "coords": [
+      -6.1773105,
+      106.8933929
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jakarta"
+  },
+  {
+    "id": "PUB",
+    "name": "Pulu Brayan",
+    "code": "PUB",
+    "coords": [
+      3.6318118,
+      98.6706357
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PUR",
+    "name": "Pulu Raja",
+    "code": "PUR",
+    "coords": [
+      2.6972956,
+      99.6170864
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PUNTI",
+    "name": "Punti Kayu",
+    "code": "",
+    "coords": [
+      -2.9405184,
+      104.7239798
+    ],
+    "island": "Sumatera",
+    "type": "LRT",
+    "network": "LRT Palembang"
+  },
+  {
+    "id": "PWK",
+    "name": "Purwakarta",
+    "code": "PWK",
+    "coords": [
+      -6.5527796,
+      107.4465323
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PWA",
+    "name": "Purwoasri",
+    "code": "PWA",
+    "coords": [
+      -7.6474024,
+      112.1002279
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "PWT",
+    "name": "Purwokerto",
+    "code": "PWT",
+    "coords": [
+      -7.4194647,
+      109.2218425
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "PWS",
+    "name": "Purwosari",
+    "code": "PWS",
+    "coords": [
+      -7.5614182,
+      110.7964303
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "RJP",
+    "name": "Rajapolah",
+    "code": "RJP",
+    "coords": [
+      -7.2195734,
+      108.1911804
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "RJW",
+    "name": "Rajawali",
+    "code": "RJW",
+    "coords": [
+      -6.1450996,
+      106.8368325
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "RBP",
+    "name": "Rambipuji",
+    "code": "RBP",
+    "coords": [
+      -8.2032715,
+      113.6143952
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "RPH",
+    "name": "Rampah",
+    "code": "RPH",
+    "coords": [
+      3.485641,
+      99.1384637
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "RCK",
+    "name": "Rancaekek",
+    "code": "RCK",
+    "coords": [
+      -6.9648801,
+      107.7559578
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "RDN",
+    "name": "Randegan",
+    "code": "RDN",
+    "coords": [
+      -7.5699574,
+      109.2201148
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "RDA",
+    "name": "Randuagung",
+    "code": "RDA",
+    "coords": [
+      -8.0701298,
+      113.3052123
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "RBG",
+    "name": "Randublatung",
+    "code": "RBG",
+    "coords": [
+      -7.1921755,
+      111.3980547
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "RK",
+    "name": "Rangkasbitung",
+    "code": "RK",
+    "coords": [
+      -6.3527788,
+      106.2515252
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "RAP",
+    "name": "Rantau Prapat",
+    "code": "RAP",
+    "coords": [
+      2.1135273,
+      99.8208136
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "RN",
+    "name": "Ranuyoso",
+    "code": "RN",
+    "coords": [
+      -7.9543972,
+      113.2368703
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "RASUN",
+    "name": "Rasuna Said",
+    "code": "",
+    "coords": [
+      -6.2216089,
+      106.8322373
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jabodebek"
+  },
+  {
+    "id": "RW",
+    "name": "Rawa Buaya",
+    "code": "RW",
+    "coords": [
+      -6.1627437,
+      106.7227543
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "RU",
+    "name": "Rawa Buntu",
+    "code": "RU",
+    "coords": [
+      -6.314884,
+      106.6761518
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "RAWAM",
+    "name": "Rawamangun",
+    "code": "",
+    "coords": [
+      -6.1931386,
+      106.8825053
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jakarta"
+  },
+  {
+    "id": "RJS",
+    "name": "Rejosari",
+    "code": "RJS",
+    "coords": [
+      -5.2940655,
+      105.1878162
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "RO",
+    "name": "Rejoso",
+    "code": "RO",
+    "coords": [
+      -7.691326,
+      112.9679326
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "RJ",
+    "name": "Rejotangan",
+    "code": "RJ",
+    "coords": [
+      -8.1209345,
+      112.0811804
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "RH",
+    "name": "Rendeh",
+    "code": "RH",
+    "coords": [
+      -6.7362218,
+      107.3985529
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "RGS",
+    "name": "Rengas",
+    "code": "RGS",
+    "coords": [
+      -5.1338192,
+      105.1544708
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "RWL",
+    "name": "Rewulu",
+    "code": "RWL",
+    "coords": [
+      -7.7961358,
+      110.2842707
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "RGP",
+    "name": "Rogojampi",
+    "code": "RGP",
+    "coords": [
+      -8.3047015,
+      114.2924358
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "RSUD",
+    "name": "RSUD",
+    "code": "",
+    "coords": [
+      -2.9477133,
+      104.7324365
+    ],
+    "island": "Sumatera",
+    "type": "LRT",
+    "network": "LRT Palembang"
+  },
+  {
+    "id": "SLM",
+    "name": "Salem",
+    "code": "SLM",
+    "coords": [
+      -7.3955967,
+      110.8271742
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SRD",
+    "name": "Saradan",
+    "code": "SRD",
+    "coords": [
+      -7.5475301,
+      111.732159
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SKT",
+    "name": "Sasaksaat",
+    "code": "SKT",
+    "coords": [
+      -6.7801577,
+      107.4319885
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "SNA",
+    "name": "Saungnaga",
+    "code": "SNA",
+    "coords": [
+      -3.6261703,
+      103.1893686
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SW",
+    "name": "Sawah Besar",
+    "code": "SW",
+    "coords": [
+      -6.1606672,
+      106.8276549
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "SWL",
+    "name": "Sawahlunto",
+    "code": "SWL",
+    "coords": [
+      -0.6829037,
+      100.7769875
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SDI",
+    "name": "Sedadi",
+    "code": "SDI",
+    "coords": [
+      -7.1407939,
+      110.8487415
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SBJ",
+    "name": "Sei Bejangkar",
+    "code": "SBJ",
+    "coords": [
+      3.1065464,
+      99.5561521
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SMC",
+    "name": "Semarang Poncol",
+    "code": "SMC",
+    "coords": [
+      -6.9728706,
+      110.4146257
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SMT",
+    "name": "Semarang Tawang",
+    "code": "SMT",
+    "coords": [
+      -6.9641479,
+      110.4276825
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SMB",
+    "name": "Sembung",
+    "code": "SMB",
+    "coords": [
+      -7.5825814,
+      112.1671585
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "SPL",
+    "name": "Sempolan",
+    "code": "SPL",
+    "coords": [
+      -8.1925803,
+      113.8963105
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SNY",
+    "name": "Senayan Mastercard",
+    "code": "SNY",
+    "coords": [
+      -6.2267337,
+      106.8024926
+    ],
+    "island": "Jawa",
+    "type": "MRT",
+    "network": "MRT Jakarta"
+  },
+  {
+    "id": "SN",
+    "name": "Sengon",
+    "code": "SN",
+    "coords": [
+      -7.755046,
+      112.7245418
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "STL",
+    "name": "Sentolo",
+    "code": "STL",
+    "coords": [
+      -7.833229,
+      110.2202569
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SPC",
+    "name": "Sepancar",
+    "code": "SPC",
+    "coords": [
+      -4.1845515,
+      104.2104346
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SPJ",
+    "name": "Sepanjang",
+    "code": "SPJ",
+    "coords": [
+      -7.3469403,
+      112.6983661
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "SG",
+    "name": "Serang",
+    "code": "SG",
+    "coords": [
+      -6.112294,
+      106.1586822
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "SDN",
+    "name": "Serdang",
+    "code": "SDN",
+    "coords": [
+      -3.2197891,
+      104.5232143
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SRP",
+    "name": "Serpong",
+    "code": "SRP",
+    "coords": [
+      -6.3201527,
+      106.6655836
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "SETIA",
+    "name": "Setiabudi",
+    "code": "",
+    "coords": [
+      -6.2093224,
+      106.8302343
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jabodebek"
+  },
+  {
+    "id": "STB",
+    "name": "Setiabudi Astra",
+    "code": "STB",
+    "coords": [
+      -6.2090648,
+      106.8216945
+    ],
+    "island": "Jawa",
+    "type": "MRT",
+    "network": "MRT Jakarta"
+  },
+  {
+    "id": "SIR",
+    "name": "Siantar",
+    "code": "SIR",
+    "coords": [
+      2.9593321,
+      99.0629547
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SCN",
+    "name": "Sicincin",
+    "code": "SCN",
+    "coords": [
+      -0.5661026,
+      100.277905
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SDR",
+    "name": "Sidareja",
+    "code": "SDR",
+    "coords": [
+      -7.4864058,
+      108.8075311
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SDA",
+    "name": "Sidoarjo",
+    "code": "SDA",
+    "coords": [
+      -7.4567712,
+      112.7126786
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": ""
+  },
+  {
+    "id": "SDT",
+    "name": "Sidotopo",
+    "code": "SDT",
+    "coords": [
+      -7.2352885,
+      112.7568868
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SKP",
+    "name": "Sikampuh",
+    "code": "SKP",
+    "coords": [
+      -7.625871,
+      109.1974864
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SIG",
+    "name": "Simpang",
+    "code": "SIG",
+    "coords": [
+      -3.10471,
+      104.6992693
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SIMPA",
+    "name": "Simpang Padang Tarab (Eks)",
+    "code": "",
+    "coords": [
+      -0.2675513,
+      100.5086742
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": ""
+  },
+  {
+    "id": "SDU",
+    "name": "Sindanglaut",
+    "code": "SDU",
+    "coords": [
+      -6.8328608,
+      108.6258519
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SGJ",
+    "name": "Singojuruh",
+    "code": "SGJ",
+    "coords": [
+      -8.3066286,
+      114.240545
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SGS",
+    "name": "Singosari",
+    "code": "SGS",
+    "coords": [
+      -7.8968962,
+      112.66602
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "SIU",
+    "name": "Situngir",
+    "code": "SIU",
+    "coords": [
+      2.4926832,
+      99.6785691
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SLW",
+    "name": "Slawi",
+    "code": "SLW",
+    "coords": [
+      -6.9818975,
+      109.1365597
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SLO",
+    "name": "Solo Balapan",
+    "code": "SLO",
+    "coords": [
+      -7.5566323,
+      110.821487
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SK",
+    "name": "Solo Jebres",
+    "code": "SK",
+    "coords": [
+      -7.5622121,
+      110.8394645
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "STA",
+    "name": "Solo Kota",
+    "code": "STA",
+    "coords": [
+      -7.5755903,
+      110.836338
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SGG",
+    "name": "Songgom",
+    "code": "SGG",
+    "coords": [
+      -7.0243387,
+      108.9889705
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SR",
+    "name": "Sragen",
+    "code": "SR",
+    "coords": [
+      -7.429436,
+      111.017835
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SRI",
+    "name": "Sragi",
+    "code": "SRI",
+    "coords": [
+      -6.9236888,
+      109.5709534
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SWT",
+    "name": "Srowot",
+    "code": "SWT",
+    "coords": [
+      -7.7413566,
+      110.5493576
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "SRW",
+    "name": "Sruweng",
+    "code": "SRW",
+    "coords": [
+      -7.6542683,
+      109.6020406
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SBT",
+    "name": "Stabat",
+    "code": "SBT",
+    "coords": [
+      3.7657904,
+      98.3810321
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SDM",
+    "name": "Sudimara",
+    "code": "SDM",
+    "coords": [
+      -6.2968441,
+      106.7126471
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "SUD",
+    "name": "Sudirman",
+    "code": "SUD",
+    "coords": [
+      -6.2024081,
+      106.8234493
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "SCT",
+    "name": "Suka Cinta",
+    "code": "SCT",
+    "coords": [
+      -3.7782176,
+      103.6254114
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "PT Kereta Api Indonesia (Persero)"
+  },
+  {
+    "id": "SI",
+    "name": "Sukabumi",
+    "code": "SI",
+    "coords": [
+      -6.9249713,
+      106.9296231
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SKN",
+    "name": "Sukamenanti",
+    "code": "SKN",
+    "coords": [
+      -5.4687084,
+      105.3236944
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SKU",
+    "name": "Sukamerindu",
+    "code": "SKU",
+    "coords": [
+      -3.5965231,
+      104.2763123
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SUA",
+    "name": "Sukaraja",
+    "code": "SUA",
+    "coords": [
+      -3.6635378,
+      103.2720593
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SUT",
+    "name": "Sukatani",
+    "code": "SUT",
+    "coords": [
+      -6.6108247,
+      107.4084641
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "SKH",
+    "name": "Sukoharjo",
+    "code": "SKH",
+    "coords": [
+      -7.6797595,
+      110.8433721
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SKM",
+    "name": "Sukomoro",
+    "code": "SKM",
+    "coords": [
+      -7.6027016,
+      111.9424005
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SKJ",
+    "name": "Sukorejo",
+    "code": "SKJ",
+    "coords": [
+      -7.7194039,
+      112.7235346
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SL",
+    "name": "Sulur",
+    "code": "SL",
+    "coords": [
+      -7.1742094,
+      111.2228251
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SLS",
+    "name": "Sulusuban",
+    "code": "SLS",
+    "coords": [
+      -4.9457545,
+      105.0829292
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SBL",
+    "name": "Sumbergempol",
+    "code": "SBL",
+    "coords": [
+      -8.0824917,
+      111.944684
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "SUM",
+    "name": "Sumberlawang",
+    "code": "SUM",
+    "coords": [
+      -7.3277189,
+      110.8637487
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SBP",
+    "name": "Sumberpucung",
+    "code": "SBP",
+    "coords": [
+      -8.1583677,
+      112.4783853
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SRJ",
+    "name": "Sumberrejo",
+    "code": "SRJ",
+    "coords": [
+      -7.1777587,
+      112.0015718
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "SWD",
+    "name": "Sumberwadung",
+    "code": "SWD",
+    "coords": [
+      -8.301699,
+      114.1053931
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SBO",
+    "name": "Sumobito",
+    "code": "SBO",
+    "coords": [
+      -7.5193957,
+      112.3393558
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "SPH",
+    "name": "Sumpiuh",
+    "code": "SPH",
+    "coords": [
+      -7.6152463,
+      109.3611086
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SUNGA",
+    "name": "Sungai Liput",
+    "code": "",
+    "coords": [
+      4.237861,
+      98.0511613
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "PT. Kereta Api Indonesia (Persero)"
+  },
+  {
+    "id": "SGT",
+    "name": "Sungai Tuha",
+    "code": "SGT",
+    "coords": [
+      -4.2816643,
+      104.3199139
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SGU",
+    "name": "Surabaya Gubeng",
+    "code": "SGU",
+    "coords": [
+      -7.2653211,
+      112.7522142
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SB",
+    "name": "Surabaya Kota",
+    "code": "SB",
+    "coords": [
+      -7.2430228,
+      112.7421627
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SBI",
+    "name": "Surabaya Pasarturi",
+    "code": "SBI",
+    "coords": [
+      -7.2481011,
+      112.7309643
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SBN",
+    "name": "Surabayan",
+    "code": "SBN",
+    "coords": [
+      -7.0997852,
+      112.3554626
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SD",
+    "name": "Surodadi",
+    "code": "SD",
+    "coords": [
+      -6.8805732,
+      109.2759558
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "SS",
+    "name": "Susuhan",
+    "code": "SS",
+    "coords": [
+      -7.7712035,
+      112.0261498
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TAB",
+    "name": "Tabing",
+    "code": "TAB",
+    "coords": [
+      -0.8667953,
+      100.3423786
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TLB",
+    "name": "Talang Baru",
+    "code": "TLB",
+    "coords": [
+      -3.8438637,
+      104.3632976
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TAL",
+    "name": "Talun",
+    "code": "TAL",
+    "coords": [
+      -8.0916077,
+      112.2885394
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "TKO",
+    "name": "Taman Kota",
+    "code": "TKO",
+    "coords": [
+      -6.158627,
+      106.7565728
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "TAMAN",
+    "name": "Taman Mini",
+    "code": "",
+    "coords": [
+      -6.2929088,
+      106.8805584
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jabodebek"
+  },
+  {
+    "id": "TBK",
+    "name": "Tambak",
+    "code": "TBK",
+    "coords": [
+      -7.6132195,
+      109.407681
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TB",
+    "name": "Tambun",
+    "code": "TB",
+    "coords": [
+      -6.2585496,
+      107.0558044
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "THB",
+    "name": "Tanah Abang",
+    "code": "THB",
+    "coords": [
+      -6.1857127,
+      106.8108938
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "TTI",
+    "name": "Tanah Tinggi",
+    "code": "TTI",
+    "coords": [
+      -6.1751701,
+      106.6467095
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "TES",
+    "name": "Tandes",
+    "code": "TES",
+    "coords": [
+      -7.2588965,
+      112.6870227
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "TNG",
+    "name": "Tangerang",
+    "code": "TNG",
+    "coords": [
+      -6.1769753,
+      106.6320106
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "TGL",
+    "name": "Tanggul",
+    "code": "TGL",
+    "coords": [
+      -8.1627667,
+      113.4482705
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TGA",
+    "name": "Tanggulangin",
+    "code": "TGA",
+    "coords": [
+      -7.5068966,
+      112.708077
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "TGG",
+    "name": "Tanggung",
+    "code": "TGG",
+    "coords": [
+      -7.0914907,
+      110.6032465
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TGN",
+    "name": "Tanjung",
+    "code": "TGN",
+    "coords": [
+      -6.8770109,
+      108.8603983
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TNT",
+    "name": "Tanjung Barat",
+    "code": "TNT",
+    "coords": [
+      -6.3080407,
+      106.8389492
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "TMB",
+    "name": "Tanjung Enim Baru",
+    "code": "TMB",
+    "coords": [
+      -3.7063668,
+      103.79907
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TGD",
+    "name": "Tanjung Gading",
+    "code": "TGD",
+    "coords": [
+      3.3113031,
+      99.3488164
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TPK",
+    "name": "Tanjung Priuk",
+    "code": "TPK",
+    "coords": [
+      -6.1106914,
+      106.8814984
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "TJP",
+    "name": "Tanjung Pura",
+    "code": "TJP",
+    "coords": [
+      3.9137346,
+      98.4187736
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TJR",
+    "name": "Tanjung Rambang",
+    "code": "TJR",
+    "coords": [
+      -3.5439546,
+      104.2619542
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TAS",
+    "name": "Tanjung Selamat",
+    "code": "TAS",
+    "coords": [
+      3.8335857,
+      98.3338192
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TNB",
+    "name": "Tanjungbalai",
+    "code": "TNB",
+    "coords": [
+      2.9707026,
+      99.7997631
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TNK",
+    "name": "Tanjungkarang",
+    "code": "TNK",
+    "coords": [
+      -5.4088468,
+      105.260112
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TANJU",
+    "name": "Tanjungrajo",
+    "code": "",
+    "coords": [
+      -4.4075617,
+      104.4624969
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": ""
+  },
+  {
+    "id": "TJS",
+    "name": "Tanjungrasa",
+    "code": "TJS",
+    "coords": [
+      -6.4085093,
+      107.5406592
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "THN",
+    "name": "Tarahan",
+    "code": "THN",
+    "coords": [
+      -5.5019154,
+      105.3345604
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TDA",
+    "name": "Tarandam",
+    "code": "TDA",
+    "coords": [
+      -0.9511501,
+      100.3683082
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TRK",
+    "name": "Tarik",
+    "code": "TRK",
+    "coords": [
+      -7.4595218,
+      112.5187765
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "TSM",
+    "name": "Tasikmalaya",
+    "code": "TSM",
+    "coords": [
+      -7.3222315,
+      108.2239381
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TEB",
+    "name": "Tebet",
+    "code": "TEB",
+    "coords": [
+      -6.2263977,
+      106.8584389
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "TBI",
+    "name": "Tebing Tinggi",
+    "code": "TBI",
+    "coords": [
+      3.3270388,
+      99.1686474
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TG",
+    "name": "Tegal",
+    "code": "TG",
+    "coords": [
+      -6.8673134,
+      109.1427503
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TGLR",
+    "name": "Tegalluar Summarecon",
+    "code": "TGLR",
+    "coords": [
+      -6.963812,
+      107.7146978
+    ],
+    "island": "Jawa",
+    "type": "Whoosh",
+    "network": "Whoosh"
+  },
+  {
+    "id": "TGI",
+    "name": "Tegineneng",
+    "code": "TGI",
+    "coords": [
+      -5.2022884,
+      105.1720813
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TGW",
+    "name": "Tegowanu",
+    "code": "TGW",
+    "coords": [
+      -7.0530538,
+      110.6024099
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TLS",
+    "name": "Telagasari",
+    "code": "TLS",
+    "coords": [
+      -6.4648138,
+      108.2347449
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TW",
+    "name": "Telawa",
+    "code": "TW",
+    "coords": [
+      -7.185774,
+      110.7519125
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TUK",
+    "name": "Teluk Dalam",
+    "code": "TUK",
+    "coords": [
+      2.8275487,
+      99.6263256
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TKE",
+    "name": "Teluk Mengkudu",
+    "code": "TKE",
+    "coords": [
+      3.530586,
+      99.0906911
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TGR",
+    "name": "Temuguruh",
+    "code": "TGR",
+    "coords": [
+      -8.3095269,
+      114.2018418
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TEJ",
+    "name": "Tenjo",
+    "code": "TEJ",
+    "coords": [
+      -6.3273185,
+      106.4616586
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "TIS",
+    "name": "Terisi",
+    "code": "TIS",
+    "coords": [
+      -6.4699755,
+      108.161079
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TERMI",
+    "name": "Terminal 1",
+    "code": "",
+    "coords": [
+      -6.1302909,
+      106.655816
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "Kalayang Bandar Udara"
+  },
+  {
+    "id": "TERMI",
+    "name": "Terminal 2",
+    "code": "",
+    "coords": [
+      -6.1231346,
+      106.6530206
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "Kalayang Bandar Udara"
+  },
+  {
+    "id": "TERMI",
+    "name": "Terminal 3",
+    "code": "",
+    "coords": [
+      -6.1197896,
+      106.6651182
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "Kalayang Bandar Udara"
+  },
+  {
+    "id": "TJH",
+    "name": "Tigagajah",
+    "code": "TJH",
+    "coords": [
+      -4.1109697,
+      104.1685002
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TGS",
+    "name": "Tigaraksa",
+    "code": "TGS",
+    "coords": [
+      -6.328836,
+      106.4340596
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "TBO",
+    "name": "Tobo",
+    "code": "TBO",
+    "coords": [
+      -7.1720727,
+      111.6542799
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TOJ",
+    "name": "Tonjong Baru",
+    "code": "TOJ",
+    "coords": [
+      -6.0312959,
+      106.1214599
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "TLN",
+    "name": "Tulangan",
+    "code": "TLN",
+    "coords": [
+      -7.4655613,
+      112.6510185
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "TA",
+    "name": "Tulungagung",
+    "code": "TA",
+    "coords": [
+      -8.0629684,
+      111.9046763
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TLY",
+    "name": "Tulungbuyut",
+    "code": "TLY",
+    "coords": [
+      -4.6260349,
+      104.6652045
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "TTG",
+    "name": "Tuntang",
+    "code": "TTG",
+    "coords": [
+      -7.2608171,
+      110.4540419
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI WIsata"
+  },
+  {
+    "id": "UJM",
+    "name": "Ujan Mas",
+    "code": "UJM",
+    "coords": [
+      -3.5321819,
+      103.7763531
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "UJN",
+    "name": "Ujungnegoro",
+    "code": "UJN",
+    "coords": [
+      -6.9085896,
+      109.789234
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "UI",
+    "name": "Universitas Indonesia",
+    "code": "UI",
+    "coords": [
+      -6.3604315,
+      106.831782
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "UP",
+    "name": "Universitas Pancasila",
+    "code": "UP",
+    "coords": [
+      -6.3393452,
+      106.834263
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "VELOD",
+    "name": "Velodrome",
+    "code": "",
+    "coords": [
+      -6.1921304,
+      106.8911841
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jakarta"
+  },
+  {
+    "id": "WDU",
+    "name": "Wadu",
+    "code": "WDU",
+    "coords": [
+      -7.1962854,
+      111.5004874
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "WLT",
+    "name": "Walantaka",
+    "code": "WLT",
+    "coords": [
+      -6.1554826,
+      106.2187374
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "WK",
+    "name": "Walikukun",
+    "code": "WK",
+    "coords": [
+      -7.3989084,
+      111.2244869
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "WNR",
+    "name": "Wanaraja",
+    "code": "WNR",
+    "coords": [
+      -7.1648613,
+      107.9767057
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "WR",
+    "name": "Waru",
+    "code": "WR",
+    "coords": [
+      -7.3526552,
+      112.7294182
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "WDW",
+    "name": "Waruduwur",
+    "code": "WDW",
+    "coords": [
+      -6.785595,
+      108.6253356
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "WB",
+    "name": "Warungbandrek",
+    "code": "WB",
+    "coords": [
+      -7.0647394,
+      108.0070019
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "WT",
+    "name": "Wates",
+    "code": "WT",
+    "coords": [
+      -7.8594893,
+      110.1576295
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "WAP",
+    "name": "Way Pisang",
+    "code": "WAP",
+    "coords": [
+      -4.3497334,
+      104.3868327
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "WAY",
+    "name": "Waytuba",
+    "code": "WAY",
+    "coords": [
+      -4.3794665,
+      104.4116429
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "WLR",
+    "name": "Weleri",
+    "code": "WLR",
+    "coords": [
+      -6.9707425,
+      110.0699257
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "WG",
+    "name": "Wlingi",
+    "code": "WG",
+    "coords": [
+      -8.0883522,
+      112.319974
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "WJ",
+    "name": "Wojo",
+    "code": "WJ",
+    "coords": [
+      -7.8618109,
+      110.0404368
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "WNG",
+    "name": "Wonogiri",
+    "code": "WNG",
+    "coords": [
+      -7.8160126,
+      110.9217632
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "WN",
+    "name": "Wonokerto",
+    "code": "WN",
+    "coords": [
+      -7.6620605,
+      112.7548962
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "WO",
+    "name": "Wonokromo",
+    "code": "WO",
+    "coords": [
+      -7.3020554,
+      112.7392222
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "WNS",
+    "name": "Wonosari",
+    "code": "WNS",
+    "coords": [
+      -7.6975364,
+      109.7016108
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "YK",
+    "name": "Yogyakarta",
+    "code": "YK",
+    "coords": [
+      -7.7892387,
+      110.3634648
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  },
+  {
+    "id": "YIA",
+    "name": "Yogyakarta International Airport",
+    "code": "YIA",
+    "coords": [
+      -7.8974224,
+      110.0613007
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI Commuter"
+  },
+  {
+    "id": "BNC",
+    "code": "BNC",
+    "name": "BNI City",
+    "coords": [
+      -6.2015938,
+      106.8197174
+    ],
+    "island": "Jawa",
+    "type": "Bandara",
+    "network": "KAI Bandara"
+  },
+  {
+    "id": "BPR",
+    "code": "BPR",
+    "name": "Batu Ceper",
+    "coords": [
+      -6.1720268,
+      106.6652866
+    ],
+    "island": "Jawa",
+    "type": "KAI",
+    "network": "KAI"
+  }
+]

@@ -1,11 +1,13 @@
 import { json } from '@sveltejs/kit';
 import { allTrains } from '$lib/server/mockSchedule';
+import { liveTrainPings, pruneExpiredPings } from '$lib/server/liveGpsStore';
 
 export const GET = async ({ setHeaders }) => {
 	// Cache response at CDN edge for 5 seconds to absorb high-frequency polling from clients
 	setHeaders({
 		'Cache-Control': 'public, s-maxage=5, stale-while-revalidate=10'
 	});
+    pruneExpiredPings();
     const nowRaw = new Date();
     const now = new Date(nowRaw.toLocaleString('en-US', { timeZone: 'Asia/Jakarta' }));
     // Use local Jakarta time if possible, or assume server time is correct
@@ -54,40 +56,48 @@ export const GET = async ({ setHeaders }) => {
 
         if (effectiveCurrentTime >= startTime && effectiveCurrentTime <= endTime) {
             // Find the segment it's currently on
-            let fromStation = null;
-            let toStation = null;
-            let progress = 0;
-
             for (let i = 0; i < stops.length - 1; i++) {
                 if (effectiveCurrentTime >= stops[i].timeMinutes && effectiveCurrentTime <= stops[i+1].timeMinutes) {
-                    fromStation = stops[i].stationId;
-                    toStation = stops[i+1].stationId;
+                    const fromStation = stops[i].stationId;
+                    const toStation = stops[i+1].stationId;
+                    const departMinutes = stops[i].timeMinutes;
+                    const arrivMinutes = stops[i+1].timeMinutes;
                     
-                    const segmentDuration = stops[i+1].timeMinutes - stops[i].timeMinutes;
+                    const segmentDuration = arrivMinutes - departMinutes;
+                    let progress = 0;
                     if (segmentDuration > 0) {
-                        progress = (effectiveCurrentTime - stops[i].timeMinutes) / segmentDuration;
+                        progress = (effectiveCurrentTime - departMinutes) / segmentDuration;
                     } else {
                         progress = 1;
                     }
+
+                    const livePing = liveTrainPings.get(train.id);
+
+                    activeTrains.push({
+                        id: train.id,
+                        line: train.line,
+                        destination: train.destination,
+                        fromStation,
+                        toStation,
+                        progress,
+                        departMinutes,
+                        arrivMinutes,
+                        isLiveGps: !!livePing,
+                        liveLat: livePing ? livePing.lat : null,
+                        liveLng: livePing ? livePing.lng : null,
+                        speed: livePing ? livePing.speed : null,
+                        heading: livePing ? livePing.heading : null,
+                        accuracy: livePing ? livePing.accuracy : null
+                    });
                     break;
                 }
-            }
-
-            if (fromStation && toStation) {
-                activeTrains.push({
-                    id: train.id,
-                    line: train.line,
-                    destination: train.destination,
-                    fromStation,
-                    toStation,
-                    progress
-                });
             }
         }
     }
 
     return json({
         status: 'success',
+        serverTimeMinutes: currentTotalMinutes,
         data: activeTrains
     });
 };
