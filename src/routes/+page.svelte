@@ -1107,10 +1107,11 @@
 					}, 50);
 				});
 
-				// Clicking marker opens detail
+				// Clicking marker opens popup only without auto-opening active trains drawer
 				marker.on("click", () => {
-					drawerTab = "active";
-					isDrawerOpen = true;
+					if (typeof window !== "undefined" && window.innerWidth < 768) {
+						isDrawerOpen = false;
+					}
 				});
 
 				trainMarkers[train.id] = marker;
