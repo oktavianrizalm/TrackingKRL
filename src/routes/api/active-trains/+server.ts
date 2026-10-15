@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import { allTrains } from '$lib/server/mockSchedule';
+import { allTrains, getStationName } from '$lib/server/mockSchedule';
 import { liveTrainPings, pruneExpiredPings } from '$lib/server/liveGpsStore';
 
 export const GET = async ({ setHeaders }) => {
@@ -75,8 +75,9 @@ export const GET = async ({ setHeaders }) => {
 
                     activeTrains.push({
                         id: train.id,
+                        name: train.name || null,
                         line: train.line,
-                        origin: train.origin || stops[0].stationId,
+                        origin: train.origin || getStationName(stops[0].stationId),
                         destination: train.destination,
                         fromStation,
                         toStation,
@@ -88,7 +89,12 @@ export const GET = async ({ setHeaders }) => {
                         liveLng: livePing ? livePing.lng : null,
                         speed: livePing ? livePing.speed : null,
                         heading: livePing ? livePing.heading : null,
-                        accuracy: livePing ? livePing.accuracy : null
+                        accuracy: livePing ? livePing.accuracy : null,
+                        stops: stops.map((s) => ({
+                            code: s.stationId,
+                            name: getStationName(s.stationId),
+                            time: s.timeStr as string
+                        }))
                     });
                     break;
                 }

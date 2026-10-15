@@ -24,3 +24,13 @@ vite.config.ts.timestamp-*
 
 .vercel
 .env*
+
+# Train Schedule & Timetable Datasets (GAPEKA & Timetables)
+GAPEKA/
+GAPEKA/**
+static/data/national-gapeka.json
+static/schedule.json
+static/mrt-schedule.json
+kci_schedules_scraped.json
+mrt-raw-schedule.json
+mrt-schedule-lebak-bulus.html

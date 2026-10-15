@@ -2580,6 +2580,18 @@
     "network": "Whoosh"
   },
   {
+    "id": "KRW",
+    "name": "Karawang",
+    "code": "KRW",
+    "coords": [
+      -6.3686,
+      107.2413
+    ],
+    "island": "Jawa",
+    "type": "Whoosh",
+    "network": "Whoosh"
+  },
+  {
     "id": "HARJA",
     "name": "Harjamukti",
     "code": "",
@@ -7984,8 +7996,8 @@
     "name": "Matraman LRT",
     "code": "MTR_LRT",
     "coords": [
-      -6.20815,
-      106.8576
+      -6.2008,
+      106.8542
     ],
     "island": "Jawa",
     "type": "LRT",

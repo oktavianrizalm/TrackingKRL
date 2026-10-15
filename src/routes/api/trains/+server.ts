@@ -52,6 +52,7 @@ export const GET = async ({ url, setHeaders }) => {
 
 				mockTrains.push({
 					id: train.id,
+					name: train.name || null,
 					line: train.line,
 					destination: train.destination,
 					scheduled_time: timeStr,

@@ -248,6 +248,7 @@
 			: activeTrains.filter(
 					(t) =>
 						t.id.toLowerCase().includes(searchQuery.toLowerCase()) ||
+						(t.name && t.name.toLowerCase().includes(searchQuery.toLowerCase())) ||
 						t.destination.toLowerCase().includes(searchQuery.toLowerCase()),
 				).slice(0, 5),
 	);
@@ -301,6 +302,23 @@
 			return id;
 		}
 		return `KA ${id}`;
+	};
+
+	const formatTrainTitle = (train: any): string => {
+		if (!train) return "";
+		const cleanId = formatTrainId(train.id || "");
+		if (train.name) {
+			const lowerId = cleanId.toLowerCase();
+			const lowerName = train.name.toLowerCase();
+			if (lowerId.includes(lowerName)) {
+				return cleanId;
+			}
+			if (lowerName.includes("lrt") && lowerId.includes("lrt")) {
+				return cleanId;
+			}
+			return `${cleanId} ${train.name}`;
+		}
+		return cleanId;
 	};
 
 	const fetchStations = async () => {
@@ -397,6 +415,12 @@
 		"CMI->JNG": ["CMI", "PDL", "CLE", "SKT", "CD", "PLD", "SUT", "CA", "PWK", "CBR", "CKP", "DWN", "KW", "CKR", "BKS", "JNG"],
 		"PSE->PWK": ["PSE", "JNG", "BKS", "CKR", "KW", "DWN", "CKP", "CBR", "PWK"],
 		"PWK->PSE": ["PWK", "CBR", "CKP", "DWN", "KW", "CKR", "BKS", "JNG", "PSE"],
+		"BKS->PWK": ["BKS", "BKST", "TB", "CIT", "TLM", "CKR", "LBG", "KDH", "KW", "KLI", "KOS", "DWN", "CKP", "CBR", "PWK"],
+		"PWK->BKS": ["PWK", "CBR", "CKP", "DWN", "KOS", "KLI", "KW", "KDH", "LBG", "CKR", "TLM", "CIT", "TB", "BKST", "BKS"],
+		"PWK->KW": ["PWK", "CBR", "CKP", "DWN", "KOS", "KLI", "KW"],
+		"KW->PWK": ["KW", "KLI", "KOS", "DWN", "CKP", "CBR", "PWK"],
+		"PWK->CKR": ["PWK", "CBR", "CKP", "DWN", "KOS", "KLI", "KW", "KDH", "LBG", "CKR"],
+		"CKR->PWK": ["CKR", "LBG", "KDH", "KW", "KLI", "KOS", "DWN", "CKP", "CBR", "PWK"],
 
 		// Cikampek <-> Karawang & Cikarang
 		"KW->CKP": ["KW", "KOS", "DWN", "CKP"],
@@ -449,27 +473,37 @@
 
 	// Master Rail Spines for continuous corridor breakdowns
 	const SPINES = [
+		['GMR', 'PSE', 'JNG', 'BKS', 'BKST', 'TB', 'CIT', 'TLM', 'CKR', 'LBG', 'KDH', 'KW', 'KLI', 'KOS', 'DWN', 'CKP', 'CBR', 'PWK'],
 		['GMR', 'PSE', 'JNG', 'BKS', 'CKR', 'KW', 'DWN', 'CKP', 'PAB', 'HGL', 'JTB', 'CN', 'CNP', 'WDW', 'BBK', 'LOS', 'TGN', 'BB', 'TG', 'LR', 'PML', 'PTN', 'CO', 'SRI', 'PK', 'BTG', 'UJN', 'KNS', 'PLB', 'KRN', 'WLR', 'KBD', 'SMC', 'SMT', 'BBG', 'NBO', 'RBG', 'CU', 'KPS', 'BJ', 'BBT', 'LMG', 'SBI'],
-		['CN', 'CNP', 'CLD', 'KGG', 'SGG', 'PPK', 'BMA', 'KRT', 'KRR', 'PWT', 'NTG', 'RDN', 'KYA'],
+		['CN', 'CNP', 'CLD', 'KGG', 'SGG', 'PPK', 'BMA', 'KRT', 'KRR', 'PWT', 'NTG', 'RDN', 'KYA', 'SPH', 'TB', 'IJ', 'GB', 'SRW', 'KM', 'KWN', 'KA', 'WNS', 'KTA', 'JN', 'WT', 'RWL', 'YK', 'LPN', 'MGW', 'KT', 'PWS', 'SLO'],
 		['CKP', 'CBR', 'PWK', 'CA', 'SUT', 'PLD', 'CD', 'SKT', 'CLE', 'PDL', 'CMI', 'BD', 'CTH', 'KAC'],
 		['BD', 'KAC', 'RCK', 'CCL', 'NG', 'LL', 'CB', 'WB', 'CPD', 'CAW', 'RJP', 'TSM', 'AW', 'MNJ', 'CI', 'BJG', 'KNP', 'BJR', 'LN', 'MLW', 'SDR', 'GDM', 'KWG', 'JRL', 'KBS', 'KYA'],
 		['CCL', 'NG', 'LL', 'CB', 'PASIR', 'WNR', 'GRT'],
 		['CP', 'GM', 'KKD', 'LBG', 'KH', 'MA', 'SKP', 'KYA'],
-		['KYA', 'SPH', 'TB', 'IJ', 'GB', 'SRW', 'KM', 'WNS', 'KTA', 'JN', 'WT', 'RWL', 'YK', 'LPN', 'MGW', 'KT', 'PWS', 'SLO'],
 		['SLO', 'PWS', 'PL', 'SR', 'WK', 'KG', 'NGW', 'BBD', 'MN', 'CRB', 'SN', 'BGR', 'NJ', 'SKM', 'BRN', 'KTS', 'PTR', 'SMB', 'JG', 'SBO', 'MR', 'TRK', 'KDN', 'KRN', 'BH', 'SPJ', 'WO', 'SGU', 'SBI'],
-		['SLO', 'SK', 'GDM', 'BBG', 'SMT', 'SMC'],
+		['SLO', 'SK', 'KSO', 'GDM', 'BBG', 'SMT', 'SMC'],
 		['KTS', 'KD', 'TA', 'BL', 'GRM', 'TAL', 'WG', 'KSB', 'PGJ', 'SBP', 'NB', 'KPN', 'PSI', 'MLK', 'ML', 'LW', 'BG', 'SDA', 'WO', 'SGU'],
 		['BG', 'PS', 'RO', 'GI', 'BYM', 'PB', 'LEC', 'RN', 'KK', 'RDA', 'JTR', 'TGL', 'BSS', 'RBP', 'MI', 'JR', 'AJ', 'KLT', 'GRN', 'MRW', 'KBR', 'GLM', 'SWD', 'KSL', 'TGR', 'RGP', 'BWI', 'AGO', 'KTG'],
 		['THB', 'PLM', 'KBY', 'PDJ', 'JMU', 'SDM', 'RU', 'SRP', 'CSK', 'CC', 'PRP', 'CJT', 'DAR', 'TEJ', 'TGS', 'CKY', 'MJ', 'CTR', 'RK', 'SG', 'KRA', 'TOJB', 'CLG', 'KEN', 'MER'],
 		['CTA', 'PDRG', 'CBN', 'NMO'],
-		['HLM', 'KCIC_CKR', 'KCIC_KRW', 'KCIC_PWK', 'KCIC_WLN', 'KCIC_CKL', 'KCIC_SKT', 'PDL', 'KCIC_CMI', 'KCIC_KPO', 'KCIC_GDB', 'TGLR'],
+		['HLM', 'KRW', 'PDL', 'TGLR'],
 		['MRI', 'SUD', 'BNC', 'DU', 'PSG', 'RW', 'KDS', 'PI', 'BPR', 'BST'],
 		['WT', 'YIA'],
-		['MDN', 'KNM', 'LBP', 'TBI', 'SIR', 'KIS', 'TNB', 'PBA', 'MBM', 'RAP'],
+		['MDN', 'KNM', 'LBP', 'LBU', 'TBI', 'SIR', 'KIS', 'TNB', 'PBA', 'MBM', 'RAP'],
 		['MDN', 'BIJ'],
 		['BIM', 'DUK', 'PD', 'ATR', 'TAB', 'LBY', 'PMN', 'NRS'],
 		['LLG', 'LT', 'ME', 'PBM', 'KPT'],
-		['PBM', 'BTA', 'KB', 'TNK']
+		['KPT', 'PBM', 'BTA', 'KB', 'TNK'],
+		// LRT Jakarta
+		['MRI_LRT', 'PROKL', 'MTR_LRT', 'PRAMU', 'RAWAM', 'VELOD', 'EQUES', 'PULOM', 'BOULE', 'BVU', 'KPG'],
+		// LRT Jabodebek Cibubur Line
+		['DUKUH', 'SETIA', 'RASUN', 'KUNIN', 'PANCO', 'CIKOK', 'CILIW', 'CW_LRT', 'TAMAN', 'KAMPU', 'CIRAC', 'HARJA'],
+		// LRT Jabodebek Bekasi Line
+		['CW_LRT', 'HLM_LRT', 'JATIB', 'CIKUN1', 'CIKUN2', 'BEKAS', 'JATIM'],
+		// LRT Palembang Sumsel
+		['BDR', 'ASH', 'PUNTI', 'RSUD', 'GARUD', 'DEMAN', 'BUMIS', 'DISHU', 'CINDE', 'AMPER', 'POLRE', 'JAKAB', 'DJKA'],
+		// MRT Jakarta
+		['LBB', 'FTM', 'CPR', 'HJN', 'BLA', 'BLM', 'ASN', 'SNY', 'IST', 'BNH', 'STB', 'DKA', 'BHI']
 	];
 
 	const findSpinePath = (from: string, to: string): string[] | null => {
@@ -609,6 +643,8 @@
 				targetTrack = trackMultiLineStringWhoosh;
 			} else if (train.line === "MRT") {
 				targetTrack = trackMultiLineStringMRT;
+			} else if (train.line === "LRT") {
+				targetTrack = null;
 			} else {
 				// Conventional tracks only (official OpenRailwayMap dataset)
 				targetTrack = trackMultiLineStringConventional;
@@ -778,7 +814,7 @@
 						? "🚊"
 						: "🚄";
 
-		const cleanTrainId = formatTrainId(train.id);
+		const cleanTrainTitle = formatTrainTitle(train);
 
 		return L.divIcon({
 			className: "custom-train-marker !bg-transparent !border-0",
@@ -788,7 +824,7 @@
 						<span>${statusIcon}</span>
 					</div>
 					<div class="bg-slate-900/90 dark:bg-slate-950/90 text-white text-[10px] font-mono font-bold px-1.5 py-0.5 rounded shadow backdrop-blur-xs flex items-center gap-1 border border-white/20 whitespace-nowrap">
-						<span>${cleanTrainId}</span>
+						<span>${cleanTrainTitle}</span>
 						${gpsBadge}
 					</div>
 				</div>
@@ -820,11 +856,21 @@
 				? `<span class="px-1.5 py-0.5 rounded text-[10px] font-mono font-black bg-emerald-50 text-emerald-700 border border-emerald-200">⚡ ${currentSpeed} km/jam</span>`
 				: `<span class="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold bg-indigo-50 text-indigo-700 border border-indigo-200">⚡ ~${currentSpeed} km/jam</span>`;
 
-		const stationInfo = isStopped
-			? `Berhenti di stasiun <b>${train.fromStation}</b>`
-			: `Menuju <b>${train.toStation}</b> (${Math.round(pos.progress * 100)}%)`;
+		const stops = train.stops || [];
+		const fromStationName =
+			stops.find((s: any) => s.code === train.fromStation)?.name ||
+			stations.find((s) => s.id === train.fromStation)?.name ||
+			train.fromStation;
+		const toStationName =
+			stops.find((s: any) => s.code === train.toStation)?.name ||
+			stations.find((s) => s.id === train.toStation)?.name ||
+			train.toStation;
 
-		const cleanTrainId = formatTrainId(train.id);
+		const stationInfo = isStopped
+			? `Berhenti di <b>${fromStationName}</b>`
+			: `Menuju <b>${toStationName}</b> (${Math.round(pos.progress * 100)}%)`;
+
+		const cleanTrainTitle = formatTrainTitle(train);
 
 		const headerIcon =
 			train.line === "WHOOSH"
@@ -840,10 +886,89 @@
 			stations.find((s) => s.id === train.fromStation)?.name ||
 			train.fromStation;
 
-		return `<div class="p-1 font-sans text-xs">
+		let stopsHtml = "";
+		if (stops.length > 0) {
+			const fromIdx = stops.findIndex((s: any) => s.code === train.fromStation);
+			const toIdx = stops.findIndex((s: any) => s.code === train.toStation);
+
+			const itemsHtml = stops
+				.map((s: any, idx: number) => {
+					let statusType: "passed" | "current" | "next" | "upcoming" = "upcoming";
+
+					if (toIdx !== -1) {
+						if (isStopped && idx === fromIdx) {
+							statusType = "current";
+						} else if (idx < toIdx) {
+							statusType = "passed";
+						} else if (idx === toIdx) {
+							statusType = isStopped ? "upcoming" : "next";
+						} else {
+							statusType = "upcoming";
+						}
+					}
+
+					let rowClass = "flex items-center justify-between text-[11px] py-1 px-1.5 rounded transition-colors";
+					let dotHtml = "";
+					let badgeHtml = "";
+					let textClass = "font-medium text-slate-700";
+					let timeClass = "font-mono text-[10px] text-slate-500 font-semibold";
+					let isRowActive = false;
+
+					if (statusType === "passed") {
+						textClass = "text-slate-400 line-through decoration-slate-300";
+						timeClass = "font-mono text-[10px] text-slate-400";
+						dotHtml = `<span class="w-1.5 h-1.5 rounded-full bg-slate-300 mr-2 flex-shrink-0"></span>`;
+						badgeHtml = `<span class="text-[8px] text-slate-400 font-bold ml-1">Lewat</span>`;
+					} else if (statusType === "current") {
+						isRowActive = true;
+						rowClass += " bg-amber-50 border border-amber-200";
+						textClass = "text-amber-900 font-bold";
+						timeClass = "font-mono text-[10px] text-amber-700 font-bold";
+						dotHtml = `<span class="relative flex h-2 w-2 mr-2 flex-shrink-0"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span></span>`;
+						badgeHtml = `<span class="text-[8px] bg-amber-500 text-white font-black px-1 py-0.2 rounded ml-1">BERHENTI</span>`;
+					} else if (statusType === "next") {
+						isRowActive = true;
+						rowClass += " bg-teal-50 border border-teal-200";
+						textClass = "text-teal-900 font-bold";
+						timeClass = "font-mono text-[10px] text-teal-700 font-bold";
+						dotHtml = `<span class="relative flex h-2 w-2 mr-2 flex-shrink-0"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-teal-600"></span></span>`;
+						badgeHtml = `<span class="text-[8px] bg-teal-600 text-white font-black px-1 py-0.2 rounded ml-1">BERIKUTNYA</span>`;
+					} else {
+						textClass = "text-slate-700";
+						dotHtml = `<span class="w-1.5 h-1.5 rounded-full border border-slate-400 mr-2 flex-shrink-0"></span>`;
+					}
+
+					const activeClassAttr = isRowActive ? " active-stop-row" : "";
+
+					return `<div class="${rowClass}${activeClassAttr}">
+						<div class="flex items-center min-w-0 pr-1.5">
+							${dotHtml}
+							<span class="truncate ${textClass}" title="${s.name}">${s.name}</span>
+							<span class="text-[9px] text-slate-400 font-mono ml-1 flex-shrink-0">(${s.code})</span>
+							${badgeHtml}
+						</div>
+						<span class="${timeClass} flex-shrink-0">${s.time}</span>
+					</div>`;
+				})
+				.join("");
+
+			stopsHtml = `
+				<div class="mt-2 pt-2 border-t border-slate-200">
+					<div class="flex items-center justify-between text-[10px] font-bold text-slate-600 mb-1.5">
+						<span class="flex items-center gap-1">📋 Jadwal Pemberhentian</span>
+						<span class="text-[9px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.2 rounded">${stops.length} Stasiun</span>
+					</div>
+					<div class="stops-scroll-container max-h-36 overflow-y-auto space-y-0.5 pr-0.5" style="scrollbar-width: thin;">
+						${itemsHtml}
+					</div>
+				</div>
+			`;
+		}
+
+		return `<div class="p-1 font-sans text-xs w-[280px] max-w-[85vw]">
 			<div class="font-black text-sm text-slate-900 mb-1.5 flex items-center justify-between gap-2">
 				<div class="flex items-center gap-1.5">
-					<span>${headerIcon}</span><span>${cleanTrainId}</span>
+					<span>${headerIcon}</span><span>${cleanTrainTitle}</span>
 				</div>
 				<div class="flex items-center gap-1">
 					${statusBadge}
@@ -859,6 +984,7 @@
 				<span>${stationInfo}</span>
 				<span class="font-bold text-teal-600">${train.fromStation} &rarr; ${train.toStation}</span>
 			</div>
+			${stopsHtml}
 		</div>`;
 	};
 
@@ -942,10 +1068,20 @@
 				if (trainMarkers[train.id].isPopupOpen?.()) {
 					const popupHtml = getPopupHtml(train, pos);
 					if (trainMarkers[train.id]._lastPopupHtml !== popupHtml) {
-						trainMarkers[train.id]
-							.getPopup()
-							.setContent(popupHtml);
+						const popup = trainMarkers[train.id].getPopup();
+						const popupEl = popup?.getElement();
+						const scrollContainer = popupEl?.querySelector(".stops-scroll-container");
+						const prevScrollTop = scrollContainer ? scrollContainer.scrollTop : null;
+
+						popup?.setContent(popupHtml);
 						trainMarkers[train.id]._lastPopupHtml = popupHtml;
+
+						if (prevScrollTop !== null) {
+							const newScroll = popup?.getElement()?.querySelector(".stops-scroll-container");
+							if (newScroll) {
+								newScroll.scrollTop = prevScrollTop;
+							}
+						}
 					}
 				}
 			} else if (isVisible) {
@@ -956,11 +1092,20 @@
 					riseOnHover: true,
 				})
 					.addTo(L._mapInstance)
-					.bindPopup(popupHtml);
+					.bindPopup(popupHtml, { minWidth: 270, maxWidth: 310 });
 
 				marker._lastStatusKey = `${pos.status}_${!!train.isLiveGps}`;
 				marker._lastPopupHtml = popupHtml;
 				marker._isOnMap = true;
+
+				marker.on("popupopen", (e: any) => {
+					setTimeout(() => {
+						const activeRow = e.popup?.getElement()?.querySelector(".active-stop-row");
+						if (activeRow) {
+							activeRow.scrollIntoView({ block: "nearest", behavior: "smooth" });
+						}
+					}, 50);
+				});
 
 				// Clicking marker opens detail
 				marker.on("click", () => {
@@ -1356,7 +1501,26 @@
 					KAT: [-6.2009538, 106.8167704], // Karet (KRT)
 					THI: [-6.1751701, 106.6467095], // Tanah Tinggi (TTI)
 					JTK: [-6.288582, 106.7291463],  // Jurangmangu (JMU)
-					TOJB: [-6.0312959, 106.1214599] // Tonjong Baru (TOJ) in Merak line
+					TOJB: [-6.0312959, 106.1214599], // Tonjong Baru (TOJ) in Merak line
+					DAW: [-6.3931077, 107.4333466], // Dawuan (DWN)
+					DWN: [-6.3931077, 107.4333466],
+					MTM: [-6.2574741, 107.111227],  // Metland Telagamurni (TLM)
+					TLM: [-6.2574741, 107.111227],
+					SDI: [-7.0428, 110.8719],       // Sedadi (SDA)
+					BOP: [-6.5985, 106.7915],       // Bogor Paledang
+					MSG: [-6.7118, 106.8169],       // Maseng
+					CCR: [-6.7903, 106.7877],       // Cicurug
+					GDS: [-6.9427, 107.0097],       // Gandasoli
+					CRG: [-6.9582, 107.0503],       // Cireungas
+					LP: [-6.9664, 107.0989],        // Lampegan
+					CBB: [-6.9472, 107.1353],       // Cibeber
+					CJ: [-6.8242, 107.1417],        // Cianjur
+					CRJ: [-6.8169, 107.2642],       // Ciranjang
+					CPY: [-6.8161, 107.3197],       // Cipeuyeum
+					CPT: [-6.8306, 107.3783],       // Cipatat
+					KKD: [-7.6111, 109.0717],       // Kasugihan
+					KO: [-7.4811, 110.8067],        // Kalioso
+					SB: [-7.2430228, 112.7421627]   // Surabaya Kota
 				};
 				Object.assign(allStationCoords, kciAliases);
 
@@ -1660,7 +1824,7 @@
 										<span class="text-sm">🚄</span>
 										<div>
 											<div class="font-bold text-xs text-slate-800 dark:text-slate-100">
-												{formatTrainId(train.id)} &bull; Tujuan {train.destination}
+												{formatTrainTitle(train)} &bull; Tujuan {train.destination}
 											</div>
 											<div class="text-[10px] text-slate-500">
 												{train.fromStation} &rarr; {train.toStation}
@@ -1995,7 +2159,7 @@
 												{train.destination}
 											</div>
 											<div class="text-[10px] text-slate-500 mt-0.5 flex flex-wrap items-center gap-1">
-												<span class="font-mono">{formatTrainId(train.id)}</span>
+												<span class="font-mono">{formatTrainTitle(train)}</span>
 												{#if train.status === "arrived"}
 													<span class="text-emerald-600 dark:text-emerald-400 font-semibold">&bull; Sudah Tiba</span>
 												{:else if activeTrains.find((t) => t.id === train.id)}
@@ -2062,7 +2226,7 @@
 										<div class="min-w-0">
 											<div class="flex items-center gap-1.5">
 												<span class="font-mono font-bold text-xs text-slate-900 dark:text-slate-100">
-													{formatTrainId(train.id)}
+													{formatTrainTitle(train)}
 												</span>
 												<span class="text-[9px] px-1.5 py-0.2 rounded font-bold uppercase {lineColors[train.line] || 'bg-slate-500 text-white'}">
 													{train.line}
