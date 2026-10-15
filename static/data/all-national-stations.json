@@ -1488,9 +1488,9 @@
     "network": "KAI Commuter"
   },
   {
-    "id": "CIKUN",
+    "id": "CIKUN1",
     "name": "Cikunir 1",
-    "code": "",
+    "code": "CIKUN1",
     "coords": [
       -6.2566001,
       106.9518734
@@ -1500,9 +1500,9 @@
     "network": "LRT Jabodebek"
   },
   {
-    "id": "CIKUN",
+    "id": "CIKUN2",
     "name": "Cikunir 2",
-    "code": "",
+    "code": "CIKUN2",
     "coords": [
       -6.2546502,
       106.9632112
@@ -7954,5 +7954,53 @@
     "island": "Jawa",
     "type": "KAI",
     "network": "KAI"
+  },
+  {
+    "id": "CW_LRT",
+    "name": "Cawang LRT",
+    "code": "CW_LRT",
+    "coords": [
+      -6.2465,
+      106.8667
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jabodebek"
+  },
+  {
+    "id": "HLM_LRT",
+    "name": "Halim LRT",
+    "code": "HLM_LRT",
+    "coords": [
+      -6.2456352,
+      106.8844875
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jabodebek"
+  },
+  {
+    "id": "MTR_LRT",
+    "name": "Matraman LRT",
+    "code": "MTR_LRT",
+    "coords": [
+      -6.20815,
+      106.8576
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jakarta"
+  },
+  {
+    "id": "MRI_LRT",
+    "name": "Manggarai LRT",
+    "code": "MRI_LRT",
+    "coords": [
+      -6.2098,
+      106.8502
+    ],
+    "island": "Jawa",
+    "type": "LRT",
+    "network": "LRT Jakarta"
   }
 ]

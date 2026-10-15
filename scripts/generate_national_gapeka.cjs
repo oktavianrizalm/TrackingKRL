@@ -223,6 +223,111 @@ const panturaTrains = [
     line: "ANTARKOTA",
     destination: "Malang",
     schedule: { "PSE": "19:20", "BKS": "19:50", "CNP": "22:25", "TG": "23:20", "PK": "00:10", "SMT": "01:25", "NBO": "02:15", "CU": "03:15", "BJ": "03:50", "BBT": "04:20", "LMG": "04:45", "SBI": "05:25", "SGU": "05:50", "SDA": "06:20", "BG": "06:50", "ML": "08:00" }
+  },
+  // Brantas (Pasar Senen - Blitar via Semarang & Solo)
+  {
+    id: "KA 151 Brantas",
+    name: "Brantas",
+    line: "ANTARKOTA",
+    destination: "Pasar Senen",
+    schedule: { "BL": "14:00", "TA": "14:35", "KD": "15:05", "KTS": "15:45", "MN": "16:45", "SK": "18:00", "SMT": "20:10", "PK": "21:25", "TG": "22:20", "BB": "22:40", "CNP": "23:25", "BKS": "01:50", "PSE": "02:20" }
+  },
+  {
+    id: "KA 152 Brantas",
+    name: "Brantas",
+    line: "ANTARKOTA",
+    destination: "Blitar",
+    schedule: { "PSE": "13:30", "BKS": "14:00", "CNP": "16:25", "BB": "17:10", "TG": "17:30", "PK": "18:25", "SMT": "19:40", "SK": "21:50", "MN": "23:05", "KTS": "00:05", "KD": "00:40", "TA": "01:05", "BL": "01:45" }
+  },
+  // Gumarang (Pasar Senen - Surabaya Pasarturi via Semarang)
+  {
+    id: "KA 163 Gumarang",
+    name: "Gumarang",
+    line: "ANTARKOTA",
+    destination: "Pasar Senen",
+    schedule: { "SBI": "16:05", "LMG": "16:45", "BBT": "17:10", "BJ": "17:45", "CU": "18:25", "SMT": "20:00", "PK": "21:15", "TG": "22:10", "CN": "23:15", "BKS": "01:35", "PSE": "02:05" }
+  },
+  {
+    id: "KA 164 Gumarang",
+    name: "Gumarang",
+    line: "ANTARKOTA",
+    destination: "Surabaya Pasarturi",
+    schedule: { "PSE": "20:45", "BKS": "21:15", "CN": "23:35", "TG": "00:40", "PK": "01:35", "SMT": "02:50", "CU": "04:25", "BJ": "05:05", "BBT": "05:40", "LMG": "06:05", "SBI": "06:45" }
+  },
+  // Menoreh (Pasar Senen - Semarang Tawang)
+  {
+    id: "KA 175 Menoreh",
+    name: "Menoreh",
+    line: "ANTARKOTA",
+    destination: "Pasar Senen",
+    schedule: { "SMT": "07:55", "PK": "09:15", "TG": "10:10", "BB": "10:30", "CNP": "11:15", "BKS": "13:35", "JNG": "13:50", "PSE": "14:05" }
+  },
+  {
+    id: "KA 176 Menoreh",
+    name: "Menoreh",
+    line: "ANTARKOTA",
+    destination: "Semarang Tawang",
+    schedule: { "PSE": "16:55", "BKS": "17:25", "CNP": "19:45", "BB": "20:30", "TG": "20:50", "PK": "21:45", "SMT": "23:05" }
+  },
+  // Tawang Jaya (Pasar Senen - Semarang Poncol)
+  {
+    id: "KA 259 Tawang Jaya",
+    name: "Tawang Jaya",
+    line: "ANTARKOTA",
+    destination: "Pasar Senen",
+    schedule: { "SMC": "13:20", "PK": "14:40", "TG": "15:40", "BB": "16:00", "CNP": "17:00", "CKR": "19:05", "BKS": "19:25", "PSE": "19:55" }
+  },
+  {
+    id: "KA 260 Tawang Jaya",
+    name: "Tawang Jaya",
+    line: "ANTARKOTA",
+    destination: "Semarang Poncol",
+    schedule: { "PSE": "23:45", "BKS": "00:15", "CKR": "00:35", "CNP": "02:35", "BB": "03:30", "TG": "03:50", "PK": "04:50", "SMC": "06:10" }
+  },
+  // Tegal Bahari (Pasar Senen - Tegal)
+  {
+    id: "KA 203 Tegal Bahari",
+    name: "Tegal Bahari",
+    line: "ANTARKOTA",
+    destination: "Pasar Senen",
+    schedule: { "TG": "14:30", "BB": "14:50", "CN": "15:40", "JNG": "17:45", "PSE": "18:05" }
+  },
+  {
+    id: "KA 204 Tegal Bahari",
+    name: "Tegal Bahari",
+    line: "ANTARKOTA",
+    destination: "Tegal",
+    schedule: { "PSE": "09:20", "BKS": "09:50", "CN": "12:10", "BB": "13:00", "TG": "13:20" }
+  },
+  // Ambarawa Ekspres (Semarang Poncol - Surabaya Pasarturi)
+  {
+    id: "KA 263 Ambarawa Ekspres",
+    name: "Ambarawa Ekspres",
+    line: "ANTARKOTA",
+    destination: "Semarang Poncol",
+    schedule: { "SBI": "13:45", "LMG": "14:25", "BBT": "14:50", "BJ": "15:25", "CU": "16:00", "RBG": "16:25", "NBO": "17:15", "SMT": "18:08", "SMC": "18:20" }
+  },
+  {
+    id: "KA 264 Ambarawa Ekspres",
+    name: "Ambarawa Ekspres",
+    line: "ANTARKOTA",
+    destination: "Surabaya Pasarturi",
+    schedule: { "SMC": "08:30", "SMT": "08:42", "NBO": "09:35", "RBG": "10:25", "CU": "10:50", "BJ": "11:25", "BBT": "12:00", "LMG": "12:25", "SBI": "13:05" }
+  },
+  // Banyubiru (Semarang Tawang - Solo Balapan)
+  {
+    id: "KA 267 Banyubiru",
+    name: "Banyubiru",
+    line: "ANTARKOTA",
+    destination: "Semarang Tawang",
+    schedule: { "SLO": "17:15", "GD": "18:15", "BBG": "19:02", "SMT": "19:20" }
+  },
+  {
+    id: "KA 268 Banyubiru",
+    name: "Banyubiru",
+    line: "ANTARKOTA",
+    destination: "Solo Balapan",
+    schedule: { "SMT": "07:50", "BBG": "08:08", "GD": "08:55", "SLO": "09:55" }
   }
 ];
 
@@ -452,21 +557,6 @@ const selatanTrains = [
     destination: "Solo Purwosari",
     schedule: { "PSE": "06:00", "BKS": "06:30", "CKR": "06:50", "CNP": "09:05", "PWT": "10:55", "KYA": "11:30", "KTA": "12:25", "WT": "12:55", "LPN": "13:25", "KT": "13:50", "PWS": "14:15" }
   },
-  // Progo
-  {
-    id: "KA 293 Progo",
-    name: "Progo",
-    line: "ANTARKOTA",
-    destination: "Pasar Senen",
-    schedule: { "LPN": "15:10", "WT": "15:40", "KTA": "16:10", "KYA": "17:15", "PWT": "17:50", "CNP": "19:40", "BKS": "21:55", "PSE": "22:25" }
-  },
-  {
-    id: "KA 294 Progo",
-    name: "Progo",
-    line: "ANTARKOTA",
-    destination: "Lempuyangan",
-    schedule: { "PSE": "23:00", "BKS": "23:30", "CNP": "01:45", "PWT": "03:35", "KYA": "04:10", "KTA": "05:05", "WT": "05:35", "LPN": "06:05" }
-  },
   // Sri Tanjung
   {
     id: "KA 241 Sri Tanjung",
@@ -497,35 +587,262 @@ const selatanTrains = [
     destination: "Cilacap",
     schedule: { "KTG": "11:30", "BWI": "11:45", "JR": "13:35", "BG": "15:35", "SDA": "16:15", "SGU": "16:50", "KTS": "18:05", "MN": "18:55", "SLO": "20:00", "YK": "20:55", "KTA": "21:45", "KYA": "22:40", "CP": "23:15" }
   },
-  // Sawunggalih (GAPEKA 2025)
+  // Sawunggalih Pagi (GAPEKA Terbaru / 168Railway: Kutoarjo - Pasar Senen PP)
   {
-    id: "KA 147 Sawunggalih Pagi",
+    id: "KA 111 Sawunggalih Pagi",
     name: "Sawunggalih Pagi",
     line: "ANTARKOTA",
     destination: "Pasar Senen",
-    schedule: { "KTA": "07:00", "GB": "07:35", "KYA": "08:05", "PWT": "08:40", "CNP": "10:30", "BKS": "12:45", "PSE": "13:15" }
+    schedule: { "KTA": "06:30", "KM": "06:52", "GB": "07:16", "KYA": "07:44", "PWT": "08:12", "CN": "10:08", "BKS": "12:16", "JNG": "12:30", "PSE": "12:40" }
   },
   {
-    id: "KA 148 Sawunggalih Pagi",
+    id: "KA 116 Sawunggalih Pagi",
     name: "Sawunggalih Pagi",
     line: "ANTARKOTA",
     destination: "Kutoarjo",
-    schedule: { "PSE": "07:10", "BKS": "07:40", "CNP": "09:55", "PWT": "11:45", "KYA": "12:20", "GB": "12:50", "KTA": "13:25" }
+    schedule: { "PSE": "07:10", "BKS": "07:38", "CN": "09:45", "PWT": "11:40", "KYA": "12:05", "GB": "12:30", "KM": "12:54", "KTA": "13:10" }
   },
-  // Progo (GAPEKA 2025/2026: Lempuyangan - Pasar Senen via Purwokerto)
+  // Progo (GAPEKA Terbaru / 168Railway: Lempuyangan - Pasar Senen PP)
   {
-    id: "KA 247 Progo",
+    id: "KA 257 Progo",
     name: "Progo",
     line: "ANTARKOTA",
     destination: "Pasar Senen",
-    schedule: { "LPN": "11:30", "WT": "12:00", "KTA": "12:35", "GB": "13:05", "KYA": "13:40", "PWT": "14:15", "CNP": "16:30", "BKS": "18:55", "JNG": "19:15", "PSE": "19:30" }
+    schedule: {
+      "LPN": "13:10",
+      "WT": "13:41",
+      "KTA": "14:14",
+      "KWN": "14:32",
+      "KM": "14:43",
+      "GB": "15:07",
+      "KYA": "15:34",
+      "PWT": "16:03",
+      "PPK": "17:06",
+      "KGG": "17:27",
+      "CNP": "18:02",
+      "HGL": "19:02",
+      "BKS": "20:22",
+      "JNG": "20:36",
+      "PSE": "20:46"
+    }
   },
   {
-    id: "KA 248 Progo",
+    id: "KA 258 Progo",
     name: "Progo",
     line: "ANTARKOTA",
     destination: "Lempuyangan",
-    schedule: { "PSE": "23:10", "BKS": "23:40", "CNP": "02:00", "PWT": "04:20", "KYA": "04:55", "GB": "05:25", "KTA": "06:00", "WT": "06:35", "LPN": "07:05" }
+    schedule: {
+      "PSE": "23:20",
+      "JNG": "23:32",
+      "BKS": "23:45",
+      "HGL": "01:03",
+      "CNP": "02:05",
+      "KGG": "02:38",
+      "PPK": "02:59",
+      "PWT": "04:04",
+      "KYA": "04:29",
+      "GB": "04:53",
+      "KM": "05:11",
+      "KWN": "05:22",
+      "KTA": "05:40",
+      "WT": "06:10",
+      "LPN": "06:40"
+    }
+  },
+  // Argo Semeru (Gambir - Surabaya Gubeng via Purwokerto/Yogyakarta)
+  {
+    id: "KA 5 Argo Semeru",
+    name: "Argo Semeru",
+    line: "ANTARKOTA",
+    destination: "Gambir",
+    schedule: { "SGU": "09:05", "MR": "09:38", "JG": "09:56", "KTS": "10:11", "NJ": "10:29", "MN": "11:06", "SLO": "12:11", "YK": "12:56", "KTA": "13:42", "KM": "14:03", "KYA": "14:38", "PWT": "15:06", "CN": "16:55", "BKS": "19:02", "JNG": "19:15", "GMR": "19:35" }
+  },
+  {
+    id: "KA 6 Argo Semeru",
+    name: "Argo Semeru",
+    line: "ANTARKOTA",
+    destination: "Surabaya Gubeng",
+    schedule: { "GMR": "06:20", "BKS": "06:46", "CN": "08:54", "PWT": "10:41", "KYA": "11:05", "KM": "11:39", "KTA": "12:02", "YK": "12:50", "SLO": "13:33", "MN": "14:41", "NJ": "15:14", "KTS": "15:35", "JG": "15:58", "MR": "16:20", "SGU": "16:50" }
+  },
+  // Bogowonto (Pasar Senen - Lempuyangan)
+  {
+    id: "KA 103 Bogowonto",
+    name: "Bogowonto",
+    line: "ANTARKOTA",
+    destination: "Pasar Senen",
+    schedule: { "LPN": "08:15", "WT": "08:45", "KTA": "09:20", "KYA": "10:15", "PWT": "10:50", "CNP": "12:50", "BKS": "15:10", "PSE": "15:40" }
+  },
+  {
+    id: "KA 104 Bogowonto",
+    name: "Bogowonto",
+    line: "ANTARKOTA",
+    destination: "Lempuyangan",
+    schedule: { "PSE": "18:10", "BKS": "18:40", "CNP": "21:00", "PWT": "23:00", "KYA": "23:35", "KTA": "00:30", "WT": "01:05", "LPN": "01:35" }
+  },
+  // Gajahwong (Pasar Senen - Lempuyangan)
+  {
+    id: "KA 105 Gajahwong",
+    name: "Gajahwong",
+    line: "ANTARKOTA",
+    destination: "Pasar Senen",
+    schedule: { "LPN": "20:40", "WT": "21:10", "KTA": "21:45", "KYA": "22:40", "PWT": "23:15", "CNP": "01:15", "BKS": "03:35", "PSE": "04:05" }
+  },
+  {
+    id: "KA 106 Gajahwong",
+    name: "Gajahwong",
+    line: "ANTARKOTA",
+    destination: "Lempuyangan",
+    schedule: { "PSE": "07:55", "BKS": "08:25", "CNP": "10:45", "PWT": "12:45", "KYA": "13:20", "KTA": "14:15", "WT": "14:50", "LPN": "15:20" }
+  },
+  // Mataram (Pasar Senen - Solo Balapan)
+  {
+    id: "KA 75 Mataram",
+    name: "Mataram",
+    line: "ANTARKOTA",
+    destination: "Pasar Senen",
+    schedule: { "SLO": "07:15", "KT": "07:40", "YK": "08:05", "KTA": "08:55", "KYA": "09:50", "PWT": "10:25", "CN": "12:25", "BKS": "14:45", "PSE": "15:15" }
+  },
+  {
+    id: "KA 76 Mataram",
+    name: "Mataram",
+    line: "ANTARKOTA",
+    destination: "Solo Balapan",
+    schedule: { "PSE": "22:05", "BKS": "22:35", "CN": "00:55", "PWT": "02:55", "KYA": "03:30", "KTA": "04:25", "YK": "05:15", "KT": "05:40", "SLO": "06:05" }
+  },
+  // Bangunkarta (Pasar Senen - Jombang via Solo)
+  {
+    id: "KA 161 Bangunkarta",
+    name: "Bangunkarta",
+    line: "ANTARKOTA",
+    destination: "Pasar Senen",
+    schedule: { "JG": "05:40", "KTS": "06:05", "MN": "07:00", "SLO": "08:10", "YK": "09:00", "KTA": "09:50", "KYA": "10:45", "PWT": "11:20", "CN": "13:20", "BKS": "15:40", "PSE": "16:10" }
+  },
+  {
+    id: "KA 162 Bangunkarta",
+    name: "Bangunkarta",
+    line: "ANTARKOTA",
+    destination: "Jombang",
+    schedule: { "PSE": "12:25", "BKS": "12:55", "CN": "15:15", "PWT": "17:15", "KYA": "17:50", "KTA": "18:45", "YK": "19:35", "SLO": "20:30", "MN": "21:40", "KTS": "22:35", "JG": "23:00" }
+  },
+  // Singasari (Pasar Senen - Blitar via Purwokerto)
+  {
+    id: "KA 149 Singasari",
+    name: "Singasari",
+    line: "ANTARKOTA",
+    destination: "Pasar Senen",
+    schedule: { "BL": "16:45", "TA": "17:15", "KD": "17:45", "KTS": "18:25", "MN": "19:25", "SLO": "20:35", "YK": "21:25", "KTA": "22:15", "KYA": "23:10", "PWT": "23:45", "CN": "01:45", "BKS": "04:05", "PSE": "04:35" }
+  },
+  {
+    id: "KA 150 Singasari",
+    name: "Singasari",
+    line: "ANTARKOTA",
+    destination: "Blitar",
+    schedule: { "PSE": "20:55", "BKS": "21:25", "CN": "23:45", "PWT": "01:45", "KYA": "02:20", "KTA": "03:15", "YK": "04:05", "SLO": "05:00", "MN": "06:10", "KTS": "07:05", "KD": "07:40", "TA": "08:05", "BL": "08:45" }
+  },
+  // Jaka Tingkir (Pasar Senen - Solo Purwosari)
+  {
+    id: "KA 255 Jaka Tingkir",
+    name: "Jaka Tingkir",
+    line: "ANTARKOTA",
+    destination: "Pasar Senen",
+    schedule: { "PWS": "23:45", "KT": "00:10", "LPN": "00:35", "WT": "01:05", "KTA": "01:40", "KYA": "02:35", "PWT": "03:10", "CNP": "05:10", "BKS": "07:30", "PSE": "08:00" }
+  },
+  {
+    id: "KA 256 Jaka Tingkir",
+    name: "Jaka Tingkir",
+    line: "ANTARKOTA",
+    destination: "Solo Purwosari",
+    schedule: { "PSE": "12:00", "BKS": "12:30", "CNP": "14:50", "PWT": "16:50", "KYA": "17:25", "KTA": "18:20", "WT": "18:55", "LPN": "19:25", "KT": "19:50", "PWS": "20:15" }
+  },
+  // Pasundan (Kiaracondong - Surabaya Gubeng)
+  {
+    id: "KA 275 Pasundan",
+    name: "Pasundan",
+    line: "ANTARKOTA",
+    destination: "Kiaracondong",
+    schedule: { "SGU": "05:50", "MR": "06:25", "JG": "06:55", "KTS": "07:20", "MN": "08:20", "PWS": "09:35", "KT": "10:00", "LPN": "10:25", "WT": "10:55", "KTA": "11:30", "KYA": "12:25", "BJR": "14:00", "CI": "14:30", "TSM": "15:00", "CPD": "15:45", "KAC": "17:35" }
+  },
+  {
+    id: "KA 276 Pasundan",
+    name: "Pasundan",
+    line: "ANTARKOTA",
+    destination: "Surabaya Gubeng",
+    schedule: { "KAC": "10:15", "CPD": "12:00", "TSM": "12:45", "CI": "13:15", "BJR": "13:45", "KYA": "15:20", "KTA": "16:15", "WT": "16:50", "LPN": "17:20", "KT": "17:45", "PWS": "18:10", "MN": "19:25", "KTS": "20:25", "JG": "20:50", "MR": "21:20", "SGU": "21:55" }
+  },
+  // Kahuripan (Kiaracondong - Blitar)
+  {
+    id: "KA 273 Kahuripan",
+    name: "Kahuripan",
+    line: "ANTARKOTA",
+    destination: "Kiaracondong",
+    schedule: { "BL": "15:45", "TA": "16:20", "KD": "16:50", "KTS": "17:35", "MN": "18:35", "PWS": "19:50", "LPN": "20:40", "KTA": "21:40", "KYA": "22:35", "BJR": "00:10", "CI": "00:40", "TSM": "01:10", "CPD": "01:55", "KAC": "03:40" }
+  },
+  {
+    id: "KA 274 Kahuripan",
+    name: "Kahuripan",
+    line: "ANTARKOTA",
+    destination: "Blitar",
+    schedule: { "KAC": "22:15", "CPD": "00:00", "TSM": "00:45", "CI": "01:15", "BJR": "01:45", "KYA": "03:20", "KTA": "04:15", "LPN": "05:20", "PWS": "06:10", "MN": "07:25", "KTS": "08:25", "KD": "09:05", "TA": "09:35", "BL": "10:15" }
+  },
+  // Kertanegara (Purwokerto - Malang via Solo)
+  {
+    id: "KA 167 Kertanegara",
+    name: "Kertanegara",
+    line: "ANTARKOTA",
+    destination: "Purwokerto",
+    schedule: { "ML": "08:20", "BL": "10:05", "TA": "10:35", "KD": "11:05", "KTS": "11:45", "MN": "12:35", "SLO": "13:40", "YK": "14:30", "KTA": "15:20", "KYA": "16:15", "PWT": "16:45" }
+  },
+  {
+    id: "KA 168 Kertanegara",
+    name: "Kertanegara",
+    line: "ANTARKOTA",
+    destination: "Malang",
+    schedule: { "PWT": "18:40", "KYA": "19:07", "KTA": "20:00", "YK": "20:50", "SLO": "21:40", "MN": "22:45", "KTS": "23:35", "KD": "00:10", "TA": "00:35", "BL": "01:10", "ML": "03:05" }
+  },
+  // Kutojaya Selatan (Kiaracondong - Kutoarjo)
+  {
+    id: "KA 291 Kutojaya Selatan",
+    name: "Kutojaya Selatan",
+    line: "ANTARKOTA",
+    destination: "Kiaracondong",
+    schedule: { "KTA": "09:40", "KM": "10:03", "GB": "10:25", "KYA": "11:00", "BJR": "12:35", "CI": "13:05", "TSM": "13:40", "CPD": "14:25", "KAC": "16:40" }
+  },
+  {
+    id: "KA 292 Kutojaya Selatan",
+    name: "Kutojaya Selatan",
+    line: "ANTARKOTA",
+    destination: "Kutoarjo",
+    schedule: { "KAC": "20:50", "CPD": "22:40", "TSM": "23:25", "CI": "23:55", "BJR": "00:25", "KYA": "02:00", "GB": "02:35", "KM": "02:57", "KTA": "03:20" }
+  },
+  // Logawa (Purwokerto - Jember via Surabaya Gubeng)
+  {
+    id: "KA 248 Logawa",
+    name: "Logawa",
+    line: "ANTARKOTA",
+    destination: "Jember",
+    schedule: { "PWT": "05:30", "KYA": "06:05", "KTA": "07:00", "LPN": "08:00", "PWS": "08:50", "MN": "10:05", "KTS": "11:05", "JG": "11:30", "SGU": "12:35", "SDA": "13:10", "BG": "13:50", "PB": "14:50", "KK": "15:35", "JR": "16:45" }
+  },
+  {
+    id: "KA 249 Logawa",
+    name: "Logawa",
+    line: "ANTARKOTA",
+    destination: "Purwokerto",
+    schedule: { "JR": "06:15", "KK": "07:25", "PB": "08:10", "BG": "09:10", "SDA": "09:50", "SGU": "10:25", "JG": "11:30", "KTS": "11:55", "MN": "12:55", "PWS": "14:10", "LPN": "15:00", "KTA": "16:00", "KYA": "16:55", "PWT": "17:30" }
+  },
+  // Ranggajati (Cirebon - Jember via Solo/Surabaya)
+  {
+    id: "KA 155 Ranggajati",
+    name: "Ranggajati",
+    line: "ANTARKOTA",
+    destination: "Cirebon",
+    schedule: { "JR": "05:15", "KK": "06:25", "PB": "07:10", "BG": "08:10", "SDA": "08:50", "SGU": "09:25", "JG": "10:30", "KTS": "10:55", "MN": "11:55", "SLO": "13:05", "YK": "14:00", "KTA": "14:50", "KYA": "15:45", "PWT": "16:20", "CN": "18:20" }
+  },
+  {
+    id: "KA 156 Ranggajati",
+    name: "Ranggajati",
+    line: "ANTARKOTA",
+    destination: "Jember",
+    schedule: { "CN": "06:45", "PWT": "08:45", "KYA": "09:20", "KTA": "10:15", "YK": "11:05", "SLO": "12:00", "MN": "13:10", "KTS": "14:10", "JG": "14:35", "SGU": "15:40", "SDA": "16:15", "BG": "16:55", "PB": "17:55", "KK": "18:40", "JR": "19:50" }
   }
 ];
 
@@ -604,20 +921,34 @@ const parahyanganTrains = [
     destination: "Banjar",
     schedule: { "GMR": "09:30", "JNG": "09:48", "BKS": "10:02", "CKR": "10:18", "CKP": "10:50", "CBR": "11:01", "PWK": "11:12", "CA": "11:22", "PLD": "11:35", "SKT": "11:52", "PDL": "12:05", "CMI": "12:20", "BD": "12:35", "KAC": "12:55", "TSM": "14:45", "CI": "15:20", "BJR": "15:50" }
   },
-  // Serayu
+  // Serayu Pagi & Malam (Pasar Senen - Purwokerto via Kiaracondong/Kroya)
   {
-    id: "KA 251 Serayu Pagi",
+    id: "KA 284 Serayu Pagi",
     name: "Serayu Pagi",
     line: "ANTARKOTA",
     destination: "Purwokerto",
     schedule: { "PSE": "09:25", "BKS": "09:55", "CKR": "10:15", "KW": "10:35", "CKP": "10:50", "CBR": "10:58", "PWK": "11:05", "CA": "11:15", "PLD": "11:28", "SKT": "11:45", "PDL": "11:58", "CMI": "12:15", "KAC": "12:45", "CCL": "13:15", "TSM": "14:50", "CI": "15:25", "BJR": "15:55", "KYA": "17:30", "PWT": "18:05" }
   },
   {
-    id: "KA 252 Serayu Pagi",
+    id: "KA 286 Serayu Malam",
+    name: "Serayu Malam",
+    line: "ANTARKOTA",
+    destination: "Purwokerto",
+    schedule: { "PSE": "20:10", "BKS": "20:40", "CKR": "21:00", "KW": "21:18", "CKP": "21:30", "PWK": "21:45", "PDL": "22:38", "CMI": "22:55", "KAC": "23:25", "CCL": "23:55", "TSM": "01:30", "CI": "02:05", "BJR": "02:35", "KYA": "04:10", "PWT": "04:45" }
+  },
+  {
+    id: "KA 283 Serayu Pagi",
     name: "Serayu Pagi",
     line: "ANTARKOTA",
     destination: "Pasar Senen",
-    schedule: { "PWT": "06:50", "KYA": "07:25", "BJR": "09:00", "CI": "09:30", "TSM": "10:05", "CCL": "11:40", "KAC": "12:10", "CMI": "12:40", "PDL": "12:55", "SKT": "13:10", "PLD": "13:25", "CA": "13:38", "PWK": "13:50", "CBR": "14:00", "CKP": "14:10", "KW": "14:25", "CKR": "14:40", "BKS": "15:00", "PSE": "15:30" }
+    schedule: { "PWT": "06:45", "KYA": "07:20", "BJR": "08:55", "CI": "09:25", "TSM": "10:00", "CCL": "11:35", "KAC": "12:05", "CMI": "12:35", "PDL": "12:50", "SKT": "13:05", "PLD": "13:20", "CA": "13:33", "PWK": "13:45", "CBR": "13:55", "CKP": "14:05", "KW": "14:20", "CKR": "14:35", "BKS": "14:55", "PSE": "15:25" }
+  },
+  {
+    id: "KA 285 Serayu Malam",
+    name: "Serayu Malam",
+    line: "ANTARKOTA",
+    destination: "Pasar Senen",
+    schedule: { "PWT": "16:30", "KYA": "17:05", "BJR": "18:40", "CI": "19:10", "TSM": "19:45", "CCL": "21:20", "KAC": "21:50", "CMI": "22:20", "PDL": "22:35", "PWK": "23:30", "CKP": "23:50", "KW": "00:05", "CKR": "00:20", "BKS": "00:40", "PSE": "01:10" }
   }
 ];
 
@@ -696,6 +1027,20 @@ const sumateraAntarkotaTrains = [
     line: "ANTARKOTA",
     destination: "Medan",
     schedule: { "TNB": "12:40", "KIS": "13:20", "TBI": "14:25", "MDN": "16:15" }
+  },
+  {
+    id: "KA U75 Putri Deli Sore",
+    name: "Putri Deli Sore",
+    line: "ANTARKOTA",
+    destination: "Tanjungbalai",
+    schedule: { "MDN": "18:55", "TBI": "20:45", "KIS": "21:50", "TNB": "22:30" }
+  },
+  {
+    id: "KA U76 Putri Deli Sore",
+    name: "Putri Deli Sore",
+    line: "ANTARKOTA",
+    destination: "Medan",
+    schedule: { "TNB": "19:00", "KIS": "19:40", "TBI": "20:45", "MDN": "22:35" }
   },
   // Siantar Ekspres
   {
@@ -1322,6 +1667,271 @@ knmDeparturesKNM.forEach((dep, idx) => {
   });
 });
 
+// ==========================================
+// 8. LRT (LRT Jabodebek, LRT Jakarta, LRT Sumsel) - GAPEKA 2025/2026
+// ==========================================
+const lrtTrains = [];
+
+// 8a. LRT Jabodebek - Lin Cibubur (DUKUH <-> HARJA)
+const lrtCibuburDeparturesDUKUH = [];
+for (let h = 5; h <= 22; h++) {
+  const mins = (h === 5) ? [30, 42, 54] : (h >= 6 && h <= 9 || h >= 16 && h <= 19) ? [6, 18, 30, 42, 54] : [10, 25, 40, 55];
+  mins.forEach(m => {
+    lrtCibuburDeparturesDUKUH.push(`${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`);
+  });
+}
+lrtCibuburDeparturesDUKUH.push("23:00");
+
+const lrtCibuburDeparturesHARJA = [];
+for (let h = 5; h <= 22; h++) {
+  const mins = (h === 5) ? [10, 22, 34, 46, 58] : (h >= 6 && h <= 9 || h >= 16 && h <= 19) ? [10, 22, 34, 46, 58] : [10, 25, 40, 55];
+  mins.forEach(m => {
+    lrtCibuburDeparturesHARJA.push(`${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`);
+  });
+}
+
+lrtCibuburDeparturesDUKUH.forEach((dep, idx) => {
+  lrtTrains.push({
+    id: `LRT C${101 + idx * 2}`,
+    name: "LRT Jabodebek Lin Cibubur",
+    line: "LRT",
+    destination: "Harjamukti",
+    schedule: {
+      "DUKUH": dep,
+      "SETIA": addMinutes(dep, 2),
+      "RASUN": addMinutes(dep, 5),
+      "KUNIN": addMinutes(dep, 7),
+      "PANCO": addMinutes(dep, 11),
+      "CIKOK": addMinutes(dep, 14),
+      "CILIW": addMinutes(dep, 16),
+      "CW_LRT": addMinutes(dep, 18),
+      "TAMAN": addMinutes(dep, 24),
+      "KAMPU": addMinutes(dep, 27),
+      "CIRAC": addMinutes(dep, 30),
+      "HARJA": addMinutes(dep, 34)
+    }
+  });
+});
+
+lrtCibuburDeparturesHARJA.forEach((dep, idx) => {
+  lrtTrains.push({
+    id: `LRT C${102 + idx * 2}`,
+    name: "LRT Jabodebek Lin Cibubur",
+    line: "LRT",
+    destination: "Dukuh Atas",
+    schedule: {
+      "HARJA": dep,
+      "CIRAC": addMinutes(dep, 4),
+      "KAMPU": addMinutes(dep, 7),
+      "TAMAN": addMinutes(dep, 10),
+      "CW_LRT": addMinutes(dep, 16),
+      "CILIW": addMinutes(dep, 18),
+      "CIKOK": addMinutes(dep, 20),
+      "PANCO": addMinutes(dep, 23),
+      "KUNIN": addMinutes(dep, 27),
+      "RASUN": addMinutes(dep, 29),
+      "SETIA": addMinutes(dep, 32),
+      "DUKUH": addMinutes(dep, 34)
+    }
+  });
+});
+
+// 8b. LRT Jabodebek - Lin Bekasi (DUKUH <-> JATIM)
+const lrtBekasiDeparturesDUKUH = [];
+for (let h = 5; h <= 22; h++) {
+  const mins = (h === 5) ? [35, 48] : (h >= 6 && h <= 9 || h >= 16 && h <= 19) ? [0, 12, 24, 36, 48] : [5, 20, 35, 50];
+  mins.forEach(m => {
+    lrtBekasiDeparturesDUKUH.push(`${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`);
+  });
+}
+lrtBekasiDeparturesDUKUH.push("22:45");
+
+const lrtBekasiDeparturesJATIM = [];
+for (let h = 5; h <= 22; h++) {
+  const mins = (h === 5) ? [0, 14, 28, 42, 54] : (h >= 6 && h <= 9 || h >= 16 && h <= 19) ? [6, 18, 30, 42, 54] : [5, 20, 35, 50];
+  mins.forEach(m => {
+    lrtBekasiDeparturesJATIM.push(`${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`);
+  });
+}
+
+lrtBekasiDeparturesDUKUH.forEach((dep, idx) => {
+  lrtTrains.push({
+    id: `LRT B${201 + idx * 2}`,
+    name: "LRT Jabodebek Lin Bekasi",
+    line: "LRT",
+    destination: "Jatimulya",
+    schedule: {
+      "DUKUH": dep,
+      "SETIA": addMinutes(dep, 2),
+      "RASUN": addMinutes(dep, 5),
+      "KUNIN": addMinutes(dep, 7),
+      "PANCO": addMinutes(dep, 11),
+      "CIKOK": addMinutes(dep, 14),
+      "CILIW": addMinutes(dep, 16),
+      "CW_LRT": addMinutes(dep, 18),
+      "HLM_LRT": addMinutes(dep, 23),
+      "JATIB": addMinutes(dep, 31),
+      "CIKUN1": addMinutes(dep, 36),
+      "CIKUN2": addMinutes(dep, 39),
+      "BEKAS": addMinutes(dep, 44),
+      "JATIM": addMinutes(dep, 48)
+    }
+  });
+});
+
+lrtBekasiDeparturesJATIM.forEach((dep, idx) => {
+  lrtTrains.push({
+    id: `LRT B${202 + idx * 2}`,
+    name: "LRT Jabodebek Lin Bekasi",
+    line: "LRT",
+    destination: "Dukuh Atas",
+    schedule: {
+      "JATIM": dep,
+      "BEKAS": addMinutes(dep, 4),
+      "CIKUN2": addMinutes(dep, 9),
+      "CIKUN1": addMinutes(dep, 12),
+      "JATIB": addMinutes(dep, 17),
+      "HLM_LRT": addMinutes(dep, 25),
+      "CW_LRT": addMinutes(dep, 30),
+      "CILIW": addMinutes(dep, 32),
+      "CIKOK": addMinutes(dep, 34),
+      "PANCO": addMinutes(dep, 37),
+      "KUNIN": addMinutes(dep, 41),
+      "RASUN": addMinutes(dep, 43),
+      "SETIA": addMinutes(dep, 46),
+      "DUKUH": addMinutes(dep, 48)
+    }
+  });
+});
+
+// 8c. LRT Jakarta (KPG <-> MRI_LRT via Velodrome & Manggarai Fase 1B)
+const lrtJktDeparturesKPG = [];
+for (let h = 5; h <= 22; h++) {
+  const mins = (h === 5) ? [30, 45] : [0, 15, 30, 45];
+  mins.forEach(m => {
+    lrtJktDeparturesKPG.push(`${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`);
+  });
+}
+
+const lrtJktDeparturesMRI = [];
+for (let h = 5; h <= 22; h++) {
+  const mins = (h === 5) ? [40, 55] : [10, 25, 40, 55];
+  mins.forEach(m => {
+    lrtJktDeparturesMRI.push(`${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`);
+  });
+}
+
+lrtJktDeparturesKPG.forEach((dep, idx) => {
+  lrtTrains.push({
+    id: `LRTJ J${301 + idx * 2}`,
+    name: "LRT Jakarta",
+    line: "LRT",
+    destination: "Manggarai",
+    schedule: {
+      "KPG": dep,
+      "BVU": addMinutes(dep, 3),
+      "BOULE": addMinutes(dep, 6),
+      "PULOM": addMinutes(dep, 8),
+      "EQUES": addMinutes(dep, 11),
+      "VELOD": addMinutes(dep, 14),
+      "RAWAM": addMinutes(dep, 17),
+      "PRAMU": addMinutes(dep, 20),
+      "MTR_LRT": addMinutes(dep, 23),
+      "PROKL": addMinutes(dep, 25),
+      "MRI_LRT": addMinutes(dep, 28)
+    }
+  });
+});
+
+lrtJktDeparturesMRI.forEach((dep, idx) => {
+  lrtTrains.push({
+    id: `LRTJ J${302 + idx * 2}`,
+    name: "LRT Jakarta",
+    line: "LRT",
+    destination: "Pegangsaan Dua",
+    schedule: {
+      "MRI_LRT": dep,
+      "PROKL": addMinutes(dep, 3),
+      "MTR_LRT": addMinutes(dep, 5),
+      "PRAMU": addMinutes(dep, 8),
+      "RAWAM": addMinutes(dep, 11),
+      "VELOD": addMinutes(dep, 14),
+      "EQUES": addMinutes(dep, 17),
+      "PULOM": addMinutes(dep, 20),
+      "BOULE": addMinutes(dep, 22),
+      "BVU": addMinutes(dep, 25),
+      "KPG": addMinutes(dep, 28)
+    }
+  });
+});
+
+// 8d. LRT Sumatera Selatan / Palembang (BDR <-> DJKA)
+const lrtSumselDeparturesDJKA = [];
+for (let h = 5; h <= 19; h++) {
+  const mins = (h === 5) ? [6, 24, 42] : [0, 18, 36, 54];
+  mins.forEach(m => {
+    lrtSumselDeparturesDJKA.push(`${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`);
+  });
+}
+lrtSumselDeparturesDJKA.push("19:01");
+
+const lrtSumselDeparturesBDR = [];
+for (let h = 6; h <= 19; h++) {
+  const mins = [0, 18, 36, 54];
+  mins.forEach(m => {
+    lrtSumselDeparturesBDR.push(`${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`);
+  });
+}
+lrtSumselDeparturesBDR.push("19:55");
+
+lrtSumselDeparturesDJKA.forEach((dep, idx) => {
+  lrtTrains.push({
+    id: `LRTS S${401 + idx * 2}`,
+    name: "LRT Sumatera Selatan",
+    line: "LRT",
+    destination: "Bandara SMB II",
+    schedule: {
+      "DJKA": dep,
+      "JAKAB": addMinutes(dep, 4),
+      "POLRE": addMinutes(dep, 8),
+      "AMPER": addMinutes(dep, 12),
+      "CINDE": addMinutes(dep, 16),
+      "DISHU": addMinutes(dep, 20),
+      "BUMIS": addMinutes(dep, 23),
+      "DEMAN": addMinutes(dep, 27),
+      "GARUD": addMinutes(dep, 31),
+      "RSUD": addMinutes(dep, 35),
+      "PUNTI": addMinutes(dep, 38),
+      "ASH": addMinutes(dep, 43),
+      "BDR": addMinutes(dep, 47)
+    }
+  });
+});
+
+lrtSumselDeparturesBDR.forEach((dep, idx) => {
+  lrtTrains.push({
+    id: `LRTS S${402 + idx * 2}`,
+    name: "LRT Sumatera Selatan",
+    line: "LRT",
+    destination: "DJKA",
+    schedule: {
+      "BDR": dep,
+      "ASH": addMinutes(dep, 4),
+      "PUNTI": addMinutes(dep, 9),
+      "RSUD": addMinutes(dep, 12),
+      "GARUD": addMinutes(dep, 16),
+      "DEMAN": addMinutes(dep, 20),
+      "BUMIS": addMinutes(dep, 24),
+      "DISHU": addMinutes(dep, 27),
+      "CINDE": addMinutes(dep, 31),
+      "AMPER": addMinutes(dep, 35),
+      "POLRE": addMinutes(dep, 39),
+      "JAKAB": addMinutes(dep, 43),
+      "DJKA": addMinutes(dep, 47)
+    }
+  });
+});
+
 // Merge all national trains
 const allNationalTrains = [
   ...panturaTrains,
@@ -1330,7 +1940,8 @@ const allNationalTrains = [
   ...sumateraAntarkotaTrains,
   ...localTrains,
   ...whooshTrains,
-  ...bandaraTrains
+  ...bandaraTrains,
+  ...lrtTrains
 ];
 
 console.log(`Generated ${allNationalTrains.length} national GAPEKA train trips:`);
@@ -1341,6 +1952,7 @@ console.log(`- Sumatera Antarkota: ${sumateraAntarkotaTrains.length}`);
 console.log(`- Lokal (Jawa & Sumatera): ${localTrains.length}`);
 console.log(`- Whoosh (KCIC): ${whooshTrains.length}`);
 console.log(`- Bandara (Soetta, YIA, Kualanamu, BIM): ${bandaraTrains.length}`);
+console.log(`- LRT (Jabodebek, Jakarta, Sumsel): ${lrtTrains.length}`);
 
 // Write to static/data/national-gapeka.json
 const outputPath = path.resolve(__dirname, '../static/data/national-gapeka.json');

@@ -38,8 +38,8 @@
 	let isLoading: boolean = $state(false);
 	let showCopyright: boolean = $state(false);
 
-	// Category filter: Semua | KRL | MRT | Antarkota | Lokal | Whoosh | Bandara
-	let selectedCategory: "Semua" | "KRL" | "MRT" | "Antarkota" | "Lokal" | "Whoosh" | "Bandara" = $state("Semua");
+	// Category filter: Semua | KRL | MRT | LRT | Antarkota | Lokal | Whoosh | Bandara
+	let selectedCategory: "Semua" | "KRL" | "MRT" | "LRT" | "Antarkota" | "Lokal" | "Whoosh" | "Bandara" = $state("Semua");
 
 	// Drawer state (Bottom sheet on mobile, floating sidebar on desktop)
 	let isDrawerOpen: boolean = $state(true);
@@ -257,8 +257,9 @@
 		activeTrains.filter((train) => {
 			if (selectedCategory === "Semua") return true;
 			if (selectedCategory === "KRL")
-				return !["MRT", "ANTARKOTA", "LOKAL", "WHOOSH", "BANDARA"].includes(train.line);
+				return !["MRT", "LRT", "ANTARKOTA", "LOKAL", "WHOOSH", "BANDARA"].includes(train.line);
 			if (selectedCategory === "MRT") return train.line === "MRT";
+			if (selectedCategory === "LRT") return train.line === "LRT";
 			if (selectedCategory === "Antarkota") return train.line === "ANTARKOTA";
 			if (selectedCategory === "Lokal") return train.line === "LOKAL";
 			if (selectedCategory === "Whoosh") return train.line === "WHOOSH";
@@ -283,10 +284,23 @@
 		TANGERANG: "bg-yellow-700 text-white",
 		TANJUNGPRIUK: "bg-pink-600 text-white",
 		MRT: "bg-blue-800 text-white",
+		LRT: "bg-indigo-600 text-white",
 		ANTARKOTA: "bg-amber-600 text-white",
 		LOKAL: "bg-teal-600 text-white",
 		WHOOSH: "bg-rose-600 text-white",
 		BANDARA: "bg-cyan-600 text-white",
+	};
+
+	const formatTrainId = (id: string): string => {
+		if (
+			id.startsWith("KA ") ||
+			id.startsWith("Whoosh ") ||
+			id.startsWith("LRT") ||
+			id.startsWith("MRT")
+		) {
+			return id;
+		}
+		return `KA ${id}`;
 	};
 
 	const fetchStations = async () => {
@@ -530,6 +544,24 @@
 		];
 	};
 
+	const haversineKm = (
+		lat1: number,
+		lon1: number,
+		lat2: number,
+		lon2: number,
+	): number => {
+		const R = 6371; // Earth radius in km
+		const dLat = ((lat2 - lat1) * Math.PI) / 180;
+		const dLon = ((lon2 - lon1) * Math.PI) / 180;
+		const a =
+			Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+			Math.cos((lat1 * Math.PI) / 180) *
+				Math.cos((lat2 * Math.PI) / 180) *
+				Math.sin(dLon / 2) *
+				Math.sin(dLon / 2);
+		return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+	};
+
 	const getJakartaMinutes = (): number => {
 		const d = new Date();
 		const utc = d.getTime() + d.getTimezoneOffset() * 60000;
@@ -544,6 +576,23 @@
 
 	let serverClockOffset = 0;
 	let animFrameId: number | null = null;
+
+	const getPathDistanceKm = (samples: [number, number][]): number => {
+		if ((samples as any)._distKm !== undefined) {
+			return (samples as any)._distKm;
+		}
+		let total = 0;
+		for (let i = 0; i < samples.length - 1; i++) {
+			total += haversineKm(
+				samples[i][0],
+				samples[i][1],
+				samples[i + 1][0],
+				samples[i + 1][1],
+			);
+		}
+		(samples as any)._distKm = total;
+		return total;
+	};
 
 	function calculateTrainPosition(train: any, currentMinutes: number) {
 		// 1. If train has active LIVE GPS ping from a passenger
@@ -579,18 +628,23 @@
 				} catch {}
 			}
 
-			const isStopped =
-				typeof train.speed === "number" && train.speed < 4;
+			const liveSpeed =
+				typeof train.speed === "number" && train.speed >= 0
+					? Math.round(train.speed)
+					: 0;
+			const isStopped = liveSpeed < 4;
 			return {
 				lat,
 				lng,
 				status: isStopped ? ("stopped" as const) : ("moving" as const),
 				progress: train.progress ?? 0.5,
+				speed: isStopped ? 0 : liveSpeed,
 			};
 		}
 
 		// 2. Timetable schedule interpolation
 		let progress = train.progress ?? 0;
+		let duration = 0;
 		if (
 			train.departMinutes !== undefined &&
 			train.arrivMinutes !== undefined &&
@@ -598,7 +652,7 @@
 		) {
 			let nowMins = currentMinutes;
 			if (nowMins < 180 && train.arrivMinutes >= 1440) nowMins += 1440;
-			const duration = train.arrivMinutes - train.departMinutes;
+			duration = train.arrivMinutes - train.departMinutes;
 			const elapsed = nowMins - train.departMinutes;
 			progress = Math.max(0, Math.min(1, elapsed / duration));
 		}
@@ -616,11 +670,60 @@
 		}
 
 		const coord = interpolatePath(samples, progress);
+
+		let speed = 0;
+		if (status === "moving") {
+			// Approximate track distance in km
+			const pathDistanceKm = getPathDistanceKm(samples);
+
+			let avgSpeed = 60;
+			if (pathDistanceKm > 0.5 && duration > 0) {
+				avgSpeed = pathDistanceKm / (duration / 60);
+			} else {
+				if (train.line === "WHOOSH") avgSpeed = 280;
+				else if (train.line === "ANTARKOTA") avgSpeed = 85;
+				else if (train.line === "BANDARA") avgSpeed = 70;
+				else if (train.line === "MRT") avgSpeed = 65;
+				else if (train.line === "LRT") avgSpeed = 55;
+				else if (train.line === "LOKAL") avgSpeed = 60;
+				else avgSpeed = 65;
+			}
+
+			// Realistic physics: smooth sinusoidal acceleration and deceleration
+			let curveFactor = 1.0;
+			if (progress < 0.15) {
+				curveFactor = Math.sin((progress / 0.15) * (Math.PI / 2));
+			} else if (progress > 0.85) {
+				curveFactor = Math.sin(((1 - progress) / 0.15) * (Math.PI / 2));
+			} else {
+				// Micro-variations in cruise speed to look realistic
+				const wave = Math.sin(progress * 25) * 0.03;
+				curveFactor = 1.05 + wave;
+			}
+
+			speed = Math.round(avgSpeed * curveFactor);
+
+			// Clamp to realistic physics ceilings per line category
+			const maxCeiling =
+				train.line === "WHOOSH"
+					? 350
+					: train.line === "ANTARKOTA"
+						? 120
+						: train.line === "BANDARA"
+							? 85
+							: train.line === "MRT" || train.line === "LRT"
+								? 80
+								: 90;
+
+			speed = Math.max(5, Math.min(maxCeiling, speed));
+		}
+
 		return {
 			lat: coord[0],
 			lng: coord[1],
 			status,
 			progress,
+			speed,
 		};
 	}
 
@@ -671,12 +774,11 @@
 				? "🚅"
 				: train.line === "BANDARA"
 					? "✈️"
-					: "🚄";
+					: train.line === "LRT"
+						? "🚊"
+						: "🚄";
 
-		const cleanTrainId =
-			train.id.startsWith("KA ") || train.id.startsWith("Whoosh ")
-				? train.id
-				: `KA ${train.id}`;
+		const cleanTrainId = formatTrainId(train.id);
 
 		return L.divIcon({
 			className: "custom-train-marker !bg-transparent !border-0",
@@ -699,9 +801,11 @@
 
 	const getPopupHtml = (
 		train: any,
-		pos: { status: string; progress: number },
+		pos: { status: string; progress: number; speed?: number },
 	) => {
 		const isStopped = pos.status === "stopped";
+		const currentSpeed = pos.speed ?? 0;
+
 		const statusBadge = isStopped
 			? '<span class="px-1.5 py-0.5 rounded text-[9px] font-black bg-amber-500 text-white">BERHENTI</span>'
 			: '<span class="px-1.5 py-0.5 rounded text-[9px] font-black bg-emerald-500 text-white">BERGERAK</span>';
@@ -710,21 +814,31 @@
 			? '<span class="px-1.5 py-0.5 rounded text-[9px] font-black bg-emerald-500 text-white flex items-center gap-1">📡 LIVE GPS</span>'
 			: '<span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-slate-200 text-slate-700">⏱️ GAPEKA</span>';
 
+		const speedBadge = isStopped
+			? '<span class="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-100 text-slate-500">0 km/jam</span>'
+			: train.isLiveGps
+				? `<span class="px-1.5 py-0.5 rounded text-[10px] font-mono font-black bg-emerald-50 text-emerald-700 border border-emerald-200">⚡ ${currentSpeed} km/jam</span>`
+				: `<span class="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold bg-indigo-50 text-indigo-700 border border-indigo-200">⚡ ~${currentSpeed} km/jam</span>`;
+
 		const stationInfo = isStopped
 			? `Berhenti di stasiun <b>${train.fromStation}</b>`
 			: `Menuju <b>${train.toStation}</b> (${Math.round(pos.progress * 100)}%)`;
 
-		const cleanTrainId =
-			train.id.startsWith("KA ") || train.id.startsWith("Whoosh ")
-				? train.id
-				: `KA ${train.id}`;
+		const cleanTrainId = formatTrainId(train.id);
 
 		const headerIcon =
 			train.line === "WHOOSH"
 				? "🚅"
 				: train.line === "BANDARA"
 					? "✈️"
-					: "🚄";
+					: train.line === "LRT"
+						? "🚊"
+						: "🚄";
+
+		const originStation =
+			train.origin ||
+			stations.find((s) => s.id === train.fromStation)?.name ||
+			train.fromStation;
 
 		return `<div class="p-1 font-sans text-xs">
 			<div class="font-black text-sm text-slate-900 mb-1.5 flex items-center justify-between gap-2">
@@ -737,7 +851,10 @@
 				</div>
 			</div>
 			<div class="text-slate-600 mb-0.5"><b>Tujuan:</b> ${train.destination}</div>
-			<div class="text-slate-600 mb-1.5"><b>Layanan:</b> <span class="font-bold text-teal-600">${train.line}</span></div>
+			<div class="text-slate-600 mb-1.5 flex items-center justify-between">
+				<div><b>Asal:</b> <span class="font-bold text-teal-600">${originStation}</span></div>
+				<div>${speedBadge}</div>
+			</div>
 			<div class="bg-slate-100 rounded-lg p-1.5 text-[10px] text-slate-700 font-mono flex items-center justify-between">
 				<span>${stationInfo}</span>
 				<span class="font-bold text-teal-600">${train.fromStation} &rarr; ${train.toStation}</span>
@@ -791,6 +908,10 @@
 			const pos = calculateTrainPosition(train, nowMins);
 			if (!pos) return;
 
+			if (train._currentSpeed !== pos.speed) {
+				train._currentSpeed = pos.speed;
+			}
+
 			const isVisible = !mapBounds || mapBounds.contains([pos.lat, pos.lng]);
 
 			if (trainMarkers[train.id]) {
@@ -819,20 +940,26 @@
 				}
 
 				if (trainMarkers[train.id].isPopupOpen?.()) {
-					trainMarkers[train.id]
-						.getPopup()
-						.setContent(getPopupHtml(train, pos));
+					const popupHtml = getPopupHtml(train, pos);
+					if (trainMarkers[train.id]._lastPopupHtml !== popupHtml) {
+						trainMarkers[train.id]
+							.getPopup()
+							.setContent(popupHtml);
+						trainMarkers[train.id]._lastPopupHtml = popupHtml;
+					}
 				}
 			} else if (isVisible) {
+				const popupHtml = getPopupHtml(train, pos);
 				// Create new radar-style train marker only when in or near viewport
 				const marker = L.marker([pos.lat, pos.lng], {
 					icon: createTrainIcon(train, pos),
 					riseOnHover: true,
 				})
 					.addTo(L._mapInstance)
-					.bindPopup(getPopupHtml(train, pos));
+					.bindPopup(popupHtml);
 
 				marker._lastStatusKey = `${pos.status}_${!!train.isLiveGps}`;
+				marker._lastPopupHtml = popupHtml;
 				marker._isOnMap = true;
 
 				// Clicking marker opens detail
@@ -1177,14 +1304,17 @@
 					const isSumatera = st.island === "Sumatera";
 					const isWhoosh = st.type === "Whoosh";
 					const isMrt = st.type === "MRT";
+					const isLrt = st.type === "LRT";
 
 					const fillColor = isWhoosh
 						? "#DC2626"
 						: isMrt
 							? "#1E40AF"
-							: isSumatera
-								? "#0EA5E9"
-								: "#6366F1";
+							: isLrt
+								? "#4F46E5"
+								: isSumatera
+									? "#0EA5E9"
+									: "#6366F1";
 
 					const minorMarker = L.circleMarker(st.coords, {
 						renderer: stationCanvasRenderer,
@@ -1530,7 +1660,7 @@
 										<span class="text-sm">🚄</span>
 										<div>
 											<div class="font-bold text-xs text-slate-800 dark:text-slate-100">
-												{train.id.startsWith('KA ') || train.id.startsWith('Whoosh ') ? train.id : 'KA ' + train.id} &bull; Tujuan {train.destination}
+												{formatTrainId(train.id)} &bull; Tujuan {train.destination}
 											</div>
 											<div class="text-[10px] text-slate-500">
 												{train.fromStation} &rarr; {train.toStation}
@@ -1578,7 +1708,7 @@
 
 			<!-- CATEGORY PILL FILTERS -->
 			<div class="flex items-center gap-1.5 overflow-x-auto pt-0.5 pb-1 no-scrollbar">
-				{#each ["Semua", "KRL", "MRT", "Antarkota", "Lokal", "Whoosh", "Bandara"] as cat}
+				{#each ["Semua", "KRL", "MRT", "LRT", "Antarkota", "Lokal", "Whoosh", "Bandara"] as cat}
 					<button
 						onclick={() => (selectedCategory = cat as any)}
 						class="flex-shrink-0 px-2.5 py-1 rounded-full text-[10px] font-bold transition-all {selectedCategory === cat
@@ -1599,7 +1729,7 @@
 					<button onclick={() => (showCopyright = false)} class="text-teal-400 hover:text-white">✕</button>
 				</div>
 				<p class="text-[11px] text-slate-300">
-					Data jadwal diolah berdasarkan GAPEKA KAI, KCI, KCIC Whoosh, & MRT Jakarta (Pembaruan 2026).
+					Data jadwal diolah berdasarkan GAPEKA KAI, KCI, KCIC Whoosh, LRT Jabodebek/Jakarta/Sumsel, & MRT Jakarta (Pembaruan 2026).
 				</p>
 			</div>
 		{/if}
@@ -1865,7 +1995,7 @@
 												{train.destination}
 											</div>
 											<div class="text-[10px] text-slate-500 mt-0.5 flex flex-wrap items-center gap-1">
-												<span class="font-mono">{train.id.startsWith('KA ') || train.id.startsWith('Whoosh ') ? train.id : 'KA ' + train.id}</span>
+												<span class="font-mono">{formatTrainId(train.id)}</span>
 												{#if train.status === "arrived"}
 													<span class="text-emerald-600 dark:text-emerald-400 font-semibold">&bull; Sudah Tiba</span>
 												{:else if activeTrains.find((t) => t.id === train.id)}
@@ -1932,17 +2062,27 @@
 										<div class="min-w-0">
 											<div class="flex items-center gap-1.5">
 												<span class="font-mono font-bold text-xs text-slate-900 dark:text-slate-100">
-													{train.id.startsWith('KA ') || train.id.startsWith('Whoosh ') ? train.id : 'KA ' + train.id}
+													{formatTrainId(train.id)}
 												</span>
 												<span class="text-[9px] px-1.5 py-0.2 rounded font-bold uppercase {lineColors[train.line] || 'bg-slate-500 text-white'}">
 													{train.line}
 												</span>
 											</div>
 											<div class="text-xs font-semibold text-slate-700 dark:text-slate-300 truncate mt-0.5">
-												Tujuan {train.destination}
+												{#if train.origin}
+													{train.origin} &rarr; {train.destination}
+												{:else}
+													Tujuan {train.destination}
+												{/if}
 											</div>
-											<div class="text-[10px] text-slate-500 font-mono mt-0.5">
-												{train.fromStation} &rarr; {train.toStation} ({Math.round(train.progress * 100)}%)
+											<div class="text-[10px] text-slate-500 font-mono mt-0.5 flex items-center gap-1.5 flex-wrap">
+												<span>{train.fromStation} &rarr; {train.toStation} ({Math.round(train.progress * 100)}%)</span>
+												{#if train._currentSpeed !== undefined}
+													<span class="text-slate-300 dark:text-slate-600">&bull;</span>
+													<span class="font-bold {train._currentSpeed > 0 ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-400'}">
+														⚡ {train._currentSpeed > 0 ? `~${train._currentSpeed} km/j` : '0 km/j'}
+													</span>
+												{/if}
 											</div>
 										</div>
 									</div>

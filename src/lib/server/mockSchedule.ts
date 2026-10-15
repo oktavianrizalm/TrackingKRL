@@ -96,24 +96,49 @@ mrtStationsRaw.forEach((s: any) => {
     if (s.id) mrtIdToName[s.id] = s.name;
 });
 
+export const getStationName = (id: string): string => {
+    return idToNameFull[id] || nationalIdToName[id] || idToName[id] || mrtIdToName[id] || id;
+};
+
 export const stationsList = Array.from(uniqueStationIds).map(id => ({
     id,
-    name: idToNameFull[id] || nationalIdToName[id] || idToName[id] || mrtIdToName[id] || id,
+    name: getStationName(id),
     type: stationTypes[id]
 })).sort((a, b) => a.name.localeCompare(b.name));
 
 const clTrains = Object.entries(parsedSchedule).map(([id, train]: [string, any]) => {
-    const parts = train.relasi.split('-');
-    const destCode = parts[parts.length - 1].toUpperCase();
-    const destination = idToName[destCode] || nationalIdToName[destCode] || destCode;
+    const keys = Object.keys(train.schedule);
+    const firstStop = keys[0];
+    const lastStop = keys[keys.length - 1];
+    const origin = getStationName(firstStop);
+    const destination = getStationName(lastStop);
 
     return {
         id,
-        line: getLineBySchedule(Object.keys(train.schedule), train.relasi),
+        line: getLineBySchedule(keys, train.relasi),
+        origin,
         destination,
         schedule: train.schedule
     };
 });
 
-export const allTrains = [...clTrains, ...mrtScheduleRaw, ...nationalGapekaRaw];
+const mrtTrains = mrtScheduleRaw.map((train: any) => {
+    const keys = Object.keys(train.schedule);
+    const originCode = keys[0];
+    return {
+        ...train,
+        origin: train.origin || getStationName(originCode)
+    };
+});
+
+const nationalTrains = nationalGapekaRaw.map((train: any) => {
+    const keys = Object.keys(train.schedule);
+    const originCode = keys[0];
+    return {
+        ...train,
+        origin: train.origin || getStationName(originCode)
+    };
+});
+
+export const allTrains = [...clTrains, ...mrtTrains, ...nationalTrains];
 

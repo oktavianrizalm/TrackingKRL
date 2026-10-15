@@ -41,6 +41,7 @@ TrackRL mendukung integrasi jadwal dan pelacakan seluruh armada perkeretaapian d
 | **Kereta Cepat (Whoosh)** | KCIC Kereta Cepat Jakarta – Bandung (Halim – Karawang – Padalarang – Tegalluar) |
 | **Kereta Komuter & Lokal** | KRL Commuter Line Jabodetabek, Commuter Line Merak, Commuter Line Yogyakarta–Solo, KA Lokal Bandung Raya, Commuter Line Dhoho/Penataran, Prameks, dll. |
 | **MRT Jakarta** | MRT Lin Utara–Selatan (Lebak Bulus Grab – Bundaran HI Bank Jakarta) |
+| **LRT (Light Rail Transit)** | LRT Jabodebek (Lin Cibubur & Lin Bekasi), LRT Jakarta (Pegangsaan Dua – Velodrome – Manggarai Fase 1B), dan LRT Sumatera Selatan (Palembang SMB II – DJKA) |
 | **Kereta Bandara** | KA Bandara Soekarno-Hatta (BST), KA Bandara Internasional Yogyakarta (YIA), KA Bandara Kualanamu (KNM), dan KA Bandara Minangkabau (BIM) |
 | **Kereta Api Sumatera** | Jalur Divre I Sumatera Utara & Aceh, Divre II Sumatera Barat, Divre III Palembang, dan Divre IV Tanjungkarang |
 

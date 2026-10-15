@@ -76,6 +76,7 @@ export const GET = async ({ setHeaders }) => {
                     activeTrains.push({
                         id: train.id,
                         line: train.line,
+                        origin: train.origin || stops[0].stationId,
                         destination: train.destination,
                         fromStation,
                         toStation,
