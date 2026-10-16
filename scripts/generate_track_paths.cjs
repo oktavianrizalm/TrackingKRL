@@ -15,6 +15,7 @@ stations.forEach(s => {
   const id = s.code || s.id || s.name;
   allStationCoords[id] = s.coords;
   allStationCoords[s.name] = s.coords;
+  if (s.id) allStationCoords[s.id] = s.coords;
   if (s.code) allStationCoords[s.code] = s.coords;
 });
 
@@ -443,10 +444,11 @@ function indexLines(rawFeatures, filterFn) {
 }
 
 console.log('Indexing railway tracks...');
+const indexedLrt = indexLines(railway.features, f => f.properties && f.properties.railway === 'light_rail');
 const indexedWhoosh = indexLines(railway.features, f => f.properties && f.properties.highspeed === 'yes');
 const indexedMrt = indexLines(krlRoutes.features, f => f.properties && (f.properties.line === 'MRT' || f.properties.colour === '#1e40af'));
 const indexedConv = [
-  ...indexLines(railway.features, f => !f.properties || f.properties.highspeed !== 'yes'),
+  ...indexLines(railway.features, f => !f.properties || (f.properties.highspeed !== 'yes' && f.properties.railway !== 'light_rail')),
   ...indexLines(krlRoutes.features, f => !f.properties || (f.properties.line !== 'MRT' && f.properties.colour !== '#1e40af'))
 ];
 
@@ -494,10 +496,36 @@ function interpolatePoints(p1, p2, steps = 3) {
   return pts;
 }
 
+function buildSingleLeg(fromCoord, toCoord, indexedTrack, steps = 8) {
+  const leg = [roundCoord(fromCoord)];
+  for (let i = 1; i < steps; i++) {
+    const f = i / steps;
+    const lat = fromCoord[0] + (toCoord[0] - fromCoord[0]) * f;
+    const lng = fromCoord[1] + (toCoord[1] - fromCoord[1]) * f;
+    
+    if (indexedTrack) {
+      const snapped = findNearestOnIndexedTracks(indexedTrack, lng, lat, 8.0);
+      if (snapped) {
+        leg.push(roundCoord(snapped));
+        continue;
+      }
+    }
+    leg.push(roundCoord([lat, lng]));
+  }
+  leg.push(roundCoord(toCoord));
+  return leg;
+}
+
 function buildSmoothLrtSegment(fromId, toId) {
   const fromC = allStationCoords[fromId];
   const toC = allStationCoords[toId];
   if (!fromC || !toC) return null;
+
+  // Use real surveyed physical LRT tracks from OpenStreetMap with 25 sampling steps
+  if (indexedLrt && indexedLrt.length > 0) {
+    const leg = buildSingleLeg(fromC, toC, indexedLrt, 25);
+    if (leg && leg.length >= 2) return leg;
+  }
 
   const key = `${fromId}->${toId}`;
   const revKey = `${toId}->${fromId}`;
@@ -519,25 +547,6 @@ function buildSmoothLrtSegment(fromId, toId) {
   return full;
 }
 
-function buildSingleLeg(fromCoord, toCoord, indexedTrack, steps = 8) {
-  const leg = [roundCoord(fromCoord)];
-  for (let i = 1; i < steps; i++) {
-    const f = i / steps;
-    const lat = fromCoord[0] + (toCoord[0] - fromCoord[0]) * f;
-    const lng = fromCoord[1] + (toCoord[1] - fromCoord[1]) * f;
-    
-    if (indexedTrack) {
-      const snapped = findNearestOnIndexedTracks(indexedTrack, lng, lat, 8.0);
-      if (snapped) {
-        leg.push(roundCoord(snapped));
-        continue;
-      }
-    }
-    leg.push(roundCoord([lat, lng]));
-  }
-  leg.push(roundCoord(toCoord));
-  return leg;
-}
 
 function buildPath(fromId, toId, line) {
   const fromCoord = allStationCoords[fromId];

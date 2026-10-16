@@ -7972,8 +7972,8 @@
     "name": "Cawang LRT",
     "code": "CW_LRT",
     "coords": [
-      -6.2465,
-      106.8667
+      -6.245907,
+      106.8712296
     ],
     "island": "Jawa",
     "type": "LRT",
@@ -7984,8 +7984,8 @@
     "name": "Halim LRT",
     "code": "HLM_LRT",
     "coords": [
-      -6.2456352,
-      106.8844875
+      -6.2458656,
+      106.8872875
     ],
     "island": "Jawa",
     "type": "LRT",

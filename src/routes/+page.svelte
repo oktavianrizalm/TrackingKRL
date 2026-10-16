@@ -222,6 +222,7 @@
 	let trackMultiLineStringMRT: any = null; // For MRT turf snapping
 	let trackMultiLineStringConventional: any = null; // For National conventional KAI turf snapping
 	let trackMultiLineStringWhoosh: any = null; // For Whoosh KCIC high-speed turf snapping
+	let trackMultiLineStringLRT: any = null; // For LRT Jabodebek, Jakarta, and Sumsel turf snapping
 	let trackMultiLineStringNational: any = null; // For fallback snapping
 	let allStationCoords: Record<string, [number, number]> = $state({}); // Map of ID -> [lat, lng]
 	let isMapReady = $state(false);
@@ -653,7 +654,7 @@
 			} else if (train.line === "MRT") {
 				targetTrack = trackMultiLineStringMRT;
 			} else if (train.line === "LRT") {
-				targetTrack = null;
+				targetTrack = trackMultiLineStringLRT;
 			} else {
 				// Conventional tracks only (official OpenRailwayMap dataset)
 				targetTrack = trackMultiLineStringConventional;
@@ -1382,14 +1383,16 @@
 				console.error("Failed to load route geometry:", err),
 			);
 
-		// 2. Fetch and Draw Active National Rail (Conventional Java & Whoosh High Speed)
+		// 2. Fetch and Draw Active National Rail (Conventional Java, Whoosh High Speed, & LRT Systems)
 		const pRailway = fetch("/data/indonesia-railway.geojson")
 			.then((res) => res.json())
 			.then((data) => {
 				const linesConv: any[] = [];
 				const linesWhoosh: any[] = [];
+				const linesLrt: any[] = [];
 				const featuresConv: any[] = [];
 				const featuresWhoosh: any[] = [];
+				const featuresLrt: any[] = [];
 
 				data.features.forEach((f: any) => {
 					const p = f.properties || {};
@@ -1398,11 +1401,19 @@
 						p.gauge === "1435" ||
 						(p.operator && p.operator.includes("Kereta Cepat")) ||
 						(p.name && p.name.includes("Kereta Cepat"));
+					const isLrt =
+						p.railway === "light_rail" ||
+						(p.operator && p.operator.includes("LRT")) ||
+						(p.name && p.name.includes("LRT"));
 
 					if (isWhoosh) {
 						featuresWhoosh.push(f);
 						if (f.geometry && f.geometry.type === "LineString") linesWhoosh.push(f.geometry.coordinates);
 						else if (f.geometry && f.geometry.type === "MultiLineString") f.geometry.coordinates.forEach((c: any) => linesWhoosh.push(c));
+					} else if (isLrt) {
+						featuresLrt.push(f);
+						if (f.geometry && f.geometry.type === "LineString") linesLrt.push(f.geometry.coordinates);
+						else if (f.geometry && f.geometry.type === "MultiLineString") f.geometry.coordinates.forEach((c: any) => linesLrt.push(c));
 					} else {
 						featuresConv.push(f);
 						if (f.geometry && f.geometry.type === "LineString") linesConv.push(f.geometry.coordinates);
@@ -1415,6 +1426,9 @@
 				}
 				if (linesWhoosh.length > 0) {
 					trackMultiLineStringWhoosh = multiLineString(linesWhoosh);
+				}
+				if (linesLrt.length > 0) {
+					trackMultiLineStringLRT = multiLineString(linesLrt);
 				}
 				trackMultiLineStringNational = trackMultiLineStringConventional;
 
@@ -1456,6 +1470,27 @@
 							renderer: vectorCanvasRenderer,
 							pane: "railwayOverlay",
 							style: { color: "#DC2626", weight: 3.0, opacity: 0.95 }
+						}
+					).addTo(railwayLayer);
+				}
+
+				// LRT Light Rail Dedicated Corridors (Jabodebek, Jakarta, Palembang)
+				if (featuresLrt.length > 0) {
+					L.geoJSON(
+						{ type: "FeatureCollection", features: featuresLrt },
+						{
+							renderer: vectorCanvasRenderer,
+							pane: "railwayOverlay",
+							style: { color: "#581C87", weight: 4.5, opacity: 0.6 }
+						}
+					).addTo(railwayLayer);
+
+					L.geoJSON(
+						{ type: "FeatureCollection", features: featuresLrt },
+						{
+							renderer: vectorCanvasRenderer,
+							pane: "railwayOverlay",
+							style: { color: "#9333EA", weight: 2.8, opacity: 0.95 }
 						}
 					).addTo(railwayLayer);
 				}
@@ -1624,51 +1659,11 @@
 				console.error("Failed to load all national stations:", err),
 			);
 
-		// 3. Fetch Precalculated Physical Railway Paths & Draw Active LRT + Sumatra Corridors
+		// 3. Fetch Precalculated Physical Railway Paths
 		const pPaths = fetch("/data/precalculated-track-paths.json")
 			.then((res) => res.json())
 			.then((data) => {
 				Object.assign(stationPairPaths, data);
-
-				const lrtFeatures: any[] = [];
-
-				for (const [key, pts] of Object.entries(data)) {
-					if (!Array.isArray(pts) || (pts as [number, number][]).length < 2) continue;
-					const samples = pts as [number, number][];
-
-					if (key.startsWith("LRT:")) {
-						lrtFeatures.push({
-							type: "Feature",
-							geometry: {
-								type: "LineString",
-								coordinates: samples.map((p) => [p[1], p[0]]),
-							},
-							properties: { key },
-						});
-					}
-				}
-
-				// Draw dedicated LRT elevated corridors
-				if (lrtFeatures.length > 0) {
-					L.geoJSON(
-						{ type: "FeatureCollection", features: lrtFeatures },
-						{
-							renderer: vectorCanvasRenderer,
-							pane: "railwayOverlay",
-							style: { color: "#581C87", weight: 4.5, opacity: 0.6 }
-						}
-					).addTo(railwayLayer);
-
-					L.geoJSON(
-						{ type: "FeatureCollection", features: lrtFeatures },
-						{
-							renderer: vectorCanvasRenderer,
-							pane: "railwayOverlay",
-							style: { color: "#9333EA", weight: 2.8, opacity: 0.95 }
-						}
-					).addTo(railwayLayer);
-				}
-
 				updateTrainMarkers();
 			})
 			.catch((err) =>
