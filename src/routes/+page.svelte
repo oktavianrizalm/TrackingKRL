@@ -383,7 +383,7 @@
 		KCIC_WLN: [-6.58383, 107.41564],
 		KCIC_CKL: [-6.70103, 107.4051],
 		KCIC_SKT: [-6.78619, 107.43887],
-		KCIC_CMI: [-6.885, 107.545],
+		KCIC_CMI: [-6.89625, 107.53142],
 		KCIC_KPO: [-6.95747, 107.57503],
 		KCIC_GDB: [-6.96849, 107.67813],
 	};
@@ -462,13 +462,19 @@
 		"SMC->CU": ["SMC", "BBG", "NBO", "RBG", "CU"],
 		"CU->SMC": ["CU", "RBG", "NBO", "BBG", "SMC"],
 
-		// Whoosh (Halim <-> Padalarang <-> Tegalluar)
-		"HLM->TGLR": ["HLM", "KCIC_CKR", "KCIC_KRW", "KCIC_PWK", "KCIC_WLN", "KCIC_CKL", "KCIC_SKT", "PDL", "KCIC_CMI", "KCIC_KPO", "KCIC_GDB", "TGLR"],
-		"TGLR->HLM": ["TGLR", "KCIC_GDB", "KCIC_KPO", "KCIC_CMI", "PDL", "KCIC_SKT", "KCIC_CKL", "KCIC_WLN", "KCIC_PWK", "KCIC_KRW", "KCIC_CKR", "HLM"],
-		"HLM->PDL": ["HLM", "KCIC_CKR", "KCIC_KRW", "KCIC_PWK", "KCIC_WLN", "KCIC_CKL", "KCIC_SKT", "PDL"],
-		"PDL->HLM": ["PDL", "KCIC_SKT", "KCIC_CKL", "KCIC_WLN", "KCIC_PWK", "KCIC_KRW", "KCIC_CKR", "HLM"],
+		// Whoosh (Halim <-> Karawang <-> Padalarang <-> Tegalluar)
+		"HLM->TGLR": ["HLM", "KCIC_CKR", "KRW", "KCIC_KRW", "KCIC_PWK", "KCIC_WLN", "KCIC_CKL", "KCIC_SKT", "PDL", "KCIC_CMI", "KCIC_KPO", "KCIC_GDB", "TGLR"],
+		"TGLR->HLM": ["TGLR", "KCIC_GDB", "KCIC_KPO", "KCIC_CMI", "PDL", "KCIC_SKT", "KCIC_CKL", "KCIC_WLN", "KCIC_PWK", "KCIC_KRW", "KRW", "KCIC_CKR", "HLM"],
+		"HLM->PDL": ["HLM", "KCIC_CKR", "KRW", "KCIC_KRW", "KCIC_PWK", "KCIC_WLN", "KCIC_CKL", "KCIC_SKT", "PDL"],
+		"PDL->HLM": ["PDL", "KCIC_SKT", "KCIC_CKL", "KCIC_WLN", "KCIC_PWK", "KCIC_KRW", "KRW", "KCIC_CKR", "HLM"],
 		"PDL->TGLR": ["PDL", "KCIC_CMI", "KCIC_KPO", "KCIC_GDB", "TGLR"],
 		"TGLR->PDL": ["TGLR", "KCIC_GDB", "KCIC_KPO", "KCIC_CMI", "PDL"],
+		"HLM->KRW": ["HLM", "KCIC_CKR", "KRW"],
+		"KRW->HLM": ["KRW", "KCIC_CKR", "HLM"],
+		"KRW->PDL": ["KRW", "KCIC_KRW", "KCIC_PWK", "KCIC_WLN", "KCIC_CKL", "KCIC_SKT", "PDL"],
+		"PDL->KRW": ["PDL", "KCIC_SKT", "KCIC_CKL", "KCIC_WLN", "KCIC_PWK", "KCIC_KRW", "KRW"],
+		"KRW->TGLR": ["KRW", "KCIC_KRW", "KCIC_PWK", "KCIC_WLN", "KCIC_CKL", "KCIC_SKT", "PDL", "KCIC_CMI", "KCIC_KPO", "KCIC_GDB", "TGLR"],
+		"TGLR->KRW": ["TGLR", "KCIC_GDB", "KCIC_KPO", "KCIC_CMI", "PDL", "KCIC_SKT", "KCIC_CKL", "KCIC_WLN", "KCIC_PWK", "KCIC_KRW", "KRW"],
 	};
 
 	// Master Rail Spines for continuous corridor breakdowns
@@ -847,14 +853,14 @@
 			: '<span class="px-1.5 py-0.5 rounded text-[9px] font-black bg-emerald-500 text-white">BERGERAK</span>';
 
 		const gpsBadge = train.isLiveGps
-			? '<span class="px-1.5 py-0.5 rounded text-[9px] font-black bg-emerald-500 text-white flex items-center gap-1">📡 LIVE GPS</span>'
-			: '<span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-slate-200 text-slate-700">⏱️ GAPEKA</span>';
+			? '<span class="px-1.5 py-0.5 rounded text-[9px] font-black bg-emerald-500 text-white flex items-center gap-1">LIVE GPS</span>'
+			: '<span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-slate-200 text-slate-700">GAPEKA</span>';
 
 		const speedBadge = isStopped
 			? '<span class="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-100 text-slate-500">0 km/jam</span>'
 			: train.isLiveGps
-				? `<span class="px-1.5 py-0.5 rounded text-[10px] font-mono font-black bg-emerald-50 text-emerald-700 border border-emerald-200">⚡ ${currentSpeed} km/jam</span>`
-				: `<span class="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold bg-indigo-50 text-indigo-700 border border-indigo-200">⚡ ~${currentSpeed} km/jam</span>`;
+				? `<span class="px-1.5 py-0.5 rounded text-[10px] font-mono font-black bg-emerald-50 text-emerald-700 border border-emerald-200">${currentSpeed} km/jam</span>`
+				: `<span class="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold bg-indigo-50 text-indigo-700 border border-indigo-200">~${currentSpeed} km/jam</span>`;
 
 		const stops = train.stops || [];
 		const fromStationName =
@@ -871,15 +877,6 @@
 			: `Menuju <b>${toStationName}</b> (${Math.round(pos.progress * 100)}%)`;
 
 		const cleanTrainTitle = formatTrainTitle(train);
-
-		const headerIcon =
-			train.line === "WHOOSH"
-				? "🚅"
-				: train.line === "BANDARA"
-					? "✈️"
-					: train.line === "LRT"
-						? "🚊"
-						: "🚄";
 
 		const originStation =
 			train.origin ||
@@ -955,7 +952,7 @@
 			stopsHtml = `
 				<div class="mt-2 pt-2 border-t border-slate-200">
 					<div class="flex items-center justify-between text-[10px] font-bold text-slate-600 mb-1.5">
-						<span class="flex items-center gap-1">📋 Jadwal Pemberhentian</span>
+						<span>Jadwal Pemberhentian</span>
 						<span class="text-[9px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.2 rounded">${stops.length} Stasiun</span>
 					</div>
 					<div class="stops-scroll-container max-h-36 overflow-y-auto space-y-0.5 pr-0.5" style="scrollbar-width: thin;">
@@ -968,16 +965,16 @@
 		return `<div class="p-1 font-sans text-xs w-[280px] max-w-[85vw]">
 			<div class="font-black text-sm text-slate-900 mb-1.5 flex items-center justify-between gap-2">
 				<div class="flex items-center gap-1.5">
-					<span>${headerIcon}</span><span>${cleanTrainTitle}</span>
+					<span>${cleanTrainTitle}</span>
 				</div>
 				<div class="flex items-center gap-1">
 					${statusBadge}
 					${gpsBadge}
 				</div>
 			</div>
-			<div class="text-slate-600 mb-0.5"><b>Tujuan:</b> ${train.destination}</div>
+			<div class="text-slate-600 mb-0.5"><b>Tujuan:</b> <span class="font-bold text-teal-600">${train.destination}</span></div>
 			<div class="text-slate-600 mb-1.5 flex items-center justify-between">
-				<div><b>Asal:</b> <span class="font-bold text-teal-600">${originStation}</span></div>
+				<div><b>Asal:</b> <span class="font-medium text-slate-800">${originStation}</span></div>
 				<div>${speedBadge}</div>
 			</div>
 			<div class="bg-slate-100 rounded-lg p-1.5 text-[10px] text-slate-700 font-mono flex items-center justify-between">
@@ -1521,6 +1518,7 @@
 					CPT: [-6.8306, 107.3783],       // Cipatat
 					KKD: [-7.6111, 109.0717],       // Kasugihan
 					KO: [-7.4811, 110.8067],        // Kalioso
+					TI: [-3.58472, 103.08139],      // Tebing Tinggi Empat Lawang
 					SB: [-7.2430228, 112.7421627]   // Surabaya Kota
 				};
 				Object.assign(allStationCoords, kciAliases);

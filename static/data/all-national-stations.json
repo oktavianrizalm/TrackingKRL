@@ -2584,8 +2584,8 @@
     "name": "Karawang",
     "code": "KRW",
     "coords": [
-      -6.3686,
-      107.2413
+      -6.36504,
+      107.21928
     ],
     "island": "Jawa",
     "type": "Whoosh",
@@ -8014,5 +8014,17 @@
     "island": "Jawa",
     "type": "LRT",
     "network": "LRT Jakarta"
+  },
+  {
+    "id": "TI",
+    "name": "Tebing Tinggi",
+    "code": "TI",
+    "coords": [
+      -3.58472,
+      103.08139
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
   }
 ]

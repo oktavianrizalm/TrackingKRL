@@ -8,7 +8,8 @@ export const stationCoordinates: Record<string, [number, number]> = {
     'CKR': [-6.2553138, 107.1450733],  // Cikarang
     'THB': [-6.1857127, 106.8108938],  // Tanah Abang
     'SUD': [-6.2024081, 106.8234493],  // Sudirman
-    'RU': [-6.3527788, 106.2515252],   // Rangkasbitung
+    'RU': [-6.314884, 106.6761518],    // Rawa Buntu
+    'RK': [-6.3527788, 106.2515252],   // Rangkasbitung
     'SRP': [-6.3201527, 106.6655836],  // Serpong
     'TNG': [-6.1769753, 106.6320106],  // Tangerang
     'DU': [-6.1552764, 106.8012968],   // Duri
@@ -46,7 +47,7 @@ export const routes = [
     {
         line: 'RANGKASBITUNG',
         color: '#16A34A', // Green
-        path: ['RU', 'SRP', 'THB']
+        path: ['RK', 'RU', 'SRP', 'THB']
     },
     {
         line: 'TANGERANG',

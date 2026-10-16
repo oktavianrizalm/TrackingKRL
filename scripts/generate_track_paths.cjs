@@ -26,7 +26,7 @@ const WHOOSH_WAYPOINTS = {
   KCIC_WLN: [-6.58383, 107.41564],
   KCIC_CKL: [-6.70103, 107.4051],
   KCIC_SKT: [-6.78619, 107.43887],
-  KCIC_CMI: [-6.885, 107.545],
+  KCIC_CMI: [-6.89625, 107.53142],
   KCIC_KPO: [-6.95747, 107.57503],
   KCIC_GDB: [-6.96849, 107.67813],
 };
@@ -42,7 +42,8 @@ const stationCoordinates = {
   CKR: [-6.2553138, 107.1450733],
   THB: [-6.1857127, 106.8108938],
   SUD: [-6.2024081, 106.8234493],
-  RU: [-6.3527788, 106.2515252],
+  RU: [-6.314884, 106.6761518],  // Rawa Buntu
+  RK: [-6.3527788, 106.2515252], // Rangkasbitung
   SRP: [-6.3201527, 106.6655836],
   TNG: [-6.1769753, 106.6320106],
   DU: [-6.1552764, 106.8012968],
@@ -279,7 +280,7 @@ const CONV_LINES = [
   // Tegal - Slawi - Prupuk
   ['TG', 'SLW', 'PPK'],
   // Cirebon - Purwokerto - Kroya
-  ['CN', 'CNP', 'LWG', 'SDL', 'KRW', 'CLD', 'KGG', 'LR', 'SGG', 'PPK', 'LG', 'BMA', 'KRT', 'PAT', 'KRR', 'KGD', 'PWT', 'NTG', 'KBS', 'RDN', 'KYA'],
+  ['CN', 'CNP', 'LWG', 'SDL', 'CLD', 'KGG', 'LR', 'SGG', 'PPK', 'LG', 'BMA', 'KRT', 'PAT', 'KRR', 'KGD', 'PWT', 'NTG', 'KBS', 'RDN', 'KYA'],
   // Kroya - Solo Balapan
   ['KYA', 'KJ', 'SPH', 'TBK', 'TB', 'IJ', 'GB', 'KA', 'SRW', 'SOA', 'KM', 'WNS', 'KWN', 'PRB', 'BTH', 'KTA', 'JN', 'WJ', 'KDG', 'WT', 'STL', 'RWL', 'PTN', 'YK', 'LPN', 'MGW', 'KLS', 'BBN', 'SWT', 'KT', 'CE', 'DL', 'GW', 'PWS', 'SLO', 'SK'],
   // Solo - Madiun - Kertosono - Surabaya
@@ -570,9 +571,18 @@ function buildPath(fromId, toId, line) {
   // 2. Whoosh: dedicated high-speed rail alignment
   if (line === 'WHOOSH') {
     const WHOOSH_INTERMEDIATES = {
-      'HLM->KRW': ['KCIC_CKR', 'KCIC_KRW'],
-      'KRW->PDL': ['KCIC_PWK', 'KCIC_WLN', 'KCIC_CKL', 'KCIC_SKT'],
-      'PDL->TGLR': ['KCIC_CMI', 'KCIC_KPO', 'KCIC_GDB']
+      'HLM->KRW': ['KCIC_CKR'],
+      'KRW->HLM': ['KCIC_CKR'],
+      'KRW->PDL': ['KCIC_KRW', 'KCIC_PWK', 'KCIC_WLN', 'KCIC_CKL', 'KCIC_SKT'],
+      'PDL->KRW': ['KCIC_SKT', 'KCIC_CKL', 'KCIC_WLN', 'KCIC_PWK', 'KCIC_KRW'],
+      'PDL->TGLR': ['KCIC_CMI', 'KCIC_KPO', 'KCIC_GDB'],
+      'TGLR->PDL': ['KCIC_GDB', 'KCIC_KPO', 'KCIC_CMI'],
+      'HLM->PDL': ['KCIC_CKR', 'KRW', 'KCIC_KRW', 'KCIC_PWK', 'KCIC_WLN', 'KCIC_CKL', 'KCIC_SKT'],
+      'PDL->HLM': ['KCIC_SKT', 'KCIC_CKL', 'KCIC_WLN', 'KCIC_PWK', 'KCIC_KRW', 'KRW', 'KCIC_CKR'],
+      'HLM->TGLR': ['KCIC_CKR', 'KRW', 'KCIC_KRW', 'KCIC_PWK', 'KCIC_WLN', 'KCIC_CKL', 'KCIC_SKT', 'PDL', 'KCIC_CMI', 'KCIC_KPO', 'KCIC_GDB'],
+      'TGLR->HLM': ['KCIC_GDB', 'KCIC_KPO', 'KCIC_CMI', 'PDL', 'KCIC_SKT', 'KCIC_CKL', 'KCIC_WLN', 'KCIC_PWK', 'KCIC_KRW', 'KRW', 'KCIC_CKR'],
+      'KRW->TGLR': ['KCIC_KRW', 'KCIC_PWK', 'KCIC_WLN', 'KCIC_CKL', 'KCIC_SKT', 'PDL', 'KCIC_CMI', 'KCIC_KPO', 'KCIC_GDB'],
+      'TGLR->KRW': ['KCIC_GDB', 'KCIC_KPO', 'KCIC_CMI', 'PDL', 'KCIC_SKT', 'KCIC_CKL', 'KCIC_WLN', 'KCIC_PWK', 'KCIC_KRW']
     };
     const pairKey = `${fromId}->${toId}`;
     const revPairKey = `${toId}->${fromId}`;

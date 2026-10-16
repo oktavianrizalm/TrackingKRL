@@ -32,7 +32,7 @@ const idToName: Record<string, string> = {
     'CKR': 'Cikarang',
     'THB': 'Tanah Abang',
     'SUD': 'Sudirman',
-    'RU': 'Rangkasbitung',
+    'RU': 'Rawa Buntu',
     'RK': 'Rangkasbitung',
     'SRP': 'Serpong',
     'TNG': 'Tangerang',
