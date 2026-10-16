@@ -91,6 +91,8 @@ const KCI_CODE_ALIASES = {
   CPT: [-6.8306, 107.3783],       // Cipatat
   KKD: [-7.6111, 109.0717],       // Kasugihan
   KO: [-7.4811, 110.8067],        // Kalioso
+  TI: [-3.58472, 103.08139],      // Tebing Tinggi Empat Lawang
+  KTP: [-4.7173, 104.7984],       // Ketapang Lampung Utara
   SB: [-7.2430228, 112.7421627]   // Surabaya Kota
 };
 Object.assign(allStationCoords, KCI_CODE_ALIASES);
@@ -264,11 +266,11 @@ const LRT_WAYPOINTS = {
 // Master Rail Network Topology across Java & Sumatra (ensures 100% accurate physical routing along real tracks)
 const CONV_LINES = [
   // Pantura Barat (Jakarta - Cikampek)
-  ['JAKK', 'GMR', 'PSE', 'KMT', 'GST', 'JNG', 'KLD', 'BUA', 'KLDB', 'CUK', 'KRI', 'BKS', 'BKST', 'TB', 'CIT', 'TLM', 'CKR', 'LBG', 'KDH', 'KW', 'KLI', 'KOS', 'DWN', 'CKP'],
+  ['JAKK', 'GMR', 'PSE', 'KMT', 'GST', 'JNG', 'KLD', 'BUA', 'KLDB', 'CUK', 'KRI', 'BKS', 'BKST', 'TB', 'CIT', 'TLM', 'CKR', 'LMB', 'KDH', 'KW', 'KLI', 'KOS', 'DWN', 'CKP'],
   // Pantura Tengah (Cikampek - Cirebon)
   ['CKP', 'TJS', 'PAB', 'PRI', 'CKM', 'PGB', 'CRA', 'HGL', 'CLH', 'KAB', 'TIS', 'TLS', 'JTB', 'KTM', 'AWN', 'BDW', 'CNK', 'CN'],
   // Pantura Timur (Cirebon - Semarang - Surabaya)
-  ['CN', 'CNP', 'BBK', 'LOS', 'TGN', 'BB', 'TG', 'LR', 'PML', 'PTN', 'CO', 'SRI', 'PK', 'BTG', 'UJN', 'KNS', 'PLB', 'KRN', 'WLR', 'KBD', 'KLW', 'MKG', 'JRK', 'SMC', 'SMT', 'ATA', 'BBG', 'TGW', 'GUB', 'KGT', 'SDA', 'NBO', 'GBN', 'JBN', 'PNL', 'KNN', 'SLR', 'DPL', 'RBG', 'WDU', 'KPA', 'CU', 'KSE', 'KIT', 'BJ', 'KPS', 'SRJ', 'BWO', 'BBT', 'GEB', 'PC', 'LMG', 'DDK', 'CME', 'BNW', 'KND', 'TES', 'SBI'],
+  ['CN', 'CNP', 'BBK', 'LOS', 'TGN', 'BB', 'TG', 'LR', 'PML', 'PTA', 'CO', 'SRI', 'PK', 'BTG', 'UJN', 'KNS', 'PLB', 'KRP', 'WLR', 'KBD', 'KLW', 'MKG', 'JRK', 'SMC', 'SMT', 'ATA', 'BBG', 'TGW', 'GUB', 'KGT', 'SDI', 'NBO', 'GBN', 'JBN', 'PNL', 'KNN', 'SLR', 'DPL', 'RBG', 'WDU', 'KPA', 'CU', 'KSE', 'KIT', 'BJ', 'KPS', 'SRJ', 'BWO', 'BBT', 'GEB', 'PC', 'LMG', 'DDK', 'CME', 'BNW', 'KND', 'TES', 'SBI'],
   // Priangan Barat (Cikampek - Purwakarta - Padalarang - Bandung)
   ['CKP', 'CBR', 'PWK', 'CA', 'SUT', 'PLD', 'CD', 'RH', 'MSI', 'SKT', 'CLE', 'PDL', 'GK', 'CMI', 'CMD', 'CIR', 'BD'],
   // Priangan Timur (Bandung - Kroya)
@@ -282,18 +284,18 @@ const CONV_LINES = [
   // Cirebon - Purwokerto - Kroya
   ['CN', 'CNP', 'LWG', 'SDL', 'CLD', 'KGG', 'LR', 'SGG', 'PPK', 'LG', 'BMA', 'KRT', 'PAT', 'KRR', 'KGD', 'PWT', 'NTG', 'KBS', 'RDN', 'KYA'],
   // Kroya - Solo Balapan
-  ['KYA', 'KJ', 'SPH', 'TBK', 'TB', 'IJ', 'GB', 'KA', 'SRW', 'SOA', 'KM', 'WNS', 'KWN', 'PRB', 'BTH', 'KTA', 'JN', 'WJ', 'KDG', 'WT', 'STL', 'RWL', 'PTN', 'YK', 'LPN', 'MGW', 'KLS', 'BBN', 'SWT', 'KT', 'CE', 'DL', 'GW', 'PWS', 'SLO', 'SK'],
+  ['KYA', 'KJ', 'SPH', 'TBK', 'IJ', 'GB', 'KA', 'SRW', 'SOA', 'KM', 'WNS', 'KWN', 'PRB', 'BTH', 'KTA', 'JN', 'WJ', 'KDG', 'WT', 'STL', 'RWL', 'PTN', 'YK', 'LPN', 'MGW', 'KLS', 'BBN', 'SWT', 'KT', 'CE', 'DL', 'GW', 'PWS', 'SLO', 'SK'],
   // Solo - Madiun - Kertosono - Surabaya
-  ['SLO', 'SK', 'PL', 'KMR', 'SR', 'KRO', 'MSR', 'GP', 'WK', 'KDB', 'NGW', 'GG', 'MAG', 'MN', 'BBD', 'CRB', 'SN', 'WLG', 'BGR', 'NJ', 'SKM', 'BRN', 'KTS', 'SMB', 'JG', 'PTR', 'SBO', 'CRM', 'MR', 'TRK', 'KDN', 'KRN', 'BH', 'SPJ', 'WO', 'SGU', 'SBI'],
+  ['SLO', 'SK', 'PL', 'KMR', 'SR', 'KRO', 'MSR', 'GP', 'WK', 'KDB', 'NGW', 'GG', 'MAG', 'MN', 'BBD', 'CRB', 'SRD', 'WLG', 'BGR', 'NJ', 'SKM', 'BRN', 'KTS', 'SMB', 'JG', 'PTR', 'SBO', 'CRM', 'MR', 'TRK', 'KDN', 'KRN', 'BH', 'SPJ', 'WO', 'SGU', 'SBI'],
   // Solo - Wonogiri (Batara Kresna)
   ['PWS', 'STA', 'SKH', 'PNT', 'WNG'],
   // Solo - Gundih - Semarang & Kedungjati branch
-  ['SLO', 'SK', 'SLM', 'SUM', 'GPK', 'KSO', 'GD', 'MGT', 'SDA', 'TRH', 'NBO'],
+  ['SLO', 'SK', 'SLM', 'SUM', 'GPK', 'KSO', 'GD', 'MGT', 'SDI', 'TRH', 'NBO'],
   ['GD', 'TW', 'KEJ', 'TGG', 'BBG', 'SMT'],
   // Surabaya Kota branch
   ['SGU', 'SB'],
   // Kertosono - Blitar - Malang - Bangil - Surabaya
-  ['KTS', 'PWA', 'PPR', 'MGN', 'SS', 'KD', 'NDL', 'KRS', 'NJG', 'TA', 'SBL', 'NT', 'RJ', 'KRN', 'BL', 'GRM', 'TAL', 'WG', 'KSB', 'PGJ', 'SBP', 'NB', 'KPN', 'PSI', 'MLK', 'ML', 'BMG', 'SGS', 'LW', 'SKJ', 'BG', 'PR', 'TGA', 'SDA', 'GDG', 'WR', 'WO', 'SGU'],
+  ['KTS', 'PWA', 'PPR', 'MGN', 'SS', 'KD', 'NDL', 'KRS', 'NJG', 'TA', 'SBL', 'NT', 'RJ', 'BL', 'GRM', 'TAL', 'WG', 'KSB', 'PGJ', 'SBP', 'NB', 'KPN', 'PSI', 'MLK', 'ML', 'BMG', 'SGS', 'LW', 'SKJ', 'BG', 'PR', 'TGA', 'SDA', 'GDG', 'WR', 'WO', 'SGU'],
   // Tapal Kuda (Bangil - Ketapang)
   ['BG', 'PS', 'RO', 'GI', 'BYM', 'PB', 'LEC', 'MLS', 'RN', 'KK', 'RDA', 'JTR', 'TGL', 'BSS', 'RBP', 'MI', 'JR', 'AJ', 'KTK', 'KLT', 'LDO', 'SPL', 'GRN', 'MRW', 'KBR', 'GLM', 'SWD', 'KKL', 'KSL', 'TGR', 'SGJ', 'RGP', 'BWI', 'AGO', 'KTG'],
   // Cilacap branch
@@ -308,7 +310,7 @@ const CONV_LINES = [
   ['MRI', 'MTR', 'JNG', 'POK', 'KMT', 'GST', 'PSE', 'KMO', 'RJW', 'KPB', 'AK', 'DU', 'THB', 'KAT', 'SUDB', 'SUD', 'MRI'],
   ['KPB', 'JAKK'],
   // Tangerang line
-  ['DU', 'GRG', 'PSG', 'TKO', 'BOI', 'RW', 'GF', 'PB', 'PI', 'BPR', 'THI', 'TNG'],
+  ['DU', 'GRG', 'PSG', 'TKO', 'BOI', 'RW', 'KDS', 'PI', 'BPR', 'TTI', 'TNG'],
   // Tanjung Priuk line
   ['JAKK', 'KPB', 'AC', 'TPO', 'TPK'],
   // Bandara Soetta
@@ -325,17 +327,14 @@ const CONV_LINES = [
   ['DUK', 'BIM'],
   // Sumatera Selatan & Lampung
   ['KPT', 'KAS', 'SIG', 'PYK', 'SDN', 'GLB', 'KED', 'LEB', 'PBM'],
-  ['PBM', 'BIB', 'PNG', 'PNM', 'NRU', 'BLP', 'GNM', 'UJM', 'ME', 'MLI', 'BJS', 'SCT', 'LT', 'SUA', 'SNA', 'BGM', 'TBI', 'MSL', 'KOP', 'LLG'],
-  ['PBM', 'PBR', 'TJR', 'ASM', 'PGG', 'MET', 'PNW', 'BLT', 'LBT', 'BTA', 'KMK', 'SPC', 'GLS', 'MP', 'WAY', 'GHM', 'BBU', 'NGN', 'TLY', 'KBL', 'CMS', 'KB', 'KAG', 'SLS', 'CPK', 'KTP', 'NRR', 'TLB', 'HJP', 'TGI', 'BKI', 'RGS', 'BRN', 'GDR', 'LAR', 'RJS', 'TNK']
+  ['PBM', 'BIB', 'PNG', 'PNM', 'NRU', 'BLP', 'GNM', 'UJM', 'ME', 'MLI', 'BJS', 'SCT', 'LT', 'SUA', 'SNA', 'BGM', 'TI', 'MSL', 'KOP', 'LLG'],
+  ['PBM', 'PBR', 'TJR', 'ASM', 'PGG', 'MET', 'PNW', 'BLT', 'LBT', 'BTA', 'KMK', 'SPC', 'GLS', 'MP', 'WAY', 'GHM', 'BBU', 'NGN', 'TLY', 'NRR', 'KTP', 'CEP', 'KB', 'CMS', 'KAG', 'BBA', 'SLS', 'HJP', 'BKI', 'RGS', 'TGI', 'BTI', 'RJS', 'GDR', 'LAR', 'TNK']
 ];
 
 const ALIAS_EDGES = [
   ['DAW', 'DWN'],
   ['MTM', 'TLM'],
   ['BOP', 'PLG'],
-  ['SDI', 'SDA'],
-  ['TBK', 'TB'],
-  ['WLT', 'WT'],
   ['PASIR', 'PSJ']
 ];
 

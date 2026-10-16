@@ -415,12 +415,12 @@
 		"CMI->JNG": ["CMI", "PDL", "CLE", "SKT", "CD", "PLD", "SUT", "CA", "PWK", "CBR", "CKP", "DWN", "KW", "CKR", "BKS", "JNG"],
 		"PSE->PWK": ["PSE", "JNG", "BKS", "CKR", "KW", "DWN", "CKP", "CBR", "PWK"],
 		"PWK->PSE": ["PWK", "CBR", "CKP", "DWN", "KW", "CKR", "BKS", "JNG", "PSE"],
-		"BKS->PWK": ["BKS", "BKST", "TB", "CIT", "TLM", "CKR", "LBG", "KDH", "KW", "KLI", "KOS", "DWN", "CKP", "CBR", "PWK"],
-		"PWK->BKS": ["PWK", "CBR", "CKP", "DWN", "KOS", "KLI", "KW", "KDH", "LBG", "CKR", "TLM", "CIT", "TB", "BKST", "BKS"],
+		"BKS->PWK": ["BKS", "BKST", "TB", "CIT", "TLM", "CKR", "LMB", "KDH", "KW", "KLI", "KOS", "DWN", "CKP", "CBR", "PWK"],
+		"PWK->BKS": ["PWK", "CBR", "CKP", "DWN", "KOS", "KLI", "KW", "KDH", "LMB", "CKR", "TLM", "CIT", "TB", "BKST", "BKS"],
 		"PWK->KW": ["PWK", "CBR", "CKP", "DWN", "KOS", "KLI", "KW"],
 		"KW->PWK": ["KW", "KLI", "KOS", "DWN", "CKP", "CBR", "PWK"],
-		"PWK->CKR": ["PWK", "CBR", "CKP", "DWN", "KOS", "KLI", "KW", "KDH", "LBG", "CKR"],
-		"CKR->PWK": ["CKR", "LBG", "KDH", "KW", "KLI", "KOS", "DWN", "CKP", "CBR", "PWK"],
+		"PWK->CKR": ["PWK", "CBR", "CKP", "DWN", "KOS", "KLI", "KW", "KDH", "LMB", "CKR"],
+		"CKR->PWK": ["CKR", "LMB", "KDH", "KW", "KLI", "KOS", "DWN", "CKP", "CBR", "PWK"],
 
 		// Cikampek <-> Karawang & Cikarang
 		"KW->CKP": ["KW", "KOS", "DWN", "CKP"],
@@ -479,15 +479,15 @@
 
 	// Master Rail Spines for continuous corridor breakdowns
 	const SPINES = [
-		['GMR', 'PSE', 'JNG', 'BKS', 'BKST', 'TB', 'CIT', 'TLM', 'CKR', 'LBG', 'KDH', 'KW', 'KLI', 'KOS', 'DWN', 'CKP', 'CBR', 'PWK'],
-		['GMR', 'PSE', 'JNG', 'BKS', 'CKR', 'KW', 'DWN', 'CKP', 'PAB', 'HGL', 'JTB', 'CN', 'CNP', 'WDW', 'BBK', 'LOS', 'TGN', 'BB', 'TG', 'LR', 'PML', 'PTN', 'CO', 'SRI', 'PK', 'BTG', 'UJN', 'KNS', 'PLB', 'KRN', 'WLR', 'KBD', 'SMC', 'SMT', 'BBG', 'NBO', 'RBG', 'CU', 'KPS', 'BJ', 'BBT', 'LMG', 'SBI'],
-		['CN', 'CNP', 'CLD', 'KGG', 'SGG', 'PPK', 'BMA', 'KRT', 'KRR', 'PWT', 'NTG', 'RDN', 'KYA', 'SPH', 'TB', 'IJ', 'GB', 'SRW', 'KM', 'KWN', 'KA', 'WNS', 'KTA', 'JN', 'WT', 'RWL', 'YK', 'LPN', 'MGW', 'KT', 'PWS', 'SLO'],
+		['GMR', 'PSE', 'JNG', 'BKS', 'BKST', 'TB', 'CIT', 'TLM', 'CKR', 'LMB', 'KDH', 'KW', 'KLI', 'KOS', 'DWN', 'CKP', 'CBR', 'PWK'],
+		['GMR', 'PSE', 'JNG', 'BKS', 'CKR', 'KW', 'DWN', 'CKP', 'PAB', 'HGL', 'JTB', 'CN', 'CNP', 'WDW', 'BBK', 'LOS', 'TGN', 'BB', 'TG', 'LR', 'PML', 'PTA', 'CO', 'SRI', 'PK', 'BTG', 'UJN', 'KNS', 'PLB', 'KRP', 'WLR', 'KBD', 'SMC', 'SMT', 'BBG', 'NBO', 'RBG', 'CU', 'KPS', 'BJ', 'BBT', 'LMG', 'SBI'],
+		['CN', 'CNP', 'CLD', 'KGG', 'SGG', 'PPK', 'BMA', 'KRT', 'KRR', 'PWT', 'NTG', 'RDN', 'KYA', 'SPH', 'TBK', 'IJ', 'GB', 'SRW', 'KM', 'KWN', 'KA', 'WNS', 'KTA', 'JN', 'WT', 'RWL', 'YK', 'LPN', 'MGW', 'KT', 'PWS', 'SLO'],
 		['CKP', 'CBR', 'PWK', 'CA', 'SUT', 'PLD', 'CD', 'SKT', 'CLE', 'PDL', 'CMI', 'BD', 'CTH', 'KAC'],
 		['BD', 'KAC', 'RCK', 'CCL', 'NG', 'LL', 'CB', 'WB', 'CPD', 'CAW', 'RJP', 'TSM', 'AW', 'MNJ', 'CI', 'BJG', 'KNP', 'BJR', 'LN', 'MLW', 'SDR', 'GDM', 'KWG', 'JRL', 'KBS', 'KYA'],
 		['CCL', 'NG', 'LL', 'CB', 'PASIR', 'WNR', 'GRT'],
 		['CP', 'GM', 'KKD', 'LBG', 'KH', 'MA', 'SKP', 'KYA'],
-		['SLO', 'PWS', 'PL', 'SR', 'WK', 'KG', 'NGW', 'BBD', 'MN', 'CRB', 'SN', 'BGR', 'NJ', 'SKM', 'BRN', 'KTS', 'PTR', 'SMB', 'JG', 'SBO', 'MR', 'TRK', 'KDN', 'KRN', 'BH', 'SPJ', 'WO', 'SGU', 'SBI'],
-		['SLO', 'SK', 'KSO', 'GDM', 'BBG', 'SMT', 'SMC'],
+		['SLO', 'PWS', 'PL', 'SR', 'WK', 'KG', 'NGW', 'BBD', 'MN', 'CRB', 'SRD', 'BGR', 'NJ', 'SKM', 'BRN', 'KTS', 'PTR', 'SMB', 'JG', 'SBO', 'MR', 'TRK', 'KDN', 'KRN', 'BH', 'SPJ', 'WO', 'SGU', 'SBI'],
+		['SLO', 'SK', 'KSO', 'GD', 'KEJ', 'BBG', 'SMT', 'SMC'],
 		['KTS', 'KD', 'TA', 'BL', 'GRM', 'TAL', 'WG', 'KSB', 'PGJ', 'SBP', 'NB', 'KPN', 'PSI', 'MLK', 'ML', 'LW', 'BG', 'SDA', 'WO', 'SGU'],
 		['BG', 'PS', 'RO', 'GI', 'BYM', 'PB', 'LEC', 'RN', 'KK', 'RDA', 'JTR', 'TGL', 'BSS', 'RBP', 'MI', 'JR', 'AJ', 'KLT', 'GRN', 'MRW', 'KBR', 'GLM', 'SWD', 'KSL', 'TGR', 'RGP', 'BWI', 'AGO', 'KTG'],
 		['THB', 'PLM', 'KBY', 'PDJ', 'JMU', 'SDM', 'RU', 'SRP', 'CSK', 'CC', 'PRP', 'CJT', 'DAR', 'TEJ', 'TGS', 'CKY', 'MJ', 'CTR', 'RK', 'SG', 'KRA', 'TOJB', 'CLG', 'KEN', 'MER'],
@@ -495,7 +495,10 @@
 		['HLM', 'KRW', 'PDL', 'TGLR'],
 		['MRI', 'SUD', 'BNC', 'DU', 'PSG', 'RW', 'KDS', 'PI', 'BPR', 'BST'],
 		['WT', 'YIA'],
-		['MDN', 'KNM', 'LBP', 'LBU', 'TBI', 'SIR', 'KIS', 'TNB', 'PBA', 'MBM', 'RAP'],
+		['MDN', 'LBP', 'PBA', 'TBI', 'KIS', 'MBM', 'RAP'],
+		['TBI', 'SIR'],
+		['KIS', 'TNB'],
+		['LBP', 'KNM'],
 		['MDN', 'BIJ'],
 		['BIM', 'DUK', 'PD', 'ATR', 'TAB', 'LBY', 'PMN', 'NRS'],
 		['LLG', 'LT', 'ME', 'PBM', 'KPT'],
@@ -1308,16 +1311,8 @@
 			},
 		);
 
-		railwayLayer = L.tileLayer(
-			"https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png",
-			{
-				maxZoom: 19,
-				opacity: 0.85,
-				attribution:
-					'&copy; <a href="https://www.openrailwaymap.org/">OpenRailwayMap</a> contributors',
-				pane: "railwayOverlay",
-			},
-		);
+		// Custom Active Railway Vector Layer Group (active-only lines, eliminates all abandoned/dead tracks)
+		railwayLayer = L.layerGroup([], { pane: "railwayOverlay" });
 
 		if (currentBasemap === "satellite") {
 			satelliteLayer.addTo(mapObj);
@@ -1331,9 +1326,9 @@
 			railwayLayer.addTo(mapObj);
 		}
 
-		const vectorCanvasRenderer = L.canvas({ padding: 0.5 });
+		const vectorCanvasRenderer = L.canvas({ padding: 0.5, pane: "railwayOverlay" });
 
-		// Fetch and Draw Real GeoJSON Routes with GPU Canvas renderer
+		// 1. Fetch and Draw Active KRL & MRT Routes
 		const p1 = fetch("/krl-routes.geojson")
 			.then((res) => res.json())
 			.then((data) => {
@@ -1357,30 +1352,116 @@
 				trackMultiLineStringMRT =
 					linesMRT.length > 0 ? multiLineString(linesMRT) : null;
 
-				// Draw only dedicated MRT Jakarta underground/elevated route; conventional tracks are beautifully handled by official OpenRailwayMap
-				if (linesMRT.length > 0) {
+				// Draw dedicated MRT Jakarta route onto active railwayLayer
+				const mrtFeatures = data.features.filter(
+					(f: any) =>
+						f.properties.line === "MRT" ||
+						f.properties.colour === "#1e40af",
+				);
+				if (mrtFeatures.length > 0) {
 					L.geoJSON(
-						{
-							type: "FeatureCollection",
-							features: data.features.filter(
-								(f: any) =>
-									f.properties.line === "MRT" ||
-									f.properties.colour === "#1e40af",
-							),
-						},
+						{ type: "FeatureCollection", features: mrtFeatures },
 						{
 							renderer: vectorCanvasRenderer,
-							style: {
-								color: "#1E40AF",
-								weight: 4,
-								opacity: 0.85,
-							},
-						},
-					).addTo(mapObj);
+							pane: "railwayOverlay",
+							style: { color: "#1E3A8A", weight: 4.5, opacity: 0.6 }
+						}
+					).addTo(railwayLayer);
+
+					L.geoJSON(
+						{ type: "FeatureCollection", features: mrtFeatures },
+						{
+							renderer: vectorCanvasRenderer,
+							pane: "railwayOverlay",
+							style: { color: "#2563EB", weight: 2.8, opacity: 0.95 }
+						}
+					).addTo(railwayLayer);
 				}
 			})
 			.catch((err) =>
 				console.error("Failed to load route geometry:", err),
+			);
+
+		// 2. Fetch and Draw Active National Rail (Conventional Java & Whoosh High Speed)
+		const pRailway = fetch("/data/indonesia-railway.geojson")
+			.then((res) => res.json())
+			.then((data) => {
+				const linesConv: any[] = [];
+				const linesWhoosh: any[] = [];
+				const featuresConv: any[] = [];
+				const featuresWhoosh: any[] = [];
+
+				data.features.forEach((f: any) => {
+					const p = f.properties || {};
+					const isWhoosh =
+						p.highspeed === "yes" ||
+						p.gauge === "1435" ||
+						(p.operator && p.operator.includes("Kereta Cepat")) ||
+						(p.name && p.name.includes("Kereta Cepat"));
+
+					if (isWhoosh) {
+						featuresWhoosh.push(f);
+						if (f.geometry && f.geometry.type === "LineString") linesWhoosh.push(f.geometry.coordinates);
+						else if (f.geometry && f.geometry.type === "MultiLineString") f.geometry.coordinates.forEach((c: any) => linesWhoosh.push(c));
+					} else {
+						featuresConv.push(f);
+						if (f.geometry && f.geometry.type === "LineString") linesConv.push(f.geometry.coordinates);
+						else if (f.geometry && f.geometry.type === "MultiLineString") f.geometry.coordinates.forEach((c: any) => linesConv.push(c));
+					}
+				});
+
+				if (linesConv.length > 0) {
+					trackMultiLineStringConventional = multiLineString(linesConv);
+				}
+				if (linesWhoosh.length > 0) {
+					trackMultiLineStringWhoosh = multiLineString(linesWhoosh);
+				}
+				trackMultiLineStringNational = trackMultiLineStringConventional;
+
+				// Conventional Heavy Rail (Active Only)
+				if (featuresConv.length > 0) {
+					L.geoJSON(
+						{ type: "FeatureCollection", features: featuresConv },
+						{
+							renderer: vectorCanvasRenderer,
+							pane: "railwayOverlay",
+							style: { color: "#0F172A", weight: 3.5, opacity: 0.5 }
+						}
+					).addTo(railwayLayer);
+
+					L.geoJSON(
+						{ type: "FeatureCollection", features: featuresConv },
+						{
+							renderer: vectorCanvasRenderer,
+							pane: "railwayOverlay",
+							style: { color: "#F97316", weight: 2.0, opacity: 0.9 }
+						}
+					).addTo(railwayLayer);
+				}
+
+				// Whoosh High-Speed Rail
+				if (featuresWhoosh.length > 0) {
+					L.geoJSON(
+						{ type: "FeatureCollection", features: featuresWhoosh },
+						{
+							renderer: vectorCanvasRenderer,
+							pane: "railwayOverlay",
+							style: { color: "#7F1D1D", weight: 5.0, opacity: 0.6 }
+						}
+					).addTo(railwayLayer);
+
+					L.geoJSON(
+						{ type: "FeatureCollection", features: featuresWhoosh },
+						{
+							renderer: vectorCanvasRenderer,
+							pane: "railwayOverlay",
+							style: { color: "#DC2626", weight: 3.0, opacity: 0.95 }
+						}
+					).addTo(railwayLayer);
+				}
+			})
+			.catch((err) =>
+				console.error("Failed to load national railway geometry:", err),
 			);
 
 		// Place Main Station Markers
@@ -1519,6 +1600,7 @@
 					KKD: [-7.6111, 109.0717],       // Kasugihan
 					KO: [-7.4811, 110.8067],        // Kalioso
 					TI: [-3.58472, 103.08139],      // Tebing Tinggi Empat Lawang
+					KTP: [-4.7173, 104.7984],       // Ketapang Lampung Utara
 					SB: [-7.2430228, 112.7421627]   // Surabaya Kota
 				};
 				Object.assign(allStationCoords, kciAliases);
@@ -1542,11 +1624,51 @@
 				console.error("Failed to load all national stations:", err),
 			);
 
-		// Fetch Precalculated Physical Railway Paths (instant 200 KB load, zero main-thread Turf lockup)
+		// 3. Fetch Precalculated Physical Railway Paths & Draw Active LRT + Sumatra Corridors
 		const pPaths = fetch("/data/precalculated-track-paths.json")
 			.then((res) => res.json())
 			.then((data) => {
 				Object.assign(stationPairPaths, data);
+
+				const lrtFeatures: any[] = [];
+
+				for (const [key, pts] of Object.entries(data)) {
+					if (!Array.isArray(pts) || (pts as [number, number][]).length < 2) continue;
+					const samples = pts as [number, number][];
+
+					if (key.startsWith("LRT:")) {
+						lrtFeatures.push({
+							type: "Feature",
+							geometry: {
+								type: "LineString",
+								coordinates: samples.map((p) => [p[1], p[0]]),
+							},
+							properties: { key },
+						});
+					}
+				}
+
+				// Draw dedicated LRT elevated corridors
+				if (lrtFeatures.length > 0) {
+					L.geoJSON(
+						{ type: "FeatureCollection", features: lrtFeatures },
+						{
+							renderer: vectorCanvasRenderer,
+							pane: "railwayOverlay",
+							style: { color: "#581C87", weight: 4.5, opacity: 0.6 }
+						}
+					).addTo(railwayLayer);
+
+					L.geoJSON(
+						{ type: "FeatureCollection", features: lrtFeatures },
+						{
+							renderer: vectorCanvasRenderer,
+							pane: "railwayOverlay",
+							style: { color: "#9333EA", weight: 2.8, opacity: 0.95 }
+						}
+					).addTo(railwayLayer);
+				}
+
 				updateTrainMarkers();
 			})
 			.catch((err) =>
@@ -1555,45 +1677,9 @@
 
 		L._mapInstance = mapObj;
 
-		Promise.all([p1, p2, pPaths]).then(() => {
+		Promise.all([p1, p2, pRailway, pPaths]).then(() => {
 			updateTrainMarkers();
 		});
-
-		// Background idle-load of national track geometry for custom live GPS pings only (non-blocking)
-		if (typeof window !== "undefined" && "requestIdleCallback" in window) {
-			window.requestIdleCallback(() => {
-				fetch("/data/indonesia-railway.geojson")
-					.then((res) => res.json())
-					.then((data) => {
-						const linesConv: any[] = [];
-						const linesWhoosh: any[] = [];
-						data.features.forEach((f: any) => {
-							const p = f.properties || {};
-							const isWhoosh =
-								p.highspeed === "yes" ||
-								p.gauge === "1435" ||
-								(p.operator && p.operator.includes("Kereta Cepat")) ||
-								(p.name && p.name.includes("Kereta Cepat"));
-
-							if (f.geometry && f.geometry.type === "LineString") {
-								if (isWhoosh) linesWhoosh.push(f.geometry.coordinates);
-								else linesConv.push(f.geometry.coordinates);
-							} else if (f.geometry && f.geometry.type === "MultiLineString") {
-								if (isWhoosh) f.geometry.coordinates.forEach((c: any) => linesWhoosh.push(c));
-								else f.geometry.coordinates.forEach((c: any) => linesConv.push(c));
-							}
-						});
-						if (linesConv.length > 0) {
-							trackMultiLineStringConventional = multiLineString(linesConv);
-						}
-						if (linesWhoosh.length > 0) {
-							trackMultiLineStringWhoosh = multiLineString(linesWhoosh);
-						}
-						trackMultiLineStringNational = trackMultiLineStringConventional;
-					})
-					.catch(() => {});
-			});
-		}
 	};
 
 	// Map zoom helper

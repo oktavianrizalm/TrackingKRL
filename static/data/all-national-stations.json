@@ -8026,5 +8026,17 @@
     "island": "Sumatera",
     "type": "KAI",
     "network": "KAI"
+  },
+  {
+    "id": "KTP",
+    "name": "Ketapang (Lampung)",
+    "code": "KTP",
+    "coords": [
+      -4.7173,
+      104.7984
+    ],
+    "island": "Sumatera",
+    "type": "KAI",
+    "network": "KAI"
   }
 ]
