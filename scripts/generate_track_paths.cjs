@@ -318,6 +318,8 @@ const CONV_LINES = [
   ['MRI', 'SUD', 'BNC', 'DU', 'PSG', 'RW', 'KDS', 'PI', 'BPR', 'BST'],
   // Bandara YIA
   ['WT', 'YIA'],
+  // Bandara Adi Soemarmo
+  ['SLO', 'KADIP', 'SMO'],
   // Sumatera Utara
   ['MDN', 'BAP', 'BTK', 'ARB', 'LBP', 'PBA', 'TKE', 'LDT', 'TKM', 'RPH', 'BMB', 'BAM', 'TBI', 'BDT', 'BLI', 'PRA', 'DSU', 'BLS', 'LMP', 'SBJ', 'KIS', 'TNB', 'PUR', 'TUK', 'HL', 'TND', 'MBM', 'PME', 'PHA', 'MBU', 'RAP'],
   ['MDN', 'BIJ'],

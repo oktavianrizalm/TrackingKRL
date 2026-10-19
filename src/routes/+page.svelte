@@ -496,6 +496,7 @@
 		['HLM', 'KRW', 'PDL', 'TGLR'],
 		['MRI', 'SUD', 'BNC', 'DU', 'PSG', 'RW', 'KDS', 'PI', 'BPR', 'BST'],
 		['WT', 'YIA'],
+		['SLO', 'KADIP', 'SMO'],
 		['MDN', 'LBP', 'PBA', 'TBI', 'KIS', 'MBM', 'RAP'],
 		['TBI', 'SIR'],
 		['KIS', 'TNB'],
