@@ -27,7 +27,8 @@ export const POST = async ({ request }) => {
 
 			for (const train of allTrains) {
 				let previousMins = -1;
-				const stops = Object.entries(train.schedule).map(([stationId, timeStr]) => {
+				const stops = Object.entries(train.schedule).map(([stationId, timeVal]) => {
+					const timeStr = typeof timeVal === 'object' && timeVal !== null ? ((timeVal as any).dep || (timeVal as any).arr) : timeVal;
 					const [h, m] = (timeStr as string).split(':').map(Number);
 					let mins = h * 60 + m;
 					if (previousMins !== -1 && mins < previousMins - 180) mins += 24 * 60;

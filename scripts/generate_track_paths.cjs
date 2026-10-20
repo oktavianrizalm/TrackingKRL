@@ -322,11 +322,14 @@ const CONV_LINES = [
   ['SLO', 'KADIP', 'SMO'],
   // Sumatera Utara
   ['MDN', 'BAP', 'BTK', 'ARB', 'LBP', 'PBA', 'TKE', 'LDT', 'TKM', 'RPH', 'BMB', 'BAM', 'TBI', 'BDT', 'BLI', 'PRA', 'DSU', 'BLS', 'LMP', 'SBJ', 'KIS', 'TNB', 'PUR', 'TUK', 'HL', 'TND', 'MBM', 'PME', 'PHA', 'MBU', 'RAP'],
-  ['MDN', 'BIJ'],
+  ['MDN', 'BIJ', 'KBG', 'TJP', 'PBN', 'BSG'],
   ['ARB', 'KNM'],
+  ['TBI', 'LTD', 'TGD', 'LAG'],
   ['TBI', 'BJL', 'DMR', 'SIR'],
   // Sumatera Barat
-  ['PD', 'AI', 'ATR', 'TAB', 'LBY', 'DUK', 'LA', 'PAK', 'KI', 'PMN', 'NRS'],
+  ['PLA', 'PD', 'AI', 'ATR', 'TAB', 'LBY', 'DUK', 'PRU', 'LA', 'PAK', 'KI', 'CPH', 'PMN', 'NRS'],
+  ['PD', 'BKP', 'IMA'],
+  ['LA', 'SCN', 'KTN'],
   ['DUK', 'BIM'],
   // Sumatera Selatan & Lampung
   ['KPT', 'KAS', 'SIG', 'PYK', 'SDN', 'GLB', 'KED', 'LEB', 'PBM'],

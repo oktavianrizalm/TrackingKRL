@@ -22,26 +22,47 @@ export const GET = async ({ setHeaders }) => {
     const activeTrains = [];
 
     for (const train of allTrains) {
-        // Schedule is an object like { "DP": "04:05", "DPB": "04:09", ... }
-        // Keys preserve insertion order. We can anchor the times based on previous stops.
+        // Schedule is an object like { "DP": "04:05" } or { "MR": { "arr": "19:51", "dep": "19:53" } }
         let previousMins = -1;
-        const stops = Object.entries(train.schedule).map(([stationId, timeStr]) => {
-            const [h, m] = (timeStr as string).split(':').map(Number);
-            let mins = h * 60 + m;
-            
-            // If time drops significantly (e.g. 23:55 -> 00:05), it crossed midnight
-            if (previousMins !== -1 && mins < previousMins - 180) {
-                mins += 24 * 60;
+        const stops = Object.entries(train.schedule).map(([stationId, timeVal]) => {
+            let arrTimeStr: string;
+            let depTimeStr: string;
+            if (typeof timeVal === 'object' && timeVal !== null) {
+                arrTimeStr = (timeVal as any).arr || (timeVal as any).dep;
+                depTimeStr = (timeVal as any).dep || (timeVal as any).arr;
+            } else {
+                arrTimeStr = timeVal as string;
+                depTimeStr = timeVal as string;
             }
-            previousMins = mins;
-            
-            return { stationId, timeMinutes: mins, timeStr };
+
+            const [ah, am] = arrTimeStr.split(':').map(Number);
+            let arrMins = ah * 60 + am;
+            const [dh, dm] = depTimeStr.split(':').map(Number);
+            let depMins = dh * 60 + dm;
+
+            if (previousMins !== -1 && arrMins < previousMins - 180) {
+                arrMins += 24 * 60;
+            }
+            if (depMins < arrMins) {
+                depMins += 24 * 60;
+            }
+            previousMins = depMins;
+
+            return {
+                stationId,
+                arrMinutes: arrMins,
+                depMinutes: depMins,
+                timeMinutes: depMins,
+                arrTimeStr,
+                depTimeStr,
+                timeStr: depTimeStr !== arrTimeStr ? `${arrTimeStr} - ${depTimeStr}` : depTimeStr
+            };
         });
 
         if (stops.length < 2) continue;
 
-        const startTime = stops[0].timeMinutes;
-        const endTime = stops[stops.length - 1].timeMinutes;
+        const startTime = stops[0].depMinutes;
+        const endTime = stops[stops.length - 1].arrMinutes;
 
         // Check if train is currently active
         // It could be active today, or it could be a cross-midnight train running past 24:00
@@ -55,48 +76,99 @@ export const GET = async ({ setHeaders }) => {
         }
 
         if (effectiveCurrentTime >= startTime && effectiveCurrentTime <= endTime) {
-            // Find the segment it's currently on
-            for (let i = 0; i < stops.length - 1; i++) {
-                if (effectiveCurrentTime >= stops[i].timeMinutes && effectiveCurrentTime <= stops[i+1].timeMinutes) {
-                    const fromStation = stops[i].stationId;
-                    const toStation = stops[i+1].stationId;
-                    const departMinutes = stops[i].timeMinutes;
-                    const arrivMinutes = stops[i+1].timeMinutes;
-                    
-                    const segmentDuration = arrivMinutes - departMinutes;
-                    let progress = 0;
-                    if (segmentDuration > 0) {
-                        progress = (effectiveCurrentTime - departMinutes) / segmentDuration;
-                    } else {
-                        progress = 1;
-                    }
+            // Check if train is currently STOPPED at a station (scheduled dwell)
+            let isStoppedAtStation = false;
+            let stoppedStationIdx = -1;
 
-                    const livePing = liveTrainPings.get(train.id);
-
-                    activeTrains.push({
-                        id: train.id,
-                        name: train.name || null,
-                        line: train.line,
-                        origin: train.origin || getStationName(stops[0].stationId),
-                        destination: train.destination,
-                        fromStation,
-                        toStation,
-                        progress,
-                        departMinutes,
-                        arrivMinutes,
-                        isLiveGps: !!livePing,
-                        liveLat: livePing ? livePing.lat : null,
-                        liveLng: livePing ? livePing.lng : null,
-                        speed: livePing ? livePing.speed : null,
-                        heading: livePing ? livePing.heading : null,
-                        accuracy: livePing ? livePing.accuracy : null,
-                        stops: stops.map((s) => ({
-                            code: s.stationId,
-                            name: getStationName(s.stationId),
-                            time: s.timeStr as string
-                        }))
-                    });
+            for (let i = 0; i < stops.length; i++) {
+                if (effectiveCurrentTime >= stops[i].arrMinutes && effectiveCurrentTime <= stops[i].depMinutes) {
+                    isStoppedAtStation = true;
+                    stoppedStationIdx = i;
                     break;
+                }
+            }
+
+            const livePing = liveTrainPings.get(train.id);
+
+            if (isStoppedAtStation) {
+                const curStn = stops[stoppedStationIdx].stationId;
+                const nextStn = stoppedStationIdx < stops.length - 1 ? stops[stoppedStationIdx + 1].stationId : curStn;
+                const dwellMinutes = stops[stoppedStationIdx].depMinutes - stops[stoppedStationIdx].arrMinutes;
+
+                activeTrains.push({
+                    id: train.id,
+                    name: train.name || null,
+                    line: train.line,
+                    origin: train.origin || getStationName(stops[0].stationId),
+                    destination: train.destination,
+                    fromStation: curStn,
+                    toStation: nextStn,
+                    currentStation: curStn,
+                    isStopped: true,
+                    dwellMinutes,
+                    progress: 0,
+                    departMinutes: stops[stoppedStationIdx].depMinutes,
+                    arrivMinutes: stoppedStationIdx < stops.length - 1 ? stops[stoppedStationIdx + 1].arrMinutes : stops[stoppedStationIdx].depMinutes,
+                    isLiveGps: !!livePing,
+                    liveLat: livePing ? livePing.lat : null,
+                    liveLng: livePing ? livePing.lng : null,
+                    speed: livePing ? livePing.speed : 0,
+                    heading: livePing ? livePing.heading : null,
+                    accuracy: livePing ? livePing.accuracy : null,
+                    stops: stops.map((s) => ({
+                        code: s.stationId,
+                        name: getStationName(s.stationId),
+                        time: s.timeStr as string,
+                        arrTime: s.arrTimeStr,
+                        depTime: s.depTimeStr
+                    }))
+                });
+            } else {
+                // Find the segment it's currently moving on
+                for (let i = 0; i < stops.length - 1; i++) {
+                    const segDep = stops[i].depMinutes;
+                    const segArr = stops[i + 1].arrMinutes;
+                    if (effectiveCurrentTime >= segDep && effectiveCurrentTime <= segArr) {
+                        const fromStation = stops[i].stationId;
+                        const toStation = stops[i + 1].stationId;
+                        const segmentDuration = segArr - segDep;
+                        let progress = 0;
+                        if (segmentDuration > 0) {
+                            progress = (effectiveCurrentTime - segDep) / segmentDuration;
+                        } else {
+                            progress = 1;
+                        }
+
+                        activeTrains.push({
+                            id: train.id,
+                            name: train.name || null,
+                            line: train.line,
+                            origin: train.origin || getStationName(stops[0].stationId),
+                            destination: train.destination,
+                            fromStation,
+                            toStation,
+                            currentStation: null,
+                            isStopped: false,
+                            dwellMinutes: 0,
+                            progress,
+                            departMinutes: segDep,
+                            arrivMinutes: segArr,
+                            isLiveGps: !!livePing,
+                            liveLat: livePing ? livePing.lat : null,
+                            liveLng: livePing ? livePing.lng : null,
+                            speed: livePing ? livePing.speed : null,
+                            heading: livePing ? livePing.heading : null,
+                            accuracy: livePing ? livePing.accuracy : null,
+                            stops: stops.map((s) => ({
+                                code: s.stationId,
+                                name: getStationName(s.stationId),
+                                time: s.timeStr as string,
+                                arrTime: s.arrTimeStr,
+                                depTime: s.depTimeStr
+                            }))
+                        });
+                        break;
+                    }
                 }
             }
         }

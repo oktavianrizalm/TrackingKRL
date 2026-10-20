@@ -33,8 +33,11 @@ export const GET = async ({ url, setHeaders }) => {
 		}
 
 		if (train.schedule[stationId]) {
-			const timeStr = train.schedule[stationId];
-			const [hours, minutes] = timeStr.split(':').map(Number);
+			const timeVal = train.schedule[stationId];
+			const depTimeStr = typeof timeVal === 'object' && timeVal !== null ? ((timeVal as any).dep || (timeVal as any).arr) : timeVal;
+			const arrTimeStr = typeof timeVal === 'object' && timeVal !== null ? ((timeVal as any).arr || (timeVal as any).dep) : timeVal;
+			const timeStr = depTimeStr !== arrTimeStr ? `${arrTimeStr} - ${depTimeStr}` : (depTimeStr as string);
+			const [hours, minutes] = (depTimeStr as string).split(':').map(Number);
 			let trainTotalMinutes = hours * 60 + minutes;
 
 			// Handle trains that are scheduled past midnight
@@ -44,11 +47,21 @@ export const GET = async ({ url, setHeaders }) => {
 
 			const diffMinutes = trainTotalMinutes - currentTotalMinutes;
 
+			// Check arrival time for dwell status
+			const [ah, am] = (arrTimeStr as string).split(':').map(Number);
+			let arrTotalMinutes = ah * 60 + am;
+			if (arrTotalMinutes < currentTotalMinutes - 120) {
+				arrTotalMinutes += 24 * 60;
+			}
+
 			// Include trains arriving in the next 120 minutes (drop departed trains)
 			if (diffMinutes >= 0 && diffMinutes <= 120) {
 				let status = 'upcoming';
-				if (diffMinutes === 0) status = 'arrived';
-				else if (diffMinutes <= 5) status = 'boarding_soon';
+				if (currentTotalMinutes >= arrTotalMinutes && currentTotalMinutes <= trainTotalMinutes) {
+					status = 'arrived';
+				} else if (diffMinutes <= 5) {
+					status = 'boarding_soon';
+				}
 
 				mockTrains.push({
 					id: train.id,

@@ -26,8 +26,11 @@ vite.config.ts.timestamp-*
 .env*
 
 # Raw Train Schedule & GAPEKA Source Files (PDF, scrapers, raw dumps)
+*.pdf
+KP-DJKA*.pdf
 GAPEKA/
 GAPEKA/**
+scratch/
 kci_schedules_scraped.json
 mrt-raw-schedule.json
 mrt-schedule-lebak-bulus.html

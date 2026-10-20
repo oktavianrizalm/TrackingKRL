@@ -497,12 +497,16 @@
 		['MRI', 'SUD', 'BNC', 'DU', 'PSG', 'RW', 'KDS', 'PI', 'BPR', 'BST'],
 		['WT', 'YIA'],
 		['SLO', 'KADIP', 'SMO'],
-		['MDN', 'LBP', 'PBA', 'TBI', 'KIS', 'MBM', 'RAP'],
+		['MDN', 'BAP', 'BTK', 'ARB', 'LBP', 'PBA', 'TBI', 'KIS', 'MBM', 'RAP'],
 		['TBI', 'SIR'],
 		['KIS', 'TNB'],
-		['LBP', 'KNM'],
-		['MDN', 'BIJ'],
-		['BIM', 'DUK', 'PD', 'ATR', 'TAB', 'LBY', 'PMN', 'NRS'],
+		['ARB', 'KNM'],
+		['MDN', 'BIJ', 'KBG', 'TJP', 'PBN', 'BSG'],
+		['TBI', 'LTD', 'TGD', 'LAG'],
+		['PLA', 'PD', 'AI', 'ATR', 'TAB', 'LBY', 'DUK', 'PRU', 'LA', 'PAK', 'KI', 'CPH', 'PMN', 'NRS'],
+		['PD', 'BKP', 'IMA'],
+		['LA', 'SCN', 'KTN'],
+		['DUK', 'BIM'],
 		['LLG', 'LT', 'ME', 'PBM', 'KPT'],
 		['KPT', 'PBM', 'BTA', 'KB', 'TNK'],
 		// LRT Jakarta
@@ -690,6 +694,46 @@
 		}
 
 		// 2. Timetable schedule interpolation
+		let nowMins = currentMinutes;
+		if (
+			train.arrivMinutes !== undefined &&
+			nowMins < 180 &&
+			train.arrivMinutes >= 1440
+		) {
+			nowMins += 1440;
+		}
+
+		let isDwellStopped = !!train.isStopped;
+		if (
+			train.departMinutes !== undefined &&
+			nowMins < train.departMinutes
+		) {
+			isDwellStopped = true;
+		}
+
+		if (isDwellStopped) {
+			const stopStationId = train.currentStation || train.fromStation;
+			const samples = getTrackPathBetween(
+				stopStationId,
+				train.toStation,
+				train.line,
+			);
+			const stationCoord =
+				allStationCoords[stopStationId] ||
+				WHOOSH_WAYPOINTS_MAP[stopStationId];
+			const coord =
+				samples && samples.length > 0 ? samples[0] : stationCoord;
+			if (coord) {
+				return {
+					lat: coord[0],
+					lng: coord[1],
+					status: "stopped" as const,
+					progress: 0,
+					speed: 0,
+				};
+			}
+		}
+
 		let progress = train.progress ?? 0;
 		let duration = 0;
 		if (
@@ -697,8 +741,6 @@
 			train.arrivMinutes !== undefined &&
 			train.arrivMinutes > train.departMinutes
 		) {
-			let nowMins = currentMinutes;
-			if (nowMins < 180 && train.arrivMinutes >= 1440) nowMins += 1440;
 			duration = train.arrivMinutes - train.departMinutes;
 			const elapsed = nowMins - train.departMinutes;
 			progress = Math.max(0, Math.min(1, elapsed / duration));
@@ -712,8 +754,14 @@
 		if (!samples || samples.length === 0) return null;
 
 		let status: "stopped" | "moving" = "moving";
-		if (progress <= 0.03 || progress >= 0.97) {
-			status = "stopped";
+		if (train.dwellMinutes !== undefined) {
+			if (progress >= 0.995) {
+				status = "stopped";
+			}
+		} else {
+			if (progress <= 0.03 || progress >= 0.97) {
+				status = "stopped";
+			}
 		}
 
 		const coord = interpolatePath(samples, progress);
@@ -878,7 +926,9 @@
 			train.toStation;
 
 		const stationInfo = isStopped
-			? `Berhenti di <b>${fromStationName}</b>`
+			? (train.dwellMinutes && train.dwellMinutes > 0
+				? `Berhenti di <b>${fromStationName}</b> (${train.dwellMinutes} menit)`
+				: `Berhenti di <b>${fromStationName}</b>`)
 			: `Menuju <b>${toStationName}</b> (${Math.round(pos.progress * 100)}%)`;
 
 		const cleanTrainTitle = formatTrainTitle(train);
@@ -2312,6 +2362,11 @@
 												<span class="text-[9px] px-1.5 py-0.2 rounded font-bold uppercase {lineColors[train.line] || 'bg-slate-500 text-white'}">
 													{train.line}
 												</span>
+												{#if train.isStopped}
+													<span class="text-[9px] px-1.5 py-0.2 rounded font-black uppercase bg-amber-500 text-white animate-pulse">
+														BERHENTI
+													</span>
+												{/if}
 											</div>
 											<div class="text-xs font-semibold text-slate-700 dark:text-slate-300 truncate mt-0.5">
 												{#if train.origin}
@@ -2321,7 +2376,13 @@
 												{/if}
 											</div>
 											<div class="text-[10px] text-slate-500 font-mono mt-0.5 flex items-center gap-1.5 flex-wrap">
-												<span>{train.fromStation} &rarr; {train.toStation} ({Math.round(train.progress * 100)}%)</span>
+												{#if train.isStopped}
+													<span class="text-amber-600 dark:text-amber-400 font-bold">
+														Berhenti di {train.currentStation || train.fromStation}{train.dwellMinutes ? ` (${train.dwellMinutes}m)` : ''}
+													</span>
+												{:else}
+													<span>{train.fromStation} &rarr; {train.toStation} ({Math.round(train.progress * 100)}%)</span>
+												{/if}
 												{#if train._currentSpeed !== undefined}
 													<span class="text-slate-300 dark:text-slate-600">&bull;</span>
 													<span class="font-bold {train._currentSpeed > 0 ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-400'}">

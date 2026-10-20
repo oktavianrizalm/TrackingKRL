@@ -22,6 +22,7 @@
 <p align="center">
   <a href="#-cakupan-layanan-kereta">Cakupan Layanan</a> •
   <a href="#-fitur-utama">Fitur Utama</a> •
+  <a href="#-animasi-berhenti-dwell-stop--fisika-gapeka-2025">Dwell Stop GAPEKA</a> •
   <a href="#-arsitektur-kinerja-tinggi-o1-lookup">Arsitektur Kinerja</a> •
   <a href="#-panduan-penggunaan">Panduan Penggunaan</a> •
   <a href="#-teknologi-yang-digunakan">Teknologi</a> •
@@ -55,6 +56,8 @@ TrackRL mendukung integrasi jadwal dan pelacakan seluruh armada perkeretaapian d
   Garis rel presisi berwarna oranye dari OpenRailwayMap di-*render* di atas basemap, mencerminkan rel ganda (*double track*), sepur belok, emplasemen stasiun, hingga jalur layang.
 - **🎯 100% Track-Snapped Animation (Master Rail Spines)**:
   Kereta ekspres yang melompati puluhan stasiun kecil tidak lagi memotong garis lurus melewati laut atau gunung, melainkan otomatis mengikuti tulang punggung koridor rel resmi (*Master Rail Spines*) dengan toleransi deviasi kurang dari 15 meter.
+- **🛑 Animasi Berhenti Stasiun Realistis (*GAPEKA 2025 Dwell Stops*)**:
+  Mengadopsi jadwal resmi kedatangan dan keberangkatan GAPEKA 2025 (*KP-DJKA 224 TAHUN 2024*). Ketika kereta terjadwal berhenti di sebuah stasiun (misalnya 2 menit di Mojokerto atau 5 menit di Madiun), animasi kereta otomatis berhenti tepat di emplasemen stasiun dengan kecepatan `0 km/jam`, memancarkan cincin animasi berkedip amber (*pulsing glow*), menampilkan badge **`BERHENTI`**, serta durasi waktu singgah sebelum melanjutkan perjalanan.
 - **⚡ Zero-Freeze High Performance Engine ($O(1)$ Lookups)**:
   Kalkulasi koordinat untuk 492 pasangan rute di seluruh Indonesia telah di-pramenghitung secara *offline*. Beban CPU saat membuka webapp turun drastis dari **34,5 detik menjadi 0,105 ms (280.000x lebih cepat)** tanpa membuat browser *stuck* di kotak abu-abu.
 - **📡 Crowdsourced Live GPS Sharing**:
@@ -67,6 +70,36 @@ TrackRL mendukung integrasi jadwal dan pelacakan seluruh armada perkeretaapian d
   Sensor *Browser Geolocation API* secara otomatis memposisikan peta ke stasiun kereta terdekat dari posisi pengguna saat membuka webapp.
 - **🖥️ Antarmuka Layar Penuh Modern (Responsive Drawer)**:
   Desain *edge-to-edge* dengan *drawer* fleksibel yang dapat dibuka/tutup, mendukung mode gelap (*Dark Mode*) dan terang (*Light Mode*) serta pilihan basemap (ESRI Satelit, Carto Dark, Carto Light).
+
+---
+
+## 🛑 Animasi Berhenti (Dwell Stop) & Fisika GAPEKA 2025
+
+TrackRL menghadirkan simulasi pergerakan kereta realistis yang disinkronkan langsung dengan jadwal resmi **GAPEKA 2025 (Keputusan Direktur Jenderal Perkeretaapian No. KP-DJKA 224 TAHUN 2024)**.
+
+### 1. Sinkronisasi Waktu Kedatangan & Keberangkatan
+Kereta api tidak hanya sekadar bergerak melintasi garis jalur, melainkan mematuhi waktu singgah (*dwell time*) resmi di setiap stasiun pemberhentian perantara:
+- **257 Nomor Perjalanan KA Antarkota di Jawa** telah diekstrak secara presisi dari dokumen resmi GAPEKA 2025 (mencakup **2.682 titik singgah perantara**).
+- Format data membedakan waktu tiba (`arr`) dan waktu berangkat (`dep`), contohnya:
+  - **KA 7 (Bima)**: Stasiun Mojokerto datang `19:51`, berangkat `19:53` (*dwell* 2 menit); Stasiun Jombang datang `20:10`, berangkat `20:12` (*dwell* 2 menit); Stasiun Madiun datang `21:16`, berangkat `21:21` (*dwell* 5 menit).
+  - **KA 1 (Argo Bromo Anggrek)**: Stasiun Cirebon datang `22:42`, berangkat `22:47` (*dwell* 5 menit); Stasiun Semarang Tawang datang `00:32`, berangkat `00:37` (*dwell* 5 menit).
+
+### 2. State Machine Animasi Berhenti (*Dwell State*)
+Ketika waktu server/klien berada dalam jendela singgah stasiun $[A_i, D_i]$:
+1. **Koordinat Stasioner**: Posisi marker kereta dikunci tepat pada titik koordinat platform/emplasemen stasiun terkait (`lat`, `lng`).
+2. **Indikator Kecepatan $0\text{ km/jam}$**: Status otomatis berubah menjadi `stopped` dengan kecepatan nol.
+3. **Visual Marker Interaktif**:
+   - Ikon lokomotif berubah menjadi ikon jeda `⏸️`.
+   - Menampilkan cincin animasi berkedip amber (*pulsing glow ring*).
+   - Badge status menampilkan **`BERHENTI`** dengan durasi menit singgah pada kartu dan popup informasi (contoh: *Berhenti di Mojokerto (2 menit)*).
+   - Pada popup rute stasiun, baris stasiun yang sedang disinggahi disorot dengan latar amber dan lencana aktif.
+
+### 3. Model Fisika Akselerasi & Deselerasi Sinusoidal
+Saat jam keberangkatan tiba ($t \ge D_i$):
+- Kereta tidak melompat secara kaku, melainkan menggunakan kurva akselerasi sinusoidal halus:
+  $$\text{curveFactor} = \sin\left(\frac{\text{progress}}{0.15} \times \frac{\pi}{2}\right) \quad (0 \le \text{progress} < 0.15)$$
+- Di tengah perjalanan ($0.15 \le \text{progress} \le 0.85$), kereta melaju pada kecepatan jelajah operasional (hingga 120 km/jam untuk KA Antarkota, 350 km/jam untuk Whoosh).
+- Menjelang stasiun tujuan berikutnya ($\text{progress} > 0.85$), kecepatan menurun secara deselerasi sinusoidal halus hingga berhenti sempurna saat memasuki stasiun.
 
 ---
 
@@ -220,4 +253,4 @@ TrackingKRL/
 - **Pengembang**: Dirancang dan dikembangkan oleh **MRO - 2026**.
 - **Sumber Data Rel**: &copy; [OpenRailwayMap](https://www.openrailwaymap.org/) contributors & [OpenStreetMap](https://www.openstreetmap.org/copyright).
 - **Peta Satelit**: &copy; [ESRI](https://www.esri.com/) World Imagery, Maxar, Earthstar Geographics.
-- **Data Jadwal**: GAPEKA Resmi PT Kereta Api Indonesia (Persero), KAI Commuter, KCIC, dan PT MRT Jakarta.
+- **Data Jadwal**: GAPEKA Resmi PT Kereta Api Indonesia (Persero) berdasarkan Keputusan Direktur Jenderal Perkeretaapian (KP-DJKA 224 TAHUN 2024 untuk Jawa, KP-DJKA 225-227 TAHUN 2024 untuk Sumatera, dan KP-DJKA 2 TAHUN 2025 untuk KCIC Whoosh), KAI Commuter, dan PT MRT Jakarta.
