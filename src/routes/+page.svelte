@@ -486,7 +486,7 @@
 		['CKP', 'CBR', 'PWK', 'CA', 'SUT', 'PLD', 'CD', 'SKT', 'CLE', 'PDL', 'CMI', 'BD', 'CTH', 'KAC'],
 		['BD', 'KAC', 'RCK', 'CCL', 'NG', 'LL', 'CB', 'WB', 'CPD', 'CAW', 'RJP', 'TSM', 'AW', 'MNJ', 'CI', 'BJG', 'KNP', 'BJR', 'LN', 'MLW', 'SDR', 'GDM', 'KWG', 'JRL', 'KBS', 'KYA'],
 		['CCL', 'NG', 'LL', 'CB', 'PASIR', 'WNR', 'GRT'],
-		['CP', 'GM', 'KKD', 'LBG', 'KH', 'MA', 'SKP', 'KYA'],
+		['CP', 'GM', 'KH', 'MA', 'SKP', 'KYA'],
 		['SLO', 'PWS', 'PL', 'SR', 'WK', 'KG', 'NGW', 'BBD', 'MN', 'CRB', 'SRD', 'BGR', 'NJ', 'SKM', 'BRN', 'KTS', 'PTR', 'SMB', 'JG', 'SBO', 'MR', 'TRK', 'KDN', 'KRN', 'BH', 'SPJ', 'WO', 'SGU', 'SBI'],
 		['SLO', 'SK', 'KSO', 'GD', 'KEJ', 'BBG', 'SMT', 'SMC'],
 		['KTS', 'KD', 'TA', 'BL', 'GRM', 'TAL', 'WG', 'KSB', 'PGJ', 'SBP', 'NB', 'KPN', 'PSI', 'MLK', 'ML', 'LW', 'BG', 'SDA', 'WO', 'SGU'],
@@ -1671,6 +1671,8 @@
 					DWN: [-6.3931077, 107.4333466],
 					MTM: [-6.2574741, 107.111227],  // Metland Telagamurni (TLM)
 					TLM: [-6.2574741, 107.111227],
+					PSJ: [-7.1283156, 107.9924477], // Pasirjengkol
+					PASIR: [-7.1283156, 107.9924477],
 					SDI: [-7.0428, 110.8719],       // Sedadi (SDA)
 					BOP: [-6.5985, 106.7915],       // Bogor Paledang
 					MSG: [-6.7118, 106.8169],       // Maseng

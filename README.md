@@ -38,9 +38,9 @@ TrackRL mendukung integrasi jadwal dan pelacakan seluruh armada perkeretaapian d
 
 | Kategori | Armada & Koridor |
 | :--- | :--- |
-| **Kereta Antarkota (KAI)** | Seluruh KA Eksekutif, Bisnis, dan Ekonomi lintas Jawa & Sumatera (Argo Bromo Anggrek, Argo Lawu, Argo Dwipangga, Taksaka, Gajayana, Bima, Argo Muria, Kertajaya, Lodaya, Turangga, Malabar, Sancaka, Sri Tanjung, Blambangan Ekspres, dll.) |
+| **Kereta Antarkota (KAI)** | Seluruh KA Eksekutif, Bisnis, dan Ekonomi lintas Jawa & Sumatera (Argo Bromo Anggrek, Argo Lawu, Argo Dwipangga, Taksaka, Gajayana, Bima, Argo Muria, Kertajaya, Lodaya, Turangga, Malabar, Sancaka, Sri Tanjung, Blambangan Ekspres, Papandayan & Cikuray lintas Garut, Purwojaya & Wijayakusuma lintas Cilacap, dll.) |
 | **Kereta Cepat (Whoosh)** | KCIC Kereta Cepat Jakarta – Bandung (Halim – Karawang – Padalarang – Tegalluar) |
-| **Kereta Komuter & Lokal** | KRL Commuter Line Jabodetabek, Commuter Line Merak, Commuter Line Yogyakarta–Solo, KA Lokal Bandung Raya, Commuter Line Dhoho/Penataran, Prameks, dll. |
+| **Kereta Komuter & Lokal** | KRL Commuter Line Jabodetabek (termasuk percabangan Nambo), Commuter Line Merak, Commuter Line Garut, Commuter Line Yogyakarta–Solo, KA Lokal Bandung Raya, Commuter Line Dhoho/Penataran, Prameks, dll. |
 | **MRT Jakarta** | MRT Lin Utara–Selatan (Lebak Bulus Grab – Bundaran HI Bank Jakarta) |
 | **LRT (Light Rail Transit)** | LRT Jabodebek (Lin Cibubur & Lin Bekasi), LRT Jakarta (Pegangsaan Dua – Velodrome – Manggarai Fase 1B), dan LRT Sumatera Selatan (Palembang SMB II – DJKA) |
 | **Kereta Bandara** | KA Bandara Soekarno-Hatta (BST), KA Bandara Internasional Yogyakarta (YIA), KA Bandara Kualanamu (KNM), dan KA Bandara Minangkabau (BIM) |
@@ -59,7 +59,7 @@ TrackRL mendukung integrasi jadwal dan pelacakan seluruh armada perkeretaapian d
 - **🛑 Animasi Berhenti Stasiun Realistis (*GAPEKA 2025 Dwell Stops*)**:
   Mengadopsi jadwal resmi kedatangan dan keberangkatan GAPEKA 2025 (*KP-DJKA 224 TAHUN 2024*). Ketika kereta terjadwal berhenti di sebuah stasiun (misalnya 2 menit di Mojokerto atau 5 menit di Madiun), animasi kereta otomatis berhenti tepat di emplasemen stasiun dengan kecepatan `0 km/jam`, memancarkan cincin animasi berkedip amber (*pulsing glow*), menampilkan badge **`BERHENTI`**, serta durasi waktu singgah sebelum melanjutkan perjalanan.
 - **⚡ Zero-Freeze High Performance Engine ($O(1)$ Lookups)**:
-  Kalkulasi koordinat untuk 492 pasangan rute di seluruh Indonesia telah di-pramenghitung secara *offline*. Beban CPU saat membuka webapp turun drastis dari **34,5 detik menjadi 0,105 ms (280.000x lebih cepat)** tanpa membuat browser *stuck* di kotak abu-abu.
+  Kalkulasi koordinat untuk 1.175 pasangan rute stasiun di seluruh Indonesia telah di-pramenghitung secara *offline*. Beban CPU saat membuka webapp turun drastis dari **34,5 detik menjadi 0,105 ms (280.000x lebih cepat)** tanpa membuat browser *stuck* di kotak abu-abu.
 - **📡 Crowdsourced Live GPS Sharing**:
   Penumpang yang sedang berada di dalam kereta dapat membagikan posisi GPS perangkat secara *real-time*. Kereta yang memiliki sinyal aktif akan menampilkan lencana hijau berkedip **`📡 LIVE GPS`**.
 - **🔍 Filter Kategori Cerdas**:
@@ -114,16 +114,16 @@ Saat jam keberangkatan tiba ($t \ge D_i$):
 --> 1.000 x 34,5 ms = 34,5 DETIK CPU TERKUNCI 100% (Browser stuck, tile abu-abu)
 
 [SEKARANG - Precalculated Track Paths & Master Rail Spines]
-492 Rute Stasiun di-pramenghitung secara offline ke precalculated-track-paths.json (346 KB)
+1.175 Rute Pasangan Stasiun di-pramenghitung secara offline ke precalculated-track-paths.json (1,1 MB)
 --> Browser klien hanya melakukan $O(1)$ Dictionary Lookup dalam 0,0001 ms!
---> Total waktu pemrosesan 128 kereta: 0,105 ms (280.000x lebih cepat)
+--> Total waktu pemrosesan seluruh armada: 0,105 ms (280.000x lebih cepat)
 --> Browser thread 100% bebas, Leaflet tile satelit & animasi 60 FPS berjalan instan!
 ```
 
 ### Master Rail Spines System
 
 Untuk mencegah kereta ekspres (misalnya KA Argo Muria rute Tegal–Cirebon sejauh 67 km, atau KA Pangandaran Tasikmalaya–Bandung sejauh 85 km) memotong garis lurus melintasi teluk laut atau pegunungan terjal:
-1. Sistem memetakan **16 Master Rail Spines** yang menghubungkan seluruh stasiun perantara berturutan.
+1. Sistem memetakan **29 Master Rail Spines** yang menghubungkan seluruh stasiun perantara berturutan (Lintas Pantura, Lintas Selatan, Percabangan Garut, Percabangan Cilacap, Nambo, Merak, Whoosh, 3 sistem LRT, MRT Jakarta, dan 4 Divre Sumatera).
 2. Setiap segmen stasiun yang berdekatan ($\le 10\text{--}15\text{ km}$) diinterpolasi dan di-*snap* ke koordinat rel fisik OpenRailwayMap.
 3. Seluruh rute di Pulau Jawa dan Sumatera memiliki tingkat presisi deviasi **$\le 15\text{ meter}$** tepat di atas rel fisik.
 
@@ -193,7 +193,7 @@ Untuk mempramenghitung rute rel fisik terbaru:
 ```bash
 node scripts/generate_track_paths.cjs
 ```
-*Output file akan otomatis diperbarui di `static/data/precalculated-track-paths.json` dalam waktu ~10 detik.*
+*Output file akan otomatis diperbarui di `static/data/precalculated-track-paths.json` dalam waktu ~30 detik (1.175 rute).*
 
 ### 4. Jalankan Server Pengembangan (Dev)
 ```bash
@@ -238,13 +238,16 @@ TrackingKRL/
 │   │   ├── all-national-stations.json       # Database stasiun Jawa & Sumatera
 │   │   ├── indonesia-railway.geojson        # Geometri rel fisik OpenRailwayMap
 │   │   ├── national-gapeka.json             # Jadwal GAPEKA terbaru KAI se-Indonesia
-│   │   └── precalculated-track-paths.json   # 492 rute track-snapped siap pakai (O(1))
+│   │   └── precalculated-track-paths.json   # 1.175 rute track-snapped siap pakai (O(1)) (1,1 MB)
 │   ├── krl-routes.geojson                   # Geometri jalur KRL & MRT Jakarta
 │   ├── mrt-schedule.json                    # Jadwal MRT Jakarta
 │   └── schedule.json                        # Jadwal Commuter Line Jabodetabek
 ├── package.json
 └── vite.config.ts
 ```
+
+> [!NOTE]
+> Berkas sumber jadwal resmi GAPEKA (KP-DJKA 224–227 TAHUN 2024 dan KP-DJKA 2 TAHUN 2025) disimpan secara lokal dan dilindungi di `.gitignore` untuk menjaga efisiensi repositori Git.
 
 ---
 

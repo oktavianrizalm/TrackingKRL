@@ -78,6 +78,8 @@ const KCI_CODE_ALIASES = {
   DWN: [-6.3931077, 107.4333466],
   MTM: [-6.2574741, 107.111227],  // Metland Telagamurni (TLM)
   TLM: [-6.2574741, 107.111227],
+  PSJ: [-7.1283156, 107.9924477], // Pasirjengkol
+  PASIR: [-7.1283156, 107.9924477],
   SDI: [-7.0428, 110.8719],       // Sedadi (SDA)
   BOP: [-6.5985, 106.7915],       // Bogor Paledang
   MSG: [-6.7118, 106.8169],       // Maseng
@@ -300,7 +302,7 @@ const CONV_LINES = [
   // Tapal Kuda (Bangil - Ketapang)
   ['BG', 'PS', 'RO', 'GI', 'BYM', 'PB', 'LEC', 'MLS', 'RN', 'KK', 'RDA', 'JTR', 'TGL', 'BSS', 'RBP', 'MI', 'JR', 'AJ', 'KTK', 'KLT', 'LDO', 'SPL', 'GRN', 'MRW', 'KBR', 'GLM', 'SWD', 'KKL', 'KSL', 'TGR', 'SGJ', 'RGP', 'BWI', 'AGO', 'KTG'],
   // Cilacap branch
-  ['KYA', 'SKP', 'MA', 'KKD', 'KH', 'KSG', 'LBG', 'JRL', 'GM', 'CP'],
+  ['KYA', 'SKP', 'MA', 'KH', 'GM', 'CP'],
   // Lintas Barat (Jakarta - Rangkasbitung - Merak)
   ['THB', 'PLM', 'KBY', 'PDJ', 'JMU', 'SDM', 'RU', 'SRP', 'CSK', 'CC', 'PRP', 'CJT', 'DAR', 'TEJ', 'TGS', 'CKY', 'MJ', 'CTR', 'RK', 'JBU', 'CT', 'CKL', 'WLT', 'SG', 'KRA', 'TOJB', 'CLG', 'KEN', 'MER'],
   // Nambo
